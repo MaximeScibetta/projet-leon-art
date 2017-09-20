@@ -10,3 +10,4 @@ http://lencreuse.be/
 * **Quel ton ?** : Un ton sérieux tous en restant dans un esprit convivale.
 * [Stratégie](https://github.com/MaximeScibetta/projet-leon-art/blob/master/Conception/Plan%20de%20liaisons.pdf "Lien vers le pdf du plan de liaison du site")
 * [Inspiration](https://www.pinterest.com/maximescibetta/saint-l%C3%A9onart/ "Lien vers le tableau pinterest d'inspiration")
+* [Code couleurs et typographique](https://github.com/MaximeScibetta/projet-leon-art/blob/master/Conception/Typo-et-couleur.pdf "Lien vers le pdf du code couleur et typographique")
