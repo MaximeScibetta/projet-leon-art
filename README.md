@@ -11,3 +11,5 @@ http://lencreuse.be/
 * [Stratégie](https://github.com/MaximeScibetta/projet-leon-art/blob/master/Conception/Plan%20de%20liaisons.pdf "Lien vers le pdf du plan de liaison du site")
 * [Inspiration](https://www.pinterest.com/maximescibetta/saint-l%C3%A9onart/ "Lien vers le tableau pinterest d'inspiration")
 * [Code couleurs et typographique](https://github.com/MaximeScibetta/projet-leon-art/blob/master/Conception/Typo-et-couleur.pdf "Lien vers le pdf du code couleur et typographique")
+* [Wireframe](https://github.com/MaximeScibetta/projet-leon-art/tree/master/Wireframe "Lien vers le dossier contenant les wireframes")
+* [Design](https://github.com/MaximeScibetta/projet-leon-art/tree/master/Design "Lien vers le dossier contenant les design") - *pour le 5 octobre*
