@@ -26,6 +26,12 @@ gulp.src( "src/sass/**/*.scss" )
     .pipe(browserSync.stream());
 } );
 
+// --- Task for fonts
+gulp.task("fonts", function() {
+    gulp.src("src/fonts/**/*.ttf")
+        .pipe(gulp.dest("assets/fonts"));
+});
+
 // --- Task for pug
 // gulp.task( "html", function() {
 //     gulp.src( "src/pug/**/*.pug" )
@@ -78,5 +84,5 @@ gulp.watch("src/html/**/*.html").on('change', browserSync.reload);
 } );
 
 // --- Aliases
-gulp.task( "default", [ "images", "css", "html", "htmli", "js", "serve" ] );
+gulp.task( "default", [ "images", "css", "html", "htmli", "js", "fonts", "serve" ] );
 gulp.task( "work", [ "default", "watch" ] );
