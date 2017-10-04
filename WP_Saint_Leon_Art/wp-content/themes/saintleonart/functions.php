@@ -1,6 +1,6 @@
 <?php
 
-add_action('init', 'dw_init_types');
+//add_action('init', 'dw_init_types');
 
 add_filter( 'wp_title', 'dw_page_title' );
  
@@ -160,29 +160,29 @@ function dw_chose_singularity($number, $singular, $plural, $empty = null)
 /**
 *   Register custom post types on INIT event
 */
-function dw_init_types()
-{
-  register_post_type('trip', [
-    'label' => 'Voyages',
-    'labels' => [
-      'singular_name' => 'voyage',
-      'add_new' => 'Ajouter un voyage',
-    ],
-    'description' => 'Type d\'article permettant d\'ajouter des voyages à la section voyages du site.',
-    'menu_position' => 20,
-    'menu_icon' => 'dashicons-palmtree',
-    'public' => true
-  ]);
-  // si plusieur type de post code de cette manière -> ['trip','event']
-  register_taxonomy('places', 'trip', [
-    'label' => 'Endroits',
-    'labels' => [
-      'singular_name' => 'endroits',
-      'edit_item' => 'Éditer l\'endroit',
-      'add_new_item' => 'Ajouter un nouvel endroit',
-    ],
-    'description' => 'Endroits dans lesquels le voyage a été effectué.',
-    'public' => true,
-    'hierarchical' => true,
-  ]);
-}
+// function dw_init_types()
+// {
+//   register_post_type('trip', [
+//     'label' => 'Voyages',
+//     'labels' => [
+//       'singular_name' => 'voyage',
+//       'add_new' => 'Ajouter un voyage',
+//     ],
+//     'description' => 'Type d\'article permettant d\'ajouter des voyages à la section voyages du site.',
+//     'menu_position' => 20,
+//     'menu_icon' => 'dashicons-palmtree',
+//     'public' => true
+//   ]);
+//   // si plusieur type de post code de cette manière -> ['trip','event']
+//   register_taxonomy('places', 'trip', [
+//     'label' => 'Endroits',
+//     'labels' => [
+//       'singular_name' => 'endroits',
+//       'edit_item' => 'Éditer l\'endroit',
+//       'add_new_item' => 'Ajouter un nouvel endroit',
+//     ],
+//     'description' => 'Endroits dans lesquels le voyage a été effectué.',
+//     'public' => true,
+//     'hierarchical' => true,
+//   ]);
+// }
