@@ -97,7 +97,10 @@
 @import "../../node_modules/inuitcss/generic/generic.reset";
 @import "../../node_modules/inuitcss/generic/generic.shared";
 
-
+button{
+    border: none;
+    background: none;
+}
 
 
 
@@ -147,6 +150,7 @@ $inuit-font-size-h3:  16px;
 @import "../../node_modules/inuitcss/utilities/utilities.clearfix";
 
 $inuit-offsets: true;
+$inuit-fractions: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18;
 @import "../../node_modules/inuitcss/utilities/utilities.widths";
 @import "../../node_modules/inuitcss/utilities/utilities.headings";
 @import "../../node_modules/inuitcss/utilities/utilities.spacings";
@@ -162,3 +166,9 @@ $inuit-offsets: true;
 // SETTINGS PERSO.
 @import "settings/settings.colors";
 @import "settings/settings.fontface";
+
+// COMPONENTS PERSO.
+@import "components/components.menu";
+@import "components/components.grid";
+@import "components/components.searchicon";
+@import "components/components.hamburgermenu";

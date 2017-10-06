@@ -1,0 +1,11 @@
+.grid{
+    position: fixed;
+    width: 100%;
+    &__col{
+        height: 100vh;
+        &-c{
+            background-color: rgba(255, 0, 0, 0.35);
+            height: 100vh;
+        }
+    }
+}

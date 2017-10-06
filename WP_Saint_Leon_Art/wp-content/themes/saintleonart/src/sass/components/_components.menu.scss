@@ -1,0 +1,36 @@
+
+@media (min-width: 320px) {
+    body{
+        overflow-x: hidden;
+        header{
+            background-color: $yellow;
+            height: 5em;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+            .site-nav{
+                width: 300px;
+                background-color: $yellow;
+                position: absolute;
+                top: 4.464em;
+                height: 100vh;
+                transform: translateX(-300px);
+                transition: transform 0.5s;
+            }
+            .hamburger:focus ~ .site-nav{
+                transform: translateX(0);
+                transition: transform 0.5s;
+                width: 300px;
+
+            }
+        }
+        &.has-sidebar{
+            .site-nav{
+                transform: translateX(0);
+                transition: transform 0.5s;
+                width: 300px;
+            }
+        }
+    }
+    
+}

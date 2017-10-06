@@ -51,5 +51,22 @@
             </div>
         </div>
     </footer>
+    <script>
+    const hamburger = document.querySelector('.hamburger');
+    const search = document.querySelector('.search-icon')
+
+    hamburger.addEventListener('click', function(e) {
+        e.stopPropagation()
+        e.preventDefault()
+        hamburger.classList.toggle('is-active')
+        document.body.classList.toggle('has-sidebar')
+    });
+
+    search.addEventListener('click', function(e) {
+        e.stopPropagation()
+        e.preventDefault()
+        search.classList.toggle('open')
+    });
+    </script>
 </body>
 </html>
