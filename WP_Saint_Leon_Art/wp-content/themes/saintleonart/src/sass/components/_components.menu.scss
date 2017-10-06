@@ -1,16 +1,15 @@
-
-@media (min-width: 320px) {
-    body{
+body{
+    @include mq($from: 0px){
         overflow-x: hidden;
         header{
-            background-color: $yellow;
-            height: 5em;
+            background-color: $purple;
+            height: $inuit-global-spacing-unit-large;
             position: fixed;
             width: 100%;
             z-index: 10;
             .site-nav{
                 width: 300px;
-                background-color: $yellow;
+                background-color: $purple;
                 position: absolute;
                 top: 4.464em;
                 height: 100vh;
@@ -21,7 +20,7 @@
                 transform: translateX(0);
                 transition: transform 0.5s;
                 width: 300px;
-
+    
             }
         }
         &.has-sidebar{
@@ -32,5 +31,5 @@
             }
         }
     }
-    
 }
+    

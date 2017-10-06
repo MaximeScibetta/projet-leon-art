@@ -1,0 +1,211 @@
+.wrapper{
+    @include mq($from: 0px){
+        .introduction{
+            background-image: url('../images/home.jpg');
+            background-size: cover;
+            background-position-x: -366px;
+            height: 100vh;
+            &__tagline{
+                font-family: 'RobotoL';
+                color: $white;
+                text-align: center;
+            }
+            &__cta{
+                .btn{
+                    display: inline-block;
+                    width: 139px;
+                }
+                .btn:nth-child(1){
+                    margin-right: $inuit-global-spacing-unit-small;
+                }
+                
+            }
+        }
+        .activitie{
+            &__item{
+                color: $white;
+                height: 160px;
+                h3{
+                    font-family: 'Rubik';
+                    span{
+                        border-bottom: 1px solid $yellow;
+                    }
+                }
+                &:nth-child(2){
+                    background-image: url('../images/Artistes.jpg');
+                }
+                &:nth-child(3){
+                    background-image: url('../images/Concerts.jpg');
+                }
+                &:nth-child(4){
+                    background-image: url('../images/Art_urbains.jpg');
+                }
+                &:nth-child(5){
+                    background-image: url('../images/Expositions.jpg');
+                }
+            }
+        }
+        .artist{
+            .item{
+                overflow-y: hidden;
+                position: relative;
+                width: 320px; height: 150px;
+                perspective: 30rem;
+                &:hover .item__front{
+                    transform: rotateY(180deg);
+                }
+                &:hover .item__back{
+                    transform: rotateY(360deg);
+                }
+                &__front, &__back{
+                    position: absolute;
+                    width: 100%; height: 100%;
+                    transition: transform 1s;
+                    backface-visibility:hidden;
+                }
+                &__front{
+                    img{
+                        width: 100%;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                    h3{
+                        font-family: 'RobotoB';
+                        font-size: 20px;
+                        width: 155px;
+                        word-break: break-word;
+                        color: $white;
+                        text-transform: uppercase;
+                    }
+                    p{
+                        font-family: 'RobotoL';
+                        font-size: 16px;
+                        color: $white;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                    }
+                }
+                &__back{
+                    background-color: $yellow;
+                    transform: rotateY(180deg);
+                    p{
+                        color: $purple;
+                        font-family: 'RobotoB';
+                        text-transform: uppercase;
+                        text-align: center;
+                        word-break: break-word;
+                        width: 107px;
+                        margin: 0 auto;
+                    } 
+                }
+            }
+        }
+        .event{
+            &__item{
+                position: relative;
+                .head{
+                    height: 100px;
+                    overflow-y: hidden;
+                    .date, .date+img{
+                        display: inline-block;
+                    }
+                    .date{
+                        height: 100px;
+                        width: 100px;
+                        background-color: $yellow;
+                        span{
+                            color: $purple;
+                            font-family: 'RobotoB';
+                            font-size: 27px;
+                            text-transform: uppercase;
+                            text-align: center;
+                            vertical-align: middle;
+                            padding-top: 25%;
+                            display: block;
+                        }
+                        &+img{
+                            vertical-align: top;
+                        }
+                    }
+                }
+                .title{
+                    font-family: 'RobotoB';
+                    width: 230px;
+                }
+                .hour, address{
+                    font-family: 'RobotoL';
+                    svg{
+                        height: 15px;
+                    }
+                }
+                >svg{
+                    height: 20px;
+                    position: absolute;
+                    top: 115px;
+                    right: 0;
+                }
+            }
+        }
+        .instagram{
+            svg{
+                width: 20px;
+                display: block;
+                margin: 0 auto;
+            }
+            h2{
+                color: $black;
+                text-transform: uppercase;
+                text-align: center;
+                >span{
+                    font-family: 'RobotoL';
+                    font-size: 16px;
+                    display: block;
+                    letter-spacing:3px;
+                }
+            }
+            &__gallery{
+                text-align: center;
+                img{
+                    width: 145px;
+                }
+            }
+        }
+        .twitter{
+            position: relative;
+            svg{
+                height: 20px;
+                display: block;
+                margin: 0 auto;
+            }
+            h2{
+                color: $black;
+                text-transform: uppercase;
+                text-align: center;
+                >span{
+                    font-family: 'RobotoL';
+                    font-size: 16px;
+                    display: block;
+                    letter-spacing:3px;
+                }
+            }
+            &__item{
+                text-align: center;
+                p{
+                    width: 235px;
+                    margin: 0 auto;
+                    &+p{
+                        width: 100%;
+                    }
+                }
+            }
+            #arrowLeft, #arrowRight{
+                height: 20px;
+                position: absolute;
+                top: 55%;
+            }
+            #arrowRight{
+                right: 0;
+            }
+        }
+    }
+} 

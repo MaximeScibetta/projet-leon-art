@@ -161,14 +161,27 @@ $inuit-fractions: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18;
 
 
 
-
+// GENERIC PERSO.
+@import "generic/generic.reset";
 
 // SETTINGS PERSO.
 @import "settings/settings.colors";
 @import "settings/settings.fontface";
 
+// ELEMENTS PERSO.
+@import "elements/elements.headings";
+
 // COMPONENTS PERSO.
-@import "components/components.menu";
 @import "components/components.grid";
-@import "components/components.searchicon";
 @import "components/components.hamburgermenu";
+@import "components/components.menu";
+@import "components/components.searchicon";
+@import "components/components.countdown";
+@import "components/components.button";
+
+// PAGES PERSO.
+@import "pages/pages.home";
+
+body{
+    font-family: $core;
+}
