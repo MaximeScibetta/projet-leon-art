@@ -1,0 +1,89 @@
+@include mq($from: 0px){
+    footer{
+        background-color: $purple;
+        color: $white;
+        h3{
+            font-family: 'RobotoB';
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        .newsletter{
+            background-color: $yellow;
+            color: $purple;
+            input#name{
+                background-color: inherit;
+                border: 1px solid $purple;
+                border-radius: 5px;
+                padding: $inuit-global-spacing-unit-tiny;
+                width: 100%;
+            }
+            input[type="submit"]{
+                background-color: $purple;
+                border: none;
+                padding: $inuit-global-spacing-unit-small;
+                color: $yellow;
+                text-transform: uppercase;
+                font-size: 20px;
+                font-family: 'RobotoL';
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        .about{
+            h3{
+                font-size: 20px;
+                font-family: 'Whoopass';
+                display: inline-block;
+                width: 20%;
+                text-align: center;
+                word-wrap: break-word;
+                line-height: 0.9;
+                margin: 5% auto 0;
+            }
+            .social{
+                text-align: center;
+                p{
+                    display: inline-block;
+                    svg{
+                        height: 30px;
+                    }
+                }
+            }
+            h3+p{
+                margin-left: 12px;
+                display: inline-block;
+                width: 74%;
+                vertical-align: top;
+            }
+        }
+        .partner{
+            svg{
+                width: 70px;
+                margin: $inuit-global-spacing-unit-small $inuit-global-spacing-unit-small 0 0;
+            }
+        }
+        .lastActu{
+           &__item{
+               margin-top: $inuit-global-spacing-unit-small;
+               position: relative;
+                img{
+                    width: 50px;
+                    margin-right: $inuit-global-spacing-unit-small;
+                }
+                .info{
+                    display: inline-block;
+                    vertical-align: top;
+                    &__title{
+                        font-family: 'RobotoM';
+                    }
+                }
+                svg{
+                    fill: $white;
+                    width: 20px;
+                    position: absolute;
+                    right: 0;
+                }
+           }
+        }
+    }
+}

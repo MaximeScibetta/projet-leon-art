@@ -173,7 +173,7 @@ get_header();
             <circle id="XMLID_83_" style="fill:url(#XMLID_4_);" cx="418.306" cy="134.072" r="34.149"/>
         </g>
     </svg>
-    <h2>
+    <h2 class="u-margin-top-tiny">
         <span>Nous suivre</span>
         Instagram feed
     </h2>
@@ -198,7 +198,7 @@ get_header();
             </g>
         </g>
     </svg>
-    <h2>
+    <h2 class="u-margin-top-tiny">
         <span>Nous suivre</span>
         Twitter feed
     </h2>
