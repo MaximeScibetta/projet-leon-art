@@ -1,6 +1,9 @@
-
 ul#countdown {
     text-align: center;
+    @include mq($from: tablet){
+        max-width: 740px;
+        margin: 0 auto;
+    }
     li {
         display: inline-block;
         width: 30%;

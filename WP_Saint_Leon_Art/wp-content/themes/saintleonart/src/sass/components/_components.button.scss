@@ -9,6 +9,11 @@
     font-family: 'RobotoL';
     border-radius: 5px;
     padding: 8px 6px;
+    @include mq($from: tablet){
+        font-size: 20px;
+        padding: 12px 6px;   
+        max-width: 500px;
+    }
     &-edge{
         display: block;
         color: $purple;

@@ -9,11 +9,35 @@
                 font-family: 'RobotoL';
                 color: $white;
                 text-align: center;
+                font-size: 20px;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            @include mq($from: tablet){
+                &__container{
+                    max-width: 550px;
+                    margin: 0 auto;
+                    position: relative;
+                }
+                h2, &__tagline{
+                    display: inline-block;
+                }
+                &__tagline{
+                    text-align: left;
+                    padding-left: 24px !important;
+                    position: absolute;
+                    top: 92px;
+                    right: 0;
+                    border-left: 1px solid;
+                }
             }
             &__cta{
+                text-align: center;
+                max-width: 740px;
+                margin: 0 auto;
                 .btn{
                     display: inline-block;
-                    width: 139px;
+                    width: 46%;
                 }
                 .btn:nth-child(1){
                     margin-right: $inuit-global-spacing-unit-small;
@@ -22,35 +46,117 @@
             }
         }
         .activitie{
+            h2{
+                padding-left: 5.55556%;
+            }
+            @include mq($from: tablet){
+                &__flex{
+                    margin: 0 auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding: 0 5.55556%;
+                }
+                h2{
+                    margin-bottom: $inuit-global-spacing-unit;
+                    flex-basis: 100%;
+                }
+            }
             &__item{
                 color: $white;
                 height: 160px;
+                position: relative;
+                @include mq($from: desktop){
+                    height: 300px;
+                }
+                position: relative;
+                background-size: cover;
+                @include mq($from: tablet){
+                    flex-basis:48.44448%;
+                    &:nth-child(1){
+                        margin-top: 0 !important;
+                        margin-bottom: $inuit-global-spacing-unit;
+                    }
+                }
                 h3{
                     font-family: 'Rubik';
+                    padding: $inuit-global-spacing-unit 0 0 $inuit-global-spacing-unit;
+                    @include mq($from: desktop){
+                        padding: $inuit-global-spacing-unit-large 0 0 $inuit-global-spacing-unit-large;
+                    }
                     span{
                         border-bottom: 1px solid $yellow;
                     }
+                    &+p{
+                        margin-top:  $inuit-global-spacing-unit-small;
+                        padding: 0 $inuit-global-spacing-unit;
+                        @include mq($from: desktop){
+                            margin-top:  $inuit-global-spacing-unit-large;
+                            padding: 0 $inuit-global-spacing-unit-large;
+                        }
+                    }
                 }
-                &:nth-child(2){
+                &:nth-child(1){
                     background-image: url('../images/Artistes.jpg');
                 }
-                &:nth-child(3){
+                &:nth-child(2){
                     background-image: url('../images/Concerts.jpg');
                 }
-                &:nth-child(4){
+                &:nth-child(3){
                     background-image: url('../images/Art_urbains.jpg');
                 }
-                &:nth-child(5){
+                &:nth-child(4){
                     background-image: url('../images/Expositions.jpg');
+                }
+                .btn{
+                    margin: 0 $inuit-global-spacing-unit-large !important;
+                    position: absolute;
+                    bottom: 48px;
+                    width: 78%;
+                }
+                svg{
+                    display: none;
+                }
+                @include mq($from: 0px, $until: desktop){
+                    .btn{
+                        display: none;
+                    }
+                    svg{
+                        fill: $white;
+                        height: 20px; 
+                        position: absolute;
+                        top: $inuit-global-spacing-unit;
+                        right: 0;
+                        display: block;
+                    }
+                }
+            }
+            .btn{
+                margin: 0 5.55556%;
+                @include mq($from: tablet){
+                    margin: 0 auto;                    
                 }
             }
         }
         .artist{
+            h2{
+                padding-left: 5.55556%;
+            }
+            @include mq($from: tablet){
+                .o-layout--flush{
+                    margin: 0 auto;
+                }
+            }
             .item{
-                overflow-y: hidden;
+                overflow: hidden;
                 position: relative;
-                width: 320px; height: 150px;
+                width: 100%; 
+                height: 150px;
                 perspective: 30rem;
+                @include mq($from: tablet){
+                    //margin-top: 0 !important;
+                    height: 350px;
+                }
                 &:hover .item__front{
                     transform: rotateY(180deg);
                 }
@@ -59,7 +165,8 @@
                 }
                 &__front, &__back{
                     position: absolute;
-                    width: 100%; height: 100%;
+                    width: 100%; 
+                    height: 100%;
                     transition: transform 1s;
                     backface-visibility:hidden;
                 }
@@ -67,7 +174,12 @@
                     img{
                         width: 100%;
                         position: absolute;
+                        top: 0;left: 0;
                         z-index: -1;
+                        @include mq($from: tablet){
+                            width: auto;
+                            left: -50%;
+                        }
                     }
                     h3{
                         font-family: 'RobotoB';
@@ -76,6 +188,9 @@
                         word-break: break-word;
                         color: $white;
                         text-transform: uppercase;
+                        @include mq($from: tablet){
+                            padding-top: 250px !important;
+                        }
                     }
                     p{
                         font-family: 'RobotoL';
@@ -96,25 +211,152 @@
                         word-break: break-word;
                         width: 107px;
                         margin: 0 auto;
+                        @include mq($from: tablet){
+                            padding-top: 100px !important;
+                        }
                     } 
+                }
+                &:nth-child(1){
+                    background-image: url('../images/bastien.jpg');
+                    background-size: cover;
+                    background-position-x: center; 
+                }
+                &:nth-child(2){
+                    background-image: url('../images/maxime.jpg');
+                    background-size: cover;
+                    background-position-x: center; 
+                }
+                &:nth-child(3){
+                    background-image: url('../images/mehdi.jpg');
+                    background-size: cover;
+                    background-position-x: center; 
+                }
+                &:nth-child(4){
+                    background-image: url('../images/alexandre.jpg');
+                    background-size: cover;
+                    background-position-x: center; 
+                }
+                @include mq($from: desktop, $until: 4000px){
+                    &:not(:last-of-type){
+                        margin-right: 3.1%;
+                    }
+                }
+            }
+            @include mq($from: tablet, $until: desktop){
+                .item:not(:nth-child(2)):not(:nth-child(4)){
+                    margin-right:10.5%;
+                }
+                .item:nth-child(3),
+                .item:nth-child(4){
+                    margin-top: $inuit-global-spacing-unit ;
+                }
+            }
+            .btn{
+                margin: 0 5.55556%;
+                @include mq($from: tablet){
+                    margin: 0 auto;                    
                 }
             }
         }
         .event{
-            &__item{
-                position: relative;
-                .head{
-                    height: 100px;
-                    overflow-y: hidden;
-                    .date, .date+img{
-                        display: inline-block;
-                    }
-                    .date{
+            .btn{
+                margin: 0 5.55556%;
+                @include mq($from: tablet){
+                    margin: 0 auto;                    
+                }
+            }
+            h2{
+                padding-left: 5.55556%;
+            }
+            @include mq($from: 0px, $until: tablet){
+                &__item{
+                    position: relative;
+                    margin-top: $inuit-global-spacing-unit;
+                    margin: $inuit-global-spacing-unit 5.55556% 0;
+                    .head{
                         height: 100px;
-                        width: 100px;
+                        overflow-y: hidden;
+                        .date, .date+img{
+                            display: inline-block;
+                        }
+                        .date{
+                            height: 100px;
+                            width: 100px;
+                            background-color: $yellow;
+                            span{
+                                color: $purple;
+                                font-family: 'RobotoB';
+                                font-size: 27px;
+                                text-transform: uppercase;
+                                text-align: center;
+                                vertical-align: middle;
+                                padding-top: 25%;
+                                display: block;
+                            }
+                            &+img{
+                                vertical-align: top;
+                            }
+                        }
+                    }
+                    .title{
+                        font-family: 'RobotoB';
+                        width: 230px;
+                    }
+                    .hour, address{
+                        font-family: 'RobotoL';
+                        svg{
+                            height: 15px;
+                        }
+                    }
+                    >svg{
+                        height: 20px;
+                        position: absolute;
+                        top: 115px;
+                        right: 0;
+                    }
+                }
+                &__item:not(:first-of-type){
+                    display: none;
+                }
+            }
+            @include mq($from: tablet, $until: 4000px){
+                &__item:first-of-type{
+                    margin-top: $inuit-global-spacing-unit;
+                }
+                &__item:nth-child(2n+2){
+                    .date{
+                        background-color: $purple;
+                    }
+                    span{
+                        color: $yellow;
+                    }
+                }
+                &__item:nth-child(2n+1){
+                    .date{
                         background-color: $yellow;
+                    }
+                    span{
+                        color: $purple;
+                    }
+                }
+                &__item{
+                    position: relative;
+                    margin-top: $inuit-global-spacing-unit-tiny;
+                    margin:0 5.55556%;
+                    .head{
+                        width: 260px;
+                        height: 100px;
+                        overflow-y: hidden;
+                        display: inline-block;
+                        .date, .date+img{
+                            display: inline-block;
+                        }
+                        .date{
+                            height: 100px;
+                            width: 100px;
+                            vertical-align: top;
+                        }
                         span{
-                            color: $purple;
                             font-family: 'RobotoB';
                             font-size: 27px;
                             text-transform: uppercase;
@@ -125,28 +367,47 @@
                         }
                         &+img{
                             vertical-align: top;
+                            width: 155px;
                         }
                     }
-                }
-                .title{
-                    font-family: 'RobotoB';
-                    width: 230px;
-                }
-                .hour, address{
-                    font-family: 'RobotoL';
-                    svg{
-                        height: 15px;
+                    .content{
+                        display: inline-block;  
+                        vertical-align: top;
                     }
-                }
-                >svg{
-                    height: 20px;
-                    position: absolute;
-                    top: 115px;
-                    right: 0;
+                    .title{
+                        font-family: 'RobotoB';
+                        width: 230px;
+                        vertical-align: top;
+                        margin-top: 0 !important;
+                    }
+                    .hour, address{
+                        font-family: 'RobotoL';
+                        svg{
+                            height: 15px;
+                        }
+                    }
+                    >svg{
+                        height: 20px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                    @include mq($from: desktop, $until: 4000px){
+                        .title, .hour, address{
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-top: 3px !important;
+                        }
+                        .content{
+                            margin-top: 30px;
+                        }
+                    }
                 }
             }
         }
         .instagram{
+            margin: 0 5.55556%;
+            position: relative;
             svg{
                 width: 20px;
                 display: block;
@@ -163,10 +424,29 @@
                     letter-spacing:3px;
                 }
             }
+            @include mq($from: 0px, $until: tablet){
+                #arrowRight, #arrowLeft{
+                    display: none;
+                }
+            }
+            #arrowRight, #arrowLeft{
+                height: 20px;
+                position: absolute;
+                top: 61%;
+            }
+            #arrowLeft{
+                left: -42px;
+            }
+            #arrowRight{
+                right: -42px;
+            }
             &__gallery{
                 text-align: center;
                 img{
-                    width: 145px;
+                    width: 49%;
+                    @include mq($from: tablet){
+                        width: 24%;
+                    }
                 }
             }
         }
@@ -191,8 +471,11 @@
             &__item{
                 text-align: center;
                 p{
-                    width: 235px;
+                    max-width: 235px;
                     margin: 0 auto;
+                    @include mq($from: tablet){
+                        max-width: 500px;
+                    }
                     &+p{
                         width: 100%;
                     }
@@ -202,6 +485,9 @@
                 height: 20px;
                 position: absolute;
                 top: 55%;
+                @include mq($from: tablet){
+                    top: 63%;
+                }
             }
             #arrowRight{
                 right: 0;
