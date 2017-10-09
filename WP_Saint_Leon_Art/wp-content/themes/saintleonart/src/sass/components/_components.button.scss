@@ -9,6 +9,11 @@
     font-family: 'RobotoL';
     border-radius: 5px;
     padding: 8px 6px;
+    &:hover{
+        color: $yellow;
+        background-color: $purple;
+        cursor: pointer;
+    }
     @include mq($from: tablet){
         font-size: 20px;
         padding: 12px 6px;   
@@ -27,5 +32,14 @@
         border: 1px solid $purple;
         width: 150px;
         margin: 0 auto;
+    }
+    &--cta{
+        margin: 0 $gutters;
+        @include mq($from: 500px){
+            font-size: 20px;
+            padding: 12px 6px;   
+            max-width: 500px;
+            margin: 0 auto;
+        }
     }
 }

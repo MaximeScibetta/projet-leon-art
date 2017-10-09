@@ -1,5 +1,6 @@
 body{
-    @include mq($from: 0px){
+    position: relative;
+    @include mq($from: 0px, $until: desktop){
         overflow-x: hidden;
         header{
             background-color: $purple;
@@ -28,6 +29,41 @@ body{
                 transform: translateX(0);
                 transition: transform 0.5s;
                 width: 300px;
+            }
+        }
+    }
+    @include mq($from: desktop, $until: 4000px){
+        header{
+            position: fixed;
+            z-index: 10;
+            padding: $inuit-global-spacing-unit 0 0 0;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            .hamburger{
+                display: none;
+            }
+            .site-nav{
+                width: 727px;
+                margin: 0 auto;
+                .menu{
+                    &__item{
+                        display: inline-block;
+                        margin-right: $inuit-global-spacing-unit-large;
+                        &:last-of-type{
+                            margin-right: 0;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $white;
+                            text-transform: uppercase;
+                            padding: $inuit-global-spacing-unit-tiny 0 0 0;
+                            &:hover{
+                                border-top: 2px solid $white;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

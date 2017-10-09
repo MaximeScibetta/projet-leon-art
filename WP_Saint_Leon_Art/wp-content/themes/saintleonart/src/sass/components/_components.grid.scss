@@ -1,6 +1,7 @@
 .grid{
     position: fixed;
     width: 100%;
+    z-index: -10;
     &__col{
         height: 100vh;
         &-c{

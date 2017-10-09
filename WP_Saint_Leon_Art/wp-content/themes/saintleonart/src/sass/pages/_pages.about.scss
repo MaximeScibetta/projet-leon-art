@@ -1,0 +1,472 @@
+.wrapper{
+    @include mq($from: 0px){
+        .introduction{
+            p{
+                color: $white;
+                margin: 0 $gutters;
+                max-width: 500px;
+                @include mq($from: 576px){
+                    margin: 0 auto;
+                }
+            }
+        }
+        .score{
+            overflow-y: hidden;
+            h2{
+                padding: 96px 96px 24px;
+                background-color: $yellow;
+                //display: block;
+                //margin: 0 auto;
+                border-radius: 5000px;
+                position: relative;
+                text-align: center;
+                top: -156px;
+                max-width: 500px;
+                margin: 0 auto;
+                span{
+                    display: block;
+                    margin: 80px 0 0 0;
+                }
+            }
+            &__flex{
+                margin-top: -220px;
+                display: flex;
+                flex-direction: column;
+                @include mq($from: tablet){
+                flex-direction: row;
+                }
+                justify-content: flex-start;
+                .flex__item{
+                    width: 100%;
+                    @include mq($from: tablet){
+                        display: inline-block;
+                        width: 33.3333333333333333%;
+                        &:nth-of-type(1){
+                            .score__item{
+                                padding-top: 72px;
+                            }
+                        }
+                        .score__item{
+                            height: $inuit-global-spacing-unit*10;
+                        }
+                    }
+                    background-size: cover;
+                    height: $inuit-global-spacing-unit*10;
+                    &:nth-of-type(1){
+                        background-image: url('../images/artistes.jpg');
+                        height: $inuit-global-spacing-unit*10;
+                        .score__item{
+                            padding-top: $inuit-global-spacing-unit-huge;
+                            @include mq($from: tablet){
+                                padding-top: 72px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(2){
+                        background-image: url('../images/artistes.jpg');
+                    }
+                    &:nth-of-type(3){
+                        background-image: url('../images/expositions.jpg');
+                    }
+                }
+            }
+            &__item{
+                font-family: 'RobotoB';
+                color: $white;
+                text-transform: uppercase;
+                font-size: 80px;
+                text-align: center;
+                padding-top: 72px;
+                span{
+                    font-size: 20px;
+                    display: block;
+                }
+            }
+        }
+        .gallery{
+            h2{
+                margin: 0 $gutters;
+            }
+            &__cta{
+               .btn--cta{
+                    display: none;
+               }
+               .btn--mobile{
+                   display: none;
+               }
+               @include mq($until: desktop){
+                    .btn--mobile{
+                        display: block;
+                        padding: $inuit-global-spacing-unit-large 0;
+                        text-align: center;
+                        background-color: $yellow;
+                        color: $purple;
+                        h3{
+                            font-family: 'Rubik';
+                            font-size: 20px;
+                        }
+                        a{
+                            svg{
+                                height: 40px;
+                                fill: $purple;
+                            }
+                            &:hover svg{
+                                fill: $red;
+                            }
+                        }
+                        a:nth-of-type(2){
+                            margin: 0  72px;
+                        }
+                }
+               }
+               @include mq($from: desktop){
+                   text-align: center;
+                    .btn--cta{
+                        display: inline-block;
+                        width: 30%;
+                        max-width: 300px;
+                        &:not(:last-of-type){
+                            margin-right: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .asbl{
+            h2{
+                padding: 24px $gutters;
+                position: relative;
+                background-color: $yellow;
+                &:after{
+                    display: block;
+                    content:"";
+                    width: 0;
+                    height: 0;
+                    border: 0 solid transparent;
+                    border-right-width: 26px;
+                    border-left-width: 26px;
+                    border-bottom: 26px solid $yellow;
+                    position: absolute;
+                    top: 100px;
+                    @include mq($from: 457px){
+                        top: 120px; 
+                    }
+                    left: 46%;
+                    transform: rotate(180deg);
+                }
+                .sla{
+                    display: inline-block;
+                    font-size: 20px;
+                    font-family: 'Whoopass';
+                    width: 55px;
+                    text-align: center;
+                    word-wrap: break-word;
+                    line-height: 0.9;
+                    margin: 0 auto;
+                    &+span{
+                        position: absolute;
+                        top: 30%;
+                        margin:0 $gutters 0 6px;
+                        @include mq($from: 457px){
+                            top: 40%; 
+                        }
+                    }
+                }
+                @include mq($from: 457px){
+                    text-align: center;
+                    .sla+span{
+                        display: block;
+                        position: relative;
+                    }
+                }
+            }
+            p{
+                margin: $inuit-global-spacing-unit-large $gutters 0;
+            }
+            img{
+                display: none;
+            }
+            @include mq($from: tablet){
+                h2{
+                    background-color: inherit;
+                    padding: 0;
+                    text-align: inherit;
+                    margin: 0 $gutters;
+                    width: auto;
+                    &:after{
+                        display: none;
+                    }
+                    .sla{
+                        &+span{
+                            display: inline-block;
+                            position: absolute;
+                            top: 30%;
+                        }
+                    }
+                }
+                .flex{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    p{
+                        margin: $inuit-global-spacing-unit $gutters 0;
+                        width: 40%;
+                       // display: inline-block;
+                    }
+                    img{
+                        display: flex;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        .team{
+            @include mq($from: 0px, $until: tablet){
+                display: none;
+            }
+            svg{
+                height: 18.75px;
+                width: 18.75px;
+            }
+            h2{
+                margin: $inuit-global-spacing-unit-huge $gutters 0;
+            }
+            &__container.flex{
+                margin: $inuit-global-spacing-unit $gutters 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .flex__item{
+                    width: 44.44444%;
+                    position: relative;
+                    @include mq($from: tablet, $until: desktop){
+                        &:nth-child(3),
+                        &:nth-child(4){
+                            margin: $inuit-global-spacing-unit 0;
+                        }
+                    }
+                    
+                    @include mq($from: desktop){
+                        &:nth-child(4),
+                        &:nth-child(5),
+                        &:nth-child(6){
+                            margin: $inuit-global-spacing-unit 0 0 0;
+                        }
+                    }
+                    &:nth-child(2n+2){
+                       // margin-left: 5%;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    .info{
+                        position: absolute;
+                        bottom: 34px;
+                        background-color: $purple;
+                        width: 100%;
+                        padding: $inuit-global-spacing-unit 0;
+                        color: $yellow;
+                        font-family: 'RobotoR';
+                        text-align: center;
+                        .name{
+                            text-transform: uppercase;
+                            font-family: 'RobotoB';
+                        }
+                    }
+                    .social{
+                        position: absolute;
+                        bottom: 0px;
+                        background-color: $yellow;
+                        width: 100%;
+                        padding: $inuit-global-spacing-unit-tiny 0;
+                        color: $purple;
+                        font-family: 'RobotoR';
+                        text-align: center;
+                        svg{
+                            vertical-align: -webkit-baseline-middle;
+                            fill: $purple;
+                            &:hover{
+                                fill: $red;
+                            }
+                            &:nth-of-type(2),
+                            &:nth-of-type(3),
+                            &:nth-of-type(4){
+                                margin: 0 0 0 $inuit-global-spacing-unit;
+                            }
+                        }
+                    }
+                }
+                @include mq($from: desktop){
+                    .flex__item{
+                        width: 30%;
+                    }
+                }
+            }
+        }
+        .press{
+            @include mq($until: tablet){
+                h2{
+                    padding: 24px $gutters;
+                    margin: $inuit-global-spacing-unit auto $inuit-global-spacing-unit-large;
+                    position: relative;
+                    background-color: $yellow;
+                    text-align: center;
+                    &:after{
+                        display: block;
+                        content:"";
+                        width: 0;
+                        height: 0;
+                        border: 0 solid transparent;
+                        border-right-width: 26px;
+                        border-left-width: 26px;
+                        border-bottom: 26px solid $yellow;
+                        position: absolute;
+                        top: 68px;
+                        left: 46%;
+                        transform: rotate(180deg);
+                    } 
+                }
+            }
+            &__container{
+                .container__item{
+                    height: 75px;
+                    margin-top: $inuit-global-spacing-unit-small;
+                    position: relative;
+                    time{
+                        float: left;
+                        width: 75px; height: 75px;
+                        font-family: 'RobotoB';
+                        font-size: 27px;
+                        text-align: center;
+                        padding-top: 10px;
+                    }
+                    &:nth-child(2n+2){
+                        time{
+                            color: $yellow;
+                            background-color: $purple;
+                        }
+                    }
+                    &:nth-child(2n+1){
+                        time{
+                            color: $purple;
+                            background-color: $yellow;
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                        &.title{
+                            max-width: 100%;
+                            margin-left: $inuit-global-spacing-unit-tiny + 75px;
+                            margin-right: 46px;
+                            margin-bottom: $inuit-global-spacing-unit-tiny;
+                        }
+                        &.size{
+                            text-transform: uppercase;
+                            display: inline-block;
+                            font-family: 'RobotoL';
+                            margin-left: $inuit-global-spacing-unit-tiny;
+                            text-align: right;
+                        }
+                        &.format{
+                            font-family: 'RobotoL';
+                            display: inline-block;
+                            margin-left: $inuit-global-spacing-unit-tiny;
+                            text-align: right;
+                            svg{
+                                width: 20px;
+                            }
+                        }
+                    }
+                    &:nth-child(2n+2){
+                        a.download{
+                            color: $yellow;
+                            background-color: $purple;
+                            svg{
+                                fill: $yellow;
+                            }
+                            &:hover{
+                                color: $purple;
+                                background-color: $yellow;
+                                svg{
+                                    fill: $purple;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(2n+1){
+                        a.download{
+                            color: $purple;
+                            background-color: $yellow;
+                            svg{
+                                fill: $purple;
+                            }
+                            &:hover{
+                                color: $yellow;
+                                background-color: $purple;
+                                svg{
+                                    fill: $yellow;
+                                }
+                            }
+                        }
+                    }
+                    a.download{
+                        
+                        float: inherit;
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        height: 75px;
+                        width: 40px;
+                        svg{
+                            width: 28px;
+                            margin: 18px 6px 0;
+                        }
+                    }
+                }
+            }
+            @include mq($from: tablet){
+                h2{
+                    margin: $inuit-global-spacing-unit-huge $gutters 0;
+                }
+                .container{
+                    margin: $inuit-global-spacing-unit $gutters 0;
+                    &__item{
+                        position: relative;
+                        time{
+                            float: inherit;
+                            display: inline-block;
+                        }
+                        p{
+                            &.title{
+                                display: inline;
+                                margin-left: 6px;
+                                max-width: 100%;
+                                vertical-align: top;
+                            }
+                            &.format,
+                            &.size{
+                                position: absolute;
+                                bottom: 24px;
+                                left: 81px;
+                            }
+                            &.format{
+                                left: 155px;
+                            }
+                        }
+                        a.download{
+                            // float: inherit;
+                            // position: absolute;
+                            // top: 54px;
+                            // right: 0px;
+                        }
+                    }
+                }
+            }
+            .btn--cta{
+                margin-top: $inuit-global-spacing-unit;
+            }
+            
+        }
+    }
+}
