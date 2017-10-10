@@ -32,6 +32,11 @@
         border: 1px solid $purple;
         width: 150px;
         margin: 0 auto;
+        &:hover{
+            color: $yellow;
+            background-color: $purple;
+            cursor: pointer;
+        }
     }
     &--cta{
         margin: 0 $gutters;
@@ -41,5 +46,9 @@
             max-width: 500px;
             margin: 0 auto;
         }
+    }
+    &--more{
+        padding: 40px;
+        margin: -40px;
     }
 }

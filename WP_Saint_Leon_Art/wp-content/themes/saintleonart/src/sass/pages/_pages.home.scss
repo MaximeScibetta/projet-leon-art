@@ -11,6 +11,30 @@
                 font-size: 20px;
                 max-width: 300px;
                 margin: 0 auto;
+                margin-top: $inuit-global-spacing-unit !important; 
+            }
+            h2{
+                padding-top: $inuit-global-spacing-unit-huge; 
+            }
+            @include mq($from: tablet){
+                &__container{
+                    h2{
+                        padding-top: $inuit-global-spacing-unit * 6; 
+                    }
+                    .introduction__tagline{
+                        margin-top: $inuit-global-spacing-unit * 3 !important; 
+                    }
+                }
+            }
+            @include mq($from: desktop){
+                &__container{
+                    h2{
+                        padding-top: $inuit-global-spacing-unit * 8; 
+                    }
+                    .introduction__tagline{
+                        margin-top: $inuit-global-spacing-unit * 5 !important; 
+                    }
+                }
             }
             @include mq($from: tablet){
                 &__container{
@@ -274,7 +298,8 @@
                     margin: $inuit-global-spacing-unit 5.55556% 0;
                     .head{
                         height: 100px;
-                        overflow-y: hidden;
+                        overflow: hidden;
+                        position: relative;
                         .date, .date+img{
                             display: inline-block;
                         }
@@ -294,6 +319,17 @@
                             }
                             &+img{
                                 vertical-align: top;
+                                position: absolute;
+                                width: 100%;
+                            }
+                        }
+                        @include mq($from: 450px){
+                            height: 150px;
+                            .date{
+                                height: 150px;width: 150px;
+                                span{
+                                    font-size: 40px;
+                                }
                             }
                         }
                     }
@@ -307,11 +343,17 @@
                             height: 15px;
                         }
                     }
-                    >svg{
-                        height: 20px;
+                    a{
+                        
                         position: absolute;
                         top: 115px;
                         right: 0;
+                        @include mq($from: 450px){
+                            top: 165px;
+                        }
+                        svg{
+                            height: 20px;
+                        }
                     }
                 }
                 &__item:not(:first-of-type){
@@ -340,12 +382,14 @@
                 }
                 &__item{
                     position: relative;
-                    margin-top: $inuit-global-spacing-unit-tiny;
                     margin:0 5.55556%;
+                    &:not(:first-of-type){
+                        margin-top: $inuit-global-spacing-unit-small;
+                    }
                     .head{
                         width: 260px;
                         height: 100px;
-                        overflow-y: hidden;
+                        overflow: hidden;
                         display: inline-block;
                         .date, .date+img{
                             display: inline-block;
@@ -364,7 +408,8 @@
                             padding-top: 25%;
                             display: block;
                         }
-                        &+img{
+                        img{
+                            //position: absolute;
                             vertical-align: top;
                             width: 155px;
                         }
@@ -385,22 +430,24 @@
                             height: 15px;
                         }
                     }
-                    >svg{
-                        height: 20px;
+                    a{
                         position: absolute;
                         top: 0;
                         right: 0;
-                    }
-                    @include mq($from: desktop, $until: 4000px){
-                        .title, .hour, address{
-                            display: inline-block;
-                            vertical-align: top;
-                            margin-top: 3px !important;
-                        }
-                        .content{
-                            margin-top: 30px;
+                        svg{
+                            height: 20px;
                         }
                     }
+                }
+            }
+            @include mq($from: 1040px, $until: 4000px){
+                .title, .hour, address{
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-top: 3px !important;
+                }
+                .content{
+                    margin-top: 30px;
                 }
             }
         }
