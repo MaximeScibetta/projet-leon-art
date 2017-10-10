@@ -1,5 +1,9 @@
     </article>
-    <footer class="u-margin-top-huge">
+    <footer class="<?php 
+                        if( get_page_template_slug( $post->ID ) != 'template-perso.php') {
+                         echo'u-margin-top-huge';
+                        }
+                    ?>">
         <div class="newsletter u-padding-vertical-large u-padding-horizontal ">
             <h3>Rester au courant</h3>
             <p class="u-margin-top">Indiquez votre adresse email dans le champ suivant pour suivre notre actualité et vous inscrire à notre newsletter via email.</p>
@@ -240,6 +244,7 @@
         }); 
         };
     </script>
+    
     <script>
         const hamburger = document.querySelector('.hamburger');
         const search = document.querySelector('.search-icon')
@@ -256,6 +261,24 @@
             e.preventDefault()
             search.classList.toggle('open')
         });
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVA_O8C3KixYaKtQ8SbWHItWCEPHXFRao"></script>
+    <script>
+        var myCenter = new google.maps.LatLng(12.2667, -2.06667);
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 7,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map"), mapProp);
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+            marker.setMap(map);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 </body>
 </html>

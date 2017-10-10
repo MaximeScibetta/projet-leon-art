@@ -4,6 +4,9 @@
             font-size: 20px;
         }
         .introduction{
+            @include mq($from: tablet){
+                height: 80vh;
+            }
             h2{
                 padding-top: $inuit-global-spacing-unit-huge;
             }
@@ -479,7 +482,7 @@
             }
             @include mq($from: 1040px){
                 h2{
-                    margin: 0 auto;
+                    text-align: center;
                 }
                 .container{
                     &__item{

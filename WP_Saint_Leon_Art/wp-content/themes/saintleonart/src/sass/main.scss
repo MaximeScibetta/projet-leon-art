@@ -159,7 +159,11 @@ $inuit-fractions: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18;
 @import "../../node_modules/inuitcss/utilities/utilities.hide";
 
 
-
+$igsuh: $inuit-global-spacing-unit-huge;
+$igsul: $inuit-global-spacing-unit-large;
+$igsu: $inuit-global-spacing-unit;
+$igsus: $inuit-global-spacing-unit-small;
+$igsut: $inuit-global-spacing-unit-tiny;
 $gutters: 5.55556%;
 // GENERIC PERSO.
 @import "generic/generic.reset";
@@ -183,6 +187,8 @@ $gutters: 5.55556%;
 // PAGES PERSO.
 @import "pages/pages.home";
 @import "pages/pages.about";
+@import "pages/pages.perso";
+@import "pages/pages.program";
 
 body{
     font-family: $core;

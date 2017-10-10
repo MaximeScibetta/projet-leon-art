@@ -259,7 +259,7 @@
                     background-size: cover;
                     background-position-x: center; 
                 }
-                @include mq($from: desktop, $until: 4000px){
+                @include mq($from: desktop){
                     &:not(:last-of-type){
                         margin-right: 3.1%;
                     }
@@ -360,7 +360,7 @@
                     display: none;
                 }
             }
-            @include mq($from: tablet, $until: 4000px){
+            @include mq($from: tablet){
                 &__item:first-of-type{
                     margin-top: $inuit-global-spacing-unit;
                 }
@@ -440,7 +440,7 @@
                     }
                 }
             }
-            @include mq($from: 1040px, $until: 4000px){
+            @include mq($from: 1040px){
                 .title, .hour, address{
                     display: inline-block;
                     vertical-align: top;

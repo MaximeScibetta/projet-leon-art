@@ -1,0 +1,144 @@
+.wrapper{
+    @include mq($from: 0px){
+        .program{
+            *,
+            :after, :before {
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box
+            }
+            h1, h2, h3, h4 {
+                font-family: "Oswald-Medium", "SourceSansPro-Regular", sans-serif
+            }
+            .timeline{
+                max-width: 90%;
+                margin: 30px auto;
+                position: relative;
+                padding: 0 10px;
+                -webkit-transition: all .4s ease;
+                transition: all .4s ease;
+                &.day2,
+                &.day3{
+                    display: none;
+                }
+                &:before{
+                    content: "";
+                    width: 3px;
+                    height: 100%;
+                    background: #1d3557;
+                    left: 50%;
+                    top: 0;
+                    position: absolute;
+                }
+                &:after {
+                    content: "";
+                    clear: both;
+                    display: table;
+                    width: 100%;
+                }
+                .timeline-item {
+                    margin-bottom: 50px;
+                    position: relative;
+                    &:after, &:before{
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        clear: both;
+                    }
+                    .timeline-icon {
+                        background: #1d3557;
+                        width: 50px;
+                        height: 50px;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        overflow: hidden;
+                        margin-left: -23px;
+                        border-radius: 50%;
+                        svg{
+                            position: relative;
+                            top: 5px;
+                            left: 0;
+                            fill: #fff;
+                            background-color: none;
+                            width: 50px;
+                            &.st1 {
+                                font-family: 'FiraLight';
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                    .timeline-content {
+                        width: 45%;
+                        background: #fff;
+                        padding: 20px;
+                        -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, .1);
+                        box-shadow: 0 3px 0 rgba(0, 0, 0, .1);
+                        border-radius: 5px;
+                        -webkit-transition: all .3s ease;
+                        transition: all .3s ease;
+                        h2{
+                            padding: 15px;
+                            background: #1d3557;
+                            color: #fff;
+                            margin: -20px -20px 0;
+                            font-weight: 300;
+                            border-radius: 5px 5px 0 0;
+                        }
+                        span:first-of-type {
+                            margin-top: 6px;
+                        }
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 45%;
+                            top: 20px;
+                            width: 0;
+                            height: 0;
+                            border-top: 7px solid transparent;
+                            border-bottom: 7px solid transparent;
+                            border-left: 7px solid #1d3557;
+                        }
+                        &.right:before {
+                            content: '';
+                            right: 45%;
+                            left: inherit;
+                            border-left: 0;
+                            border-right: 7px solid #1d3557;
+                        }
+                        &.right {
+                            float: right;
+                        
+                        }
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            @include mq($until: tablet){
+                .timeline {
+                    margin: 30px;
+                    padding: 0;
+                    width: 90%;
+
+                }
+                .timeline .timeline-item .timeline-content {
+                    width: 90%;
+                    float: right;
+                }
+                .timeline .timeline-item .timeline-content.right:before,
+                .timeline .timeline-item .timeline-content:before {
+                    left: 10%;
+                    margin-left: -6px;
+                    border-left: 0;
+                    border-right: 7px solid #1d3557;
+                }
+                .timeline .timeline-item .timeline-icon,
+                .timeline:before {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
