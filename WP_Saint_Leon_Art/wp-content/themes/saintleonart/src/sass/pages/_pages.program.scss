@@ -1,6 +1,60 @@
 .wrapper{
     @include mq($from: 0px){
+        .information{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            position: relative;
+            top: -222px;
+            address,
+            .time{
+                width: 100%;
+                font-size: 20px;
+                svg{
+                    height: 40px;
+                    display: inline-block;
+                }
+                span{
+                    display: inline-block;
+                    width: 70%;
+                }
+            }
+            address{
+                background-color: $yellow;
+                color: $purple;
+                padding: $igsul 0;
+                text-align: left;
+                svg{
+                    fill: $purple;
+                    margin: 0 $igsu 0 $gutters;
+                }
+            }
+            .time{
+                background-color: $purple;
+                color: $white;
+                padding: $igsul 0;
+                text-align: right;
+                svg{
+                    margin: 0 $gutters 0 $igsu;
+                    fill: $white;
+                }
+            }
+            @include mq($from: desktop){
+                flex-direction: row;
+                justify-content: center;
+                top: -139px;
+                address,
+                .time{
+                    width: 40%;
+                }
+            }
+        }
         .program{
+            margin-top: -174px;
+            @include mq($from: desktop){
+                margin-top: -45px;
+            }
             *,
             :after, :before {
                 box-sizing: border-box;
@@ -17,6 +71,9 @@
                 padding: 0 10px;
                 -webkit-transition: all .4s ease;
                 transition: all .4s ease;
+                &>a{
+                    text-decoration: none;
+                }
                 &.day2,
                 &.day3{
                     display: none;
@@ -25,7 +82,7 @@
                     content: "";
                     width: 3px;
                     height: 100%;
-                    background: #1d3557;
+                    background: $purple;
                     left: 50%;
                     top: 0;
                     position: absolute;
@@ -46,7 +103,7 @@
                         clear: both;
                     }
                     .timeline-icon {
-                        background: #1d3557;
+                        background: $purple;
                         width: 50px;
                         height: 50px;
                         position: absolute;
@@ -55,22 +112,20 @@
                         overflow: hidden;
                         margin-left: -23px;
                         border-radius: 50%;
-                        svg{
-                            position: relative;
-                            top: 5px;
-                            left: 0;
-                            fill: #fff;
-                            background-color: none;
-                            width: 50px;
-                            &.st1 {
-                                font-family: 'FiraLight';
-                                font-size: 25px;
-                            }
-                        }
+                       &:after{
+                           display: block;
+                           content:'';
+                           width: 20px;height: 20px;
+                           background-color: $yellow;
+                           border-radius: 50px;
+                           position: absolute;
+                           top: 15px;right: 15px;
+                       }
                     }
                     .timeline-content {
                         width: 45%;
                         background: #fff;
+                        color: $black;
                         padding: 20px;
                         -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, .1);
                         box-shadow: 0 3px 0 rgba(0, 0, 0, .1);
@@ -78,15 +133,25 @@
                         -webkit-transition: all .3s ease;
                         transition: all .3s ease;
                         h2{
+                            font-family: 'RobotoB';
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
                             padding: 15px;
-                            background: #1d3557;
-                            color: #fff;
+                            background: $purple;
+                            color: $yellow;
                             margin: -20px -20px 0;
                             font-weight: 300;
                             border-radius: 5px 5px 0 0;
                         }
                         span:first-of-type {
-                            margin-top: 6px;
+                            margin-top: $igsu;
+                            font-family: 'RobotoB';
+                        }
+                        address{
+                            font-family: 'RobotoB';
+                        }
+                        p{
+                            margin-top: $igsut;
                         }
                         &:before {
                             content: '';
@@ -97,14 +162,14 @@
                             height: 0;
                             border-top: 7px solid transparent;
                             border-bottom: 7px solid transparent;
-                            border-left: 7px solid #1d3557;
+                            border-left: 7px solid $purple;
                         }
                         &.right:before {
                             content: '';
                             right: 45%;
                             left: inherit;
                             border-left: 0;
-                            border-right: 7px solid #1d3557;
+                            border-right: 7px solid $purple;
                         }
                         &.right {
                             float: right;
@@ -132,12 +197,132 @@
                     left: 10%;
                     margin-left: -6px;
                     border-left: 0;
-                    border-right: 7px solid #1d3557;
+                    border-right: 7px solid $purple;
                 }
                 .timeline .timeline-item .timeline-icon,
                 .timeline:before {
                     left: 0;
                 }
+            }
+            &__navigation{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $purple;
+                    border: 2px solid $purple;
+                    border-radius: 50px;
+                    padding: $igsus $igsu;
+                    &:hover,
+                    &.active{
+                        background-color: $yellow;
+                        border-color: $yellow;                        
+                    }
+                }
+                .day{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    margin: 0 $gutters;
+                    a{
+                        width: 30.52%;
+                        @include mq($from: tablet){
+                            width: 20%;
+                        }
+                        text-align: center;
+                        &:nth-child(2){
+                            margin: 0 $igsus;
+                        }
+                        @include mq($from: tablet){
+                            &:nth-child(3){
+                                margin: 0 $igsus 0 0;
+                            }
+                        }
+                        &:last-of-type{
+                            width: 100%;
+                            margin: $igsus 0;
+                            @include mq($from: tablet){
+                                width: 33%;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+                .order,
+                .map{
+                    //width: 42.2%;
+                    width: 100%;
+                    @include mq($from: 500px){
+                        width: 40%;
+                    }
+                    text-align: center;
+                    margin: 0 $gutters;
+                    @include mq($from: tablet){
+                        margin-top: $igsu !important;
+                    }
+                }
+                .order{
+                    //margin: 0 $igsu 0 $gutters;
+                    
+                    @include mq($from: 500px){
+                        margin:0 0 0 $gutters;
+                    }
+                }
+                .map{
+                    //margin-right: $gutters;
+                    margin-top: $igsus;
+                    
+                    @include mq($from: 500px){
+                        margin-top: 0;
+                        margin:0 $gutters 0 $igsu;
+                    }
+                }
+                @include mq($from: desktop){
+                    .day{
+                        width: 75%;
+                        margin: 0 0 0 $gutters;
+                        a{
+                            width: 18%;
+                            &:last-of-type{
+                                width: 39%;
+                                //margin-right: $igsus;
+                            }
+                        }
+                    }
+                    .order{
+                        width: 11%;
+                        margin: 0 !important;
+                    }
+                }
+                @include mq($from: 1200px){
+                    .day{
+                        width: 59%;
+                        margin: 0 6px 0 $gutters;
+                        a{
+                            width: 19%;
+                            &:last-of-type{
+                                width: 37%;
+                            }
+                        }
+                    }
+                    .order{
+                        width: 9%;
+                    }
+                    .map{
+                        width: 19%;
+                        margin: 0 0 0 12px !important;
+                    }
+                }
+            }
+        }
+        .map{
+            iframe{
+                width: 100%;
             }
         }
     }

@@ -9,26 +9,44 @@ get_header();
 </section>
 <div class="information">
     <address>
-        Saint Léonard 4000, Liège, Belgique
+        <svg version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
+            <g>
+                <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
+                    s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
+                <path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+                    L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
+                    C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
+                    C45.576,13.08,46.321,24.468,41.099,31.431z"/>
+            </g>
+        </svg>
+        <span>Saint Léonard 4000, Liège, Belgique</span>
     </address>
     <p class="time">
-        Du 19 août à 18:00 au 21 août à 20:00
+        <span>Du 19 août à 18:00 au 21 août à 20:00</span>
+        <svg version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
+            <g>
+                <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+                    S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+                <path d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
+            </g>
+        </svg>
     </p>
 </div>
 <section class="program">
     <div class="program__navigation">
-        <a href="">19 août</a>
-        <a href="">20 août</a>
-        <a href="">21 août</a>
-        <a href="">Trier</a>
-        <a href="">Map interactive</a>
+        <div class="day">
+            <a href="" class="active">19 août</a>
+            <a href="">20 août</a>
+            <a href="">21 août</a>
+            <a href="">Tous le programme</a>
+        </div>
+        <a href="" class="order">Trier</a>
+        <a href="" class="map">Map interactive</a>
     </div>
     <div class="timeline day1">
         <a href="">
             <div class="timeline-item">
-                <div class="timeline-icon">
-                
-                </div>
+                <div class="timeline-icon"></div>
                 <div class="timeline-content">
                     <h2>Concert de Maxime Scibetta</h2>
                     <span>12:00</span>
@@ -36,119 +54,19 @@ get_header();
                     <p>
                         Jeune artiste belge, maxime n'a pas d'inspiration pour le contenu donc écrit n'importe quoi, on fera avec.
                     </p>
-                    <a href="https://www.facebook.com/pacst.be/" class="btn" title="Visitez le site de Parcours d'artistes">Visitez leur site</a>
                 </div>
             </div>
         </a>
         <a href="">
             <div class="timeline-item">
-                <div class="timeline-icon">
-                
-                </div>
+                <div class="timeline-icon"></div>
                 <div class="timeline-content right">
                     <h2>Concert de Maxime Scibetta</h2>
                     <span>12:00</span>
-                    <address>Place saint léonard</address>
+                    <address>Rue de louveigné, 170/08, 4000, Liège</address>
                     <p>
                         Jeune artiste belge, maxime n'a pas d'inspiration pour le contenu donc écrit n'importe quoi, on fera avec.
                     </p>
-                    <a href="https://www.facebook.com/pacst.be/" class="btn" title="Visitez le site de Parcours d'artistes">Visitez leur site</a>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                
-                </div>
-                <div class="timeline-content">
-                    <h2>Concert de Maxime Scibetta</h2>
-                    <span>12:00</span>
-                    <address>Place saint léonard</address>
-                    <p>
-                        Jeune artiste belge, maxime n'a pas d'inspiration pour le contenu donc écrit n'importe quoi, on fera avec.
-                    </p>
-                    <a href="https://www.facebook.com/pacst.be/" class="btn" title="Visitez le site de Parcours d'artistes">Visitez leur site</a>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                
-                </div>
-                <div class="timeline-content right">
-                    <h2>Concert de Maxime Scibetta</h2>
-                    <span>12:00</span>
-                    <address>Place saint léonard</address>
-                    <p>
-                        Jeune artiste belge, maxime n'a pas d'inspiration pour le contenu donc écrit n'importe quoi, on fera avec.
-                    </p>
-                    <a href="https://www.facebook.com/pacst.be/" class="btn" title="Visitez le site de Parcours d'artistes">Visitez leur site</a>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                
-                </div>
-                <div class="timeline-content">
-                    <h2>Concert de Maxime Scibetta</h2>
-                    <span>12:00</span>
-                    <address>Place saint léonard</address>
-                    <p>
-                        Jeune artiste belge, maxime n'a pas d'inspiration pour le contenu donc écrit n'importe quoi, on fera avec.
-                    </p>
-                    <a href="https://www.facebook.com/pacst.be/" class="btn" title="Visitez le site de Parcours d'artistes">Visitez leur site</a>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                
-                </div>
-                <div class="timeline-content right">
-                    <h2>Concert de Maxime Scibetta</h2>
-                    <span>12:00</span>
-                    <address>Place saint léonard</address>
-                    <p>
-                        Jeune artiste belge, maxime n'a pas d'inspiration pour le contenu donc écrit n'importe quoi, on fera avec.
-                    </p>
-                    <a href="https://www.facebook.com/pacst.be/" class="btn" title="Visitez le site de Parcours d'artistes">Visitez leur site</a>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                
-                </div>
-                <div class="timeline-content">
-                    <h2>Concert de Maxime Scibetta</h2>
-                    <span>12:00</span>
-                    <address>Place saint léonard</address>
-                    <p>
-                        Jeune artiste belge, maxime n'a pas d'inspiration pour le contenu donc écrit n'importe quoi, on fera avec.
-                    </p>
-                    <a href="https://www.facebook.com/pacst.be/" class="btn" title="Visitez le site de Parcours d'artistes">Visitez leur site</a>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                
-                </div>
-                <div class="timeline-content right">
-                    <h2>Concert de Maxime Scibetta</h2>
-                    <span>12:00</span>
-                    <address>Place saint léonard</address>
-                    <p>
-                        Jeune artiste belge, maxime n'a pas d'inspiration pour le contenu donc écrit n'importe quoi, on fera avec.
-                    </p>
-                    <a href="https://www.facebook.com/pacst.be/" class="btn" title="Visitez le site de Parcours d'artistes">Visitez leur site</a>
                 </div>
             </div>
         </a>
@@ -414,5 +332,9 @@ get_header();
         </a>
     </div>
 </section> 
+<section class="map">
+    <h2>Map interactive</h2>
+    <iframe src="https://www.google.fr/maps/d/embed?mid=1nmuuAJ-lLItmVbx4dM3wAajKFHk" height="480"></iframe>
+</section>
 
 <?php get_footer(); ?>
