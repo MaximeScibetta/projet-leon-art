@@ -85,7 +85,7 @@
             }
             &__item{
                 color: $white;
-                height: 160px;
+                height: 200px;
                 position: relative;
                 width: 100%;
                 display: inline-flex;
@@ -143,17 +143,28 @@
                 }
                 .btn{
                     width: auto;
-                    margin: 0 $inuit-global-spacing-unit-large !important;
                     //position: absolute;
                     //bottom: 48px;
                    // width: 78%;
+                   margin: 0 !important;
+                   align-self: center;
+                   position: absolute;
+                   bottom: $igsu;
+                   @include mq($from: desktop){
+                       bottom: $igsul;
+                   }
                 }
                 svg{
                     display: none;
                 }
                 @include mq($from: 0px, $until: desktop){
                     .btn{
-                        display: none;
+                        //display: none;
+                        span{
+                            @include mq($from: tablet){
+                                display: none;
+                            }
+                        }
                     }
                     svg{
                         fill: $white;
@@ -166,10 +177,7 @@
                 }
             }
             .btn{
-                margin: 0 !important;
-                align-self: center;
-                position: absolute;
-                bottom: $igsul;
+                margin: 0 8.33333%;
                 @include mq($from: tablet){
                     margin: 0 auto;                    
                 }

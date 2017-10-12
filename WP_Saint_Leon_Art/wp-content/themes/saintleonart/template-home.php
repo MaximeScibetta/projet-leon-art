@@ -36,23 +36,23 @@ get_header();
         <div class="o-layout__item activitie__item u-padding-bottom u-margin-top">
             <h3 class=""><span>Artist</span>es</h3>
             <p class="">Venant de toutes là Belgique, vous pourrez y découvrire des artistes de tous les genres, avec pour chacun leur histoire et le style.</p>
-            <a href="" class="btn">Voir tous nos artistes</a>
+            <a href="" class="btn">Voir <span>tous nos artistes</span></a>
             </svg>
         </div>
         <div class="o-layout__item activitie__item u-padding-bottom">
             <h3 class=""><span>Conce</span>rts</h3>
             <p class="">De tous genre musicaux en passant par le classic en allant jusqu'au rap, vous pourrez venir dancer face à notre scène avec un bar à proximité.</p>
-            <a href="" class="btn">Voir tous nos concerts</a>
+            <a href="" class="btn">Voir <span>tous nos concerts</span></a>
         </div>
         <div class="o-layout__item activitie__item u-padding-bottom">
             <h3 class=""><span>Art ur</span>bains</h3>
             <p class="">Présent dans tous le quartier avec l'avantage qu'ils soient visible toutes l'année à n'importe quelles heures. Un art d'un autre genre en pleine émergence.</p>
-            <a href="" class="btn">Voir tous nos arts urbains</a>
+            <a href="" class="btn">Voir <span>tous nos arts urbains</span></a>
         </div>
         <div class="o-layout__item activitie__item u-padding-bottom">
             <h3 class=""><span>Expos</span>itions</h3>
             <p class="">Durant notre week-end, venez chez nos habitants découvrir nos artistes partenaire, venez disctuer avec eux et voir leur oeuvres.</p>
-            <a href="" class="btn">Voir tous nos expositions</a>
+            <a href="" class="btn">Voir <span>tous nos expositions</span></a>
         </div>
     </div>
     <a href="" class="btn u-margin-top">Voir le programme</a>

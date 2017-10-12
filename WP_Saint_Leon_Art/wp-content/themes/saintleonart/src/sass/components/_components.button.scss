@@ -8,7 +8,7 @@
     font-size: 16px;
     font-family: 'RobotoR';
     border-radius: 5px;
-    padding: 8px 6px;
+    padding: 8px 3%;
     &:hover{
         color: $white;
         background-color: $purple;
@@ -16,7 +16,7 @@
     }
     @include mq($from: tablet){
         font-size: 20px;
-        padding: 12px 6px;   
+        padding: 12px 3%;   
         max-width: 500px;
     }
     &-edge{
