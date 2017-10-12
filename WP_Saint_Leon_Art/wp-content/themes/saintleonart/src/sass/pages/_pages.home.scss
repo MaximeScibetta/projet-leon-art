@@ -75,11 +75,8 @@
             }
             @include mq($from: tablet){
                 &__flex{
-                    margin: 0 auto;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    padding: 0 8.33333%;
+                    margin: 0 $gutters;
+                    width: $gutters * 10;
                 }
                 h2{
                     margin-bottom: $inuit-global-spacing-unit;
@@ -90,19 +87,30 @@
                 color: $white;
                 height: 160px;
                 position: relative;
+                width: 100%;
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                @include mq($from: tablet){
+                    &:nth-child(2n+2){
+                        margin-left: $igsu;
+                    }
+                }
                 @include mq($from: desktop){
                     height: 300px;
                 }
                 position: relative;
                 background-size: cover;
                 @include mq($from: tablet){
-                    flex-basis:48.44448%;
+                    width: calc( (#{$gutters} * 6) - 12px );
                     &:nth-child(1){
                         margin-top: 0 !important;
                         margin-bottom: $inuit-global-spacing-unit;
                     }
                 }
                 h3{
+                    width: 100%;
                     font-family: 'Rubik';
                     padding: $inuit-global-spacing-unit 0 0 $inuit-global-spacing-unit;
                     @include mq($from: desktop){
@@ -112,6 +120,7 @@
                         border-bottom: 1px solid $yellow;
                     }
                     &+p{
+                        width: 100%;
                         margin-top:  $inuit-global-spacing-unit-small;
                         padding: 0 $inuit-global-spacing-unit;
                         @include mq($from: desktop){
@@ -133,10 +142,11 @@
                     background-image: url('../images/Expositions.jpg');
                 }
                 .btn{
+                    width: auto;
                     margin: 0 $inuit-global-spacing-unit-large !important;
-                    position: absolute;
-                    bottom: 48px;
-                    width: 78%;
+                    //position: absolute;
+                    //bottom: 48px;
+                   // width: 78%;
                 }
                 svg{
                     display: none;
@@ -156,7 +166,10 @@
                 }
             }
             .btn{
-                margin: 0 8.33333%;
+                margin: 0 !important;
+                align-self: center;
+                position: absolute;
+                bottom: $igsul;
                 @include mq($from: tablet){
                     margin: 0 auto;                    
                 }

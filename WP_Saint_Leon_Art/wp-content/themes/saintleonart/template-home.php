@@ -32,54 +32,27 @@ get_header();
 </section>
 <section class="activitie">
     <h2 class="u-margin-top-large">Venez y voir des ...</h2>
-    <div class="activitie__flex">
-        <div class="activitie__item u-padding-bottom u-margin-top">
+    <div class="activitie__flex o-layout">
+        <div class="o-layout__item activitie__item u-padding-bottom u-margin-top">
             <h3 class=""><span>Artist</span>es</h3>
             <p class="">Venant de toutes là Belgique, vous pourrez y découvrire des artistes de tous les genres, avec pour chacun leur histoire et le style.</p>
             <a href="" class="btn">Voir tous nos artistes</a>
-            <svg version="1.1" id="more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                <g>
-                    <path d="M30,16c4.411,0,8-3.589,8-8s-3.589-8-8-8s-8,3.589-8,8S25.589,16,30,16z"/>
-                    <path d="M30,44c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,44,30,44z"/>
-                    <path d="M30,22c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,22,30,22z"/>
-                </g>
             </svg>
         </div>
-        <div class="activitie__item u-padding-bottom">
+        <div class="o-layout__item activitie__item u-padding-bottom">
             <h3 class=""><span>Conce</span>rts</h3>
             <p class="">De tous genre musicaux en passant par le classic en allant jusqu'au rap, vous pourrez venir dancer face à notre scène avec un bar à proximité.</p>
             <a href="" class="btn">Voir tous nos concerts</a>
-            <svg version="1.1" id="more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                <g>
-                    <path d="M30,16c4.411,0,8-3.589,8-8s-3.589-8-8-8s-8,3.589-8,8S25.589,16,30,16z"/>
-                    <path d="M30,44c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,44,30,44z"/>
-                    <path d="M30,22c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,22,30,22z"/>
-                </g>
-            </svg>
         </div>
-        <div class="activitie__item u-padding-bottom">
+        <div class="o-layout__item activitie__item u-padding-bottom">
             <h3 class=""><span>Art ur</span>bains</h3>
             <p class="">Présent dans tous le quartier avec l'avantage qu'ils soient visible toutes l'année à n'importe quelles heures. Un art d'un autre genre en pleine émergence.</p>
             <a href="" class="btn">Voir tous nos arts urbains</a>
-            <svg version="1.1" id="more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                <g>
-                    <path d="M30,16c4.411,0,8-3.589,8-8s-3.589-8-8-8s-8,3.589-8,8S25.589,16,30,16z"/>
-                    <path d="M30,44c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,44,30,44z"/>
-                    <path d="M30,22c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,22,30,22z"/>
-                </g>
-            </svg>
         </div>
-        <div class="activitie__item u-padding-bottom">
+        <div class="o-layout__item activitie__item u-padding-bottom">
             <h3 class=""><span>Expos</span>itions</h3>
             <p class="">Durant notre week-end, venez chez nos habitants découvrir nos artistes partenaire, venez disctuer avec eux et voir leur oeuvres.</p>
             <a href="" class="btn">Voir tous nos expositions</a>
-            <svg version="1.1" id="more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                <g>
-                    <path d="M30,16c4.411,0,8-3.589,8-8s-3.589-8-8-8s-8,3.589-8,8S25.589,16,30,16z"/>
-                    <path d="M30,44c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,44,30,44z"/>
-                    <path d="M30,22c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,22,30,22z"/>
-                </g>
-            </svg>
         </div>
     </div>
     <a href="" class="btn u-margin-top">Voir le programme</a>

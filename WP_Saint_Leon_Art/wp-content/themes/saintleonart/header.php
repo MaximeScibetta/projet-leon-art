@@ -22,5 +22,5 @@
             <span class="handle"></span>
         </button>
     </header>
-    <article class="wrapper">
+    <article class="wrapper u-12/12">
         
