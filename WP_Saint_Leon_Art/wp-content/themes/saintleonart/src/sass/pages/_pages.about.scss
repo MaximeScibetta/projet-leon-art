@@ -101,6 +101,7 @@
             }
         }
         .gallery{
+            margin-bottom: $igsul;
             h2{
                 margin: 0 $gutters;
             }
@@ -150,6 +151,8 @@
             }
         }
         .asbl{
+            background-color: $grey;
+            padding: $igsul 0;
             h2{
                 padding: 24px $gutters;
                 position: relative;
@@ -238,6 +241,7 @@
             }
         }
         .team{
+            margin-top: $igsul;
             @include mq($from: 0px, $until: tablet){
                 display: none;
             }
@@ -246,7 +250,7 @@
                 width: 18.75px;
             }
             h2{
-                margin: $inuit-global-spacing-unit-huge $gutters 0;
+                margin: 0 $gutters 0;
             }
             &__container.flex{
                 margin: $inuit-global-spacing-unit $gutters 0;
@@ -346,9 +350,15 @@
                 }
             }
             &__container{
+                &>a{
+                    text-decoration: none;
+                    &:hover{
+                        background-color: $grey;
+                        cursor: pointer;
+                    }
+                }
                 .container__item{
                     height: 75px;
-                    margin-top: $inuit-global-spacing-unit-small;
                     position: relative;
                     time{
                         float: left;
@@ -363,6 +373,7 @@
                             color: $yellow;
                             background-color: $purple;
                         }
+                        background-color: $grey;
                     }
                     &:nth-child(2n+1){
                         time{
@@ -373,10 +384,14 @@
                     p{
                         font-size: 16px;
                         &.title{
+                            padding-top: $igsut;
                             max-width: 100%;
                             margin-left: $inuit-global-spacing-unit-tiny + 75px;
                             margin-right: 46px;
-                            margin-bottom: $inuit-global-spacing-unit-tiny;
+                            @include mq($from: 500px){
+                                margin-bottom: $igsut;
+                            
+                            }
                         }
                         &.size{
                             text-transform: uppercase;
@@ -402,13 +417,6 @@
                             svg{
                                 fill: $yellow;
                             }
-                            &:hover{
-                                color: $purple;
-                                background-color: $yellow;
-                                svg{
-                                    fill: $purple;
-                                }
-                            }
                         }
                     }
                     &:nth-child(2n+1){
@@ -417,13 +425,6 @@
                             background-color: $yellow;
                             svg{
                                 fill: $purple;
-                            }
-                            &:hover{
-                                color: $yellow;
-                                background-color: $purple;
-                                svg{
-                                    fill: $yellow;
-                                }
                             }
                         }
                     }
@@ -438,6 +439,13 @@
                         svg{
                             width: 28px;
                             margin: 18px 6px 0;
+                        }
+                        &:hover{
+                            color: $black;
+                            background-color: inherit;
+                            svg{
+                                fill: $black;
+                            }
                         }
                     }
                 }
@@ -456,7 +464,7 @@
                         }
                         p{
                             &.title{
-                                display: inline;
+                                display: inline-block;
                                 margin-left: 6px;
                                 max-width: 100%;
                                 vertical-align: top;

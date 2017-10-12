@@ -85,7 +85,7 @@ get_header();
     <a href="" class="btn u-margin-top">Voir le programme</a>
 </section>
 <section class="artist">
-    <h2 class="u-margin-top-huge u-margin-bottom">Nos participants</h2>
+    <h2 class="u-margin-bottom">Nos participants</h2>
     <div class="o-layout--flush u-16/18@tablet">
         <div class="artist__item item o-layout__item u-8/18@tablet u-4/18@desktop">
             <div class="item__front">
@@ -135,175 +135,147 @@ get_header();
     <a href="" class="btn u-margin-top">Voir tous nos artistes</a>
 </section>
 <section class="event">
-    <h2 class="u-margin-top-huge">Prochain événement</h2>
-    <div class="event__item">
-        <div class="head">
-            <p class="date"><span>23 sept.</span></p>
-            <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
+    <h2>Prochain événement</h2>
+    <a href="">
+        <div class="event__item">
+            <div class="head">
+                <p class="date"><span>23 sept.</span></p>
+                <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
+            </div>
+            <div class="content">
+                <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
+                <p class="hour u-margin-left-small u-margin-top-small">
+                    <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
+                        <g>
+                            <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+                                S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+                            <path d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
+                        </g>
+                    </svg>
+                    12:00 à 20:00
+                </p>
+                <address class="u-margin-left-small u-margin-top-tiny">
+                    <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
+                        <g>
+                            <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
+                                s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
+                            <path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+                                L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
+                                C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
+                                C45.576,13.08,46.321,24.468,41.099,31.431z"/>
+                        </g>
+                    </svg>
+                    Place Vieille-Montagne, 4000
+                </address>
+            </div>
         </div>
-        <div class="content">
-            <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
-            <p class="hour u-margin-left-small u-margin-top-small">
-                <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                    <g>
-                        <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-                            S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-                        <path d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
-                    </g>
-                </svg>
-                12:00 à 20:00
-            </p>
-            <address class="u-margin-left-small u-margin-top-tiny">
-                <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
-                    <g>
-                        <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
-                            s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
-                        <path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
-                            L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
-                            C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
-                            C45.576,13.08,46.321,24.468,41.099,31.431z"/>
-                    </g>
-                </svg>
-                Place Vieille-Montagne, 4000
-            </address>
+    </a>
+    <a href="">
+        <div class="event__item">
+            <div class="head">
+                <p class="date"><span>23 sept.</span></p>
+                <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
+            </div>
+            <div class="content">
+                <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
+                <p class="hour u-margin-left-small u-margin-top-small">
+                    <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
+                        <g>
+                            <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+                                S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+                            <path d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
+                        </g>
+                    </svg>
+                    12:00 à 20:00
+                </p>
+                <address class="u-margin-left-small u-margin-top-tiny">
+                    <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
+                        <g>
+                            <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
+                                s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
+                            <path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+                                L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
+                                C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
+                                C45.576,13.08,46.321,24.468,41.099,31.431z"/>
+                        </g>
+                    </svg>
+                    Place Vieille-Montagne, 4000
+                </address>
+            </div>
         </div>
-        <a href="" class="btn--more">
-            <svg version="1.1" id="more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                <g>
-                    <path d="M30,16c4.411,0,8-3.589,8-8s-3.589-8-8-8s-8,3.589-8,8S25.589,16,30,16z"/>
-                    <path d="M30,44c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,44,30,44z"/>
-                    <path d="M30,22c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,22,30,22z"/>
-                </g>
-            </svg>
-        </a>
-    </div>
-    <div class="event__item">
-        <div class="head">
-            <p class="date"><span>23 sept.</span></p>
-            <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
+    </a>
+    <a href="">
+        <div class="event__item">
+            <div class="head">
+                <p class="date"><span>23 sept.</span></p>
+                <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
+            </div>
+            <div class="content">
+                <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
+                <p class="hour u-margin-left-small u-margin-top-small">
+                    <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
+                        <g>
+                            <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+                                S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+                            <path d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
+                        </g>
+                    </svg>
+                    12:00 à 20:00
+                </p>
+                <address class="u-margin-left-small u-margin-top-tiny">
+                    <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
+                        <g>
+                            <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
+                                s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
+                            <path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+                                L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
+                                C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
+                                C45.576,13.08,46.321,24.468,41.099,31.431z"/>
+                        </g>
+                    </svg>
+                    Place Vieille-Montagne, 4000
+                </address>
+            </div>
         </div>
-        <div class="content">
-            <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
-            <p class="hour u-margin-left-small u-margin-top-small">
-                <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                    <g>
-                        <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-                            S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-                        <path d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
-                    </g>
-                </svg>
-                12:00 à 20:00
-            </p>
-            <address class="u-margin-left-small u-margin-top-tiny">
-                <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
-                    <g>
-                        <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
-                            s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
-                        <path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
-                            L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
-                            C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
-                            C45.576,13.08,46.321,24.468,41.099,31.431z"/>
-                    </g>
-                </svg>
-                Place Vieille-Montagne, 4000
-            </address>
+    </a>
+    <a href="">
+        <div class="event__item">
+            <div class="head">
+                <p class="date"><span>23 sept.</span></p>
+                <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
+            </div>
+            <div class="content">
+                <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
+                <p class="hour u-margin-left-small u-margin-top-small">
+                    <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
+                        <g>
+                            <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+                                S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+                            <path d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
+                        </g>
+                    </svg>
+                    12:00 à 20:00
+                </p>
+                <address class="u-margin-left-small u-margin-top-tiny">
+                    <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
+                        <g>
+                            <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
+                                s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
+                            <path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+                                L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
+                                C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
+                                C45.576,13.08,46.321,24.468,41.099,31.431z"/>
+                        </g>
+                    </svg>
+                    Place Vieille-Montagne, 4000
+                </address>
+            </div>
         </div>
-        <a href="" class="btn--more">
-            <svg version="1.1" id="more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                <g>
-                    <path d="M30,16c4.411,0,8-3.589,8-8s-3.589-8-8-8s-8,3.589-8,8S25.589,16,30,16z"/>
-                    <path d="M30,44c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,44,30,44z"/>
-                    <path d="M30,22c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,22,30,22z"/>
-                </g>
-            </svg>
-        </a>
-    </div>
-    <div class="event__item">
-        <div class="head">
-            <p class="date"><span>23 sept.</span></p>
-            <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
-        </div>
-        <div class="content">
-            <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
-            <p class="hour u-margin-left-small u-margin-top-small">
-                <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                    <g>
-                        <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-                            S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-                        <path d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
-                    </g>
-                </svg>
-                12:00 à 20:00
-            </p>
-            <address class="u-margin-left-small u-margin-top-tiny">
-                <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
-                    <g>
-                        <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
-                            s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
-                        <path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
-                            L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
-                            C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
-                            C45.576,13.08,46.321,24.468,41.099,31.431z"/>
-                    </g>
-                </svg>
-                Place Vieille-Montagne, 4000
-            </address>
-        </div>
-        <a href="" class="btn--more">
-            <svg version="1.1" id="more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                <g>
-                    <path d="M30,16c4.411,0,8-3.589,8-8s-3.589-8-8-8s-8,3.589-8,8S25.589,16,30,16z"/>
-                    <path d="M30,44c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,44,30,44z"/>
-                    <path d="M30,22c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,22,30,22z"/>
-                </g>
-            </svg>
-        </a>
-    </div>
-    <div class="event__item">
-        <div class="head">
-            <p class="date"><span>23 sept.</span></p>
-            <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
-        </div>
-        <div class="content">
-            <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
-            <p class="hour u-margin-left-small u-margin-top-small">
-                <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                    <g>
-                        <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-                            S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-                        <path d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
-                    </g>
-                </svg>
-                12:00 à 20:00
-            </p>
-            <address class="u-margin-left-small u-margin-top-tiny">
-                <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
-                    <g>
-                        <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
-                            s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
-                        <path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
-                            L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
-                            C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
-                            C45.576,13.08,46.321,24.468,41.099,31.431z"/>
-                    </g>
-                </svg>
-                Place Vieille-Montagne, 4000
-            </address>
-        </div>
-        <a href="" class="btn--more">
-            <svg version="1.1" id="more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
-                <g>
-                    <path d="M30,16c4.411,0,8-3.589,8-8s-3.589-8-8-8s-8,3.589-8,8S25.589,16,30,16z"/>
-                    <path d="M30,44c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,44,30,44z"/>
-                    <path d="M30,22c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,22,30,22z"/>
-                </g>
-            </svg>
-        </a>
-    </div>
+    </a>
     <a href="" class="btn u-margin-top">Voir tous nos événements</a>
 </section>
 <section class="instagram">
-    <svg class="u-margin-top-huge" version="1.1" id="instagram_color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 551.034 551.034" style="enable-background:new 0 0 551.034 551.034;">
+    <svg class="" version="1.1" id="instagram_color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 551.034 551.034" style="enable-background:new 0 0 551.034 551.034;">
         <g id="XMLID_13_">
                 <linearGradient id="XMLID_2_" gradientUnits="userSpaceOnUse" x1="275.517" y1="4.5714" x2="275.517" y2="549.7202" gradientTransform="matrix(1 0 0 -1 0 554)">
                 <stop  offset="0" style="stop-color:#E09B3D"/>
@@ -341,7 +313,7 @@ get_header();
         <span>Nous suivre</span>
         Instagram feed
     </h2>
-    <svg class="u-margin-horizontal-small" version="1.1" id="arrowLeft" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.238 44.238" style="enable-background:new 0 0 44.238 44.238;">
+    <!-- <svg class="u-margin-horizontal-small" version="1.1" id="arrowLeft" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.238 44.238" style="enable-background:new 0 0 44.238 44.238;">
         <g>
             <g>
                 <path d="M22.119,44.237C9.922,44.237,0,34.315,0,22.119S9.922,0.001,22.119,0.001s22.119,9.922,22.119,22.118
@@ -352,14 +324,14 @@ get_header();
                     C25.051,29.812,24.859,29.884,24.667,29.884z"/>
             </g>
         </g>
-    </svg>
+    </svg> -->
     <div class="instagram__gallery u-margin-top">
         <img src="<?= dw_asset('images/insta.jpg');?>" alt="" class="instagram__item">
         <img src="<?= dw_asset('images/insta1.jpg');?>" alt="" class="instagram__item">
         <img src="<?= dw_asset('images/insta-2.jpg');?>" alt="" class="instagram__item">
         <img src="<?= dw_asset('images/insta3.jpg');?>" alt="" class="instagram__item">
     </div>
-    <svg class="u-margin-horizontal-small" version="1.1" id="arrowRight" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.236 44.236" style="enable-background:new 0 0 44.236 44.236;">
+    <!-- <svg class="u-margin-horizontal-small" version="1.1" id="arrowRight" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.236 44.236" style="enable-background:new 0 0 44.236 44.236;">
         <g>
             <g>
                 <path d="M22.118,44.236C9.922,44.236,0,34.314,0,22.118S9.922,0,22.118,0s22.118,9.922,22.118,22.118S34.314,44.236,22.118,44.236
@@ -370,10 +342,10 @@ get_header();
                     C19.725,29.811,19.533,29.884,19.341,29.884z"/>
             </g>
         </g>
-    </svg>
+    </svg> -->
 </section>
 <section class="twitter">
-    <svg class="u-margin-top-huge" version="1.1" id="twitter_color" fill="purple" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
+    <svg class="" version="1.1" id="twitter_color" fill="purple" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
         <g>
             <g>
                 <path style="fill:#00ACED;" d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411

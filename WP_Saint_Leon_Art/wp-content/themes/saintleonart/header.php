@@ -8,7 +8,7 @@
     <link rel="stylesheet"  href="<?= dw_asset('css/main.css');?>">
 </head>
 <body>
-    <?php get_template_part('part', 'grid');?>
+<?php get_template_part('part', 'grid');?>
     <header>
         <button class="hamburger" >
             <span class="line"></span>

@@ -1,16 +1,16 @@
 .btn{
     display: block;
-    color: $purple;
+    color: $black;
     background-color: $yellow;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     font-size: 16px;
-    font-family: 'RobotoL';
+    font-family: 'RobotoR';
     border-radius: 5px;
     padding: 8px 6px;
     &:hover{
-        color: $yellow;
+        color: $white;
         background-color: $purple;
         cursor: pointer;
     }

@@ -1,6 +1,6 @@
     </article>
     <footer class="<?php 
-                        if( get_page_template_slug( $post->ID ) != 'template-perso.php') {
+                        if( get_page_template_slug( $post->ID ) != 'template-perso.php' && get_page_template_slug( $post->ID ) != 'template-home.php' ) {
                          echo'u-margin-top-huge';
                         }
                     ?>">

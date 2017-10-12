@@ -31,8 +31,8 @@ get_header();
     </div>
 </section>
 <section class="artwork">
-    <img src="<?= dw_asset('images/home.jpg');?>" alt="">
-    <img src="<?= dw_asset('images/home.jpg');?>" alt="">
+    <img src="http://homestead.app/projet-leon-art/WP_Saint_Leon_Art/wp-content/uploads/2017/10/perso_galerie-e1507722679803.jpg" alt="">
+    <img src="http://homestead.app/projet-leon-art/WP_Saint_Leon_Art/wp-content/uploads/2017/10/perso_galerie_1-e1507722650644.jpg" alt="">
 </section>
 <div id="map"></div>
 <section class="social">

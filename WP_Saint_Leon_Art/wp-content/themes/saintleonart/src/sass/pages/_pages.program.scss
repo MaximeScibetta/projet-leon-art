@@ -321,8 +321,15 @@
             }
         }
         .map{
+            margin-top: $igsuh;
+            h2{
+                margin: 0 $gutters $igsu;
+            }
             iframe{
-                width: 100%;
+                width: calc( 100% - 8.33333% - 8.33333% );
+                @include mq($from: desktop){
+                    margin: 0 $gutters;
+                }
             }
         }
     }

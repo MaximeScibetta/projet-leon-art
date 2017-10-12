@@ -32,7 +32,7 @@
                         padding-top: $inuit-global-spacing-unit * 8; 
                     }
                     .introduction__tagline{
-                        margin-top: $inuit-global-spacing-unit * 5 !important; 
+                        margin-top: $inuit-global-spacing-unit * 3 !important; 
                     }
                 }
             }
@@ -69,8 +69,9 @@
             }
         }
         .activitie{
+            padding: $igsul 0;
             h2{
-                padding-left: 5.55556%;
+                padding-left: 8.33333%;
             }
             @include mq($from: tablet){
                 &__flex{
@@ -78,7 +79,7 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
-                    padding: 0 5.55556%;
+                    padding: 0 8.33333%;
                 }
                 h2{
                     margin-bottom: $inuit-global-spacing-unit;
@@ -155,15 +156,17 @@
                 }
             }
             .btn{
-                margin: 0 5.55556%;
+                margin: 0 8.33333%;
                 @include mq($from: tablet){
                     margin: 0 auto;                    
                 }
             }
         }
         .artist{
+            background-color: $grey;
+            padding: $igsul 0;
             h2{
-                padding-left: 5.55556%;
+                padding-left: 8.33333%;
             }
             @include mq($from: tablet){
                 .o-layout--flush{
@@ -275,27 +278,36 @@
                 }
             }
             .btn{
-                margin: 0 5.55556%;
+                margin: 0 8.33333%;
                 @include mq($from: tablet){
                     margin: 0 auto;                    
                 }
             }
         }
         .event{
+            &>a:not(.btn){
+                text-decoration: none;
+                color: $black;
+                display: block;
+                &:hover{
+                    background-color: $grey;
+                }
+            }
+            padding: $igsul 0;
             .btn{
-                margin: 0 5.55556%;
-                @include mq($from: tablet){
+                margin: 0 8.33333%;
+                @include mq($from: 750px){
                     margin: 0 auto;                    
                 }
             }
             h2{
-                padding-left: 5.55556%;
+                padding-left: 8.33333%;
             }
-            @include mq($from: 0px, $until: tablet){
+            @include mq($from: 0px, $until: 750px){
                 &__item{
                     position: relative;
                     margin-top: $inuit-global-spacing-unit;
-                    margin: $inuit-global-spacing-unit 5.55556% 0;
+                    margin: $inuit-global-spacing-unit 8.33333% 0;
                     .head{
                         height: 100px;
                         overflow: hidden;
@@ -356,15 +368,15 @@
                         }
                     }
                 }
-                &__item:not(:first-of-type){
+                &>a:not(:first-of-type){
                     display: none;
                 }
             }
-            @include mq($from: tablet){
-                &__item:first-of-type{
+            @include mq($from: 750px){
+                &>a:first-of-type{
                     margin-top: $inuit-global-spacing-unit;
                 }
-                &__item:nth-child(2n+2){
+                &>a:nth-child(2n+2){
                     .date{
                         background-color: $purple;
                     }
@@ -372,7 +384,7 @@
                         color: $yellow;
                     }
                 }
-                &__item:nth-child(2n+1){
+                &>a:nth-child(2n+1){
                     .date{
                         background-color: $yellow;
                     }
@@ -382,7 +394,7 @@
                 }
                 &__item{
                     position: relative;
-                    margin:0 5.55556%;
+                    margin:0 8.33333%;
                     &:not(:first-of-type){
                         margin-top: $inuit-global-spacing-unit-small;
                     }
@@ -420,9 +432,10 @@
                     }
                     .title{
                         font-family: 'RobotoB';
-                        width: 230px;
+                        width: auto;
                         vertical-align: top;
                         margin-top: 0 !important;
+                        padding-top: $igsut;
                     }
                     .hour, address{
                         font-family: 'RobotoL';
@@ -430,21 +443,17 @@
                             height: 15px;
                         }
                     }
-                    a{
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        svg{
-                            height: 20px;
-                        }
-                    }
                 }
             }
-            @include mq($from: 1040px){
+            @include mq($from: 1400px){
+                text-align: center;
                 .title, .hour, address{
                     display: inline-block;
                     vertical-align: top;
                     margin-top: 3px !important;
+                }
+                .title{
+                    padding-top: 0;
                 }
                 .content{
                     margin-top: 30px;
@@ -452,8 +461,9 @@
             }
         }
         .instagram{
-            margin: 0 5.55556%;
+            padding: $igsul 0;
             position: relative;
+            background-color: $grey;
             svg{
                 width: 20px;
                 display: block;
@@ -487,7 +497,9 @@
                 right: -42px;
             }
             &__gallery{
+                width: calc( 100% - 8.33333% - 8.33333% );
                 text-align: center;
+                margin: 0 auto;
                 img{
                     width: 49%;
                     @include mq($from: tablet){
@@ -498,10 +510,16 @@
         }
         .twitter{
             position: relative;
+            background-color: $grey;
+            padding: $igsul 0 $igsuh;            
             svg{
                 height: 20px;
                 display: block;
                 margin: 0 auto;
+                &:hover{
+                    cursor: pointer;
+                    fill: $purple;
+                }
             }
             h2{
                 color: $black;
@@ -530,9 +548,9 @@
             #arrowLeft, #arrowRight{
                 height: 20px;
                 position: absolute;
-                top: 55%;
+                top: 46%;
                 @include mq($from: tablet){
-                    top: 63%;
+                    top: 41%;
                 }
             }
             #arrowRight{
