@@ -70,6 +70,7 @@
         }
         .activitie{
             padding: $igsul 0;
+            
             h2{
                 padding-left: 8.33333%;
             }
@@ -180,6 +181,17 @@
                 margin: 0 8.33333%;
                 @include mq($from: tablet){
                     margin: 0 auto;                    
+                }
+            }
+            @include mq($from: 1450px){
+                max-width: $max-size;
+                margin: 0 auto;
+                h2{
+                    padding-left: 0;
+                }
+                &__flex{
+                    margin: 0;
+                    width: auto;
                 }
             }
         }
@@ -324,7 +336,13 @@
             h2{
                 padding-left: 8.33333%;
             }
-            @include mq($from: 0px, $until: 750px){
+            .content,
+            .content .title{
+                @include mq($from: 500px){
+                    font-size: 20px;
+                }
+            }
+            @include mq($from: 0px, $until: 790px){
                 &__item{
                     position: relative;
                     margin-top: $inuit-global-spacing-unit;
@@ -368,7 +386,6 @@
                     }
                     .title{
                         font-family: 'RobotoB';
-                        width: 230px;
                     }
                     .hour, address{
                         font-family: 'RobotoL';
@@ -393,7 +410,7 @@
                     display: none;
                 }
             }
-            @include mq($from: 750px){
+            @include mq($from: 790px){
                 &>a:first-of-type{
                     margin-top: $inuit-global-spacing-unit;
                 }
@@ -420,7 +437,9 @@
                         margin-top: $inuit-global-spacing-unit-small;
                     }
                     .head{
-                        width: 260px;
+                        //width: calc( (#{$gutters} * 6) - #{$igsu});
+                        //max-width: 300px;
+                        width: 212px;
                         height: 100px;
                         overflow: hidden;
                         display: inline-block;
@@ -442,21 +461,29 @@
                             display: block;
                         }
                         img{
+                            width: 100px;
+                            height: 100px;
+                            //width: calc( (#{$gutters} * 8) - 8px );
                             //position: absolute;
-                            vertical-align: top;
-                            width: 155px;
+                            //vertical-align: top;
+                            //width: 155px;
                         }
                     }
                     .content{
+                        width: calc( (#{$gutters} * 6) );                        
                         display: inline-block;  
                         vertical-align: top;
+                        margin-left: $igsu;
                     }
                     .title{
                         font-family: 'RobotoB';
                         width: auto;
+                        @include mq($until: 800px){
+                            max-width: 340px
+                        }
                         vertical-align: top;
                         margin-top: 0 !important;
-                        padding-top: $igsut;
+                        padding-top: 0;
                     }
                     .hour, address{
                         font-family: 'RobotoL';
@@ -466,19 +493,14 @@
                     }
                 }
             }
-            @include mq($from: 1400px){
-                text-align: center;
-                .title, .hour, address{
-                    display: inline-block;
-                    vertical-align: top;
-                    margin-top: 3px !important;
+            @include mq($from: desktop){
+                h2{
+                    text-align: center;
                 }
-                .title{
-                    padding-top: 0;
-                }
-                .content{
-                    margin-top: 30px;
-                }
+                &__item{
+                    max-width: 810px;
+                    margin: 0 auto;
+                }                
             }
         }
         .instagram{

@@ -116,8 +116,8 @@ get_header();
                 <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
             </div>
             <div class="content">
-                <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
-                <p class="hour u-margin-left-small u-margin-top-small">
+                <p class="title u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
+                <p class="hour u-margin-top-small">
                     <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
                         <g>
                             <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
@@ -127,7 +127,7 @@ get_header();
                     </svg>
                     12:00 à 20:00
                 </p>
-                <address class="u-margin-left-small u-margin-top-tiny">
+                <address class="u-margin-top-tiny">
                     <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
                         <g>
                             <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
@@ -150,8 +150,8 @@ get_header();
                 <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
             </div>
             <div class="content">
-                <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
-                <p class="hour u-margin-left-small u-margin-top-small">
+                <p class="title u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
+                <p class="hour u-margin-top-small">
                     <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
                         <g>
                             <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
@@ -161,7 +161,7 @@ get_header();
                     </svg>
                     12:00 à 20:00
                 </p>
-                <address class="u-margin-left-small u-margin-top-tiny">
+                <address class="u-margin-top-tiny">
                     <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
                         <g>
                             <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
@@ -184,8 +184,8 @@ get_header();
                 <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
             </div>
             <div class="content">
-                <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
-                <p class="hour u-margin-left-small u-margin-top-small">
+                <p class="title u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
+                <p class="hour u-margin-top-small">
                     <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
                         <g>
                             <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
@@ -195,7 +195,7 @@ get_header();
                     </svg>
                     12:00 à 20:00
                 </p>
-                <address class="u-margin-left-small u-margin-top-tiny">
+                <address class="u-margin-top-tiny">
                     <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
                         <g>
                             <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
@@ -218,8 +218,8 @@ get_header();
                 <img src="<?= dw_asset('images/next event.jpg');?>" alt="" class="">
             </div>
             <div class="content">
-                <p class="title u-margin-left-small u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
-                <p class="hour u-margin-left-small u-margin-top-small">
+                <p class="title u-margin-top-small">Macadam Party et Lancement de l'appel à candidature</p>
+                <p class="hour u-margin-top-small">
                     <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
                         <g>
                             <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
@@ -229,7 +229,7 @@ get_header();
                     </svg>
                     12:00 à 20:00
                 </p>
-                <address class="u-margin-left-small u-margin-top-tiny">
+                <address class="u-margin-top-tiny">
                     <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
                         <g>
                             <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5

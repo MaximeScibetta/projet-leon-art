@@ -11,6 +11,9 @@
             .time{
                 width: 100%;
                 font-size: 20px;
+                @include mq($from: 500px){
+                    font-size: 30px;
+                }
                 svg{
                     height: 40px;
                     display: inline-block;
@@ -66,14 +69,15 @@
             }
             .timeline{
                 max-width: 90%;
-                margin: 30px auto;
+                margin: $igsul $gutters;
                 position: relative;
-                padding: 0 10px;
                 -webkit-transition: all .4s ease;
                 transition: all .4s ease;
                 &>a{
                     text-decoration: none;
+                   
                 }
+                &.day1,
                 &.day2,
                 &.day3{
                     display: none;
@@ -102,6 +106,7 @@
                         width: 100%;
                         clear: both;
                     }
+                    
                     .timeline-icon {
                         background: $purple;
                         width: 50px;
@@ -181,6 +186,14 @@
                     }
                 }
             }
+            #day1:target,
+            #day2:target,
+            #day3:target{
+                display: block;
+            }
+            #all:target{
+                display: block;
+            }
             @include mq($until: tablet){
                 .timeline {
                     margin: 30px;
@@ -206,116 +219,104 @@
             }
             &__navigation{
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                @include mq($from : 470px){
+                    flex-direction: row;
+                }
                 justify-content: flex-start;
                 flex-wrap: wrap;
+                margin: 0 $gutters;
                 a{
+                    margin-top: $igsus;
+                    width: 100%;
                     text-decoration: none;
                     text-transform: uppercase;
+                    text-align: center;
+                    font-family: 'RobotoR';
                     color: $purple;
                     border: 2px solid $purple;
                     border-radius: 50px;
                     padding: $igsus $igsu;
-                    &:hover,
-                    &.active{
-                        background-color: $yellow;
-                        border-color: $yellow;                        
+                    &:hover,&.active{
+                        background: $yellow;
+                        border-color:  $yellow;
+                    }
+                    svg{
+                        height: 16px; width: 18px;
+                        fill: $purple;
+                        display: inline-block;
                     }
                 }
                 .day{
-                    width: 100%;
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: flex-start;
                     flex-wrap: wrap;
-                    margin: 0 $gutters;
-                    a{
-                        width: 30.52%;
-                        @include mq($from: tablet){
-                            width: 20%;
-                        }
-                        text-align: center;
-                        &:nth-child(2){
-                            margin: 0 $igsus;
-                        }
-                        @include mq($from: tablet){
-                            &:nth-child(3){
-                                margin: 0 $igsus 0 0;
-                            }
-                        }
-                        &:last-of-type{
-                            width: 100%;
-                            margin: $igsus 0;
-                            @include mq($from: tablet){
-                                width: 33%;
-                                margin: 0;
-                            }
-                        }
-                    }
-                }
-                .order,
-                .map{
-                    //width: 42.2%;
                     width: 100%;
-                    @include mq($from: 500px){
-                        width: 40%;
+                    @include mq($from:540px){
+                        flex-direction: row;
                     }
-                    text-align: center;
-                    margin: 0 $gutters;
-                    @include mq($from: tablet){
-                        margin-top: $igsu !important;
-                    }
-                }
-                .order{
-                    //margin: 0 $igsu 0 $gutters;
-                    
-                    @include mq($from: 500px){
-                        margin:0 0 0 $gutters;
-                    }
-                }
-                .map{
-                    //margin-right: $gutters;
-                    margin-top: $igsus;
-                    
-                    @include mq($from: 500px){
-                        margin-top: 0;
-                        margin:0 $gutters 0 $igsu;
-                    }
-                }
-                @include mq($from: desktop){
-                    .day{
-                        width: 75%;
-                        margin: 0 0 0 $gutters;
-                        a{
-                            width: 18%;
-                            &:last-of-type{
-                                width: 39%;
-                                //margin-right: $igsus;
-                            }
+                    @include mq($from:1950px){
+                        width: calc( 66.666667% - 36px);
+                        margin-right: $igsus;
+                        a:last-of-type{
+                            margin-right: 0;
                         }
                     }
-                    .order{
-                        width: 11%;
-                        margin: 0 !important;
-                    }
-                }
-                @include mq($from: 1200px){
-                    .day{
-                        width: 59%;
-                        margin: 0 6px 0 $gutters;
-                        a{
-                            width: 19%;
-                            &:last-of-type{
-                                width: 37%;
+                    a{
+                        width: 100%;
+                        @include mq($from:540px){
+                            width: calc( 50% - #{$igsut} );
+                            &:nth-of-type(2n+1){
+                                margin-right: $igsus;
+                            }
+                            @include mq($from: 1283px){
+                                &:nth-of-type(2){
+                                    margin-right: $igsus;
+                                }
                             }
                         }
+                        @include mq( $from : 1283px){
+                            width: calc( 25% - 9px );
+                            
+                        }
+                        @include mq($from:1950px){
+                            width: calc( 25% - 9px );
+                            margin-right: $igsus;
+                        }
                     }
+                }
+                @include mq($from: 470px){
                     .order{
-                        width: 9%;
+                        width: calc( 50% - #{$igsut} );
+                        margin-right: $igsus;
+                        @include mq($from:1950px){
+                            width: calc( 16.6666665% - #{$igsut} );
+                            margin-right: $igsus;
+                        }
                     }
-                    .map{
-                        width: 19%;
-                        margin: 0 0 0 12px !important;
+                    .interactiv{
+                        width: calc( 50% - #{$igsut} );
+                        @include mq($from:1950px){
+                            width: calc( 16.6666665% - #{$igsut} );
+                        }
+                    }
+                }
+            }
+            .timeline{
+                a:hover{
+                    cursor: pointer;
+                    .timeline{
+                        &-item{
+                            .timeline-content{
+                                background: $purple;
+                                color: $white;
+                                h2{
+                                    background: $white;
+                                    color: $black;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -326,8 +327,9 @@
                 margin: 0 $gutters $igsu;
             }
             iframe{
-                width: calc( 100% - 8.33333% - 8.33333% );
+                width: 100%;
                 @include mq($from: desktop){
+                    width: calc( 100% - 8.33333% - 8.33333% );
                     margin: 0 $gutters;
                 }
             }

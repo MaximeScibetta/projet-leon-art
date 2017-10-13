@@ -280,5 +280,23 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+
+    <script>
+        const buttons = document.querySelectorAll('.program__navigation a');
+
+        Array.from(buttons).forEach(function($btn) {
+            $btn.addEventListener("click", fActive);
+        });
+
+        function fActive(e) {
+            e.stopPropagation();
+            //e.preventDefault();
+            if(  document.querySelector('.active') ){
+                document.querySelector('.active').classList.remove('active');
+            }
+            e.currentTarget.classList.add('active');
+        };
+        
+    </script>
 </body>
 </html>

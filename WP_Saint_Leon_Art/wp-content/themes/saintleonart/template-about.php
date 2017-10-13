@@ -79,8 +79,8 @@ get_header();
 </section>
 <section class="team">
     <h2>Rencontrez l'équipe</h2>
-    <div class="team__container flex">
-        <div class="flex__item">
+    <div class="team__container o-flex">
+        <div class="o-flex__item">
             <img src="<?= dw_asset('images/mehdi.jpg');?>" alt="" width="300" height="300">
             <div class="info">
                 <p class="name">Méhdi Bensif</p>
@@ -119,7 +119,7 @@ get_header();
                 </svg>
             </div>
         </div>
-        <div class="flex__item">
+        <div class="o-flex__item">
             <img src="<?= dw_asset('images/maxime.jpg');?>" alt="" width="300" height="300">
             <div class="info">
                 <p class="name">Méhdi Bensif</p>
@@ -158,7 +158,7 @@ get_header();
                 </svg>
             </div>
         </div>
-        <div class="flex__item">
+        <div class="o-flex__item">
             <img src="<?= dw_asset('images/bastien.jpg');?>" alt="" width="300" height="300">
             <div class="info">
                 <p class="name">Méhdi Bensif</p>
@@ -197,7 +197,7 @@ get_header();
                 </svg>
             </div>
         </div>
-        <div class="flex__item">
+        <div class="o-flex__item">
             <img src="<?= dw_asset('images/bruno.jpg');?>" alt="" width="300" height="300">
             <div class="info">
                 <p class="name">Méhdi Bensif</p>
@@ -236,7 +236,7 @@ get_header();
                 </svg>
             </div>
         </div>
-        <div class="flex__item">
+        <div class="o-flex__item">
             <img src="<?= dw_asset('images/louis.jpg');?>" alt="" width="300" height="300">
             <div class="info">
                 <p class="name">Méhdi Bensif</p>
@@ -275,7 +275,7 @@ get_header();
                 </svg>
             </div>
         </div>
-        <div class="flex__item">
+        <div class="o-flex__item">
             <img src="<?= dw_asset('images/julien.jpg');?>" alt="" width="300" height="300">
             <div class="info">
                 <p class="name">Méhdi Bensif</p>
