@@ -33,17 +33,27 @@
             }
             >div{
                 width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 0 $gutters;
+                @include mq($from: 550px){
+                    padding: 0;
+                }
                 @include mq($from: desktop){
                     width: 40%;
                     align-self: normal;
+                    padding: 0 $igsul;
                 }
-                background-color: $purple;
-                color: $white;
-                padding: 0 $gutters;
+                @include mq($from: wide){
+                    max-width: 700px;
+                }
+                background-color: $white;
+                color: #3f3e3e;
                 h3{
                     margin-top: $inuit-global-spacing-unit;
-                    font-size: 20px;
+                    font-size: 24px;
                     font-family: 'Rubik';
+                    color: $purple;
                     @include mq($from: desktop){
                         margin-top: 40%;
                     }
@@ -66,7 +76,7 @@
                     p{
                         width: auto;
                         a{
-                            color: $white;
+                            color: $black;
                             font-family: 'RobotoL';
                             text-transform: uppercase;
                             text-decoration: none;

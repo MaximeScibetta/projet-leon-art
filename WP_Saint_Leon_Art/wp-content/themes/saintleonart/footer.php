@@ -298,5 +298,50 @@
         };
         
     </script>
+    <script>
+        var fCheckForm = function fCheckForm() {
+            var $Form = document.querySelector('.contact form');
+            var $FirstNameField = document.getElementById('first_name');
+            var $LastNameField = document.getElementById('last_name');
+            var $EmailField = document.getElementById('email');
+            var $SelectField = document.getElementById('selectOpt');
+            var $MsgField = document.getElementById('message');
+            var $SubmitBtn = document.getElementById('submit');
+            var regexpName = /^[a-zA-Z\u00C0-\u00FF]+['-]?[a-zA-Z\u00C0-\u00FF]+$/;
+            var regexpEmail = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+            var regexpMsg = /^([a-zA-Z]{2,40} + [a-zA-Z]{2,40})$/;
+            var fCheckAField = function fCheckAField(field, regexp) {
+                if (field.value == '') {
+                    field.parentNode.querySelector('span').innerHTML = "Votre champs de formulaire est vide.";
+                    field.parentNode.querySelector('span').classList.add('on');
+                    return false;
+                } else if (regexp && !regexp.test(field.value)) {
+                    field.parentNode.querySelector('span').innerHTML = "Il semble que la valeur rentré ait un problème.";
+                    field.parentNode.querySelector('span').classList.add('on');
+                    return false;
+                } else {
+                    $SubmitBtn.removeAttribute('disabled');
+                    field.parentNode.querySelector('span').classList.remove('on');
+                    field.parentNode.querySelector('.input').classList.add('ok');
+                    return true;
+                }
+            };
+        };
+        var input = document.querySelectorAll('fieldset .input');
+        var getFocus = function getFocus(oEvent) {
+            oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
+        };
+        var outFocus = function outFocus(e) {
+            if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 || e.currentTarget.parentNode.querySelector('.input option').value.length === 0 || e.currentTarget.parentNode.querySelector('#selectOpt').value == 0) {
+                e.currentTarget.parentNode.querySelector('label').classList.remove("focus");
+            }
+        };
+        Array.from(input).forEach(function($label) {
+            $label.addEventListener("focus", getFocus);
+            $label.addEventListener("click", getFocus);
+            $label.addEventListener("blur", outFocus);
+        });
+        fCheckForm();
+    </script>
 </body>
 </html>

@@ -8,7 +8,13 @@
     <link rel="stylesheet"  href="<?= dw_asset('css/main.css');?>">
 </head>
 <body>
-<?php get_template_part('part', 'grid');?>
+<?php if( get_page_template_slug( $post->ID ) != 'template-perso.php' 
+       && get_page_template_slug( $post->ID ) != 'template-home.php' 
+       && get_page_template_slug( $post->ID ) != 'template-program.php' 
+       && get_page_template_slug( $post->ID ) != 'template-about.php' 
+       && get_page_template_slug( $post->ID ) != 'template-contact.php' ):?>
+    <?php get_template_part('part', 'grid');?>
+<?php endif ?>
     <header>
         <button class="hamburger" >
             <span class="line"></span>
