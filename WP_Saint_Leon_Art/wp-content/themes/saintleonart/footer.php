@@ -300,11 +300,10 @@
     </script>
     <script>
         var fCheckForm = function fCheckForm() {
-            var $Form = document.querySelector('.contact form');
+            var $Form = document.querySelector('form.contact');
             var $FirstNameField = document.getElementById('first_name');
             var $LastNameField = document.getElementById('last_name');
             var $EmailField = document.getElementById('email');
-            var $SelectField = document.getElementById('selectOpt');
             var $MsgField = document.getElementById('message');
             var $SubmitBtn = document.getElementById('submit');
             var regexpName = /^[a-zA-Z\u00C0-\u00FF]+['-]?[a-zA-Z\u00C0-\u00FF]+$/;
@@ -326,7 +325,54 @@
                     return true;
                 }
             };
+            var fCheckFirstName = function fCheckFirstName() {
+                return fCheckAField($FirstNameField, regexpName);
+            };
+            var fCheckLastName = function fCheckLastName() {
+                return fCheckAField($LastNameField, regexpName);
+            };
+            var fCheckEmail = function fCheckEmail() {
+                return fCheckAField($EmailField, regexpEmail);
+            };
+            var fCheckMessage = function fCheckMessage() {
+                if ($MsgField.value.split(/\s+/).length >= 3) {
+                    $MsgField.parentNode.querySelector('span').classList.remove('on');
+                    $MsgField.parentNode.querySelector('.input').classList.add('ok');
+                    return true;
+                }
+                if ($MsgField.value.split(/\s+/).length === 1) {
+                    $MsgField.parentNode.querySelector('span').innerHTML = "Vous n'avez pas écrit de message.";
+                    $MsgField.parentNode.querySelector('span').classList.add('on');
+                    return false;
+                }
+                if ($MsgField.value.split(/\s+/).length < 5) {
+                    $MsgField.parentNode.querySelector('span').innerHTML = "Vous avez pas écris un assez grand message.";
+                    $MsgField.parentNode.querySelector('span').classList.add('on');
+                    return false;
+                }
+            };
+            var fCheckSelect = function fCheckSelect() {
+                if ($SelectField.value == 0) {
+                    $SelectField.parentNode.querySelector('span').innerHTML = "Vous n'avez pas séléctioné de raison.";
+                    $SelectField.parentNode.querySelector('span').classList.add('on');
+                    return false;
+                }
+                $SelectField.parentNode.querySelector('span').classList.remove('on');
+                $SelectField.parentNode.querySelector('.input').classList.add('ok');
+                return true;
+            };
+            var fCheckAll = function fCheckAll() {
+                if (fCheckFirstName() * fCheckLastName() * fCheckEmail() * fCheckMessage() * fCheckSelect()) {
+                    $Form.classList.add('valid');
+                }
         };
+        $FirstNameField.addEventListener('blur', fCheckFirstName, false);
+        $LastNameField.addEventListener('blur', fCheckLastName, false);
+        $EmailField.addEventListener('blur', fCheckEmail, false);
+        $MsgField.addEventListener('blur', fCheckMessage, false);
+        $SelectField.addEventListener('blur', fCheckSelect, false);
+        $SubmitBtn.addEventListener('click', fCheckAll, false);
+    };
         var input = document.querySelectorAll('fieldset .input');
         var getFocus = function getFocus(oEvent) {
             oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
