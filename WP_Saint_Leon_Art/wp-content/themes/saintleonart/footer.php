@@ -173,14 +173,14 @@
         * ON DOCUMENT LOAD
         * -------------------------- */
         $(function() {
-        // Calculate time until launch date
-        timeToLaunch();
-        // Transition the current countdown from 0 
-        numberTransition('#days .number', days, 1000, 'easeOutQuad');
-        numberTransition('#hours .number', hrs, 1000, 'easeOutQuad');
-        numberTransition('#minutes .number', min, 1000, 'easeOutQuad');
-        // Begin Countdown
-        setTimeout(countDownTimer,1001);
+            // Calculate time until launch date
+            timeToLaunch();
+            // Transition the current countdown from 0 
+            numberTransition('#days .number', days, 1000, 'easeOutQuad');
+            numberTransition('#hours .number', hrs, 1000, 'easeOutQuad');
+            numberTransition('#minutes .number', min, 1000, 'easeOutQuad');
+            // Begin Countdown
+            setTimeout(countDownTimer,1001);
         });
 
         /* --------------------------
@@ -350,16 +350,6 @@
                     $MsgField.parentNode.querySelector('span').classList.add('on');
                     return false;
                 }
-            };
-            var fCheckSelect = function fCheckSelect() {
-                if ($SelectField.value == 0) {
-                    $SelectField.parentNode.querySelector('span').innerHTML = "Vous n'avez pas séléctioné de raison.";
-                    $SelectField.parentNode.querySelector('span').classList.add('on');
-                    return false;
-                }
-                $SelectField.parentNode.querySelector('span').classList.remove('on');
-                $SelectField.parentNode.querySelector('.input').classList.add('ok');
-                return true;
             };
             var fCheckAll = function fCheckAll() {
                 if (fCheckFirstName() * fCheckLastName() * fCheckEmail() * fCheckMessage() * fCheckSelect()) {
