@@ -457,15 +457,6 @@
                     }
                 }
             }
-            // @include mq($from: desktop){
-            //     h2{
-            //         text-align: center;
-            //     }
-            //     &__item{
-            //         max-width: 810px;
-            //         margin: 0 auto;
-            //     }                
-            // }
             @include mq($from: 1450px){
                 margin: 0 $gutters;
                 h2{

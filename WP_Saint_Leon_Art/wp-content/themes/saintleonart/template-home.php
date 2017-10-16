@@ -61,7 +61,7 @@ get_header();
     <h2 class="u-margin-bottom">Nos participants</h2>
     <div class="artist__container">
         <a href="" class="item">
-            <img src="http://saintleonart.app/wp-content/uploads/2017/10/bastien-e1508146241736.jpg" alt="" width="400" height="400">
+            <img src="http://saintleonart.app/wp-content/uploads/2017/10/bastien-1-e1508150338632.jpg" alt="" width="400" height="225">
             <div class="item__info">
                 <h3 class="">
                     Basiten 
