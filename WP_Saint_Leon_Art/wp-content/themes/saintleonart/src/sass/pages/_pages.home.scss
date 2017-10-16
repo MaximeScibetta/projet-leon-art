@@ -250,7 +250,7 @@
                     }
                     &__info{
                         position: absolute;
-                        top: 60%;
+                        top: 40%;
                         background-color: $purple;
                         padding: $igsu $igsul;
                         transition: 1s cubic-bezier(.86,0,.07,1);
@@ -383,12 +383,12 @@
                         background-color: $purple;
                     }
                     span{
-                        color: $yellow;
+                        color: $white;
                     }
                 }
                 &>a:nth-child(2n+1){
                     .date{
-                        background-color: $yellow;
+                        background-color: $white;
                     }
                     span{
                         color: $purple;

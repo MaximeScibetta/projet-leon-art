@@ -1,0 +1,105 @@
+.wrapper{
+    @include mq($from: 0px){
+        .introduction{
+            &.all{
+                height: 50vh;
+            }
+        }
+        .all h2{
+            display: none;
+        }
+        .all.event{
+            
+            &>a{
+                display: block;
+                &:nth-of-type(2n+1){
+                    background-color: $grey;
+                }
+                .event__item{
+                    margin: 0 $gutters;
+                    padding: $igsu 0;
+                    @include mq($from: 790px){
+                        padding: $igsus 0;
+                    }
+                    @include mq($from: 1450px){
+                        margin: 0;
+                    }
+                }
+
+            }
+            &>a:nth-child(2n+2){
+                .date{
+                    background-color: $purple;
+                }
+                span{
+                    color: $white;
+                }
+            }
+            &>a:nth-child(2n+1){
+                .date{
+                    background-color: $white;
+                }
+                span{
+                    color: $purple;
+                }
+            }
+        }
+        .all.artist{
+            .artist__container{
+                margin: 0;
+                @include mq($from: tablet){
+                    margin: 0 $gutters;
+                }
+                .item{
+                    &:hover{
+                        .item__info{
+                            padding-top: 25% ;
+                        }
+                    }
+                }
+                .item__info{
+                    padding: $igsu $igsul;
+                }
+            }
+        }
+        .all.artist.concert-expo{
+            .artist__container{
+                .item{
+                    &__info{
+                        
+                        p.onhover{
+                            display: none;
+                            margin-top: $igsu;
+                            &:last-of-type{
+                                margin-top: $igsut;
+                            }
+                            svg{
+                                width: 18.5px;
+                                height: 18.5px;
+                                fill: $white;
+                            }
+                            text-transform: none;
+                            letter-spacing: inherit;
+                        }
+                    }
+                    &:hover{
+                        p.onhover{
+                            display: block;
+                            
+                        }
+                        .item__info{
+                            padding-top: 10%;
+                        }
+                    }
+                }
+            }
+            &.urbanart{
+                .artist__container .item:hover {
+                    p.onhover+p.onhover{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

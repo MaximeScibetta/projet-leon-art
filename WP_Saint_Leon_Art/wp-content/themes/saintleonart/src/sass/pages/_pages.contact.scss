@@ -1,6 +1,9 @@
 .wrapper{
     @include mq($from: 0px){
         .introduction{
+            p{
+                margin-top: $igsu;
+            }
             .hang{      
                 p{
                     margin-top: $igsu;
