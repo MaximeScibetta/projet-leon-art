@@ -26,8 +26,8 @@ get_header();
         </li>
     </ul>
     <div class="introduction__cta u-padding-horizontal-small u-margin-top-large">
-        <a href="" class="btn">Le programme</a>
-        <a href="" class="btn">L'Actualité</a>
+        <a href="http://saintleonart.app/?page_id=29" class="btn">Le programme</a>
+        <a href="http://saintleonart.app/?page_id=49" class="btn">L'Actualité</a>
     </div>
 </section>
 <section class="activitie">
@@ -36,31 +36,31 @@ get_header();
         <div class="o-layout__item activitie__item u-padding-bottom u-margin-top">
             <h3 class=""><span>Artist</span>es</h3>
             <p class="">Venant de toutes là Belgique, vous pourrez y découvrire des artistes de tous les genres, avec pour chacun leur histoire et le style.</p>
-            <a href="" class="btn">Voir <span>tous nos artistes</span></a>
+            <a href="http://saintleonart.app/?page_id=49" class="btn">Voir <span>tous nos artistes</span></a>
             </svg>
         </div>
         <div class="o-layout__item activitie__item u-padding-bottom">
             <h3 class=""><span>Conce</span>rts</h3>
             <p class="">De tous genre musicaux en passant par le classic en allant jusqu'au rap, vous pourrez venir dancer face à notre scène avec un bar à proximité.</p>
-            <a href="" class="btn">Voir <span>tous nos concerts</span></a>
+            <a href="http://saintleonart.app/?page_id=49" class="btn">Voir <span>tous nos concerts</span></a>
         </div>
         <div class="o-layout__item activitie__item u-padding-bottom">
             <h3 class=""><span>Art ur</span>bains</h3>
             <p class="">Présent dans tous le quartier avec l'avantage qu'ils soient visible toutes l'année à n'importe quelles heures. Un art d'un autre genre en pleine émergence.</p>
-            <a href="" class="btn">Voir <span>tous nos arts urbains</span></a>
+            <a href="http://saintleonart.app/?page_id=49" class="btn">Voir <span>tous nos arts urbains</span></a>
         </div>
         <div class="o-layout__item activitie__item u-padding-bottom">
             <h3 class=""><span>Expos</span>itions</h3>
             <p class="">Durant notre week-end, venez chez nos habitants découvrir nos artistes partenaire, venez disctuer avec eux et voir leur oeuvres.</p>
-            <a href="" class="btn">Voir <span>tous nos expositions</span></a>
+            <a href="http://saintleonart.app/?page_id=49" class="btn">Voir <span>tous nos expositions</span></a>
         </div>
     </div>
-    <a href="" class="btn u-margin-top">Voir le programme</a>
+    <a href="http://saintleonart.app/?page_id=29" class="btn u-margin-top">Voir le programme</a>
 </section>
 <section class="artist">
     <h2 class="u-margin-bottom">Nos participants</h2>
     <div class="artist__container">
-        <a href="" class="item">
+        <a href="http://saintleonart.app/?page_id=27" class="item">
             <img src="http://saintleonart.app/wp-content/uploads/2017/10/bastien-1-e1508150338632.jpg" alt="" width="400" height="225">
             <div class="item__info">
                 <h3 class="">
@@ -70,7 +70,7 @@ get_header();
                 <p class="">Peintre</p>
             </div>
         </a>
-        <a href="" class="item">
+        <a href="http://saintleonart.app/?page_id=27" class="item">
             <img src="http://saintleonart.app/wp-content/uploads/2017/10/maxime-e1508146131808.jpg" alt="" width="400" height="400">
             <div class="item__info">
                 <h3 class="">
@@ -80,7 +80,7 @@ get_header();
                 <p class="">Street artiste</p>
             </div>
         </a>
-        <a href="" class="item">        
+        <a href="http://saintleonart.app/?page_id=27" class="item">        
         <img src="http://saintleonart.app/wp-content/uploads/2017/10/alexandre-e1508146310478.jpg" alt="" width="400" height="400">
             <div class="item__info">
                 <h3 class="">
@@ -90,7 +90,7 @@ get_header();
                 <p class="">Acteur</p>
             </div>
         </a>
-        <a href="" class="item">
+        <a href="http://saintleonart.app/?page_id=27" class="item">
             <img src="http://saintleonart.app/wp-content/uploads/2017/10/mehdi-e1508146391655.jpg" alt="" width="400" height="400">
             <div class="item__info">
                 <h3 class="">
@@ -147,7 +147,7 @@ get_header();
             </div>
         </div>
     </div> -->
-    <a href="" class="btn u-margin-top">Voir tous nos artistes</a>
+    <a href="http://saintleonart.app/?page_id=49" class="btn u-margin-top">Voir tous nos artistes</a>
 </section>
 <section class="event">
     <h2>Prochain événement</h2>

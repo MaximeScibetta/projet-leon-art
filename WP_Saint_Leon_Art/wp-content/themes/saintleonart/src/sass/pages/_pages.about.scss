@@ -294,7 +294,11 @@
                         svg{
                             fill: $white;
                             width: 18.75px;
-                            height: 18.75px; 
+                            height: 18.75px;
+                            &:hover{
+                                fill: $yellow;
+                                cursor: pointer;
+                            } 
                         }
                         svg{
                             &:nth-of-type(1),
@@ -353,7 +357,7 @@
                     }
                     &:nth-child(2n+2){
                         time{
-                            color: $yellow;
+                            color: $white;
                             background-color: $purple;
                         }
                         background-color: $grey;
@@ -361,7 +365,7 @@
                     &:nth-child(2n+1){
                         time{
                             color: $purple;
-                            background-color: $yellow;
+                            background-color: $white;
                         }
                     }
                     p{
@@ -395,17 +399,17 @@
                     }
                     &:nth-child(2n+2){
                         a.download{
-                            color: $yellow;
+                            color: $white;
                             background-color: $purple;
                             svg{
-                                fill: $yellow;
+                                fill: $white;
                             }
                         }
                     }
                     &:nth-child(2n+1){
                         a.download{
                             color: $purple;
-                            background-color: $yellow;
+                            background-color: $white;
                             svg{
                                 fill: $purple;
                             }
@@ -424,10 +428,9 @@
                             margin: 18px 6px 0;
                         }
                         &:hover{
-                            color: $black;
-                            background-color: inherit;
+                            background-color: $red;
                             svg{
-                                fill: $black;
+                                fill: $white;
                             }
                         }
                     }
@@ -462,29 +465,11 @@
                                 left: 155px;
                             }
                         }
-                        a.download{
-                            // float: inherit;
-                            // position: absolute;
-                            // top: 54px;
-                            // right: 0px;
-                        }
+                        
                     }
                 }
             }
-            // @include mq($from: 1040px){
-            //     h2{
-            //         text-align: center;
-            //     }
-            //     .container{
-            //         &__item{
-            //             max-width: 940px;
-            //             margin: 0 auto;
-            //             .title{
-            //                 font-size: 20px;
-            //             }
-            //         }
-            //     }
-            // }
+            
             @include mq($from: desktop){
                 .container{
                     .title{
