@@ -316,7 +316,6 @@ get_header();
             </a>
         </div>
     </section> -->
-    
     <section class="artist all concert-expo urbanart">
         <h2>Nos concerts</h2>
         <div class="artist__container">
@@ -381,7 +380,7 @@ get_header();
                 </div>
             </a>
             <a href="" class="item">        
-            <img src="http://saintleonart.app/wp-content/uploads/2017/10/alexandre-e1508164269988.jpg" alt="" width="400" height="400">
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/alexandre-e1508164269988.jpg" alt="" width="400" height="400">
                 <div class="item__info">
                     <h3 class="">Les frères lumières</h3>
                     <p class="">Rap</p>
