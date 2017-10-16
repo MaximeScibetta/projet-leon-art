@@ -59,10 +59,52 @@ get_header();
 </section>
 <section class="artist">
     <h2 class="u-margin-bottom">Nos participants</h2>
-    <div class="o-layout--flush u-16/18@tablet">
+    <div class="artist__container">
+        <a href="" class="item">
+            <img src="http://saintleonart.app/wp-content/uploads/2017/10/bastien-e1508146241736.jpg" alt="" width="400" height="400">
+            <div class="item__info">
+                <h3 class="">
+                    Basiten 
+                    <span>Damit</span>
+                </h3>
+                <p class="">Peintre</p>
+            </div>
+        </a>
+        <a href="" class="item">
+            <img src="http://saintleonart.app/wp-content/uploads/2017/10/maxime-e1508146131808.jpg" alt="" width="400" height="400">
+            <div class="item__info">
+                <h3 class="">
+                    Maxime 
+                    <span>Scibetta</span>
+                </h3>
+                <p class="">Street artiste</p>
+            </div>
+        </a>
+        <a href="" class="item">        
+        <img src="http://saintleonart.app/wp-content/uploads/2017/10/alexandre-e1508146310478.jpg" alt="" width="400" height="400">
+            <div class="item__info">
+                <h3 class="">
+                    Alexandre 
+                    <span>Lopez Calvo</span>
+                </h3>
+                <p class="">Acteur</p>
+            </div>
+        </a>
+        <a href="" class="item">
+            <img src="http://saintleonart.app/wp-content/uploads/2017/10/mehdi-e1508146391655.jpg" alt="" width="400" height="400">
+            <div class="item__info">
+                <h3 class="">
+                    Mehdi 
+                    <span>Bensif</span>
+                </h3>
+                <p class="">Chanteur</p>
+            </div>
+        </a>
+    </div>
+    <!-- <div class="o-layout--flush u-16/18@tablet">
         <div class="artist__item item o-layout__item u-8/18@tablet u-4/18@desktop">
             <div class="item__front">
-                <!-- <img src="<?= dw_asset('images/bastien.jpg');?>" alt=""  width="380" height="380"> -->
+                <img src="<?= dw_asset('images/bastien.jpg');?>" alt=""  width="380" height="380">
                 <h3 class="u-padding-top-large u-padding-left">Basiten Damit</h3>
                 <p class="u-padding-top u-padding-left">Peintre</p>
             </div>
@@ -73,7 +115,7 @@ get_header();
         </div>
         <div class="artist__item item o-layout__item u-8/18@tablet u-4/18@desktop">
             <div class="item__front">
-                <!-- <img src="<?= dw_asset('images/maxime.jpg');?>" alt="" width="380" height="380"> -->
+                <img src="<?= dw_asset('images/maxime.jpg');?>" alt="" width="380" height="380">
                 <h3 class="u-padding-top-large u-padding-left">Maxime Scibetta</h3>
                 <p class="u-padding-top u-padding-left">Street artiste</p>
             </div>
@@ -84,7 +126,7 @@ get_header();
         </div>
         <div class="artist__item item o-layout__item u-8/18@tablet u-4/18@desktop">
             <div class="item__front">
-                <!-- <img src="<?= dw_asset('images/mehdi.jpg');?>" alt="" width="380" height="380"> -->
+                <img src="<?= dw_asset('images/mehdi.jpg');?>" alt="" width="380" height="380">
                 <h3 class="u-padding-top-large u-padding-left">Mehdi Bensif</h3>
                 <p class="u-padding-top u-padding-left">Chanteur</p>
             </div>
@@ -95,7 +137,7 @@ get_header();
         </div>
         <div class="artist__item item o-layout__item u-8/18@tablet u-4/18@desktop">
             <div class="item__front">
-                <!-- <img src="<?= dw_asset('images/alexandre.jpg');?>" alt="" width="380" height="380"> -->
+                <img src="<?= dw_asset('images/alexandre.jpg');?>" alt="" width="380" height="380">
                 <h3 class="u-padding-top-large u-padding-left">Alexandre Lopez Calvo</h3>
                 <p class="u-padding-top u-padding-left">Acteur</p>
             </div>
@@ -104,7 +146,7 @@ get_header();
                 <a href="" class="btn-edge">Voir le profile</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <a href="" class="btn u-margin-top">Voir tous nos artistes</a>
 </section>
 <section class="event">
