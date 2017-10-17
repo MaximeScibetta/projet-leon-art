@@ -52,3 +52,28 @@
         margin: -40px;
     }
 }
+#arrow-cta{
+    position: absolute;
+    left: 24px;
+    padding-left: $igsu;
+    position: absolute;
+    bottom: 32px;
+    @include mq($from: desktop){
+        left: 48px;
+        bottom: 48px;
+    }
+    p{
+        text-transform: uppercase;
+        font-family: 'RobotoR';
+        font-size: 14px;
+        transition: 1s cubic-bezier(.86,0,.07,1);
+    }
+    svg{
+        height: auto;
+        position: inherit;
+        top: inherit;
+        right: inherit;
+        display: block;
+        width: 200px;
+    }
+}

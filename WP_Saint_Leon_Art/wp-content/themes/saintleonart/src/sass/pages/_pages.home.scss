@@ -70,21 +70,12 @@
         }
         .activitie{
             padding: $igsul 0;
-            
             h2{
                 padding-left: 8.33333%;
+                margin-bottom: $igsu;
             }
-            @include mq($from: tablet){
-                &__flex{
-                    margin: 0 $gutters;
-                    width: $gutters * 10;
-                }
-                h2{
-                    margin-bottom: $inuit-global-spacing-unit;
-                    flex-basis: 100%;
-                }
-            }
-            &__item{
+            a.clickable{
+                text-decoration: none;
                 color: $white;
                 height: 200px;
                 position: relative;
@@ -93,6 +84,14 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 flex-wrap: wrap;
+                &:hover{
+                    #arrow-cta{
+                        p{
+                            letter-spacing: 3px;
+                            transition: 1s cubic-bezier(.86,0,.07,1);
+                        }
+                    }
+                }
                 @include mq($from: tablet){
                     &:nth-child(2n+2){
                         margin-left: $igsu;
@@ -130,18 +129,6 @@
                         }
                     }
                 }
-                &:nth-child(1){
-                    background-image: url('../images/Artistes.jpg');
-                }
-                &:nth-child(2){
-                    background-image: url('../images/Concerts.jpg');
-                }
-                &:nth-child(3){
-                    background-image: url('../images/Art_urbains.jpg');
-                }
-                &:nth-child(4){
-                    background-image: url('../images/Expositions.jpg');
-                }
                 .btn{
                     width: auto;
                     //position: absolute;
@@ -176,7 +163,33 @@
                         display: block;
                     }
                 }
+                &:nth-child(1){
+                    background-image: url('../images/Artistes.jpg');
+                }
+                &:nth-child(2){
+                    background-image: url('../images/Concerts.jpg');
+                    @include mq($from: tablet){
+                        margin-bottom: $igsu;
+                    }
+                }
+                &:nth-child(3){
+                    background-image: url('../images/Art_urbains.jpg');
+                }
+                &:nth-child(4){
+                    background-image: url('../images/Expositions.jpg');
+                }
             }
+            @include mq($from: tablet){
+                &__flex{
+                    margin: 0 $gutters;
+                    width: $gutters * 10;
+                }
+                h2{
+                    margin-bottom: $inuit-global-spacing-unit;
+                    flex-basis: 100%;
+                }
+            }
+            
             .btn{
                 margin: 0 8.33333%;
                 @include mq($from: tablet){
@@ -221,10 +234,11 @@
                         .item__info{
                             top: 0;
                             width: 100%;height: 100%;
+                            display: block;
                             background-color: rgba(130, 28, 72, 0.5);
                             padding-left: $igsul;
-                            text-align: center;
-                            padding-top: 45%;
+                            //text-align: center;
+                            padding-top: 10%;
                             transition: 1s cubic-bezier(.86,0,.07,1);
                         }
                     }
@@ -299,6 +313,10 @@
             }
             h2{
                 padding-left: 8.33333%;
+                @include mq($from: 900px){
+                    text-align: center;
+                    padding-left: 0;
+                } 
             }
             .content,
             .content .title{
@@ -388,7 +406,7 @@
                 }
                 &>a:nth-child(2n+1){
                     .date{
-                        background-color: $white;
+                        background-color: $grey;
                     }
                     span{
                         color: $purple;
@@ -397,12 +415,14 @@
                 &__item{
                     position: relative;
                     margin:0 8.33333%;
+                    @include mq($from: 900px){
+                        text-align: center;
+                    } 
                     &:not(:first-of-type){
                         margin-top: $inuit-global-spacing-unit-small;
                     }
                     .head{
-                        //width: calc( (#{$gutters} * 6) - #{$igsu});
-                        //max-width: 300px;
+                        
                         width: 212px;
                         height: 100px;
                         overflow: hidden;
@@ -427,17 +447,19 @@
                         img{
                             width: 100px;
                             height: 100px;
-                            //width: calc( (#{$gutters} * 8) - 8px );
-                            //position: absolute;
-                            //vertical-align: top;
-                            //width: 155px;
                         }
                     }
                     .content{
-                        width: calc( (#{$gutters} * 6) );                        
+                        width: calc( (#{$gutters} * 6) );
+                        @include mq($from: 900px){
+                            width: auto;
+                        }                        
                         display: inline-block;  
                         vertical-align: top;
                         margin-left: $igsu;
+                        @include mq($from: 900px){
+                            text-align: left;
+                        } 
                     }
                     .title{
                         font-family: 'RobotoB';
@@ -448,33 +470,25 @@
                         vertical-align: top;
                         margin-top: 0 !important;
                         padding-top: 0;
+                        
+                        @include mq($from: 900px){
+                            margin-top: $igsu !important;
+                        } 
                     }
                     .hour, address{
                         font-family: 'RobotoL';
+                        @include mq($from: 900px){
+                            display: inline-block;
+                        } 
                         svg{
                             height: 15px;
                         }
                     }
-                }
-            }
-            @include mq($from: 1450px){
-                margin: 0 $gutters;
-                h2{
-                    padding-left: 0;
-                }
-                &__item{
-                    max-width: inherit;
-                    margin: 0 auto;
-                    .content{
-                        width: auto;
-                        .title, .hour, address{
-                            display: inline-block;
-                            margin-top: $igsu !important;
+                    @include mq($from: 900px){
+                        address{
+                            margin-left: $igsus;
                         }
-                        .title, .hour{
-                            margin-right: $igsus;
-                        }
-                    }
+                    } 
                 }
             }
         }
@@ -515,7 +529,7 @@
                 right: -42px;
             }
             &__gallery{
-                width: calc( 100% - 8.33333% - 8.33333% );
+                width: ( 100% - 8.33333% - 8.33333% );
                 text-align: center;
                 margin: 0 auto;
                 img{

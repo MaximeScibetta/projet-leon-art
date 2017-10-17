@@ -28,10 +28,43 @@ get_header();
 </section>
 <section class="gallery">
     <h2 class="u-margin-top-huge u-margin-bottom">En images</h2>
-    <div class="gallery__container container">
-        <img src="" alt="" class="container__item">
-        <img src="" alt="" class="container__item">
-        <img src="" alt="" class="container__item">
+    <div class="CSSgal">
+        <s id="s1"></s> 
+        <s id="s2"></s>
+        <s id="s3"></s>
+        <s id="s4"></s>
+        <s id="s5"></s>
+        <div class="slider">
+            <div>
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/Mon_voisin_doris-e1508242487943.jpg" alt="">
+            </div>
+            <div>
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/Cour-Le-Magasin-e1508242508862.jpg" alt="">
+            </div>
+            <div>
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/Couloir-Le-Magasin-e1508242556203.jpg" alt="">
+            </div>
+            <div>
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/Cafet-Le-Magasin-1-e1508242581386.jpg" alt="">
+            </div>
+            <div>
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/Cafet-Le-Magasin1-e1508242626764.jpg" alt="">
+            </div>
+        </div>
+        <div class="prevNext">
+        <div><a href="#s5"></a><a href="#s2"></a></div>
+        <div><a href="#s1"></a><a href="#s3"></a></div>
+        <div><a href="#s2"></a><a href="#s4"></a></div>
+        <div><a href="#s3"></a><a href="#s5"></a></div>
+        <div><a href="#s4"></a><a href="#s1"></a></div>
+        </div>
+        <div class="bullets">
+            <a href="#s1" class="bullets_nav">1</a>
+            <a href="#s2" class="bullets_nav">2</a>
+            <a href="#s3" class="bullets_nav">3</a>
+            <a href="#s4" class="bullets_nav">4</a>
+            <a href="#s5" class="bullets_nav">5</a>
+        </div>
     </div>
     <div class="gallery__cta u-margin-top">
         <a href="" class="btn btn--cta">Notre galerie instagram</a>
@@ -74,8 +107,8 @@ get_header();
         <p>
             Encreuse de projets culturels ou citoyens : Qui fait couler beaucoup d’encre sur le papier. Qui a besoin dans son travail de gribouiller, raturer, relire, garder des traces. Qui aime à faire des schémas, des croquis, des plans, pour visualiser le travail accompli et à accomplir. Ancreuse de projets culturels ou citoyens : Qui a pour objectif lorsqu’elle travaille sur un projet de l’ancrer dans un territoire, dans une mémoire collective et dans un quotidien. Encreuse : Qui propose des animations artistiques. Travailler avec des encres, créer ses peintures et ses couleurs, découvrir des matières. Et tout simplement, parce que quand vous m’aurez rencontrée, je resterai bien ancrée dans votre mémoire !
         </p>
-        <img src="<?= dw_asset('images/home.jpg');?>" alt="" height="300">
     </div>
+    <a href="" class="btn btn--cta">Voir nos actualités</a>
 </section>
 <section class="team">
     <h2>Rencontrez l'équipe</h2>

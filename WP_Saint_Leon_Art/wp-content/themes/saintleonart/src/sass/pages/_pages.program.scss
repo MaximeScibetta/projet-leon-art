@@ -329,6 +329,14 @@
             h2{
                 margin: 0 $gutters $igsu;
             }
+            .overlay{
+                background:transparent; 
+                position:relative; 
+                width: calc( 100% - 8.33333% - 8.33333% );
+                height:480px; /* your iframe height */
+                top:480px;  /* your iframe height */
+                margin-top:-480px;  /* your iframe height */
+            }
             iframe{
                 width: 100%;
                 @include mq($from: desktop){

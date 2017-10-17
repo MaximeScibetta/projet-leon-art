@@ -153,6 +153,15 @@
         .asbl{
             background-color: $grey;
             padding: $igsul 0;
+            @include mq($from: tablet){
+                padding: $igsuh*2 0;
+                background-image: url(http://saintleonart.app/wp-content/uploads/2017/10/Cafet-Le-Magasin-e1508231479151.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .btn{
+                margin-top: $igsul;
+            }
             h2{
                 padding: 24px $gutters;
                 position: relative;
@@ -204,16 +213,13 @@
             p{
                 margin: $inuit-global-spacing-unit-large $gutters 0;
             }
-            img{
-                display: none;
-            }
             @include mq($from: tablet){
                 h2{
-                    background-color: inherit;
+                    background: none;
                     padding: 0;
-                    color: $purple;
+                    color: $white;
                     text-align: inherit;
-                    margin: 0 $gutters;
+                    margin: 100px $gutters 0;
                     width: auto;
                     &:after{
                         display: none;
@@ -225,19 +231,25 @@
                             top: 30%;
                         }
                     }
+                    
+                    @include mq($from: 900px){
+                        text-align: center;
+                        .sla{
+                            &+span{
+                                position: inherit;
+                            }
+                        }
+                    }
                 }
                 .flex{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
                     p{
-                        margin: $inuit-global-spacing-unit $gutters 0;
-                        width: 40%;
-                       // display: inline-block;
-                    }
-                    img{
-                        display: flex;
-                        width: 50%;
+                        max-width: 650px;
+                        @include mq($from: 900px){
+                            margin: 0 auto;
+                        }
+                        line-height: 1.3;
+                        font-size: 20px;
+                        color: $white;
                     }
                 }
             }

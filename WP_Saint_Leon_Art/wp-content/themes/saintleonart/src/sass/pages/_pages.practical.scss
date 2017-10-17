@@ -1,0 +1,33 @@
+.wrapper{
+    @include mq($from: 0px){
+        .map{
+            margin-top: $igsu;
+            svg#logo{
+                width: 100px;
+                @include mq($from: desktop){
+                    width: 125px;
+                }
+                display: block;
+                margin: $igsu auto $igsu;
+                @include mq($from: tablet){
+                    margin: $igsu $igsu 0 $gutters;
+                    display: inline-block;
+                }
+                @include mq($from: desktop){
+                    margin-right: $igsul;
+                }
+            }
+            p{
+                margin: 0 $gutters $igsul;
+                @include mq($from: 760px){
+                    max-width: 500px;
+                    margin: $igsu $gutters $igsul 0;
+                    display: inline-block;
+                }
+                @include mq($from: desktop){
+                    max-width: 650px;
+                }
+            }
+        }
+    }
+}

@@ -186,6 +186,7 @@ $max-size: 1200px;
 @import "components/components.countdown";
 @import "components/components.button";
 @import "components/components.footer";
+@import "components/components.gallery";
 
 // PAGES PERSO.
 @import "pages/pages.home";
@@ -194,6 +195,7 @@ $max-size: 1200px;
 @import "pages/pages.program";
 @import "pages/pages.contact";
 @import "pages/pages.all";
+@import "pages/pages.practical";
 
 body{
     font-family: $core;

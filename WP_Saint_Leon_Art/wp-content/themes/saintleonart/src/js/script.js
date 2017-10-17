@@ -100,9 +100,9 @@
         marker.setMap(map);
     }
     google.maps.event.addDomListener(window, 'load', initialize);
-    /* --------------------------*/
-    // Hamburger menu and sidebar
-    /* --------------------------*/
+/* --------------------------*/
+// Hamburger menu and sidebar
+/* --------------------------*/
     const hamburger = document.querySelector('.hamburger');
     const search = document.querySelector('.search-icon')
 
@@ -221,8 +221,22 @@
 /* --------------------------*/
 // Form contact feedback and focus
 /* --------------------------*/
+    const fCancelAnchor = function(e){
+        if (window.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.pageXOffset, window.pageYOffset);
+        }, 1);
+    }
+        console.log(window.pageXOffset, window.pageYOffset);
+    }
+
+    const bullets = document.querySelectorAll('.bullets_nav');
+    
+
     const fPageIsLoaded = function() {
-       
+        Array.from(bullets).forEach(function($btn) {
+            $btn.addEventListener("click", fCancelAnchor);
+        });
     }
     
     window.addEventListener("load", fPageIsLoaded);

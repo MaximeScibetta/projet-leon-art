@@ -138,7 +138,8 @@ get_header();
 </section> 
 <section class="map" id="mapinteractiv">
     <h2>Map interactive</h2>
-    <iframe src="https://www.google.fr/maps/d/embed?mid=1nmuuAJ-lLItmVbx4dM3wAajKFHk" height="480"></iframe>
+    <div class="overlay" onClick="style.pointerEvents='none'"></div>
+    <iframe scrolling="no" style="overflow:hidden;" src="https://www.google.fr/maps/d/embed?mid=1nmuuAJ-lLItmVbx4dM3wAajKFHk" height="480"></iframe>
 </section>
 
 <?php get_footer(); ?>

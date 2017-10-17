@@ -1,7 +1,11 @@
 body{
     position: relative;
+    .menu>.menu__item.sla{
+        display: none;
+    }
     @include mq($from: 0px, $until: desktop){
         overflow-x: hidden;
+        
         header{
             background-color: $purple;
             height: $inuit-global-spacing-unit-large;
@@ -12,10 +16,46 @@ body{
                 width: 300px;
                 background-color: $purple;
                 position: absolute;
-                top: 4.464em;
                 height: 100vh;
                 transform: translateX(-300px);
                 transition: transform 0.5s;
+                .menu{
+                    &__item{
+                        padding: $igsus 0;
+                        &.sla{
+                            margin: $igsuh auto 0;
+                            display: block;
+                            font-size: 40px;
+                            font-family: 'Whoopass';
+                            color: $white;
+                            width: 111px;
+                            text-align: center;
+                            word-wrap: break-word;
+                            line-height: 0.9;
+                        }
+                        &:not(.sla){
+                            text-align: center;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $white;
+                            font-family: 'RobotoM';
+                            text-transform: uppercase;
+                            font-size: 20px;
+                        }
+                        &:not(:last-of-type){
+                            margin-bottom: $igsul;
+                        }
+                        &.active,
+                        &:hover:not(.sla){
+                            background-color: $yellow;
+                            padding: $igsus 0;
+                            a{
+                                color: $black;
+                            }
+                        }
+                    }
+                }
             }
             .hamburger:focus ~ .site-nav{
                 transform: translateX(0);
@@ -52,14 +92,17 @@ body{
                         &:last-of-type{
                             margin-right: 0;
                         }
+                        &:hover,
+                        &.active{
+                            a{
+                                border-top: 2px solid $white;
+                            }
+                        }
                         a{
                             text-decoration: none;
                             color: $white;
                             text-transform: uppercase;
                             padding: $inuit-global-spacing-unit-tiny 0 0 0;
-                            &:hover{
-                                border-top: 2px solid $white;
-                            }
                         }
                     }
                 }

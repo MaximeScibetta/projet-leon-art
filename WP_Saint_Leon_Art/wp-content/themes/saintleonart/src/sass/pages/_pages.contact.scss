@@ -1,12 +1,15 @@
 .wrapper{
     @include mq($from: 0px){
-        .introduction{
+        .form{
+            max-width: 610px;
+            margin: $igsul auto 0;
             p{
                 margin-top: $igsu;
             }
             .hang{      
                 p{
                     margin-top: $igsu;
+                    margin: 0 $gutters;
                     @include mq($from: 500px){
                         margin-top: $igsul;
                     }
@@ -15,7 +18,7 @@
                     max-width: 500px;
                     margin: 0 auto;
                     @include mq($from: 500px){
-                        margin: $igsul auto 0;
+                        margin: 0 auto $igsul;
                     }
                     &>svg{
                         width: 100px;
@@ -28,6 +31,9 @@
                     }
                     .info{
                         margin: 0 $gutters;
+                        @include mq($from: 0px, $until: 500px){
+                            margin-bottom: $igsul;
+                        }
                         @include mq($from: 500px){
                             display: inline-block;
                             margin-top: $igsu;
@@ -35,11 +41,11 @@
                         div{
                             svg{
                                 width: 30px;
-                                fill: $white;
+                                fill: $black;
                             }
                             address, p{
                                 font-size: 20px;
-                                color: $white;
+                                color: $black;
                                 width: 205px;
                                 display: inline-block;
                                 margin: 0 0 0 $igsu;
@@ -51,10 +57,6 @@
                     }
                 }
             }
-        }
-        .form{
-            max-width: 610px;
-            margin: $igsul auto 0;
             input[type="text"],
             input[type="email"],
             input[type="tel"],

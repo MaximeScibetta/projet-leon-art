@@ -7,7 +7,7 @@ get_header();
 <section class="introduction all" style="background-image: url(<?= dw_asset('images/home.jpg');?>);">
     <h2 class="branding" id="branding">Actualités <span>SaintLeon'Art</span></h2>
 </section>
-<!-- <section class="event all">
+<section class="event all">
     <h2>Tous nos événements</h2>
     <a href="">
         <div class="event__item">
@@ -145,7 +145,7 @@ get_header();
             </div>
         </div>
     </a>
-</section> -->
+</section>
     <!-- <section class="artist all">
         <h2>Nos artistes</h2>
         <div class="artist__container">
@@ -316,7 +316,7 @@ get_header();
             </a>
         </div>
     </section> -->
-    <section class="artist all concert-expo urbanart">
+    <!-- <section class="artist all concert-expo urbanart">
         <h2>Nos concerts</h2>
         <div class="artist__container">
             <a href="" class="item">
@@ -440,5 +440,5 @@ get_header();
                 </div>
             </a>
         </div>
-    </section>
+    </section> -->
 <?php get_footer(); ?>
