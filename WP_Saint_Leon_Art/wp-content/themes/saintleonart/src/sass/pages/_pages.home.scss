@@ -2,7 +2,6 @@
     @include mq($from: 0px){
         .introduction{
             background-size: cover;
-            background-position-x: -366px;
             height: 100vh;
             &__tagline{
                 font-family: 'RobotoL';

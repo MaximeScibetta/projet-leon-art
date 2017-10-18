@@ -4,7 +4,7 @@ Template Name: Page contact
 */
 get_header();
 ?>
-<section class="introduction all" style="background-image: url(<?= dw_asset('images/home.jpg');?>);">
+<section class="introduction all" style="background-image: url(<?= dw_asset('images/contact.jpg');?>);">
     <h2 id="branding">Contactez <span>SaintLeon'Art</span></h2>
 </section>
 <section class="form">

@@ -4,7 +4,7 @@ Template Name: Page pratique
 */
 get_header();
 ?>
-<section class="introduction all" style="background-image: url(<?= dw_asset('images/home.jpg');?>);">
+<section class="introduction all" style="background-image: url(<?= dw_asset('images/practical.jpg');?>);">
     <h2 id="branding" class="branding">Venir à <span>SaintLeon'Art</span></h2>
 </section>
 <section class="map" id="mapinteractiv">
