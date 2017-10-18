@@ -4,13 +4,26 @@
                          echo'u-margin-top-huge';
                         }
                     ?>">
-        <div class="newsletter u-padding-vertical-large u-padding-horizontal ">
-            <h3>Rester au courant</h3>
-            <p class="u-margin-top">Indiquez votre adresse email dans le champ suivant pour suivre notre actualité et vous inscrire à notre newsletter via email.</p>
-            <form action="post" class="u-margin-top">
-                <label for="email" class="u-hidden-visually">Email</label>
-                <input type="email" name="name" id="name" placeholder="Indiquez votre adress email">
-                <input type="submit" value="Envoyez" class="u-margin-top">
+        <div class="newsletter u-padding-vertical-large ">
+            <div class="title">
+                <h3>Rester au courant de</h3>
+                <span>SaintLeon'Art</span>
+            </div>
+            <!-- <p class="u-margin-top">Indiquez votre adresse email dans le champ suivant pour suivre notre actualité et vous inscrire à notre newsletter via email.</p> -->
+            <form action="index.php" class="form">
+                <fieldset>
+                    <legend class="u-hidden-visually">Prénom</legend>
+                    <label for="first_name">Prénom</label>
+                    <input type="text" id="first_name" name="first_name" class="input">
+                </fieldset>
+        
+                <fieldset>
+                    <legend class="u-hidden-visually">Email</legend>
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" class="input">
+                </fieldset>
+        
+                <input type="submit" id="submit" value="Inscription au newsletter">
             </form>
         </div>
         <div class="about u-margin-top-large u-padding-horizontal ">
@@ -170,6 +183,22 @@
     });
 });
     </script>
+    <script>
+    
+    var input = document.querySelectorAll('fieldset .input');
+        var getFocus = function getFocus(oEvent) {
+            oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
+        };
+        var outFocus = function outFocus(e) {
+            if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 || e.currentTarget.parentNode.querySelector('.input option').value.length === 0 ) {
+                e.currentTarget.parentNode.querySelector('label').classList.remove("focus");
+            }
+        };
+        Array.from(input).forEach(function($label) {
+            $label.addEventListener("focus", getFocus);
+            $label.addEventListener("click", getFocus);
+            $label.addEventListener("blur", outFocus);
+        });</script>
     <script src="<?= dw_asset('js/script.js');?>"></script>
 </body>
 </html>
