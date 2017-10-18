@@ -4,7 +4,7 @@ Template Name: Page programme
 */
 get_header();
 ?>
-<section class="introduction" style="background-image: url(<?= dw_asset('images/home.jpg');?>);">
+<section class="introduction litle" style="background-image: url(<?= dw_asset('images/home.jpg');?>);">
     <h2 id="branding" class="branding">Programme <span>SaintLeon'Art</span></h2>
 </section>
 <div class="information">
