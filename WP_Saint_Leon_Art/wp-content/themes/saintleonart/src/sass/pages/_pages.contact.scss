@@ -7,38 +7,54 @@
                 margin-top: $igsu;
             }
             .hang{      
+                span{
+                    padding: $igsu;
+                    font-size: 40px;
+                    font-family: 'Whoopass';
+                    color: $white;
+                    background-color: $purple;
+                    width: 156px;
+                    text-align: center;
+                    word-wrap: break-word;
+                    line-height: 0.9;
+                    margin: $igsu auto 0;
+                    display: block;
+                    vertical-align: bottom;
+                    
+                    @include mq($from: 600px){
+                        display: inline-block;
+                    }
+                }
                 p{
-                    margin-top: $igsu;
-                    margin: 0 $gutters;
-                    @include mq($from: 500px){
+                    margin: $igsu $gutters 0;
+                    max-width: 610px;
+                    @include mq($from: 630px){
+                        margin: 0 auto;
+                        font-size: 20px;
+                    }
+                    @include mq($from: 600px){
                         margin-top: $igsul;
                     }
                 }
                 .content{
-                    max-width: 500px;
+                    max-width: 610px;
                     margin: 0 auto;
-                    @include mq($from: 500px){
+                    @include mq($from: 600px){
                         margin: 0 auto $igsul;
-                    }
-                    &>svg{
-                        width: 100px;
-                        display: block;
-                        margin: $igsu auto $igsu;
-                        @include mq($from: 500px){
-                            margin: 0 0 $igsus $igsu;
-                            display: inline-block;
-                        }
                     }
                     .info{
                         margin: 0 $gutters;
-                        @include mq($from: 0px, $until: 500px){
+                        @include mq($from: 0px, $until: 600px){
                             margin-bottom: $igsul;
                         }
-                        @include mq($from: 500px){
+                        @include mq($from: 600px){
                             display: inline-block;
                             margin-top: $igsu;
                         }
                         div{
+                            &:first-of-type{
+                                margin-top: 41px;
+                            }
                             svg{
                                 width: 30px;
                                 fill: $black;
@@ -64,6 +80,10 @@
                 background: none;
                 border: none;
             }
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="tel"]:focus,
+            textarea:focus{outline: none;}
             label{
                 font-family: 'RobotoR';
             }
@@ -163,7 +183,8 @@
                 }
                 fieldset label.focus {
                     top: -30px;
-                    font-size: 1rem!important
+                    font-size: 20px!important;
+                    font-family: 'RobotoB';
                 }
                 fieldset .left {
                     border-radius: 5px;
