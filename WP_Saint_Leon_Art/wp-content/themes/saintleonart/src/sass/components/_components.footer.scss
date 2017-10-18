@@ -101,6 +101,10 @@
                         width: auto;
                         padding: $igsus $igsu;
                     }
+                    &:hover{
+                        cursor: pointer;
+                        background-color: $red;
+                    }
                 }
             }
             @include mq($from: desktop){
