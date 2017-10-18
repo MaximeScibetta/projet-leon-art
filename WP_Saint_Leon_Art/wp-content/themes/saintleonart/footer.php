@@ -157,7 +157,19 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVA_O8C3KixYaKtQ8SbWHItWCEPHXFRao"></script>
-    <script></script>
+    <script> 
+    $('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+    </script>
     <script src="<?= dw_asset('js/script.js');?>"></script>
 </body>
 </html>

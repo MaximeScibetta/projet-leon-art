@@ -5,18 +5,21 @@
         }
         .introduction{
             @include mq($from: tablet){
-                height: 80vh;
+                height: 90vh;
             }
             h2{
                 padding-top: $inuit-global-spacing-unit-huge;
             }
             p{
                 color: $white;
-                margin: 0 $gutters;
+                margin: $igsul $gutters 0;
                 max-width: 500px;
                 @include mq($from: 576px){
-                    margin: 0 auto;
+                    margin: $igsul auto 0;
                 }
+            }
+            .btn{
+                margin-top: $igsul;
             }
             h2{
                 @include mq($from: tablet){
@@ -28,82 +31,104 @@
             }
         }
         .score{
-            overflow-y: hidden;
-            h2{
-                padding: 96px 96px 24px;
-                background-color: $yellow;
-                //display: block;
-                //margin: 0 auto;
-                border-radius: 5000px;
-                position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            ul{
+                height: 20px;
+                overflow-y: hidden;
+                width: 100%;
                 text-align: center;
-                top: -156px;
-                max-width: 500px;
-                margin: 0 auto;
-                span{
-                    display: block;
-                    margin: 80px 0 0 0;
+                margin: $igsus 0;
+                position: absolute;
+                color: $white;
+                li{
+                    h2{
+                        font-size: 20px;
+                        font-family: 'Rubik';
+                        a{
+                            text-decoration: none;
+                            color: $white;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                svg{
+                    fill: $white;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
                 }
             }
-            &__flex{
-                margin-top: -220px;
+            .flex{
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 @include mq($from: tablet){
-                flex-direction: row;
+                    flex-direction: row;
                 }
                 justify-content: flex-start;
-                .flex__item{
-                    width: 100%;
+                &__item{
+                    display: flex;
+                    flex-direction: column;
                     @include mq($from: tablet){
-                        display: inline-block;
-                        width: 33.3333333333333333%;
-                        &:nth-of-type(1){
-                            .score__item{
-                                padding-top: 72px;
-                            }
-                        }
-                        .score__item{
-                            height: $inuit-global-spacing-unit*10;
-                        }
+                        flex-direction: column;
                     }
-                    background-size: cover;
-                    height: $inuit-global-spacing-unit*10;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    padding: $igsul 0 ;
+                    background: $purple;
+                    svg{
+                        width: 100px;
+                        height: 100px;
+                        fill: $white;
+                        margin-bottom: $igsu;
+                    }
+                    .count,
+                    .text{
+                        width: 100%;
+                        color:$white;
+                        text-align: center;
+                    }
+                    .count{
+                        font-family: 'RobotoB';
+                        font-size: 50px;
+                    }
+                    .text{
+                        margin-top: $igsus;
+                        text-transform: uppercase;
+                        font-family: 'RobotoL';
+                        font-size: 20px;
+                    }
                     &:nth-of-type(1){
-                        background-image: url('../images/artistes.jpg');
-                        height: $inuit-global-spacing-unit*10;
-                        .score__item{
-                            padding-top: $inuit-global-spacing-unit-huge;
-                            @include mq($from: tablet){
-                                padding-top: 72px;
-                            }
-                        }
+                        background-color: $purple;
+                        color: $white;
                     }
                     &:nth-of-type(2){
-                        background-image: url('../images/artistes.jpg');
+                        background-color: $red;
+                        color: $white;
                     }
                     &:nth-of-type(3){
-                        background-image: url('../images/expositions.jpg');
+                        background-color: $yellow;
+                        color: $purple;
+                        svg{
+                            fill: $purple;
+                        }
+                        .count, .text{
+                            color: $purple;
+                        }
                     }
                 }
             }
-            &__item{
-                font-family: 'RobotoB';
-                color: $white;
-                text-transform: uppercase;
-                font-size: 80px;
-                text-align: center;
-                padding-top: 72px;
-                span{
-                    font-size: 20px;
-                    display: block;
-                }
-            }
+            
         }
         .gallery{
             margin-bottom: $igsul;
             h2{
-                margin: 0 $gutters;
+                margin: $igsul $gutters 0;
             }
             &__cta{
                .btn--cta{
@@ -382,6 +407,7 @@
                     }
                     p{
                         font-size: 16px;
+                        line-height: 1;
                         &.title{
                             padding-top: $igsut;
                             max-width: 100%;
