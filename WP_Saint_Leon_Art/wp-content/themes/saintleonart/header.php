@@ -25,10 +25,6 @@
         </button>
         <h1 class="u-hidden-visually">Saint-Léon'Art</h1>
         <?php get_template_part('part', 'navbar');?>
-        <button class="search-icon">
-            <span class="circle"></span>
-            <span class="handle"></span>
-        </button>
     </header>
     <article class="wrapper u-12/12">
         

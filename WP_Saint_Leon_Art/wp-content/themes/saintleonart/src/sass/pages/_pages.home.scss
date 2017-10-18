@@ -11,18 +11,21 @@
                 font-size: 20px;
                 max-width: 300px;
                 margin: 0 auto;
-                margin-top: $inuit-global-spacing-unit !important; 
+                margin-top: $igsul !important; 
+                line-height: 1.2;
             }
             h2{
                 padding-top: $inuit-global-spacing-unit-huge; 
+                font-size: 80px;
+                width: 222px;
             }
             @include mq($from: tablet){
                 &__container{
                     h2{
-                        padding-top: $inuit-global-spacing-unit * 6; 
+                        padding-top: $igsu * 6; 
                     }
                     .introduction__tagline{
-                        margin-top: $inuit-global-spacing-unit * 3 !important; 
+                        margin-top: $igsu * 5 !important; 
                     }
                 }
             }
@@ -32,7 +35,7 @@
                         padding-top: $inuit-global-spacing-unit * 8; 
                     }
                     .introduction__tagline{
-                        margin-top: $inuit-global-spacing-unit * 3 !important; 
+                        margin-top: $inuit-global-spacing-unit * 5 !important; 
                     }
                 }
             }
@@ -77,7 +80,16 @@
             a.clickable{
                 text-decoration: none;
                 color: $white;
-                height: 200px;
+                height: 230px;
+                @include mq($from: 400px){
+                    height: 200px;
+                }
+                @include mq($from: tablet){
+                    height: 250px;
+                }
+                @include mq($from: 800px){
+                    height: 230px;
+                }
                 position: relative;
                 width: 100%;
                 display: inline-flex;
@@ -88,7 +100,7 @@
                     #arrow-cta{
                         p{
                             letter-spacing: 3px;
-                            transition: 1s cubic-bezier(.86,0,.07,1);
+                            transition: .1s cubic-bezier(.86,0,.07,1);
                         }
                     }
                 }
@@ -115,6 +127,7 @@
                     padding: $inuit-global-spacing-unit 0 0 $inuit-global-spacing-unit;
                     @include mq($from: desktop){
                         padding: $inuit-global-spacing-unit-large 0 0 $inuit-global-spacing-unit-large;
+                        font-size: 20px;
                     }
                     span{
                         border-bottom: 1px solid $yellow;
@@ -220,8 +233,8 @@
                 }
             }
             &__container{
-                margin: 0 $gutters;
-                @include mq($from: tablet){
+                //margin: 0 $gutters;
+                @include mq($from: 425px){
                     margin: 0 $gutters;
                 }
                 .item{
@@ -324,7 +337,7 @@
                     font-size: 20px;
                 }
             }
-            @include mq($from: 0px, $until: 790px){
+            @include mq($from: 0px, $until: 873px){
                 &__item{
                     position: relative;
                     margin-top: $inuit-global-spacing-unit;
@@ -347,7 +360,7 @@
                                 text-transform: uppercase;
                                 text-align: center;
                                 vertical-align: middle;
-                                padding-top: 25%;
+                                padding-top: 15%;
                                 display: block;
                             }
                             &+img{
@@ -392,7 +405,8 @@
                     display: none;
                 }
             }
-            @include mq($from: 790px){
+            /*790px*/
+            @include mq($from: 873px){
                 &>a:first-of-type{
                     margin-top: $inuit-global-spacing-unit;
                 }
@@ -412,17 +426,18 @@
                         color: $purple;
                     }
                 }
+                &>a:not(:last-of-type){
+                    margin-bottom: 5px;
+                }
                 &__item{
                     position: relative;
                     margin:0 8.33333%;
-                    @include mq($from: 900px){
-                        text-align: center;
-                    } 
+                    text-align: center;
+                    height: 100px;
                     &:not(:first-of-type){
-                        margin-top: $inuit-global-spacing-unit-small;
+                       // margin-top: $inuit-global-spacing-unit-small;
                     }
                     .head{
-                        
                         width: 212px;
                         height: 100px;
                         overflow: hidden;
@@ -437,11 +452,11 @@
                         }
                         span{
                             font-family: 'RobotoB';
-                            font-size: 27px;
+                            font-size: 25px;
                             text-transform: uppercase;
                             text-align: center;
                             vertical-align: middle;
-                            padding-top: 25%;
+                            padding-top: 15%;
                             display: block;
                         }
                         img{
@@ -450,16 +465,12 @@
                         }
                     }
                     .content{
-                        width: calc( (#{$gutters} * 6) );
-                        @include mq($from: 900px){
-                            width: auto;
-                        }                        
+                        //width: calc( (#{$gutters} * 6) );
+                        width: auto;
                         display: inline-block;  
                         vertical-align: top;
                         margin-left: $igsu;
-                        @include mq($from: 900px){
                             text-align: left;
-                        } 
                     }
                     .title{
                         font-family: 'RobotoB';
@@ -471,24 +482,22 @@
                         margin-top: 0 !important;
                         padding-top: 0;
                         
-                        @include mq($from: 900px){
                             margin-top: $igsu !important;
-                        } 
                     }
                     .hour, address{
                         font-family: 'RobotoL';
-                        @include mq($from: 900px){
                             display: inline-block;
-                        } 
                         svg{
                             height: 15px;
+                            margin-right: 0 !important;
                         }
                     }
-                    @include mq($from: 900px){
-                        address{
-                            margin-left: $igsus;
-                        }
-                    } 
+                    .hour{
+                        margin-right: $igsus;
+                    }
+                    address{
+                        margin-left: $igsus;
+                    }
                 }
             }
         }
