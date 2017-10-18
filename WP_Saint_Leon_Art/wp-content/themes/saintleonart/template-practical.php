@@ -8,23 +8,86 @@ get_header();
     <h2 id="branding" class="branding">Venir à <span>SaintLeon'Art</span></h2>
 </section>
 <section class="map" id="mapinteractiv">
-    <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;">
-        <style type="text/css">
-            .st0{fill:#D94636;}
-            .st1{fill:#FFCC79;}
-            .st2{fill:#7F174A;}
-        </style>
-        <g>
-            <path class="st0" d="M178.2,99.8c0,42.8-34.7,77.4-77.4,77.4c-42.8,0-77.4-34.7-77.4-77.4c0-42.8,34.7-77.4,77.4-77.4
-                C143.5,22.4,178.2,57,178.2,99.8"/>
-        </g>
-        <rect x="60.3" y="10.8" class="st1" width="80.9" height="177.9"/>
-        <polygon class="st2" points="187.9,106.3 13.6,2.9 13.6,92.8 13.6,93.2 187.9,196.7 187.9,106.7 "/>
-    </svg>
-    <p>
-        Venir à Saint léonard est possible de toute la Belgique via tout type de transport. Vous pourrez y venir en voiture et la déposer dans un parking proche ou alors en transport en commun à l'aide de nos nombreux arrêts de bus à proximité grâce à la TEC ou encore en train via la SNCB si vous venez de plus loin. Vous pourrez chercher votre moyen de transport préféré via notre carte interactive.
-    </p>
+    <div class="hang">
+        <p>
+            Venir à Saint léonard est possible de toute la Belgique via tout type de transport. Vous pourrez y venir en voiture et la déposer dans un parking proche ou alors en transport en commun à l'aide de nos nombreux arrêts de bus à proximité grâce à la TEC ou encore en train via la SNCB si vous venez de plus loin. Vous pourrez chercher votre moyen de transport préféré via notre carte interactive.
+        </p>
+        <div class="content">
+            <span>SaintLeon'Art</span>
+            <div class="info">
+                <div>
+                    <svg version="1.1" id="parking" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.678 248.678" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 248.678 248.678">
+                        <g>
+                        <path d="m169.839,0h-91c-3.313,0-6,2.687-6,6v94.333c0,3.313 2.687,6 6,6h39.5v130.345h-8.482c-3.313,0-6,2.687-6,6s2.687,6 6,6h28.965c3.313,0 6-2.687 6-6s-2.687-6-6-6h-8.482v-130.345h39.5c3.313,0 6-2.687 6-6v-94.333c-0.001-3.313-2.687-6-6.001-6zm-6,94.333h-79v-82.333h79v82.333z"/>
+                        <path d="m110.175,79.169c3.313,0 6-2.687 6-6v-14.002h12.327c8.823,0 16.001-7.178 16.001-16.001s-7.178-16.001-16.001-16.001h-18.327c-3.313,0-6,2.687-6,6v40.004c-1.42109e-14,3.313 2.687,6 6,6zm6-40.004h12.327c2.206,0 4.001,1.795 4.001,4.001s-1.795,4.001-4.001,4.001h-12.327v-8.002z"/>
+                        </g>
+                    </svg>
+                    <p>Tourisme parking a quelque mètre du quartier</p>
+                </div>
+                <div>
+                    <svg version="1.1" id="bus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 508 508" style="enable-background:new 0 0 508 508;">
+                        <g>
+                            <g>
+                                <path d="M496,179.1l-86.6-86.6c-7.6-7.6-18.1-12-28.8-12H40.8C18.3,80.5,0,98.8,0,121.3v220.2c0,22.5,18.3,40.8,40.8,40.8h10.5
+                                    c6.4,25.9,29.7,45.2,57.5,45.2c27.8,0,51.2-19.3,57.5-45.2h175.4c6.4,25.9,29.7,45.2,57.5,45.2s51.2-19.3,57.5-45.2h10.5
+                                    c22.5,0,40.8-18.3,40.8-40.8V207.9C508,197.2,503.6,186.7,496,179.1z M108.8,399.3c-17.1,0-31.1-13.9-31.1-31.1
+                                    c0-17.1,13.9-31.1,31.1-31.1c17.2,0,31.1,13.9,31.1,31.1C139.9,385.3,125.9,399.3,108.8,399.3z M399.2,399.3
+                                    c-17.1,0-31.1-13.9-31.1-31.1c0-17.1,13.9-31.1,31.1-31.1c17.1,0,31.1,13.9,31.1,31.1C430.3,385.3,416.3,399.3,399.2,399.3z
+                                    M479.9,341.5h-0.1c0,6.9-5.6,12.5-12.5,12.5h-10.5c-6.4-25.9-29.7-45.2-57.5-45.2s-51.2,19.3-57.5,45.2H166.3
+                                    c-6.4-25.9-29.7-45.2-57.5-45.2c-27.8,0-51.2,19.3-57.5,45.2H40.8c-6.9,0-12.5-5.6-12.5-12.5V121.3c0-6.9,5.6-12.5,12.5-12.5
+                                    h339.9c3.3,0,6.5,1.3,8.9,3.7l86.6,86.6c2.3,2.3,3.7,5.6,3.7,8.9V341.5z"/>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M447.5,210.3l-69.2-69.2c-2.6-2.6-6.2-4.1-10-4.1H70.6c-7.8,0-14.1,6.3-14.1,14.1v90.4c0,7.3,5.6,13.4,12.8,14.1
+                                    l366.9,33.9c7.5,0.6,15.1-4.7,15.4-14.1v-55.1C451.6,216.6,450.1,213,447.5,210.3z M146.6,234.3l-61.9-5.7v-63.4h61.9V234.3z
+                                    M239.9,242.9l-65.1-6v-71.7h65.1V242.9z M333.2,251.6l-65.1-6v-80.3h65.1V251.6z M423.3,259.9l-61.9-5.7v-89h1l60.9,60.9V259.9z"
+                                    />
+                            </g>
+                        </g>
+                    </svg>
+                    <p>La ligne 1 ou 4</p>
+                </div>
+                <div>
+                    <svg version="1.1" id="train" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 506.852 506.852" style="enable-background:new 0 0 506.852 506.852;">
+                        <g>
+                            <g>
+                                <path d="M416.726,0h-326.6c-23.3,0-42.2,18.9-42.2,42.2v343c0,23.3,18.9,42.2,42.2,42.2h28.6l-45.8,56.5c-4.9,6-4,14.9,2.1,19.8
+                                    c6.1,4.9,14.9,4,19.8-2.1l60.2-74.2h196.9l60.1,74.2c4.9,6,13.8,7,19.8,2.1c6-4.9,7-13.8,2.1-19.8l-45.8-56.5h28.6
+                                    c23.3,0,42.2-18.9,42.2-42.2v-343C458.926,18.9,440.026,0,416.726,0z M430.726,385.2L430.726,385.2c0,7.8-6.3,14.1-14.1,14.1
+                                    h-326.5c-7.8,0-14.1-6.3-14.1-14.1v-343c0-7.8,6.3-14.1,14.1-14.1h326.5c7.8,0,14.1,6.3,14.1,14.1V385.2z"/>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M361.126,55.8h-215.4c-23.1,0-42,18.8-42,42v87.5c0,23.1,18.8,42,42,42h215.4c23.1,0,42-18.8,42-42V97.8
+                                    C403.126,74.6,384.326,55.8,361.126,55.8z M375.126,185.3h-0.2c0,7.6-6.2,13.8-13.8,13.8h-215.4c-7.6,0-13.8-6.2-13.8-13.8V97.8
+                                    c0-7.6,6.2-13.8,13.8-13.8h64v24.4c0,7.8,6.3,14.1,14.1,14.1s14.1-6.3,14.1-14.1V83.9h31.2V144c0,7.8,6.3,14.1,14.1,14.1
+                                    c7.8,0,14.1-6.3,14.1-14.1V83.9h64c7.6,0,13.8,6.2,13.8,13.8V185.3z"/>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M158.126,266.1c-26.2,0-47.5,21.3-47.5,47.5s21.3,47.5,47.5,47.5s47.5-21.3,47.5-47.5
+                                    C205.626,287.3,184.326,266.1,158.126,266.1z M158.126,332.8c-10.6,0-19.3-8.7-19.3-19.3s8.7-19.3,19.3-19.3
+                                    c10.6,0,19.3,8.7,19.3,19.3S168.726,332.8,158.126,332.8z"/>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M348.726,266.1c-26.2,0-47.5,21.3-47.5,47.5s21.3,47.5,47.5,47.5s47.5-21.3,47.5-47.5
+                                    C396.226,287.3,374.926,266.1,348.726,266.1z M348.726,332.8c-10.6,0-19.3-8.7-19.3-19.3s8.7-19.3,19.3-19.3
+                                    c10.6,0,19.3,8.7,19.3,19.3S359.326,332.8,348.726,332.8z"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p>Direction Liège-Guillemins</p>
+                </div>
+            </div>
+       </div>
+    </div>
     <h2>Map interactive</h2>
     <iframe src="https://www.google.fr/maps/d/embed?mid=1nmuuAJ-lLItmVbx4dM3wAajKFHk" height="480"></iframe>
 </section>
-<?php get_footer(); ?>
+<?php get_footer(); ?> 
