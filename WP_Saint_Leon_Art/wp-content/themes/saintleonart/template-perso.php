@@ -4,7 +4,7 @@ Template Name: Page perso
 */
 get_header();
 ?>
-<section class="introduction" style="background-image: url(<?= dw_asset('images/home.jpg');?>);">
+<section class="introduction" style="background-image: url('http://saintleonart.app/wp-content/uploads/2017/10/perso_branding.jpg');">
     <h2 id="branding">Banksy <span>SaintLeon'Art</span></h2>
     <div class="location">
         <a href="#map">
@@ -15,7 +15,7 @@ get_header();
     </div>
 </section>
 <section class="description">
-    <img src="<?= dw_asset('images/home.jpg');?>" alt="">
+    <img src="http://saintleonart.app/wp-content/uploads/2017/10/perso_gal-e1508398367240.jpg" alt="">
     <div>
         <h3>Banksy</h3>
         <p class="content">
