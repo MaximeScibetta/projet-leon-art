@@ -26,9 +26,11 @@
             justify-content: flex-start;
             img{
                 width: 100%;
+                height: auto;
                 @include mq($from: desktop){
                     width: 60%;
                     align-self: normal;
+                    height: 800px;
                 }
             }
             >div{
@@ -55,7 +57,7 @@
                     font-family: 'Rubik';
                     color: $purple;
                     @include mq($from: desktop){
-                        margin-top: 40%;
+                        margin-top: 25%;
                     }
                 }
                 p{
@@ -95,6 +97,9 @@
             img+img{
                 margin-top: -4px;
             }
+            img{
+                width: 100%;
+            }
             @include mq($from: desktop){
                 display: flex;
                 flex-direction: row;
@@ -133,9 +138,15 @@
                 margin-bottom: $igsu;
             }
             }
-            p{
+            a{
                 text-align: center;
+                &:hover{
+                    svg{
+                        fill: $yellow;
+                    }
+                }
                 svg{
+                    fill: $white;
                     height: 63px;
                 }
                 &:nth-of-type(2){
@@ -148,7 +159,7 @@
             @include mq($from: tablet){
                 div{
                     text-align: center;
-                    p{
+                    a{
                         display: inline-block;
                         &:nth-of-type(2){
                             margin:0 $inuit-global-spacing-unit-huge;

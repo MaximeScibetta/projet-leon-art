@@ -57,6 +57,9 @@ body{
                             @media (max-height: 900px){
                                 margin-bottom: $igsu;
                             }
+                            @media (max-height: 600px){
+                                margin-bottom: $igsus;
+                            }
                         }
                         &.active,
                         &:hover:not(.sla){
