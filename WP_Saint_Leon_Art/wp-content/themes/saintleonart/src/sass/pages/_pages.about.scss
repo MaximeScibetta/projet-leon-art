@@ -3,8 +3,8 @@
         @include mq($from: desktop){
             font-size: 20px;
         }
-        .introduction{
-            &__container{
+        .introduction.about{
+            .introduction__container{
                 .introduction__tagline{
                     margin-top: 68px !important;
                     @include mq($from: 0px, $until: tablet){

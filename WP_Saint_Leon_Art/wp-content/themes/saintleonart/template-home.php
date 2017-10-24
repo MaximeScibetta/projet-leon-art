@@ -4,7 +4,7 @@ Template Name: Page Accueil
 */
 get_header();
 ?>
-<section class="introduction" style="background-image: url(<?= dw_asset('images/home.jpg');?>);">
+<section class="introduction home" style="background-image: url(<?= dw_asset('images/home.jpg');?>);">
     <div class="introduction__container">
             <h2 class="sla">SaintLeon'Art</h2>
             <p class="introduction__tagline u-padding-horizontal-small u-10/18@tablet">
