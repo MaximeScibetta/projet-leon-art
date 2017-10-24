@@ -163,7 +163,7 @@
                 margin: $igsul $gutters 0;
             }
             &__cta{
-               .btn--cta{
+               .btn--anim{
                     display: none;
                }
                .btn--mobile{
@@ -196,10 +196,10 @@
                }
                @include mq($from: desktop){
                    text-align: center;
-                    .btn--cta{
+                    .btn--anim{
                         display: inline-block;
-                        width: 30%;
-                        max-width: 300px;
+                        // width: 30%;
+                        // max-width: 350px;
                         &:not(:last-of-type){
                             margin-right: 12px;
                         }
