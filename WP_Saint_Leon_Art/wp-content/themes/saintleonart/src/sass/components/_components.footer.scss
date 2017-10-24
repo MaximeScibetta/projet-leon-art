@@ -29,7 +29,7 @@
             p{
                 font-size: 20px;
                 max-width: 500px;
-                margin: 0 auto;
+                margin: 0 auto; 
             }
             .form{
                 margin: $igsul $gutters 0;
@@ -132,41 +132,27 @@
                 }
             }
         }
-        .about{
+        .nav{
+            
             display: inline-block;
             @include mq($from: 500px){
-                text-align: center;
             }
-            &__container{
-                margin: 0 auto;
-                h3{
-                    font-size: 20px;
-                    font-family: 'Whoopass';
-                    display: inline-block;
-                    max-width: 54px;
-                    text-align: center;
-                    word-wrap: break-word;
-                    line-height: 0.9;
-                    //margin: 5% auto 0;
-                }
-                p{
-                    max-width: 400px;                
-                }
+            h3{
+                margin-bottom: $igsus;
             }
-            .social{
-                text-align: center;
-                p{
-                    display: inline-block;
-                    svg{
-                        height: 30px;
+            .secondMenu{
+                &__item{
+                    &:not(:last-of-type){
+                        margin-bottom: $igsus;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $white;
+                        &:hover{
+                            text-decoration: underline;
+                        }
                     }
                 }
-            }
-            h3+p{
-                margin-left: 12px;
-                display: inline-block;
-                width: 74%;
-                vertical-align: top;
             }
         }
         .partner{
@@ -178,9 +164,17 @@
         .lastActu{
             width: 100%;
            &__item{
+               display: block;
                margin-top: $inuit-global-spacing-unit-small;
                position: relative;
                max-width: 400px;
+               &:hover{
+                   cursor: pointer;
+                   .info{
+                   text-decoration: underline;
+                   
+                   }
+               }
                 img{
                     width: 50px;
                     margin-right: $inuit-global-spacing-unit-small;
@@ -200,7 +194,7 @@
                 }
            }
         }
-        @include mq($from: tablet){
+        @include mq($from: 0px){
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -208,24 +202,40 @@
             .newsletter{
                 width: 100%;
             }
-            .about{
-                width: 50%;
-            }
+            .nav{
+                width: 100%;
+                @include mq($from: 610px){
+                    width: 38%;
+                }
+                @include mq($from: tablet){
+                    width: 33%;
+                }
+                @include mq($from: desktop){
+                    width: 25%;
+                }
+            }   
             .lastActu{
-                width: 50%;
-            }
+                width: 100%;
+                @include mq($from: 610px){
+                    width: 50%;
+                }
+                @include mq($from: desktop){
+                    width: 33%;
+                }
+            }         
             .partner{
                 width: 100%;
+                @include mq($from: desktop){
+                    width: 40%;
+                }
                 svg{
                     width: 60px;
                 }
             }
             @include mq($from: desktop){
-                .about, .lastActu{
-                    width: 30%;
-                }
+                
                 .partner{
-                    width: 40%;
+                    //width: 40%;
                 }
             }
         }
