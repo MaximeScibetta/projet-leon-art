@@ -414,7 +414,7 @@
                         background-color: $purple;
                     }
                     span{
-                        color: $white;
+                        color: $grey;
                     }
                 }
                 &>a:nth-child(2n+1){
@@ -432,7 +432,7 @@
                     position: relative;
                     margin:0 8.33333%;
                     text-align: center;
-                    height: 100px;
+                    //height: 100px;
                     &:not(:first-of-type){
                        // margin-top: $inuit-global-spacing-unit-small;
                     }

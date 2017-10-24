@@ -26,8 +26,8 @@ get_header();
         </li>
     </ul>
     <div class="introduction__cta u-padding-horizontal-small u-margin-top-large">
-        <a href="http://saintleonart.app/?page_id=29" class="btn button btn--hover">Le programme</a>
-        <a href="http://saintleonart.app/?page_id=49" class="btn btn--hover">L'Actualité</a>
+        <a href="http://saintleonart.app/?page_id=29" class="btn btn--anim btn btn--anim--anim">Le programme</a>
+        <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim btn btn--anim--anim">L'Actualité</a>
     </div>
 </section>
 <section class="activitie">
@@ -114,7 +114,7 @@ get_header();
             </div>
         </a>
     </div>
-    <a href="http://saintleonart.app/?page_id=29" class="btn u-margin-top">Voir le programme</a>
+    <a href="http://saintleonart.app/?page_id=29" class="btn btn--anim u-margin-top">Voir le programme</a>
 </section>
 <section class="artist">
     <h2 class="u-margin-bottom">Nos participants</h2>
@@ -160,7 +160,7 @@ get_header();
             </div>
         </a>
     </div>
-    <a href="http://saintleonart.app/?page_id=49" class="btn u-margin-top">Voir tous nos artistes</a>
+    <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim u-margin-top">Voir tous nos artistes</a>
 </section>
 <section class="event">
     <h2>Prochain événement</h2>
@@ -300,7 +300,7 @@ get_header();
             </div>
         </div>
     </a>
-    <a href="" class="btn u-margin-top">Voir tous nos événements</a>
+    <a href="" class="btn btn--anim u-margin-top">Voir tous nos événements</a>
 </section>
 <section class="instagram">
     <svg class="" version="1.1" id="instagram_color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 551.034 551.034" style="enable-background:new 0 0 551.034 551.034;">
