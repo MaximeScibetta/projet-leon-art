@@ -4,11 +4,36 @@
             font-size: 20px;
         }
         .introduction{
-            @include mq($from: tablet){
-                height: 90vh;
+            &__container{
+                .introduction__tagline{
+                    margin-top: 68px !important;
+                    @include mq($from: 0px, $until: tablet){
+                        margin-top: 48px !important;
+                    }
+                }
             }
             h2{
                 padding-top: $inuit-global-spacing-unit-huge;
+                text-transform: uppercase;
+                font-family: 'Rubik';
+                font-size: 30px;
+                color: $white;
+                text-align: center;
+                margin: 0 auto;
+                @include mq($from: tablet){
+                    padding-top: $inuit-global-spacing-unit * 6; 
+                }
+                @include mq($from: desktop){
+                    padding-top: $inuit-global-spacing-unit * 6; 
+                }
+                span{
+                    font-family: 'Whoopass';
+                    font-size: 40px;
+                    width: 111px;
+                    display: block;
+                    margin: 0 auto;
+                    word-wrap: break-word; 
+                }
             }
             p{
                 text-shadow: 0px 0px 3px black;
@@ -29,6 +54,12 @@
                 @include mq($from: desktop){
                     padding-top: $inuit-global-spacing-unit * 6; 
                 }
+            }
+        }
+        .introduction.about{
+            height: 50vh;
+            @include mq($from: 0px, $until: 400px){
+                height: 60vh;
             }
         }
         .score{
