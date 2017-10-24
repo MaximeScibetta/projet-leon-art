@@ -32,6 +32,15 @@ body{
                             text-align: center;
                             word-wrap: break-word;
                             line-height: 0.9;
+                            @media (max-height: 720px){
+                                margin: $igsul auto 0;
+                            }
+                            @media (max-height: 660px){
+                                margin: $igsu auto 0;
+                            }
+                            @media (max-height: 630px){
+                                margin: 0 auto ;
+                            }
                         }
                         &:not(.sla){
                             text-align: center;
@@ -45,6 +54,9 @@ body{
                         }
                         &:not(:last-of-type){
                             margin-bottom: $igsul;
+                            @media (max-height: 900px){
+                                margin-bottom: $igsu;
+                            }
                         }
                         &.active,
                         &:hover:not(.sla){

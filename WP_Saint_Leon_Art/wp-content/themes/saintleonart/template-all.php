@@ -4,7 +4,7 @@ Template Name: Page all
 */
 get_header();
 ?>
-<section class="introduction all" style="background-image: url(<?= dw_asset('images/all-expo.jpg');?>);">
+<section class="introduction litle" style="background-image: url(<?= dw_asset('images/all-expo.jpg');?>);">
     <h2 class="branding" id="branding">Actualités <span>SaintLeon'Art</span></h2>
 </section>
 <section class="event all">

@@ -8,7 +8,7 @@ get_header();
     <div class="introduction__container">
         <h2 class="sla"><span>SaintLeon'Art</span> c'est...</h2>
         <p class="introduction__tagline u-padding-horizontal-small u-11/18@tablet">
-            Saint-LéonArt c'est un événement dont le but est de mettre en avant le fabuleux tissu artistique du quartier St Léonard à Liège. <!--Ce quartier dispose en effet d’une richesse artistique et d’un dynamisme important qu’il veut partager avec ses habitants et avec les liégeois de tous horizons. Saint-LéonArt vise également à favoriser la rencontre entre la population du quartier et l’art sous toutes ses formes tout en créant des liens durables entre habitants et artistes qui s’y côtoient tous les jours. -->
+           Un événement dont le but est de mettre en avant le fabuleux tissu artistique du quartier St Léonard à Liège. <!--Ce quartier dispose en effet d’une richesse artistique et d’un dynamisme important qu’il veut partager avec ses habitants et avec les liégeois de tous horizons. Saint-LéonArt vise également à favoriser la rencontre entre la population du quartier et l’art sous toutes ses formes tout en créant des liens durables entre habitants et artistes qui s’y côtoient tous les jours. -->
         </p>
     </div>
     <a href="" class="btn btn--anim">Notre programme 2017</a>
