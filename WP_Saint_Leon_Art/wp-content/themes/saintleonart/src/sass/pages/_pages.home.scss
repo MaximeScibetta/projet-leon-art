@@ -295,7 +295,7 @@
                     font-size: 20px;
                 }
             }
-            @include mq($from: 0px, $until: 873px){
+            @include mq($from: 0px, $until: 893px){
                 &__item{
                     position: relative;
                     margin-top: $inuit-global-spacing-unit;
@@ -364,7 +364,7 @@
                 }
             }
             /*790px*/
-            @include mq($from: 873px){
+            @include mq($from: 893px){
                 &>a:first-of-type{
                     margin-top: $inuit-global-spacing-unit;
                 }
@@ -439,8 +439,6 @@
                         vertical-align: top;
                         margin-top: 0 !important;
                         padding-top: 0;
-                        
-                            margin-top: $igsu !important;
                     }
                     .hour, address{
                         font-family: 'RobotoL';
