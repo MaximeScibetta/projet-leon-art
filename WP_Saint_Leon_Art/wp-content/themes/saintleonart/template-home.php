@@ -32,85 +32,41 @@ get_header();
 </section>
 <section class="activitie">
     <h2 class="u-margin-top-large">Venez y voir des ...</h2>
-    <div class="activitie__flex o-layout">
+    <div class="activitie__flex flex">
         <a class="clickable" href="http://saintleonart.app/?page_id=49">
-            <div class="o-layout__item">
-                <h3 class=""><span>Artist</span>es</h3>
-                <p class="">Venant de toutes là Belgique, vous pourrez y découvrire des artistes de tous les genres, avec pour chacun leur histoire et le style.</p> 
-            </div>
-            <div id="arrow-cta">
-                    <p>Voir tous nos artistes</p>
-                    <svg width="92px" height="9px" viewBox="0 0 92 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="Landing-Copy" transform="translate(-809.000000, -808.000000)" fill="#FFFFFF">
-                                <g id="Project-Info" transform="translate(740.000000, 309.000000)">
-                                    <g id="Button" transform="translate(0.000000, 497.000000)">
-                                        <path d="M158.794907,7 L69.2478632,7 L69.2478632,6 L158.80056,6 L155.775798,2.97523772 L156.482905,2.26813094 L160.689284,6.47450974 L160.207862,6.95593111 L160.207862,7 L160.163793,7 L159.983688,7.18010561 L160.000308,7.19672564 L156.464774,10.7322596 L155.763711,10.0311964 L158.794907,7 Z" id="Arrow"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div> 
-        </a>
-        <a class="clickable" href="http://saintleonart.app/?page_id=49">
-            <div class="o-layout__item activitie__item">
-                <h3 class=""><span>Conce</span>rts</h3>
-                <p class="">De tous genre musicaux en passant par le classic en allant jusqu'au rap, vous pourrez venir dancer face à notre scène avec un bar à proximité.</p>
-                <div id="arrow-cta">
-                    <p>Voir tous nos concerts</p>
-                    <svg width="92px" height="9px" viewBox="0 0 92 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="Landing-Copy" transform="translate(-809.000000, -808.000000)" fill="#FFFFFF">
-                                <g id="Project-Info" transform="translate(740.000000, 309.000000)">
-                                    <g id="Button" transform="translate(0.000000, 497.000000)">
-                                        <path d="M158.794907,7 L69.2478632,7 L69.2478632,6 L158.80056,6 L155.775798,2.97523772 L156.482905,2.26813094 L160.689284,6.47450974 L160.207862,6.95593111 L160.207862,7 L160.163793,7 L159.983688,7.18010561 L160.000308,7.19672564 L156.464774,10.7322596 L155.763711,10.0311964 L158.794907,7 Z" id="Arrow"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>  
+            <div class="flex__item">
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/Artistes-e1508929014727.jpg" alt="">
+                <div class="container">
+                    <h3 class=""><span>Artist</span>es</h3>
+                    <p class="">Venant de toutes là Belgique, vous pourrez y découvrire des artistes de tous les genres, avec pour chacun leur histoire et le style.</p> 
+                </div>
             </div>
         </a>
         <a class="clickable" href="http://saintleonart.app/?page_id=49">
-            <div class="o-layout__item activitie__item">
-                <h3 class=""><span>Art ur</span>bains</h3>
-                <p class="">Présent dans tous le quartier avec l'avantage qu'ils soient visible toutes l'année à n'importe quelles heures. Un art d'un autre genre en pleine émergence.</p>
-                <div id="arrow-cta">
-                    <p>Voir tous nos art urbains</p>
-                    <svg width="92px" height="9px" viewBox="0 0 92 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="Landing-Copy" transform="translate(-809.000000, -808.000000)" fill="#FFFFFF">
-                                <g id="Project-Info" transform="translate(740.000000, 309.000000)">
-                                    <g id="Button" transform="translate(0.000000, 497.000000)">
-                                        <path d="M158.794907,7 L69.2478632,7 L69.2478632,6 L158.80056,6 L155.775798,2.97523772 L156.482905,2.26813094 L160.689284,6.47450974 L160.207862,6.95593111 L160.207862,7 L160.163793,7 L159.983688,7.18010561 L160.000308,7.19672564 L156.464774,10.7322596 L155.763711,10.0311964 L158.794907,7 Z" id="Arrow"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>  
+            <div class="flex__item">
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/Concerts-e1508924871336.jpg" alt="">
+                <div class="container">
+                    <h3 class=""><span>Conce</span>rts</h3>
+                    <p class="">De tous genre musicaux en passant par le classic en allant jusqu'au rap, vous pourrez venir dancer face à notre scène avec un bar à proximité.</p>
+                </div>
             </div>
         </a>
         <a class="clickable" href="http://saintleonart.app/?page_id=49">
-            <div class="o-layout__item activitie__item">
-                <h3 class=""><span>Expos</span>itions</h3>
-                <p class="">Durant notre week-end, venez chez nos habitants découvrir nos artistes partenaire, venez disctuer avec eux et voir leur oeuvres.</p>
-                <div id="arrow-cta">
-                    <p>Voir tous nos expositions</p>
-                    <svg width="92px" height="9px" viewBox="0 0 92 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="Landing-Copy" transform="translate(-809.000000, -808.000000)" fill="#FFFFFF">
-                                <g id="Project-Info" transform="translate(740.000000, 309.000000)">
-                                    <g id="Button" transform="translate(0.000000, 497.000000)">
-                                        <path d="M158.794907,7 L69.2478632,7 L69.2478632,6 L158.80056,6 L155.775798,2.97523772 L156.482905,2.26813094 L160.689284,6.47450974 L160.207862,6.95593111 L160.207862,7 L160.163793,7 L159.983688,7.18010561 L160.000308,7.19672564 L156.464774,10.7322596 L155.763711,10.0311964 L158.794907,7 Z" id="Arrow"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>  
+            <div class="flex__item">
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/all-urban-e1508924949844.jpg" alt="">
+                <div class="container">
+                    <h3 class=""><span>Art</span> urbains</h3>
+                    <p class="">Présent dans tous le quartier avec l'avantage qu'ils soient visible toutes l'année à n'importe quelles heures. Un art d'un autre genre en pleine émergence.</p>
+                </div>
+            </div>
+        </a>
+        <a class="clickable" href="http://saintleonart.app/?page_id=49">
+            <div class="flex__item">
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/instagram_2-e1508924983597.jpg" alt="">
+                <div class="container">
+                    <h3 class=""><span>Expos</span>itions</h3>
+                    <p class="">Durant notre week-end, venez chez nos habitants découvrir nos artistes partenaire, venez disctuer avec eux et voir leur oeuvres.</p>
+                </div>
             </div>
         </a>
     </div>

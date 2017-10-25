@@ -15,8 +15,16 @@
             }
             h2{
                 padding-top: $inuit-global-spacing-unit-huge; 
-                font-size: 80px;
-                width: 222px;
+                font-size: 50px;
+                width: 140px;
+                @media (min-height: 700px){
+                    font-size: 80px;
+                    width: 222px;
+                }
+                @include mq($from: tablet){
+                    font-size: 80px;
+                    width: 222px;
+                }
             }
             @include mq($from: tablet){
                 &__container{
@@ -79,147 +87,95 @@
                 padding-left: 8.33333%;
                 margin-bottom: $igsu;
             }
-            a.clickable{
-                text-decoration: none;
-                color: $white;
-                height: 230px;
-                @include mq($from: 400px){
-                    height: 200px;
-                }
-                @include mq($from: tablet){
-                    height: 250px;
-                }
-                @include mq($from: 800px){
-                    height: 230px;
-                }
-                position: relative;
-                width: 100%;
-                display: inline-flex;
-                flex-direction: column;
-                justify-content: flex-start;
+            .flex{
+                display: flex;
+                flex-direction: row;
                 flex-wrap: wrap;
-                &:hover{
-                    #arrow-cta{
+                justify-content: flex-start;
+                @include mq($from: 425px){
+                    margin: 0 $gutters;
+                }
+                a.clickable{
+                    text-decoration: none;
+                    color: $white;
+                    height: auto;
+                    width: 100%; 
+                    overflow: hidden;
+                    @include mq($from: tablet){
+                        width: calc( (100% - 30px) /2 );
+                        &:nth-of-type(2n+1){
+                            margin-right: $igsu;
+                        }
+                        &:nth-of-type(1n+3){
+                            margin-top: $igsu;
+                        }
+                    }
+                    // @include mq($from: 1650px){
+                    //     width: calc( (100% - 88px) /4 );
+                    //     margin-top: 0 !important;
+                    //     &:not(:last-of-type){
+                    //         margin-right: $igsu;
+                    //     }
+                    // }
+                    .flex__item{
+                        position: relative;
+                        height: 100%;
+                        img{
+                            width: 100%;
+                        }
+                       .container{
+                        background-color: $purple;
+                        position: absolute;
+                        top: 50%;                   
+                        transition: 1s cubic-bezier(.86,0,.07,1);
+                        width: 50%;
+                        height: 75px;
+                        @include mq($from: 1100px){
+                            width: 40%;
+                        }
+                        h3{
+                            font-size: 20px;
+                            font-family: 'RobotoB';
+                            margin: $igsu 0 0 $igsus;
+                            transition: 1s cubic-bezier(.86,0,.07,1);
+                        }
+                        h3,p{
+                            z-index: 1;
+                        }
                         p{
-                            letter-spacing: 3px;
-                            transition: .1s cubic-bezier(.86,0,.07,1);
+                            opacity: 0;
+                            transition: 1s cubic-bezier(.86,0,.07,1);
                         }
+                       }
                     }
-                }
-                @include mq($from: tablet){
-                    &:nth-child(2n+2){
-                        margin-left: $igsu;
-                    }
-                }
-                @include mq($from: desktop){
-                    height: 300px;
-                }
-                position: relative;
-                background-size: cover;
-                @include mq($from: tablet){
-                    width: calc( (#{$gutters} * 6) - 12px );
-                    &:nth-child(1){
-                        margin-top: 0 !important;
-                        margin-bottom: $inuit-global-spacing-unit;
-                    }
-                }
-                h3{
-                    width: 100%;
-                    font-family: 'Rubik';
-                    padding: $inuit-global-spacing-unit 0 0 $inuit-global-spacing-unit;
-                    @include mq($from: desktop){
-                        padding: $inuit-global-spacing-unit-large 0 0 $inuit-global-spacing-unit-large;
-                        font-size: 20px;
-                    }
-                    span{
-                        border-bottom: 1px solid $yellow;
-                    }
-                    &+p{
-                        width: 100%;
-                        margin-top:  $inuit-global-spacing-unit-small;
-                        padding: 0 $inuit-global-spacing-unit;
-                        @include mq($from: desktop){
-                            margin-top:  $inuit-global-spacing-unit-large;
-                            padding: 0 $inuit-global-spacing-unit-large;
-                        }
-                    }
-                }
-                .btn{
-                    width: auto;
-                    //position: absolute;
-                    //bottom: 48px;
-                   // width: 78%;
-                   margin: 0 !important;
-                   align-self: center;
-                   position: absolute;
-                   bottom: $igsu;
-                   @include mq($from: desktop){
-                       bottom: $igsul;
-                   }
-                }
-                svg{
-                    display: none;
-                }
-                @include mq($from: 0px, $until: desktop){
-                    .btn{
-                        //display: none;
-                        span{
-                            @include mq($from: tablet){
-                                display: none;
+                    &:hover{
+                        .flex__item{
+                            .container{
+                                background-color: rgba(130, 28, 72, 0.5);
+                                transition: 1s cubic-bezier(.86,0,.07,1);
+                                top: 0;left: 0;
+                                height: 100%;
+                                width: 100%;
+                                h3{
+                                    transition: 1s cubic-bezier(.86,0,.07,1);
+                                    @include mq($from: 500px){
+                                        margin: $igsul 0 0 $igsus;
+                                    }
+                                    @include mq($from: 1200px){
+                                        margin: $igsul $igsul 0 $igsul;
+                                    }
+                                }
+                                p{
+                                    opacity: 1;
+                                    margin: $igsus $igsus 0;
+                                    transition: 1s cubic-bezier(.86,0,.07,1);
+                                    @include mq($from: 1200px){
+                                        margin: $igsu $igsul 0 $igsul;
+                                    }
+                                }
                             }
                         }
                     }
-                    svg{
-                        fill: $white;
-                        height: 20px; 
-                        position: absolute;
-                        top: $inuit-global-spacing-unit;
-                        right: 0;
-                        display: block;
-                    }
-                }
-                &:nth-child(1){
-                    background-image: url('../images/Artistes.jpg');
-                }
-                &:nth-child(2){
-                    background-image: url('../images/Concerts.jpg');
-                    @include mq($from: tablet){
-                        margin-bottom: $igsu;
-                    }
-                }
-                &:nth-child(3){
-                    background-image: url('../images/Art_urbains.jpg');
-                }
-                &:nth-child(4){
-                    background-image: url('../images/Expositions.jpg');
-                }
-            }
-            @include mq($from: tablet){
-                &__flex{
-                    margin: 0 $gutters;
-                    width: $gutters * 10;
-                }
-                h2{
-                    margin-bottom: $inuit-global-spacing-unit;
-                    flex-basis: 100%;
-                }
-            }
-            
-            .btn{
-                margin: 0 8.33333%;
-                @include mq($from: tablet){
-                    margin: 0 auto;                    
-                }
-            }
-            @include mq($from: 1450px){
-                max-width: $max-size;
-                margin: 0 auto;
-                h2{
-                    padding-left: 0;
-                }
-                &__flex{
-                    margin: 0;
-                    width: auto;
                 }
             }
         }
@@ -250,10 +206,10 @@
                             top: 0;
                             width: 100%;height: 100%;
                             display: block;
-                            background-color: rgba(130, 28, 72, 0.5);
                             padding-left: $igsul;
                             //text-align: center;
                             padding-top: 10%;
+                            background-color: rgba(130, 28, 72, 0.5);
                             transition: 1s cubic-bezier(.86,0,.07,1);
                         }
                     }
