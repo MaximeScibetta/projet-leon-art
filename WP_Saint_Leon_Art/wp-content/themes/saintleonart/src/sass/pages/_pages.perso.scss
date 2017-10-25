@@ -133,27 +133,29 @@
                 text-align: center;
                 letter-spacing: 3px;
                 padding: $inuit-global-spacing-unit $gutters;
-                
-            @include mq($from: tablet){
-                margin-bottom: $igsu;
+                @include mq($from: tablet){
+                    margin-bottom: $igsu;
+                }
             }
-            }
-            a{
+            div{
                 text-align: center;
-                &:hover{
-                    svg{
-                        fill: $yellow;
+                a{
+                    display: block;
+                    &:hover{
+                        svg{
+                            fill: $yellow;
+                        }
                     }
-                }
-                svg{
-                    fill: $white;
-                    height: 63px;
-                }
-                &:nth-of-type(2){
-                    margin: $inuit-global-spacing-unit-large 0;
-                }
-                &:last-of-type{
-                    padding-bottom: $inuit-global-spacing-unit;
+                    svg{
+                        fill: $white;
+                        height: 63px;
+                    }
+                    &:nth-of-type(2){
+                        margin: $inuit-global-spacing-unit-large 0;
+                    }
+                    &:last-of-type{
+                        padding-bottom: $inuit-global-spacing-unit;
+                    }
                 }
             }
             @include mq($from: tablet){

@@ -435,7 +435,7 @@
                     &:nth-child(2n+1){
                         time{
                             color: $purple;
-                            background-color: $white;
+                            background-color: $grey;
                         }
                     }
                     p{
@@ -559,7 +559,7 @@
                     margin: $igsu 0 0;
                 }
             }
-            .btn--cta{
+            .btn--anim{
                 margin-top: $inuit-global-spacing-unit;
             }
             
