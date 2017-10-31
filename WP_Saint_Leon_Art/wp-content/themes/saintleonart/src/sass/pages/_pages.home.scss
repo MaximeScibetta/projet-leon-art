@@ -3,6 +3,7 @@
         .introduction{
             background-size: cover;
             height: 100vh;
+            min-height: 600px;
             &__tagline{
                 font-family: 'RobotoL';
                 color: $white;
@@ -17,14 +18,14 @@
                 padding-top: $inuit-global-spacing-unit-huge; 
                 font-size: 50px;
                 width: 140px;
-                @media (min-height: 700px){
-                    font-size: 80px;
-                    width: 222px;
-                }
                 @include mq($from: tablet){
                     font-size: 80px;
                     width: 222px;
                 }
+                // @media (min-height: 700px){
+                //     font-size: 80px;
+                //     width: 222px;
+                // }
             }
             @include mq($from: tablet){
                 &__container{
@@ -64,21 +65,57 @@
                     border-left: 1px solid;
                 }
             }
+            @media (max-height: 700px){
+                &__container{
+                    h2{
+                        padding-top: 100px;
+                        @media (max-height: 600px){
+                            padding-top: 70px;
+                        }
+                    }
+                    .introduction__tagline{
+                        margin-top: 75px !important;
+                        @media (max-height: 600px){
+                            margin-top: 45px!important;
+                        }
+                    }
+                }
+                @media (max-height: 600px){
+                    &__cta{
+                        a{
+                            margin-top: 0 !important;
+                        }
+                    }
+                }
+            }
             &__cta{
                 text-align: center;
                 max-width: 740px;
                 margin: 0 auto;
                 .btn{
                     display: inline-block;
-                    width: 46%;
+                    width: calc( 100% - ( #{$gutters} * 2 ) );
+                    @include mq($from: 450px){
+                        width: 46%;
+                    }
                     &--anim{
                         margin: inherit;
                     }
                 }
                 .btn:nth-child(1){
-                    margin-right: $inuit-global-spacing-unit-small;
+                    @include mq($from: 450px){
+                        margin-right: $inuit-global-spacing-unit-small;
+                    }
+                    @include mq($from: 0px,$until: 450px){
+                         margin-bottom: $igsus ;
+                    
+                    }
                 }
-                
+                @include mq($from: 0px, $until: 450px){
+                    .btn:nth-child(2){
+                        margin-top: 0px;
+                    }
+                }
             }
         }
         .activitie{
@@ -110,13 +147,6 @@
                             margin-top: $igsu;
                         }
                     }
-                    // @include mq($from: 1650px){
-                    //     width: calc( (100% - 88px) /4 );
-                    //     margin-top: 0 !important;
-                    //     &:not(:last-of-type){
-                    //         margin-right: $igsu;
-                    //     }
-                    // }
                     .flex__item{
                         position: relative;
                         height: 100%;
@@ -137,6 +167,10 @@
                             font-size: 20px;
                             font-family: 'RobotoB';
                             margin: $igsu 0 0 $igsus;
+                            @include mq($from: desktop){
+                            margin: $igsu 0 0 $igsul;
+                            }
+                            
                             transition: 1s cubic-bezier(.86,0,.07,1);
                             svg{
                                 width: 15px;
@@ -153,6 +187,7 @@
                         p{
                             opacity: 0;
                             transition: 1s cubic-bezier(.86,0,.07,1);
+                            max-width: 450px;
                         }
                        }
                     }
@@ -171,6 +206,9 @@
                                     }
                                     @include mq($from: 1200px){
                                         margin: $igsul $igsul 0 $igsul;
+                                    }
+                                    @include mq($from: wide){
+                                        margin-top: 15%;
                                     }
                                     svg{
                                         transform: rotate(90deg);
