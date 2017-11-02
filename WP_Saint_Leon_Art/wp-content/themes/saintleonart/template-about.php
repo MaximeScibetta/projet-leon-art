@@ -270,11 +270,11 @@ get_header();
             </div>
         </div>
         <div class="bullets">
-            <a href="#s1" class="bullets_nav" data-translateValue="-0%">1</a>
-            <a href="#s2" class="bullets_nav active" data-translateValue="-55%">2</a>
-            <a href="#s3" class="bullets_nav" data-translateValue="-125%">3</a>
-            <a href="#s4" class="bullets_nav" data-translateValue="-195%">4</a>
-            <a href="#s5" class="bullets_nav" data-translateValue="-265%">5</a>
+            <a href="#s1" class="bullets_nav" data-translateValue="-0%" data-next-img="1" data-prec-img="4">1</a>
+            <a href="#s2" class="bullets_nav active" data-translateValue="-55%" data-next-img="2" data-prec-img="0">2</a>
+            <a href="#s3" class="bullets_nav" data-translateValue="-125%" data-next-img="3" data-prec-img="1">3</a>
+            <a href="#s4" class="bullets_nav" data-translateValue="-195%" data-next-img="4" data-prec-img="2">4</a>
+            <a href="#s5" class="bullets_nav" data-translateValue="-265%" data-next-img="0" data-prec-img="3">5</a>
         </div>
     </div>
     <div class="gallery__cta u-margin-top">

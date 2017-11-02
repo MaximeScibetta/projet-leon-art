@@ -243,6 +243,14 @@
 
             // Add class active from actual focus
             $btn.classList.add('active');
+
+            // Change opacity of prec/next image
+            if( document.querySelectorAll('.slider .precNext') ){
+                document.querySelectorAll('.slider .precNext')[0].classList.remove('precNext');
+                document.querySelectorAll('.slider .precNext')[0].classList.remove('precNext');
+            }
+            img[$btn.getAttribute('data-prec-img')].classList.toggle('precNext');
+            img[$btn.getAttribute('data-next-img')].classList.toggle('precNext');
         });
     });
     
@@ -283,9 +291,6 @@
 
             // Add class active from actual focus
             btnA[ $prevNext.getAttribute('data-focus') ].classList.add('active');
-            // if( $prevNext.getAttribute('data-next-img') == 0 ){
-            //     img[5].classList.add('precNext');
-            // }
         });
     });
 
