@@ -51,9 +51,9 @@
         }
     }
     
-    .CSSgal .prevNext > div+div {
-        visibility: hidden; /* Hide all but first P/N container */
-    }
+    // .CSSgal .prevNext > div+div {
+    //     visibility: hidden; /* Hide all but first P/N container */
+    // }
     
     .CSSgal .prevNext a {
         background: #fff;
@@ -169,5 +169,17 @@
         margin: 0 3px;
         color: rgba(0,0,0,0.8);
         text-decoration: none;
+    }
+    .slider {transform: translateX(-55%); -webkit-transform: translateX(-55%);}
+    .prevNext{
+        div{
+            visibility: hidden;
+    
+        }
+    }
+    .prevNext{
+        div:first-of-type+div{
+            visibility: visible ;
+        }
     }
 }

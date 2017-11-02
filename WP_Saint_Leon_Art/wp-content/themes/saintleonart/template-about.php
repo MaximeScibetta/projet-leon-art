@@ -245,29 +245,29 @@ get_header();
         </div>
         <div class="prevNext">
         <div>
-            <a href="#s5" data-translateValue="-265%" data-next="9" data-prec="1"></a>
-            <a href="#s2" data-translateValue="-55%" data-next="3" data-prec="1"></a>
+            <a href="#s5" data-translateValue="-265%" data-next="9" data-prec="1" data-focus="4"></a>
+            <a href="#s2" data-translateValue="-55%" data-next="3" data-prec="1" data-focus="1"></a>
         </div>
         <div>
-            <a href="#s1" data-translateValue="-0%" data-next="1" data-prec="3"></a>
-            <a href="#s3" data-translateValue="-125%" data-next="5" data-prec="3"></a>
+            <a href="#s1" data-translateValue="-0%" data-next="1" data-prec="3" data-focus="0"></a>
+            <a href="#s3" data-translateValue="-125%" data-next="5" data-prec="3" data-focus="2"></a>
         </div>
         <div>
-            <a href="#s2" data-translateValue="-55%" data-next="3" data-prec="5"></a>
-            <a href="#s4" data-translateValue="-195%" data-next="7" data-prec="5"></a>
+            <a href="#s2" data-translateValue="-55%" data-next="3" data-prec="5" data-focus="1"></a>
+            <a href="#s4" data-translateValue="-195%" data-next="7" data-prec="5" data-focus="3"></a>
         </div>
         <div>
-            <a href="#s3" data-translateValue="-125%" data-next="5" data-prec="7"></a>
-            <a href="#s5" data-translateValue="-265%" data-next="9" data-prec="7"></a>
+            <a href="#s3" data-translateValue="-125%" data-next="5" data-prec="7" data-focus="2"></a>
+            <a href="#s5" data-translateValue="-265%" data-next="9" data-prec="7" data-focus="4"></a>
         </div>
         <div>
-            <a href="#s4" data-translateValue="-195%" data-next="7" data-prec="9"></a>
-            <a href="#s1" data-translateValue="0%" data-next="1" data-prec="9"></a>
+            <a href="#s4" data-translateValue="-195%" data-next="7" data-prec="9" data-focus="3"></a>
+            <a href="#s1" data-translateValue="0%" data-next="1" data-prec="9" data-focus="0"></a>
         </div>
         </div>
         <div class="bullets">
             <a href="#s1" class="bullets_nav" data-translateValue="-0%">1</a>
-            <a href="#s2" class="bullets_nav" data-translateValue="-55%">2</a>
+            <a href="#s2" class="bullets_nav active" data-translateValue="-55%">2</a>
             <a href="#s3" class="bullets_nav" data-translateValue="-125%">3</a>
             <a href="#s4" class="bullets_nav" data-translateValue="-195%">4</a>
             <a href="#s5" class="bullets_nav" data-translateValue="-265%">5</a>

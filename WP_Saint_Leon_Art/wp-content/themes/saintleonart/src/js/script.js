@@ -261,10 +261,23 @@
             // Create variable for the parent
             const prevNextParent = $prevNext.parentNode.parentNode;
 
-            // Add visibke/hidden style for the nextPrec button
+            // Add visible/hidden style for the nextPrec button
             prevNextParent.childNodes[$prevNext.getAttribute('data-next')].style.visibility = 'visible';
             prevNextParent.childNodes[$prevNext.getAttribute('data-prec')].style.visibility = 'hidden';
             
+            // Change opacity of prec/next image
+            console.log(img[$prevNext.getAttribute('data-next')]);
+            console.log(img[$prevNext.getAttribute('data-prec')]);
+
+            // Remove class active from bullets prec focus
+            const btnA = document.querySelectorAll('.bullets_nav');
+            const btn = document.querySelector('.bullets_nav');
+            if( document.querySelector('.bullets .active') ){
+                document.querySelector('.bullets .active').classList.remove('active');
+            }
+
+            // Add class active from actual focus
+            btnA[ $prevNext.getAttribute('data-focus') ].classList.add('active');
         });
     });
 
