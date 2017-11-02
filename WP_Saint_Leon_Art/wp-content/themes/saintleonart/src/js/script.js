@@ -283,6 +283,9 @@
 
             // Add class active from actual focus
             btnA[ $prevNext.getAttribute('data-focus') ].classList.add('active');
+            // if( $prevNext.getAttribute('data-next-img') == 0 ){
+            //     img[5].classList.add('precNext');
+            // }
         });
     });
 

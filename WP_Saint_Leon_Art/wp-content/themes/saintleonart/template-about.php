@@ -242,6 +242,10 @@ get_header();
             <div>
                 <img src="http://saintleonart.app/wp-content/uploads/2017/10/Cafet-Le-Magasin1-e1508242626764.jpg" alt="">
             </div>
+            <!-- hack for opacity -->
+            <div class="precNext">
+                <img src="http://saintleonart.app/wp-content/uploads/2017/10/Mon_voisin_doris-e1508242487943.jpg" alt="">
+            </div>
         </div>
         <div class="prevNext">
             <div>
