@@ -117,6 +117,7 @@
         e.stopPropagation()
         e.preventDefault()
         search.classList.toggle('open')
+        search.parentNode.classList.toggle('open');
     });
 /* --------------------------*/
 // Event menu
@@ -217,26 +218,56 @@
             $label.addEventListener("blur", outFocus);
         });
     };
-    fCheckForm();
+    //fCheckForm();
 /* --------------------------*/
-// Form contact feedback and focus
+// Cancel anchor
 /* --------------------------*/
+
     const fCancelAnchor = function(e){
-        if (window.location.hash) {
-        setTimeout(function() {
-            window.scrollTo(window.pageXOffset, window.pageYOffset);
-        }, 1);
-    }
-        console.log(window.pageXOffset, window.pageYOffset);
+        e.preventDefault();
     }
 
     const bullets = document.querySelectorAll('.bullets_nav');
+    Array.from(bullets).forEach(function($btn) {
+        $btn.addEventListener("click", fCancelAnchor);
+        
+    });
+    
+    const prevNext = document.querySelectorAll('.prevNext div a');
+
+    Array.from(prevNext).forEach(function($prevNext) {
+        $prevNext.addEventListener("click", fCancelAnchor);
+
+        
+        const translateValue = $prevNext.getAttribute('data-translateValue');
+        $prevNext.addEventListener("click", () =>{
+            document.querySelector('.slider').style.transform = `translateX(${translateValue})`;
+            const prevNextParent = $prevNext.parentNode.parentNode;
+            prevNextParent.childNodes[$prevNext.getAttribute('data-next')].style.visibility = 'visible';
+            prevNextParent.childNodes[$prevNext.getAttribute('data-prec')].style.visibility = 'hidden';
+            
+        });
+    });
+
+    const img = document.querySelectorAll('.slider div');
+
+
+    // const fCancelAnchor = function(e){
+    //     if (window.location.hash) {
+    //     setTimeout(function() {
+    //         window.scrollTo(window.pageXOffset, window.pageYOffset);
+    //     }, 1);
+    // }
+    //     console.log(window.pageXOffset, window.pageYOffset);
+    // }
+
+    // const bullets = document.querySelectorAll('.bullets_nav');
     
 
-    const fPageIsLoaded = function() {
-        Array.from(bullets).forEach(function($btn) {
-            $btn.addEventListener("click", fCancelAnchor);
-        });
-    }
+    // const fPageIsLoaded = function() {
+    //     Array.from(bullets).forEach(function($btn) {
+    //         $btn.addEventListener("click", fCancelAnchor);
+    //     });
+    // }
     
-    window.addEventListener("load", fPageIsLoaded);
+    // window.addEventListener("load", fPageIsLoaded);

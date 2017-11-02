@@ -12,6 +12,9 @@
                 <span class="circle"></span>
                 <span class="handle"></span>
             </button>
+            <form action="">
+                <input type="search">
+            </form>
         </li>
     </ul>
 </nav>

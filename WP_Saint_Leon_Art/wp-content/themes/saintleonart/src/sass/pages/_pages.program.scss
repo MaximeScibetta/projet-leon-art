@@ -3,7 +3,7 @@
         .introduction.litle{
             height: 300px;
             @include mq($from: desktop){
-                height: 400px;
+                min-height: 400px;
             }
             h2{
                 padding-top: $igsuh !important;

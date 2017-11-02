@@ -163,6 +163,20 @@
             h2{
                 margin: $igsul $gutters 0;
             }
+            .CSSgal{
+                @include mq($from: 1200px){
+                    margin: 0 $gutters;
+                }
+            }
+            @include mq($from: wide){
+                h2{
+                    width: 1200px;
+                    margin: $igsul auto 0;
+                }
+                .CSSgal{
+                    margin: 0 auto;
+                }
+            }
             &__cta{
                .btn--anim{
                     display: none;

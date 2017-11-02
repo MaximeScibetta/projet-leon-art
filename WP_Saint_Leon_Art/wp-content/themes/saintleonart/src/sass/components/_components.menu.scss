@@ -5,7 +5,6 @@ body{
     }
     @include mq($from: 0px, $until: desktop){
         overflow-x: hidden;
-        
         header{
             background-color: $purple;
             height: $inuit-global-spacing-unit-large;
@@ -23,7 +22,7 @@ body{
                     &__item{
                         padding: $igsus 0;
                         &.sla{
-                            margin: $igsuh auto 0;
+                            margin: $igsu auto 0;
                             display: block;
                             font-size: 40px;
                             font-family: 'Whoopass';
@@ -32,14 +31,18 @@ body{
                             text-align: center;
                             word-wrap: break-word;
                             line-height: 0.9;
-                            @media (max-height: 720px){
-                                margin: $igsul auto 0;
+                            @media (max-height: 845px){
+                               margin-top: $igsus;
+                               margin-bottom: $igsu !important;
                             }
                             @media (max-height: 660px){
-                                margin: $igsu auto 0;
+                                font-size: 30px;
+                                width: 90px;
+                                margin-bottom: $igsus !important;
                             }
-                            @media (max-height: 630px){
-                                margin: 0 auto ;
+                            @media (max-height: 570px){
+                                margin: 0 auto $igsus !important;
+                                padding: 0;
                             }
                         }
                         &:not(.sla){
@@ -54,19 +57,41 @@ body{
                         }
                         &:not(:last-of-type){
                             margin-bottom: $igsul;
-                            @media (max-height: 900px){
+                            @media (max-height: 830px){
                                 margin-bottom: $igsu;
                             }
-                            @media (max-height: 600px){
+                            @media (max-height: 660px){
                                 margin-bottom: $igsus;
+                            }
+                            @media (max-height: 525px){
+                                margin: 0;
                             }
                         }
                         &.active,
-                        &:hover:not(.sla){
+                        &:hover:not(.sla):not(:last-child){
                             background-color: $yellow;
                             padding: $igsus 0;
                             a{
                                 color: $black;
+                            }
+                        }
+                    }
+                    &__item:last-child{
+                        padding: 0;
+                        .search-icon{
+                            top: 0px;
+                            display: inline-block;
+                        }
+                        form{
+                            opacity: 0;                                    
+                        }
+                        &.open{
+                            form{
+                                opacity: 1;
+                                display: inline-block;
+                            }
+                            .search-icon{
+                                margin-right: 12px;
                             }
                         }
                     }
@@ -87,7 +112,7 @@ body{
             }
         }
     }
-    @include mq($from: desktop, $until: 4000px){
+    @include mq($from: desktop){
         header{
             position: fixed;
             z-index: 10;
@@ -104,6 +129,7 @@ body{
                     &__item{
                         display: inline-block;
                         margin-right: $inuit-global-spacing-unit-large;
+                        position: relative;
                         &:last-of-type{
                             margin-right: 0;
                         }
@@ -118,6 +144,18 @@ body{
                             color: $white;
                             text-transform: uppercase;
                             padding: $inuit-global-spacing-unit-tiny 0 0 0;
+                        }
+                        form{
+                            position: absolute;
+                            opacity: 0;
+                            top: -10px;left: 45px;
+                            transition: .2s cubic-bezier(.86,0,.07,1);
+                        }
+                        &.open{
+                            form{
+                                opacity: 1;
+                                transition: .2s cubic-bezier(.86,0,.07,1);
+                            }
                         }
                     }
                 }

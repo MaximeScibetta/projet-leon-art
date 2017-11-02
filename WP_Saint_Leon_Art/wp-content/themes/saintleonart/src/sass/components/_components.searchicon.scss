@@ -3,16 +3,14 @@ $duration: 0.6s;
 
 .search-icon {
   height: 2.8em;
- // width: 2.8em;
- // display:inline-block;
-  //padding: 0.5em;
-  //margin: 1em auto;
-  position: absolute;
-  //right: 0px;
-  //top: -4px;
   cursor: pointer;
   border-radius: 4px;
-  top: 0;
+  position: relative;
+  top: -10px;
+  @include mq($from: desktop){
+    position: absolute;
+    top: -35px;
+  }
 }
 .circle {
   position: relative;
@@ -20,7 +18,7 @@ $duration: 0.6s;
   height: 25px;
   width: 25px;
   background-color: $purple;
-  @include mq($from: desktop, $until: 4000px){
+  @include mq($from: desktop){
     background-color: inherit;
   }
   border-radius: 70px;
@@ -34,7 +32,7 @@ $duration: 0.6s;
   position: absolute;
   background-color: $white;
   top: 32px;
-  @include mq($from: desktop, $until: 4000px){
+  @include mq($from: desktop){
    top: 35px;
   }
   left: 19px;
@@ -57,8 +55,7 @@ $duration: 0.6s;
   }
 }
 
-.open,
-.search-icon:focus {
+.open {
   .circle {
     transform: scale(.02);
     transform-origin: 30% 40%;
