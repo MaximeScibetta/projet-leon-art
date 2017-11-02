@@ -228,9 +228,23 @@
     }
 
     const bullets = document.querySelectorAll('.bullets_nav');
+
+    // Remove style of first child bullets
+    //bullets[0].style.background = 'rgba(255, 255, 255, 0.5)'; 
+
     Array.from(bullets).forEach(function($btn) {
         $btn.addEventListener("click", fCancelAnchor);
-        
+        const translateValue = $btn.getAttribute('data-translateValue');
+        $btn.addEventListener('click', () =>{
+            if( $btn.parentNode.querySelector('.active') ){
+                $btn.parentNode.querySelector('.active').classList.remove('active');
+                
+            }
+
+            document.querySelector('.slider').style.transform = `translateX(${translateValue})`;
+
+            $btn.classList.add('active');
+        });
     });
     
     const prevNext = document.querySelectorAll('.prevNext div a');
@@ -238,8 +252,8 @@
     Array.from(prevNext).forEach(function($prevNext) {
         $prevNext.addEventListener("click", fCancelAnchor);
 
-        
         const translateValue = $prevNext.getAttribute('data-translateValue');
+        
         $prevNext.addEventListener("click", () =>{
             document.querySelector('.slider').style.transform = `translateX(${translateValue})`;
             const prevNextParent = $prevNext.parentNode.parentNode;
