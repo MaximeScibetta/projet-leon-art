@@ -220,7 +220,7 @@
     };
     //fCheckForm();
 /* --------------------------*/
-// Cancel anchor
+// JS Slider
 /* --------------------------*/
 
     const fCancelAnchor = function(e){
@@ -229,20 +229,19 @@
 
     const bullets = document.querySelectorAll('.bullets_nav');
 
-    // Remove style of first child bullets
-    //bullets[0].style.background = 'rgba(255, 255, 255, 0.5)'; 
-
     Array.from(bullets).forEach(function($btn) {
         $btn.addEventListener("click", fCancelAnchor);
         const translateValue = $btn.getAttribute('data-translateValue');
         $btn.addEventListener('click', () =>{
+            // Remove class active from prec focus
             if( $btn.parentNode.querySelector('.active') ){
                 $btn.parentNode.querySelector('.active').classList.remove('active');
-                
             }
 
+            // Make translateX animation of slider
             document.querySelector('.slider').style.transform = `translateX(${translateValue})`;
 
+            // Add class active from actual focus
             $btn.classList.add('active');
         });
     });
@@ -255,8 +254,14 @@
         const translateValue = $prevNext.getAttribute('data-translateValue');
         
         $prevNext.addEventListener("click", () =>{
+
+            // Make translateX animation of slider
             document.querySelector('.slider').style.transform = `translateX(${translateValue})`;
+
+            // Create variable for the parent
             const prevNextParent = $prevNext.parentNode.parentNode;
+
+            // Add visibke/hidden style for the nextPrec button
             prevNextParent.childNodes[$prevNext.getAttribute('data-next')].style.visibility = 'visible';
             prevNextParent.childNodes[$prevNext.getAttribute('data-prec')].style.visibility = 'hidden';
             
@@ -264,24 +269,3 @@
     });
 
     const img = document.querySelectorAll('.slider div');
-
-
-    // const fCancelAnchor = function(e){
-    //     if (window.location.hash) {
-    //     setTimeout(function() {
-    //         window.scrollTo(window.pageXOffset, window.pageYOffset);
-    //     }, 1);
-    // }
-    //     console.log(window.pageXOffset, window.pageYOffset);
-    // }
-
-    // const bullets = document.querySelectorAll('.bullets_nav');
-    
-
-    // const fPageIsLoaded = function() {
-    //     Array.from(bullets).forEach(function($btn) {
-    //         $btn.addEventListener("click", fCancelAnchor);
-    //     });
-    // }
-    
-    // window.addEventListener("load", fPageIsLoaded);
