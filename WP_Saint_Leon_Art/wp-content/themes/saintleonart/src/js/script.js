@@ -266,8 +266,13 @@
             prevNextParent.childNodes[$prevNext.getAttribute('data-prec')].style.visibility = 'hidden';
             
             // Change opacity of prec/next image
-            console.log(img[$prevNext.getAttribute('data-next')]);
-            console.log(img[$prevNext.getAttribute('data-prec')]);
+            if( document.querySelectorAll('.slider .precNext') ){
+                console.log(document.querySelectorAll('.slider .precNext'));
+                document.querySelectorAll('.slider .precNext')[0].classList.remove('precNext');
+                document.querySelectorAll('.slider .precNext')[0].classList.remove('precNext');
+            }
+            img[$prevNext.getAttribute('data-prec-img')].classList.toggle('precNext');
+            img[$prevNext.getAttribute('data-next-img')].classList.toggle('precNext');
 
             // Remove class active from bullets prec focus
             const btnA = document.querySelectorAll('.bullets_nav');

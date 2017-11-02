@@ -227,13 +227,13 @@ get_header();
         <s id="s4"></s>
         <s id="s5"></s>
         <div class="slider">
-            <div>
+            <div class="precNext">
                 <img src="http://saintleonart.app/wp-content/uploads/2017/10/Mon_voisin_doris-e1508242487943.jpg" alt="">
             </div>
             <div>
                 <img src="http://saintleonart.app/wp-content/uploads/2017/10/Cour-Le-Magasin-e1508242508862.jpg" alt="">
             </div>
-            <div>
+            <div class="precNext">
                 <img src="http://saintleonart.app/wp-content/uploads/2017/10/Couloir-Le-Magasin-e1508242556203.jpg" alt="">
             </div>
             <div>
@@ -244,26 +244,26 @@ get_header();
             </div>
         </div>
         <div class="prevNext">
-        <div>
-            <a href="#s5" data-translateValue="-265%" data-next="9" data-prec="1" data-focus="4"></a>
-            <a href="#s2" data-translateValue="-55%" data-next="3" data-prec="1" data-focus="1"></a>
-        </div>
-        <div>
-            <a href="#s1" data-translateValue="-0%" data-next="1" data-prec="3" data-focus="0"></a>
-            <a href="#s3" data-translateValue="-125%" data-next="5" data-prec="3" data-focus="2"></a>
-        </div>
-        <div>
-            <a href="#s2" data-translateValue="-55%" data-next="3" data-prec="5" data-focus="1"></a>
-            <a href="#s4" data-translateValue="-195%" data-next="7" data-prec="5" data-focus="3"></a>
-        </div>
-        <div>
-            <a href="#s3" data-translateValue="-125%" data-next="5" data-prec="7" data-focus="2"></a>
-            <a href="#s5" data-translateValue="-265%" data-next="9" data-prec="7" data-focus="4"></a>
-        </div>
-        <div>
-            <a href="#s4" data-translateValue="-195%" data-next="7" data-prec="9" data-focus="3"></a>
-            <a href="#s1" data-translateValue="0%" data-next="1" data-prec="9" data-focus="0"></a>
-        </div>
+            <div>
+                <a href="#s5" data-translateValue="-265%" data-next="9" data-prec="1" data-focus="4" data-next-img="0" data-prec-img="3"></a>
+                <a href="#s2" data-translateValue="-55%" data-next="3" data-prec="1" data-focus="1" data-next-img="2" data-prec-img="0"></a>
+            </div>
+            <div>
+                <a href="#s1" data-translateValue="-0%" data-next="1" data-prec="3" data-focus="0" data-next-img="1" data-prec-img="4"></a>
+                <a href="#s3" data-translateValue="-125%" data-next="5" data-prec="3" data-focus="2" data-next-img="3" data-prec-img="1"></a>
+            </div>
+            <div>
+                <a href="#s2" data-translateValue="-55%" data-next="3" data-prec="5" data-focus="1" data-next-img="2" data-prec-img="0"></a>
+                <a href="#s4" data-translateValue="-195%" data-next="7" data-prec="5" data-focus="3"  data-next-img="4" data-prec-img="2"></a>
+            </div>
+            <div>
+                <a href="#s3" data-translateValue="-125%" data-next="5" data-prec="7" data-focus="2" data-next-img="3" data-prec-img="1"></a>
+                <a href="#s5" data-translateValue="-265%" data-next="9" data-prec="7" data-focus="4" data-next-img="0" data-prec-img="3"></a>
+            </div>
+            <div>
+                <a href="#s4" data-translateValue="-195%" data-next="7" data-prec="9" data-focus="3" data-next-img="4" data-prec-img="2"></a>
+                <a href="#s1" data-translateValue="0%" data-next="1" data-prec="9" data-focus="0" data-next-img="1" data-prec-img="4"></a>
+            </div>
         </div>
         <div class="bullets">
             <a href="#s1" class="bullets_nav" data-translateValue="-0%">1</a>
