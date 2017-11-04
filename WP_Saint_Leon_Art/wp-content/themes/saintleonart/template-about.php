@@ -249,24 +249,84 @@ get_header();
         </div>
         <div class="prevNext"> 
             <div>
-                <a href="#s5" data-translateValue-mobile="-400%" data-translateValue-desktop="-265%" data-next="9" data-prec="1" data-focus="4" data-next-img="0" data-prec-img="3"></a>
-                <a href="#s2" data-translateValue-mobile="-100%" data-translateValue-desktop="-55%" data-next="3" data-prec="1" data-focus="1" data-next-img="2" data-prec-img="0"></a>
+                <a href="#s5" data-translateValue-mobile="-400%" data-translateValue-desktop="-265%" data-next="9" data-prec="1" data-focus="4" data-next-img="0" data-prec-img="3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
+	<g transform="matrix(-1 0 0 1 451.846 0)"><g>
+		<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" data-original="#000000" class="active-path" >
+		</path>
+	</g></g> 
+</svg></a>
+                <a href="#s2" data-translateValue-mobile="-100%" data-translateValue-desktop="-55%" data-next="3" data-prec="1" data-focus="1" data-next-img="2" data-prec-img="0"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
+	<g>
+		<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+			L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+			c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+	</g>
+</svg>
+</a>
             </div>
             <div>
-                <a href="#s1" data-translateValue-mobile="-0%" data-translateValue-desktop="-0%" data-next="1" data-prec="3" data-focus="0" data-next-img="1" data-prec-img="4"></a>
-                <a href="#s3" data-translateValue-mobile="-200%" data-translateValue-desktop="-125%" data-next="5" data-prec="3" data-focus="2" data-next-img="3" data-prec-img="1"></a>
+                <a href="#s1" data-translateValue-mobile="-0%" data-translateValue-desktop="-0%" data-next="1" data-prec="3" data-focus="0" data-next-img="1" data-prec-img="4"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
+	<g transform="matrix(-1 0 0 1 451.846 0)"><g>
+		<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" data-original="#000000" class="active-path" >
+		</path>
+	</g></g> 
+</svg></a>
+                <a href="#s3" data-translateValue-mobile="-200%" data-translateValue-desktop="-125%" data-next="5" data-prec="3" data-focus="2" data-next-img="3" data-prec-img="1"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
+	<g>
+		<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+			L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+			c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+	</g>
+</svg>
+</a>
             </div>
             <div>
-                <a href="#s2" data-translateValue-mobile="-100%" data-translateValue-desktop="-55%" data-next="3" data-prec="5" data-focus="1" data-next-img="2" data-prec-img="0"></a>
-                <a href="#s4" data-translateValue-mobile="-300%" data-translateValue-desktop="-195%" data-next="7" data-prec="5" data-focus="3"  data-next-img="4" data-prec-img="2"></a>
+                <a href="#s2" data-translateValue-mobile="-100%" data-translateValue-desktop="-55%" data-next="3" data-prec="5" data-focus="1" data-next-img="2" data-prec-img="0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
+	<g transform="matrix(-1 0 0 1 451.846 0)"><g>
+		<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" data-original="#000000" class="active-path" >
+		</path>
+	</g></g> 
+</svg></a>
+                <a href="#s4" data-translateValue-mobile="-300%" data-translateValue-desktop="-195%" data-next="7" data-prec="5" data-focus="3"  data-next-img="4" data-prec-img="2"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
+	<g>
+		<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+			L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+			c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+	</g>
+</svg>
+</a>
             </div>
             <div>
-                <a href="#s3" data-translateValue-mobile="-200%" data-translateValue-desktop="-125%" data-next="5" data-prec="7" data-focus="2" data-next-img="3" data-prec-img="1"></a>
-                <a href="#s5" data-translateValue-mobile="-400%" data-translateValue-desktop="-265%" data-next="9" data-prec="7" data-focus="4" data-next-img="0" data-prec-img="3"></a>
+                <a href="#s3" data-translateValue-mobile="-200%" data-translateValue-desktop="-125%" data-next="5" data-prec="7" data-focus="2" data-next-img="3" data-prec-img="1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
+	<g transform="matrix(-1 0 0 1 451.846 0)"><g>
+		<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" data-original="#000000" class="active-path" >
+		</path>
+	</g></g> 
+</svg></a>
+                <a href="#s5" data-translateValue-mobile="-400%" data-translateValue-desktop="-265%" data-next="9" data-prec="7" data-focus="4" data-next-img="0" data-prec-img="3"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
+	<g>
+		<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+			L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+			c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+	</g>
+</svg>
+</a>
             </div>
             <div>
-                <a href="#s4" data-translateValue-mobile="-300%" data-translateValue-desktop="-195%" data-next="7" data-prec="9" data-focus="3" data-next-img="4" data-prec-img="2"></a>
-                <a href="#s1" data-translateValue-mobile="0%" data-translateValue-desktop="0%" data-next="1" data-prec="9" data-focus="0" data-next-img="1" data-prec-img="4"></a>
+                <a href="#s4" data-translateValue-mobile="-300%" data-translateValue-desktop="-195%" data-next="7" data-prec="9" data-focus="3" data-next-img="4" data-prec-img="2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
+	<g transform="matrix(-1 0 0 1 451.846 0)"><g>
+		<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" data-original="#000000" class="active-path" >
+		</path>
+	</g></g> 
+</svg></a>
+                <a href="#s1" data-translateValue-mobile="0%" data-translateValue-desktop="0%" data-next="1" data-prec="9" data-focus="0" data-next-img="1" data-prec-img="4"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
+	<g>
+		<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+			L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+			c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+	</g>
+</svg>
+</a>
             </div>
         </div>
         <div class="bullets">
