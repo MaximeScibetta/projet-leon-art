@@ -32,7 +32,7 @@
                     font-size: 40px;
                     width: 111px;
                     display: block;
-                    margin: 0 auto;
+                    margin: 0 auto $igsus;
                     word-wrap: break-word; 
                 }
             }
@@ -257,8 +257,8 @@
                     transform: rotate(180deg);
                 }
                 .sla{
-                    display: inline-block;
-                    font-size: 20px;
+                    display: block;
+                    font-size: 40px;
                     font-family: 'Whoopass';
                     width: 55px;
                     text-align: center;
