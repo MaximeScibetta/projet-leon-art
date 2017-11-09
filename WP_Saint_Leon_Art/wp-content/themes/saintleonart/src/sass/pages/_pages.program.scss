@@ -167,10 +167,17 @@
                         }
                         span:first-of-type {
                             margin-top: $igsu;
+                            margin-bottom: $igsut;
                             font-family: 'RobotoB';
+                            svg{
+                                width: 20px;height: 20px;
+                            }
                         }
                         address{
                             font-family: 'RobotoB';
+                            svg{
+                                width: 20px;height: 20px;
+                            }
                         }
                         p{
                             margin-top: $igsut;
