@@ -350,6 +350,7 @@
                     position: relative;
                     margin-top: $inuit-global-spacing-unit;
                     margin: $inuit-global-spacing-unit 8.33333% 0;
+                    padding: $igsus 0;
                     .head{
                         height: 100px;
                         overflow: hidden;
@@ -441,6 +442,7 @@
                     position: relative;
                     margin:0 8.33333%;
                     text-align: center;
+                    padding: $igsus 0;
                     //height: 100px;
                     &:not(:first-of-type){
                        // margin-top: $inuit-global-spacing-unit-small;
