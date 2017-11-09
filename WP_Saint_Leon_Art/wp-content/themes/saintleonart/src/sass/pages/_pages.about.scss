@@ -260,7 +260,7 @@
                     display: block;
                     font-size: 40px;
                     font-family: 'Whoopass';
-                    width: 55px;
+                    width: 110px;
                     text-align: center;
                     word-wrap: break-word;
                     line-height: 0.9;
@@ -431,6 +431,16 @@
                 .container__item{
                     height: 75px;
                     position: relative;
+                    margin: $igsu 0;
+                    &:hover{
+                        background: $grey;
+                        &:nth-child(2n+1){
+                            time{
+                                
+                        background: $white;
+                            }
+                        }
+                    }
                     time{
                         float: left;
                         width: 75px; height: 75px;
@@ -444,7 +454,7 @@
                             color: $white;
                             background-color: $purple;
                         }
-                        background-color: $grey;
+                        //background-color: $grey;
                     }
                     &:nth-child(2n+1){
                         time{
