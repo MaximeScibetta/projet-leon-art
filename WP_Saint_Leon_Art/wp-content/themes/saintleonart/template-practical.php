@@ -10,7 +10,7 @@ get_header();
 <section class="map" id="mapinteractiv">
     <div class="hang">
         <p>
-            Venir à Saint léonard est possible de toute la Belgique via tout type de transport. Vous pourrez y venir en voiture et la déposer dans un parking proche ou alors en transport en commun à l'aide de nos nombreux arrêts de bus à proximité grâce à la TEC ou encore en train via la SNCB si vous venez de plus loin. Vous pourrez chercher votre moyen de transport préféré via notre carte interactive.
+            Venir à Saint léonard est possible de toute la Belgique via tout type de transport. Vous pourrez y venir en voiture et la déposer dans au parking le plus proche Place des Déportés ou alors en transport en commun à l'aide de nos nombreux arrêts de bus à proximité grâce à la TEC via les bus de la ligne 1 ou 4 ou encore en train direction Liège - Guillemins via la SNCB si vous venez de plus loin. Vous pourrez choisir votre moyen de transport préféré via notre carte interactive.
         </p>
         <div class="content">
             <span>SaintLeon'Art</span>

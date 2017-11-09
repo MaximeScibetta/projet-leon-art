@@ -4,7 +4,7 @@
             margin-top: $igsu;
             p{
                 margin: 0 $gutters $igsul;
-                @include mq($from: desktop){
+                @include mq($from: desktop){ 
                     max-width: 650px;
                 }
             }
@@ -58,7 +58,7 @@
                                 margin-top: 41px;
                             }
                             &:last-of-type{
-                                margin-bottom: 12px;
+                                margin-bottom: 11px;
                             }
                             svg{
                                 width: 30px;
@@ -71,12 +71,13 @@
                                 color: $black;
                                 display: inline-block;
                                 margin: 0 0 0 $igsu;
+                                vertical-align: top;
                                 @include mq($from: 380px){
                                     width: 250px;
                                 }
                             }
                             &:nth-of-type(2){
-                                margin: $igsus 0;
+                                margin: 20px 0;
                             }
                         }
                     }
@@ -94,14 +95,23 @@
                         margin: 0;
                         max-width: inherit;
                         display: inline-flex;
-                        align-self: center;
+                        //align-self: center;
                         height: 171px;
                         margin-left: 48px;
                         span{
-                            margin: $igsu $igsul 0 auto;
+                            margin: 0 $igsul $igsu auto;
                         }
                         .info{
                             margin: 0;
+                            div{
+                                margin-top: 0;
+                                &:first-of-type{
+                                    margin-top: 0;
+                                }
+                                p{
+                                    margin-left: $igsus;
+                                }
+                            }
                         }
                     }
                 }
