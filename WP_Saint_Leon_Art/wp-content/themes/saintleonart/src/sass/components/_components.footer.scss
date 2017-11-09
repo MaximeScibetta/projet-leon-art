@@ -85,34 +85,43 @@
                                 border: 3px solid $purple;
                                 transition: all .2s ease-in-out;
                             }
-                            &.ok{
-                                border-bottom: 3px solid #1abc9c                            
-                            }
                         }
                     }
                 }
                 input[type=submit]{
-                    border: none;
-                    background: none;
+                     border: none;
+                    // background: none;
+                    // background: $purple;
+                    // color: $white;
+                    // text-transform: uppercase;
+                    // font-size: 16px;
+                    // padding: $igsus 0;
+                    // width: 100%;
+                    // display: block;
+                    // margin: 0 auto;
+                    // border-radius: 5px;
+                    // border: 2px solid $purple;
+                    // @include mq($from: tablet){
+                    //     font-size: 20px;
+                    //     width: auto;
+                    //     padding: $igsus $igsu;
+                    // }
+                    // &:hover{
+                    //     cursor: pointer;
+                    //     background-color: $yellow;
+                    //     color: $purple;
+                    // }
+                }
+                a{
                     background: $purple;
                     color: $white;
-                    text-transform: uppercase;
-                    font-size: 16px;
-                    padding: $igsus 0;
-                    width: 100%;
-                    display: block;
-                    margin: 0 auto;
-                    border-radius: 5px;
                     border: 2px solid $purple;
-                    @include mq($from: tablet){
-                        font-size: 20px;
-                        width: auto;
-                        padding: $igsus $igsu;
+                    border-radius: 5px;
+                    &:before{
+                        background: $yellow;
                     }
                     &:hover{
-                        cursor: pointer;
-                        background-color: $yellow;
-                        color: $purple;
+                        color: $black;
                     }
                 }
             }
@@ -138,67 +147,69 @@
                 }
             }
         }
-        .nav{
-            
-            display: inline-block;
-            @include mq($from: 500px){
-            }
-            h3{
-                margin-bottom: $igsus;
-            }
-            .secondMenu{
-                &__item{
-                    &:not(:last-of-type){
-                        margin-bottom: $igsus;
-                    }
-                    a{
-                        text-decoration: none;
-                        color: $white;
-                        &:hover{
-                            text-decoration: underline;
+        .footer_wrapper{
+            .nav{
+                
+                display: inline-block;
+                @include mq($from: 500px){
+                }
+                h3{
+                    margin-bottom: $igsus;
+                }
+                .secondMenu{
+                    &__item{
+                        &:not(:last-of-type){
+                            margin-bottom: $igsus;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $white;
+                            &:hover{
+                                text-decoration: underline;
+                            }
                         }
                     }
                 }
             }
-        }
-        .partner{
-            svg{
-                width: 70px;
-                margin: $inuit-global-spacing-unit-small $inuit-global-spacing-unit-small 0 0;
-            }
-        }
-        .lastActu{
-            width: 100%;
-           &__item{
-               display: block;
-               margin-top: $inuit-global-spacing-unit-small;
-               position: relative;
-               max-width: 400px;
-               &:hover{
-                   cursor: pointer;
-                   .info{
-                   text-decoration: underline;
-                   
-                   }
-               }
-                img{
-                    width: 50px;
-                    margin-right: $inuit-global-spacing-unit-small;
-                }
-                .info{
-                    display: inline-block;
-                    vertical-align: top;
-                    &__title{
-                        font-family: 'RobotoM';
-                    }
-                }
+            .partner{
                 svg{
-                    fill: $white;
-                    width: 20px;
-                    position: absolute;
-                    right: 0;
+                    width: 70px;
+                    margin: $inuit-global-spacing-unit-small $inuit-global-spacing-unit-small 0 0;
                 }
-           }
+            }
+            .lastActu{
+                width: 100%;
+               &__item{
+                   display: block;
+                   margin-top: $inuit-global-spacing-unit-small;
+                   position: relative;
+                   max-width: 400px;
+                   &:hover{
+                       cursor: pointer;
+                       .info{
+                       text-decoration: underline;
+                       
+                       }
+                   }
+                    img{
+                        width: 50px;
+                        margin-right: $inuit-global-spacing-unit-small;
+                    }
+                    .info{
+                        display: inline-block;
+                        vertical-align: top;
+                        &__title{
+                            font-family: 'RobotoM';
+                        }
+                    }
+                    svg{
+                        fill: $white;
+                        width: 20px;
+                        position: absolute;
+                        right: 0;
+                    }
+               }
+            }
         }
         @include mq($from: 0px){
             display: flex;
@@ -208,40 +219,42 @@
             .newsletter{
                 width: 100%;
             }
-            .nav{
-                width: 100%;
-                @include mq($from: 610px){
-                    width: 38%;
-                }
-                @include mq($from: tablet){
-                    width: 33%;
-                }
-                @include mq($from: desktop){
-                    width: 25%;
-                }
-            }   
-            .lastActu{
-                width: 100%;
-                @include mq($from: 610px){
-                    width: 50%;
-                }
-                @include mq($from: desktop){
-                    width: 33%;
-                }
-            }         
-            .partner{
-                width: 100%;
-                @include mq($from: desktop){
-                    width: 40%;
-                }
-                svg{
-                    width: 60px;
-                }
-            }
-            @include mq($from: desktop){
-                
+            .footer_wrapper{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                max-width: 1400px;
+                margin: 0 auto;
+                .nav{
+                    width: 100%;
+                    @include mq($from: 610px){
+                        width: 38%;
+                    }
+                    @include mq($from: tablet){
+                        width: 33%;
+                    }
+                    @include mq($from: desktop){
+                        width: 25%;
+                    }
+                }   
+                .lastActu{
+                    width: 100%;
+                    @include mq($from: 610px){
+                        width: 50%;
+                    }
+                    @include mq($from: desktop){
+                        width: 33%;
+                    }
+                }         
                 .partner{
-                    //width: 40%;
+                    width: 100%;
+                    @include mq($from: desktop){
+                        width: 40%;
+                    }
+                    svg{
+                        width: 60px;
+                    }
                 }
             }
         }

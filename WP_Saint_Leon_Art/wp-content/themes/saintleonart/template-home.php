@@ -26,8 +26,8 @@ get_header();
         </li>
     </ul>
     <div class="introduction__cta u-padding-horizontal-small u-margin-top-large">
-        <a href="http://saintleonart.app/?page_id=29" class="btn btn--anim btn btn--anim--anim">Le programme</a>
-        <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim btn btn--anim--anim">L'Actualité</a>
+        <a href="http://saintleonart.app/?page_id=29" class="btn btn--anim">Le programme</a>
+        <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim">L'Actualité</a>
     </div>
 </section>
 <section class="activitie">
