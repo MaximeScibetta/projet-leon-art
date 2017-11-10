@@ -171,6 +171,9 @@
                             margin: $igsu 0 0 $igsul;
                             }
                             
+                            @include mq($from: 1500px){
+                                font-size: 24px;
+                            }
                             transition: 1s cubic-bezier(.86,0,.07,1);
                             svg{
                                 width: 15px;
@@ -286,8 +289,9 @@
                     &__info{
                         position: absolute;
                         top: 40%;
+                        width: 75%;height: 50%;
                         background-color: $purple;
-                        padding: $igsu $igsul;
+                        padding:  $igsu $igsu 0 $igsu  ;
                         transition: 1s cubic-bezier(.86,0,.07,1);
                         h3{
                             font-family: 'RobotoB';
