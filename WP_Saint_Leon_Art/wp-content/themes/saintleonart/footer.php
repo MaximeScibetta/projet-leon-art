@@ -14,12 +14,14 @@
                     <legend class="u-hidden-visually">Prénom</legend>
                     <label for="first_name">Prénom</label>
                     <input type="text" id="first_name" name="first_name" class="input">
+                    <span class="left"></span>
                 </fieldset>
         
                 <fieldset>
                     <legend class="u-hidden-visually">Email</legend>
                     <label for="email">Adresse email</label>
                     <input type="email" id="email" name="email" class="input">
+                    <span class="left"></span>
                 </fieldset>
                 <a href="" class="btn btn--anim">Inscription au newsletter</a>
             </form>

@@ -203,37 +203,37 @@
         $MsgField.addEventListener('blur', fCheckMessage, false);
         $SubmitBtn.addEventListener('click', fCheckAll, false);
 
-        var input = document.querySelectorAll('fieldset .input');
+        // var input = document.querySelectorAll('.input');
 
-        var getFocus = function getFocus(oEvent) {
-            oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
-            var oInput =  oEvent.currentTarget.parentNode.querySelector('.input');
-            setTimeout(function(){
-                console.log()
-                oInput.classList.add("border");
+        // var getFocus = function getFocus(oEvent) {
+        //     oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
+        //     var oInput =  oEvent.currentTarget.parentNode.querySelector('.input');
+        //     setTimeout(function(){
+        //         console.log()
+        //         oInput.classList.add("border");
                 
-                },200);
+        //         },200);
             
-        };
+        // };
 
          
 
-        var outFocus = function outFocus(e) {
-            if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 || e.currentTarget.parentNode.querySelector('.input option').value.length === 0 ) {
-                e.currentTarget.parentNode.querySelector('label').classList.remove("focus");
-            }
-            console.log(e.currentTarget)
-            e.currentTarget.classList.remove("border");
+        // var outFocus = function outFocus(e) {
+        //     if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 || e.currentTarget.parentNode.querySelector('.input option').value.length === 0 ) {
+        //         e.currentTarget.parentNode.querySelector('label').classList.remove("focus");
+        //     }
+        //     console.log(e.currentTarget)
+        //     e.currentTarget.classList.remove("border");
             
-        };
-        Array.from(input).forEach(function($label) {
-            $label.addEventListener("focus", getFocus);
-            $label.addEventListener("click", getFocus);
-            $label.addEventListener("blur", outFocus);
+        // };
+        // Array.from(input).forEach(function($label) {
+        //     $label.addEventListener("focus", getFocus);
+        //     $label.addEventListener("click", getFocus);
+        //     $label.addEventListener("blur", outFocus);
 
-        });
+        // });
     };
-    fCheckForm();
+    //fCheckForm();
 /* --------------------------*/
 // JS Slider
 /* --------------------------*/
@@ -326,3 +326,38 @@
     });
 
     const img = document.querySelectorAll('.slider div');
+/* --------------------------*/
+// JS Slider
+/* --------------------------*/
+    var fAnimInput = function fAnimInput() {
+        var input = document.querySelectorAll('.input');
+
+        var getFocus = function getFocus(oEvent) {
+            oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
+            var oInput =  oEvent.currentTarget.parentNode.querySelector('.input');
+            console.log(oEvent)
+            setTimeout(function(){
+                oInput.classList.add("border");
+                
+                },200);
+            
+        };
+
+         
+
+        var outFocus = function outFocus(e) {
+            if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 || e.currentTarget.parentNode.querySelector('.input option').value.length === 0 ) {
+                e.currentTarget.parentNode.querySelector('label').classList.remove("focus");
+            }
+            console.log(e.currentTarget)
+            e.currentTarget.classList.remove("border");
+            
+        };
+        Array.from(input).forEach(function($label) {
+            $label.addEventListener("focus", getFocus);
+            $label.addEventListener("click", getFocus);
+            $label.addEventListener("blur", outFocus);
+
+        });
+    };
+    fAnimInput();

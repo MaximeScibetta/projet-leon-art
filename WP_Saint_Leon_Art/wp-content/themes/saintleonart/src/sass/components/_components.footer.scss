@@ -81,10 +81,10 @@
                         &.input{
                             transition: all .2s ease-in-out;
                             border-bottom: 3px solid $purple;
-                            &:focus{
-                                border: 3px solid $purple;
-                                transition: all .2s ease-in-out;
-                            }
+                        }
+                        &.border{
+                            border: 3px solid $purple;
+                            transition: all .2s ease-in-out;
                         }
                     }
                 }
