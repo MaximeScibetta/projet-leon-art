@@ -2,28 +2,29 @@ $easing: cubic-bezier(.25,1.7,.35,.8);
 $duration: 0.6s;
 
 .search-icon {
-  height: 2.8em;
+  height: 25px;
   cursor: pointer;
   border-radius: 4px;
   position: relative;
   top: -10px;
   @include mq($from: desktop){
     position: absolute;
-    top: -35px;
+    top: -26px;
   }
 }
 .circle {
   position: relative;
   display: block;
-  height: 25px;
-  width: 25px;
+  height: 15px;
+  width: 15px;
+  top: -3px;
   background-color: $purple;
   @include mq($from: desktop){
     background-color: inherit;
   }
   border-radius: 70px;
   z-index:0;
-  border: 5px solid $white;
+  border: 3px solid $white;
   transition: all $duration $easing;
   z-index: 1;
 }
@@ -31,13 +32,13 @@ $duration: 0.6s;
 .handle {
   position: absolute;
   background-color: $white;
-  top: 32px;
+  top: 18px;
   @include mq($from: desktop){
-   top: 35px;
+   top: 17px;
   }
-  left: 19px;
-  width: 20px;
-  height: 5px;
+  left: 15px;
+  width: 12px;
+  height: 3px;
   display: block;
   transform: rotate(45deg);
   float: right;
@@ -45,8 +46,8 @@ $duration: 0.6s;
   &:after {
     content:"";
     background-color: $white;
-    width: 20px;
-    height: 5px;
+    width: 12px;
+    height: 3px;
     display: block;
     float: right;
     border-radius: 2px;
