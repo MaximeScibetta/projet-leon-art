@@ -34,7 +34,7 @@ get_header();
 </div>
 <section class="program">
     <div class="program__navigation">
-        <div class="day">
+        <div class="day"> 
             <a href="#day1">19 août</a>
             <a href="#day2">20 août</a>
             <a href="#day3">21 août</a>
@@ -50,8 +50,10 @@ get_header();
             </svg>
         </a>
         <a href="#mapinteractiv" class="interactiv">Map interactive</a>
+
     </div>
-    <div class="timeline day1" id="day1" id="all">
+    <div class="timeline day1" id="day1" id="all" W
+    
         <a href="">
             <div class="timeline-item">
                 <div class="timeline-icon"></div>

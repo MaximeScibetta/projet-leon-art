@@ -204,24 +204,40 @@
         $SubmitBtn.addEventListener('click', fCheckAll, false);
 
         var input = document.querySelectorAll('fieldset .input');
+
         var getFocus = function getFocus(oEvent) {
             oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
+            var oInput =  oEvent.currentTarget.parentNode.querySelector('.input');
+            setTimeout(function(){
+                console.log()
+                oInput.classList.add("border");
+                
+                },200);
+            
         };
+
+         
+
         var outFocus = function outFocus(e) {
             if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 || e.currentTarget.parentNode.querySelector('.input option').value.length === 0 ) {
                 e.currentTarget.parentNode.querySelector('label').classList.remove("focus");
             }
+            console.log(e.currentTarget)
+            e.currentTarget.classList.remove("border");
+            
         };
         Array.from(input).forEach(function($label) {
             $label.addEventListener("focus", getFocus);
             $label.addEventListener("click", getFocus);
             $label.addEventListener("blur", outFocus);
+
         });
     };
-    //fCheckForm();
+    fCheckForm();
 /* --------------------------*/
 // JS Slider
 /* --------------------------*/
+
 
     const fCancelAnchor = function(e){
         e.preventDefault();

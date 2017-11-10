@@ -154,9 +154,8 @@
                     transition: all .2s ease-in-out;
                     border-bottom: 3px solid rgba(130, 28, 73, 0.3);
                 }
-                .input:focus,
-                select:focus,
-                textarea:focus {
+                .input.border:focus,
+                textarea.border:focus {
                     border: 3px solid $purple;
                     transition: all .2s ease-in-out;
                 }
