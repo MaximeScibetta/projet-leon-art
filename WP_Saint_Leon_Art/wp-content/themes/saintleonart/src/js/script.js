@@ -327,7 +327,7 @@
 
     const img = document.querySelectorAll('.slider div');
 /* --------------------------*/
-// JS Slider
+// Input Anim
 /* --------------------------*/
     var fAnimInput = function fAnimInput() {
         var input = document.querySelectorAll('.input');
@@ -361,3 +361,22 @@
         });
     };
     fAnimInput();
+/* --------------------------*/
+// Button Anim
+/* --------------------------*/
+// const btnAnim = document.querySelectorAll('.btn--anim');
+
+// var pseudoBtn = document.querySelector('.btn--anim');
+
+// var pseudoBeforeContent = window.getComputedStyle(pseudoBtn, ':before').content; // Returns (string) "70px"
+// function fAddContent(o){
+//     document.styleSheets[0].addRule('.btn--anim::before', `content: ''`);
+//     var text = o.target.childNodes[0].data;
+//     document.styleSheets[0].addRule('.btn--anim::before', `content: '${text}'`);
+//     console.log(text)
+// }
+//         Array.from(btnAnim).forEach(function($btn) {
+//             $btn.addEventListener("mouseover", fAddContent);
+        
+//         });
+// fAddContent();
