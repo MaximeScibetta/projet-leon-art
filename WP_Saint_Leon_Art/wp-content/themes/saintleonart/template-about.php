@@ -340,7 +340,8 @@ get_header();
     <div class="gallery__cta u-margin-top">
         <a href="" class="btn btn--anim" data-text="Notre galerie instagram">Notre galerie instagram</a>
         <a href="" class="btn btn--anim" data-text="Notre galerie facebook">Notre galerie facebook</a>
-        <a href="" class="btn btn--anim" data-text="Notre galerie twitter">Notre gallerie twitter</a>
+        <a href="" class="btn btn--anim" data-text="Notre galerie twitter">Notre galerie twitter</a>
+        <a href="" class="btn btn--anim" data-text="Notre galerie photos">Notre galerie photos</a>
         <div class="btn--mobile">
             <h3 class="u-margin-bottom">Nos galeries</h3>
             <a href="">
