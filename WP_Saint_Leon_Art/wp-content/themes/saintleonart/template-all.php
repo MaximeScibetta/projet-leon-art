@@ -7,7 +7,7 @@ get_header();
 <section class="introduction litle" style="background-image: url(<?= dw_asset('images/all-expo.jpg');?>);">
     <h2 class="branding" id="branding">Actualités <span>SaintLeon'Art</span></h2>
 </section>
-<section class="event all">
+ <section class="event all">
     <h2>Tous nos événements</h2>
     <div class="all__navigation">
         <a href="" class="order">Trier par date

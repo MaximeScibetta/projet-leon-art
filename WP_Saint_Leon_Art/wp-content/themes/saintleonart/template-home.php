@@ -4,11 +4,26 @@ Template Name: Page Accueil
 */
 get_header();
 ?>
+<?php 
+    $home = new WP_Query();
+    $home->query([
+        'post_type' => 'page',
+        'meta_query' => [ 
+                [
+                    'key'   => '_wp_page_template', 
+                    'value' => 'template-home.php'
+                ]
+            ],
+        ]);
+;?>
+<?php if ( $home->have_posts() ): while( $home->have_posts() ): $home->the_post();?>
+        <?php $fields = get_fields(); ?>
+        <?php var_dump($fields['type_activitie'][0]['illustration']['url']) ?>
 <section class="introduction home" style="background-image: url(<?= dw_asset('images/home.jpg');?>);">
     <div class="introduction__container">
             <h2 class="sla">SaintLeon'Art</h2>
             <p class="introduction__tagline u-padding-horizontal-small u-10/18@tablet">
-                Parcours d'artistes dans le quartier saint léonard à Liège du 19 au 21 août 2018
+                <?= $fields['tagline']; ?>
             </p>
     </div>
     <ul class="introduction__counter counter u-padding-horizontal-small u-margin-top-large" id="countdown">
@@ -26,19 +41,25 @@ get_header();
         </li>
     </ul>
     <div class="introduction__cta u-padding-horizontal-small u-margin-top-large">
-        <a href="http://saintleonart.app/?page_id=29" class="btn btn--anim" data-text="Le programme">Le programme</a>
-        <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim" data-text="L'Actualité">L'Actualité</a>
+        <?php if( have_rows('buttons') ): while ( have_rows('buttons') ) : the_row(); ?>
+        <a href="<?php the_sub_field('btn_link'); ?>" class="btn btn--anim" data-text="<?php the_sub_field('btn_name'); ?>"><?php the_sub_field('btn_name'); ?></a>
+        <?php endwhile; endif; ?>
     </div>
 </section>
 <section class="activitie">
-    <h2 class="u-margin-top-large">Venez y voir des ...</h2>
+    <h2 class="u-margin-top-large"><?= $fields['section_title']; ?></h2>
     <div class="activitie__flex flex">
+        <?php if( have_rows('type_activitie') ): while ( have_rows('type_activitie') ) : the_row(); ?>
+        <?php  $image = get_sub_field('illustration'); if( !empty($image) ): 
+            $url = $image['url'];
+            $alt = $image['alt']; 
+        endif; ?>
         <a class="clickable" href="http://saintleonart.app/?page_id=49">
             <div class="flex__item">
-                <img src="http://saintleonart.app/wp-content/uploads/2017/10/Artistes-e1508929014727.jpg" alt="">
+                <img src="<?= $url ;?>" alt="<?= $alt ;?>">
                 <div class="container">
                     <h3 class="">
-                        <span>Artist</span>es 
+                        <span><?php the_sub_field('title_activitie'); ?></span>
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="612px" height="612px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
                             <g>
                                 <g id="Right">
@@ -54,85 +75,11 @@ get_header();
                             </g>
                         </svg>
                     </h3>
-                    <p class="">Venant de toutes là Belgique, vous pourrez y découvrire des artistes de tous les genres, avec pour chacun leur histoire et le style.</p> 
+                    <p class=""><?php the_sub_field('info_activitie'); ?></p> 
                 </div>
             </div>
         </a>
-        <a class="clickable" href="http://saintleonart.app/?page_id=49">
-            <div class="flex__item">
-                <img src="http://saintleonart.app/wp-content/uploads/2017/10/Concerts-e1508924871336.jpg" alt="">
-                <div class="container">
-                    <h3 class="">
-                        <span>Conce</span>rts 
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="612px" height="612px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
-                            <g>
-                                <g id="Right">
-                                    <g>
-                                        <path d="M277.58,179.679l-0.057,0.077c-5.125-4.705-11.857-7.631-19.335-7.631c-15.835,0-28.688,12.852-28.688,28.688
-                                            c0,8.377,3.634,15.835,9.352,21.076l-0.057,0.077L330.48,306l-91.686,84.055l0.057,0.076c-5.718,5.221-9.352,12.68-9.352,21.057
-                                            c0,15.836,12.852,28.688,28.688,28.688c7.478,0,14.21-2.926,19.335-7.611l0.057,0.076l114.75-105.188
-                                            c5.91-5.451,9.295-13.101,9.295-21.152s-3.385-15.702-9.295-21.152L277.58,179.679z M306,0C137.012,0,0,137.012,0,306
-                                            s137.012,306,306,306s306-137.012,306-306S474.988,0,306,0z M306,554.625C168.912,554.625,57.375,443.088,57.375,306
-                                            S168.912,57.375,306,57.375S554.625,168.912,554.625,306S443.088,554.625,306,554.625z"/>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                    </h3>
-                    <p class="">De tous genre musicaux en passant par le classic en allant jusqu'au rap, vous pourrez venir dancer face à notre scène avec un bar à proximité.</p>
-                </div>
-            </div>
-        </a>
-        <a class="clickable" href="http://saintleonart.app/?page_id=49">
-            <div class="flex__item">
-                <img src="http://saintleonart.app/wp-content/uploads/2017/10/all-urban-e1508924949844.jpg" alt="">
-                <div class="container">
-                    <h3 class="">
-                        <span>Art</span> urbains 
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="612px" height="612px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
-                            <g>
-                                <g id="Right">
-                                    <g>
-                                        <path d="M277.58,179.679l-0.057,0.077c-5.125-4.705-11.857-7.631-19.335-7.631c-15.835,0-28.688,12.852-28.688,28.688
-                                            c0,8.377,3.634,15.835,9.352,21.076l-0.057,0.077L330.48,306l-91.686,84.055l0.057,0.076c-5.718,5.221-9.352,12.68-9.352,21.057
-                                            c0,15.836,12.852,28.688,28.688,28.688c7.478,0,14.21-2.926,19.335-7.611l0.057,0.076l114.75-105.188
-                                            c5.91-5.451,9.295-13.101,9.295-21.152s-3.385-15.702-9.295-21.152L277.58,179.679z M306,0C137.012,0,0,137.012,0,306
-                                            s137.012,306,306,306s306-137.012,306-306S474.988,0,306,0z M306,554.625C168.912,554.625,57.375,443.088,57.375,306
-                                            S168.912,57.375,306,57.375S554.625,168.912,554.625,306S443.088,554.625,306,554.625z"/>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                    </h3>
-                    <p class="">Présent dans tous le quartier avec l'avantage qu'ils soient visible toutes l'année à n'importe quelles heures. Un art d'un autre genre en pleine émergence.</p>
-                </div>
-            </div>
-        </a>
-        <a class="clickable" href="http://saintleonart.app/?page_id=49">
-            <div class="flex__item">
-                <img src="http://saintleonart.app/wp-content/uploads/2017/10/instagram_2-e1508924983597.jpg" alt="">
-                <div class="container">
-                    <h3 class="">
-                        <span>Expos</span>itions 
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="612px" height="612px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
-                            <g>
-                                <g id="Right">
-                                    <g>
-                                        <path d="M277.58,179.679l-0.057,0.077c-5.125-4.705-11.857-7.631-19.335-7.631c-15.835,0-28.688,12.852-28.688,28.688
-                                            c0,8.377,3.634,15.835,9.352,21.076l-0.057,0.077L330.48,306l-91.686,84.055l0.057,0.076c-5.718,5.221-9.352,12.68-9.352,21.057
-                                            c0,15.836,12.852,28.688,28.688,28.688c7.478,0,14.21-2.926,19.335-7.611l0.057,0.076l114.75-105.188
-                                            c5.91-5.451,9.295-13.101,9.295-21.152s-3.385-15.702-9.295-21.152L277.58,179.679z M306,0C137.012,0,0,137.012,0,306
-                                            s137.012,306,306,306s306-137.012,306-306S474.988,0,306,0z M306,554.625C168.912,554.625,57.375,443.088,57.375,306
-                                            S168.912,57.375,306,57.375S554.625,168.912,554.625,306S443.088,554.625,306,554.625z"/>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                    </h3>
-                    <p class="">Durant notre week-end, venez chez nos habitants découvrir nos artistes partenaire, venez disctuer avec eux et voir leur oeuvres.</p>
-                </div>
-            </div>
-        </a>
+        <?php endwhile; endif; ?>
     </div>
     <a href="http://saintleonart.app/?page_id=29" class="btn btn--anim u-margin-top" data-text="Voir le programme">Voir le programme</a>
 </section>
@@ -439,4 +386,5 @@ get_header();
         </svg>
     </div>
 </section>
+<?php endwhile;endif; ?>
 <?php get_footer(); ?>
