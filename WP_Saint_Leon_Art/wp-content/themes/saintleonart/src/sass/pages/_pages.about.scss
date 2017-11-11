@@ -257,10 +257,14 @@
                     transform: rotate(180deg);
                 }
                 .sla{
-                    display: block;
-                    font-size: 40px;
+                    display: inline-block;
                     font-family: 'Whoopass';
-                    width: 110px;
+                    font-size: 20px;
+                    width: 55px;
+                    @include mq($from: tablet){
+                        font-size: 40px;
+                        width: 110px;
+                    }
                     text-align: center;
                     word-wrap: break-word;
                     line-height: 0.9;
