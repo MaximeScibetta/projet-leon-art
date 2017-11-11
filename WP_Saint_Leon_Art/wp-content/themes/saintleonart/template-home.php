@@ -18,7 +18,7 @@ get_header();
 ;?>
 <?php if ( $home->have_posts() ): while( $home->have_posts() ): $home->the_post();?>
         <?php $fields = get_fields(); ?>
-        <?php var_dump($fields['type_activitie'][0]['illustration']['url']) ?>
+        <?php var_dump($fields['type_activitie'][0]['illustration']) ?>
 <section class="introduction home" style="background-image: url(<?= dw_asset('images/home.jpg');?>);">
     <div class="introduction__container">
             <h2 class="sla">SaintLeon'Art</h2>
@@ -50,13 +50,10 @@ get_header();
     <h2 class="u-margin-top-large"><?= $fields['section_title']; ?></h2>
     <div class="activitie__flex flex">
         <?php if( have_rows('type_activitie') ): while ( have_rows('type_activitie') ) : the_row(); ?>
-        <?php  $image = get_sub_field('illustration'); if( !empty($image) ): 
-            $url = $image['url'];
-            $alt = $image['alt']; 
-        endif; ?>
+        
         <a class="clickable" href="http://saintleonart.app/?page_id=49">
             <div class="flex__item">
-                <img src="<?= $url ;?>" alt="<?= $alt ;?>">
+                <?php sla_image_attribute( get_sub_field('illustration') ); ?>
                 <div class="container">
                     <h3 class="">
                         <span><?php the_sub_field('title_activitie'); ?></span>

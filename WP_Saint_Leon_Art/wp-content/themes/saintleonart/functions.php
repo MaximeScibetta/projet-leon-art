@@ -165,3 +165,27 @@ add_filter( 'wp_title', 'sla_page_title' );
     $title .= ' - ' . get_bloginfo( 'name' );
     return $title;
     }
+
+/****************************************************************************************************/
+
+/************************************************
+*** Get the url & alt attribute from image
+************************************************/
+    function get_sla_image_attribute($function)
+    {
+        $image = $function;
+        if( !empty($image) ){
+            $url = $image['url'];
+            $alt = $image['alt'];
+            $width =  $image['width'];
+            $height =  $image['height'];
+        }
+        return "<img src=". $url ." alt=".$alt.">";
+        
+        //return "<img src=". $url . " width=". $width . " height=" . $height .">";
+    }
+
+    function sla_image_attribute($function)
+    {
+        echo get_sla_image_attribute($function);
+    }
