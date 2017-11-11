@@ -98,7 +98,7 @@ get_header();
             <span class="left"></span>
         </fieldset>
 
-        <button class="send-button" id="submit" type="submit" value="Envoyer">
+        <!-- <button class="send-button" id="submit" type="submit" value="Envoyer">
             <div class="button">
                 <span class="send-text">Envoyer</span>
                 <svg version="1.1" id="send_mail" class="send-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;">
@@ -110,7 +110,8 @@ get_header();
                         c9.014,5.541,20.68,0.258,22.603-10.005l92.021-481.989C512.735,12.682,510.673,7.755,507.165,4.34z"/>
                 </svg>
             </div>
-        </button>
+        </button> -->
+        <a href="" data-text="Envoyer" class="btn btn--anim">Envoyer</a>
     </form>
 </section>
 
