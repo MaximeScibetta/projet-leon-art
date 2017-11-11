@@ -134,7 +134,7 @@ get_header();
             </div>
         </a>
     </div>
-    <a href="http://saintleonart.app/?page_id=29" class="btn btn--anim u-margin-top">Voir le programme</a>
+    <a href="http://saintleonart.app/?page_id=29" class="btn btn--anim u-margin-top" data-text="Voir le programme">Voir le programme</a>
 </section>
 <section class="artist">
     <h2 class="u-margin-bottom">Nos participants</h2>
@@ -180,7 +180,7 @@ get_header();
             </div>
         </a>
     </div>
-    <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim u-margin-top">Voir tous nos artistes</a>
+    <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim u-margin-top" data-text="Voir tous nos artistes">Voir tous nos artistes</a>
 </section>
 <section class="event">
     <h2>Prochain événement</h2>
@@ -320,7 +320,7 @@ get_header();
             </div>
         </div>
     </a>
-    <a href="" class="btn btn--anim u-margin-top">Voir tous nos événements</a>
+    <a href="" class="btn btn--anim u-margin-top" data-text="Voir tous nos événements">Voir tous nos événements</a>
 </section>
 <section class="instagram">
     <svg class="" version="1.1" id="instagram_color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 551.034 551.034" style="enable-background:new 0 0 551.034 551.034;">

@@ -27,7 +27,7 @@ get_header();
             <p><a href="">#Concert</a></p>
             <p><a href="">#Expo</a></p>   
         </div>
-        <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim">Voir tous nos artistes</a>
+        <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim"  data-text="Voir tous nos artistes">Voir tous nos artistes</a>
     </div>
 </section>
 <section class="artwork">

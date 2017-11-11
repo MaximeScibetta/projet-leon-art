@@ -11,7 +11,7 @@ get_header();
            Un événement dont le but est de mettre en avant le fabuleux tissu artistique du quartier St Léonard à Liège. <!--Ce quartier dispose en effet d’une richesse artistique et d’un dynamisme important qu’il veut partager avec ses habitants et avec les liégeois de tous horizons. Saint-LéonArt vise également à favoriser la rencontre entre la population du quartier et l’art sous toutes ses formes tout en créant des liens durables entre habitants et artistes qui s’y côtoient tous les jours. -->
         </p>
     </div>
-    <a href="" class="btn btn--anim">Notre programme 2017</a>
+    <a href="" class="btn btn--anim" data-text="Notre programme 2017">Notre programme 2017</a>
 </section>
 <section class="score">
     <ul>
@@ -338,9 +338,9 @@ get_header();
         </div>
     </div>
     <div class="gallery__cta u-margin-top">
-        <a href="" class="btn btn--anim">Notre galerie instagram</a>
-        <a href="" class="btn btn--anim">Notre galerie facebook</a>
-        <a href="" class="btn btn--anim">Notre gallerie twitter</a>
+        <a href="" class="btn btn--anim" data-text="Notre galerie instagram">Notre galerie instagram</a>
+        <a href="" class="btn btn--anim" data-text="Notre galerie facebook">Notre galerie facebook</a>
+        <a href="" class="btn btn--anim" data-text="Notre galerie twitter">Notre gallerie twitter</a>
         <div class="btn--mobile">
             <h3 class="u-margin-bottom">Nos galeries</h3>
             <a href="">
@@ -379,7 +379,7 @@ get_header();
             Encreuse de projets culturels ou citoyens : Qui fait couler beaucoup d’encre sur le papier. Qui a besoin dans son travail de gribouiller, raturer, relire, garder des traces. Qui aime à faire des schémas, des croquis, des plans, pour visualiser le travail accompli et à accomplir. Ancreuse de projets culturels ou citoyens : Qui a pour objectif lorsqu’elle travaille sur un projet de l’ancrer dans un territoire, dans une mémoire collective et dans un quotidien. Encreuse : Qui propose des animations artistiques. Travailler avec des encres, créer ses peintures et ses couleurs, découvrir des matières. Et tout simplement, parce que quand vous m’aurez rencontrée, je resterai bien ancrée dans votre mémoire !
         </p>
     </div>
-    <a href="" class="btn btn--anim">Voir nos actualités</a>
+    <a href="" class="btn btn--anim" data-text="Voir nos actualités">Voir nos actualités</a>
 </section>
 <section class="team">
     <h2>Rencontrez l'équipe</h2>
@@ -1244,6 +1244,6 @@ get_header();
             </a>
         </div>
     </div>
-    <a href="" class="btn btn--anim">Voir nos actualités</a>
+    <a href="" class="btn btn--anim" data-text="Voir nos actualités">Voir nos actualités</a>
 </section>
 <?php get_footer(); ?>

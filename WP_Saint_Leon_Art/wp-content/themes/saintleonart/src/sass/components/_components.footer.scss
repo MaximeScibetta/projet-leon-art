@@ -80,6 +80,7 @@
                         }
                         &.input{
                             transition: all .2s ease-in-out;
+                            border: 3px solid $yellow;
                             border-bottom: 3px solid $purple;
                         }
                         &.border{
