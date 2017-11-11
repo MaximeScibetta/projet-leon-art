@@ -23,7 +23,7 @@
                     <input type="email" id="email" name="email" class="input">
                     <span class="left"></span>
                 </fieldset>
-                <a href="" class="btn btn--anim">Inscription au newsletter</a>
+                <a href="" class="btn btn--anim" data-text="Inscritpion au newsletter">Inscription au newsletter</a>
             </form>
         </div>
         <div class="footer_wrapper">

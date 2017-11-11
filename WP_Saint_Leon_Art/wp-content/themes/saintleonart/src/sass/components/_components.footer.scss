@@ -122,7 +122,9 @@
                         background: $yellow;
                     }
                     &:hover{
-                        color: $black;
+                        &:before{
+                            color: $black;
+                        }
                     }
                 }
             }
