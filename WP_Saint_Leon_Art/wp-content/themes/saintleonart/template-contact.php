@@ -97,7 +97,6 @@ get_header();
             <textarea rows="1" cols="10" name="message" id="message" class="input"></textarea>
             <span class="left"></span>
         </fieldset>
-
         <!-- <button class="send-button" id="submit" type="submit" value="Envoyer">
             <div class="button">
                 <span class="send-text">Envoyer</span>
