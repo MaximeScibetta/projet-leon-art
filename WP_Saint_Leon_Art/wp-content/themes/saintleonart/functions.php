@@ -209,4 +209,19 @@ add_filter( 'wp_title', 'sla_page_title' );
     }
 
     
-            
+            /**
+*   GET the slug
+*/
+function dw_get_the_slug()
+{
+  global $post;
+  return $post->post_name;
+}
+
+/**
+*   RETURN the slug
+*/
+function dw_the_slug()
+{
+  echo dw_get_the_slug();
+}

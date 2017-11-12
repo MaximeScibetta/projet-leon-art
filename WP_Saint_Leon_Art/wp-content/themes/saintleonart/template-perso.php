@@ -7,7 +7,8 @@ get_header();
 <?php 
     $perso = new WP_Query();
     $perso->query([
-        'post_type' => 'artist'
+        'post_type' => 'artist',
+        'name' => dw_get_the_slug(),
         ]);
 ;?>
 <?php if ( $perso->have_posts() ): while( $perso->have_posts() ): $perso->the_post();?>
