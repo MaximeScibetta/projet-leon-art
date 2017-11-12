@@ -33,10 +33,9 @@ get_header();
                     <?php the_sub_field('artist_description'); ?>
             </p>
             <div class="theme">
-                <p><a href="">#StreetArt</a></p>
-                <p><a href="">#Painting</a></p>
-                <p><a href="">#Concert</a></p>
-                <p><a href="">#Expo</a></p>   
+            <?php foreach( sla_taxonomies(get_the_ID(), 'kind') as $taxo): ?>
+                <p><a href="">#<?= $taxo; ?></a></p>
+            <?php endforeach; ?>  
             </div>
             <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim"  data-text="Voir tous nos artistes">Voir tous nos artistes</a>
         </div>

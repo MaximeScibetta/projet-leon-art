@@ -187,3 +187,26 @@ add_filter( 'wp_title', 'sla_page_title' );
     {
         echo get_sla_image_attribute($function);
     }
+
+/****************************************************************************************************/
+
+/************************************************
+*** Get the taxonomy value for current post
+************************************************/
+
+    function sla_get_taxonomies($postID, $taxonomyName) {
+        $terms = wp_get_post_terms($postID, $taxonomyName);
+        $termsArray = [];
+        foreach ($terms as $term){
+            array_push($termsArray, $term->name);
+        }
+        return $termsArray;
+    }
+
+    function sla_taxonomies($postID, $taxonomyName){
+        $taxoArray = sla_get_taxonomies($postID, $taxonomyName);
+        return $taxoArray;
+    }
+
+    
+            
