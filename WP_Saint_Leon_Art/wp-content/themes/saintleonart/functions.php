@@ -171,18 +171,16 @@ add_filter( 'wp_title', 'sla_page_title' );
 /************************************************
 *** Get the url & alt attribute from image
 ************************************************/
-    function get_sla_image_attribute($function)
+    function get_sla_image_attribute($fieldName)
     {
-        $image = $function;
+        $image = get_sub_field( $fieldName );
         if( !empty($image) ){
             $url = $image['url'];
             $alt = $image['alt'];
             $width =  $image['width'];
             $height =  $image['height'];
         }
-        return "<img src=". $url ." alt=".$alt.">";
-        
-        //return "<img src=". $url . " width=". $width . " height=" . $height .">";
+        return '<img src="' . $url . '" alt="' . $alt . '">';
     }
 
     function sla_image_attribute($function)

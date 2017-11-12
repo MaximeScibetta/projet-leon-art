@@ -4,41 +4,57 @@ Template Name: Page perso
 */
 get_header();
 ?>
-<section class="introduction" style="background-image: url('http://saintleonart.app/wp-content/uploads/2017/10/perso_branding.jpg');">
-    <h2 id="branding">Banksy <span>SaintLeon'Art</span></h2>
-    <div class="location">
-        <a href="#map">
-            <address>
-                Quai Saint-Léonard 62, 4000 Liège
-            </address>
-        </a>
-    </div>
-</section>
-<section class="description">
-    <img src="http://saintleonart.app/wp-content/uploads/2017/10/perso_gal-e1508398367240.jpg" alt="">
-    <div>
-        <h3>Banksy</h3>
-        <p class="content">
-            Banksy est le pseudonyme d'un artiste connu pour son art urbain (ou street art) et également comme peintre et réalisateur. Dissimulant sa véritable identité, Banksy est entouré de mystère. Cet artiste combine les techniques de Warhol et l'œuvre in situ pour faire passer ses messages, qui mêlent souvent politique, humour et poésie comme Ernest Pignon-Ernest, Miss.Tic, Jef Aérosol ou Blek le rat. Les pochoirs de Banksy sont des images humoristiques, parfois combinées avec des slogans. Le message est généralement libertaire1, antimilitariste, anticapitaliste ou antisystème. Ses personnages sont souvent des rats, des singes, des policiers, des soldats, des enfants, des personnes célèbres ou des personnes âgées.
-        </p>
-        <div class="theme">
-            <p><a href="">#StreetArt</a></p>
-            <p><a href="">#Painting</a></p>
-            <p><a href="">#Concert</a></p>
-            <p><a href="">#Expo</a></p>   
+<?php 
+    $perso = new WP_Query();
+    $perso->query([
+        'post_type' => 'artist'
+        ]);
+;?>
+<?php if ( $perso->have_posts() ): while( $perso->have_posts() ): $perso->the_post();?>
+<?php $fields = get_fields(); ?>
+<section class="introduction" style="background-image: url(<?= $fields['artist_branding'] ;?>);">
+    <h2 id="branding"><?= $fields['artist_name']; ?><span> SaintLeon'Art</span></h2>
+    <?php if( have_rows('artist_location') ): the_row(); ?>
+        <div class="location">
+            <a href="#map">
+                <address>
+                    <?php the_sub_field('artist_address'); ?>
+                </address>
+            </a>
         </div>
-        <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim"  data-text="Voir tous nos artistes">Voir tous nos artistes</a>
-    </div>
+    <?php endif; ?>
 </section>
-<section class="artwork">
-    <img src="http://homestead.app/projet-leon-art/WP_Saint_Leon_Art/wp-content/uploads/2017/10/perso_galerie-e1507722679803.jpg" alt="">
-    <img src="http://homestead.app/projet-leon-art/WP_Saint_Leon_Art/wp-content/uploads/2017/10/perso_galerie_1-e1507722650644.jpg" alt="">
-</section>
+<?php if( have_rows('section_description') ): while ( have_rows('section_description') ) : the_row(); ?>
+    <section class="description">
+        <?php sla_image_attribute('artist_description_img'); ?>
+        <div>
+            <h3><?= $fields['artist_name']; ?></h3>
+            <p class="content">
+                    <?php the_sub_field('artist_description'); ?>
+            </p>
+            <div class="theme">
+                <p><a href="">#StreetArt</a></p>
+                <p><a href="">#Painting</a></p>
+                <p><a href="">#Concert</a></p>
+                <p><a href="">#Expo</a></p>   
+            </div>
+            <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim"  data-text="Voir tous nos artistes">Voir tous nos artistes</a>
+        </div>
+    </section>
+<?php endwhile; endif;?>
+<?php $images = get_field('artist_gallery'); if( $images ): ?>
+    <section class="artwork">
+        <?php foreach( $images as $image ): ?>
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <?php endforeach; ?>
+    </section>
+<?php endif; ?>
 <div id="map"></div>
+<?php if( have_rows('artist_social') ): the_row(); ?>
 <section class="social">
-    <h2>Retrouvez Banksy sur les réseaux sociaux !</h2>
+    <h2>Retrouvez <?= $fields['artist_name']; ?> sur les réseaux sociaux !</h2>
     <div>
-        <a href="">
+        <a href="<?php the_sub_field('social_twitter'); ?>">
             <svg version="1.1" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
                 <g>
                     <g>
@@ -54,13 +70,13 @@ get_header();
             </svg>
             <span class="u-hidden-visually">twitter</span>    
         </a>
-        <a href="" class="">
+        <a href="<?php the_sub_field('social_facebook'); ?>" class="">
             <svg xmlns="http://www.w3.org/2000/svg" height="96.123" viewBox="0 0 96.124 96.123">
                 <path  d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 0 0-1.96 1.961v15.803a1.96 1.96 0 0 0 1.96 1.96H36.57v39.876a1.96 1.96 0 0 0 1.96 1.96h16.352a1.96 1.96 0 0 0 1.96-1.96V54.287h14.654a1.96 1.96 0 0 0 1.96-1.96l.006-15.803a1.963 1.963 0 0 0-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 0 0 1.959-1.96V1.98A1.96 1.96 0 0 0 72.089.02z"/>
             </svg>
             <span class="u-hidden-visually">facebook</span>    
         </a>
-        <a href="">
+        <a href="<?php the_sub_field('social_instagram'); ?>">
             <svg xmlns="http://www.w3.org/2000/svg" height="169.063" viewBox="0 0 169.063 169.063">
                 <path  d="M122.406 0H46.654C20.929 0 0 20.93 0 46.655v75.752c0 25.726 20.929 46.655 46.654 46.655h75.752c25.727 0 46.656-20.93 46.656-46.655V46.655C169.063 20.93 148.133 0 122.406 0zm31.657 122.407c0 17.455-14.201 31.655-31.656 31.655H46.654C29.2 154.063 15 139.862 15 122.407V46.655C15 29.201 29.2 15 46.654 15h75.752c17.455 0 31.656 14.201 31.656 31.655v75.752z"/>
                 <path  d="M84.531 40.97c-24.021 0-43.563 19.542-43.563 43.563 0 24.02 19.542 43.561 43.563 43.561s43.563-19.541 43.563-43.561c0-24.021-19.542-43.563-43.563-43.563zm0 72.123c-15.749 0-28.563-12.812-28.563-28.561 0-15.75 12.813-28.563 28.563-28.563s28.563 12.813 28.563 28.563c0 15.749-12.814 28.561-28.563 28.561zM129.921 28.251c-2.89 0-5.729 1.17-7.77 3.22a11.053 11.053 0 0 0-3.23 7.78c0 2.891 1.18 5.73 3.23 7.78 2.04 2.04 4.88 3.22 7.77 3.22 2.9 0 5.73-1.18 7.78-3.22 2.05-2.05 3.22-4.89 3.22-7.78 0-2.9-1.17-5.74-3.22-7.78-2.04-2.05-4.88-3.22-7.78-3.22z"/>
@@ -69,4 +85,6 @@ get_header();
         </a>
     </div>
 </section>
+<?php endif; ?>
+<?php endwhile;endif; ?>
 <?php get_footer(); ?>

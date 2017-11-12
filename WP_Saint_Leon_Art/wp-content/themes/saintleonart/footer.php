@@ -1,7 +1,7 @@
     </article>
     <footer class="<?php 
                         if( get_page_template_slug( $post->ID ) != 'template-perso.php' && get_page_template_slug( $post->ID ) != 'template-home.php' ) {
-                         echo'u-margin-top-huge';
+                         //echo'u-margin-top-huge';
                         }
                     ?>">
         <div class="newsletter u-padding-vertical-large ">
@@ -147,21 +147,34 @@
 });
     </script>
     <script>
-    
-    var input = document.querySelectorAll('fieldset .input');
-        var getFocus = function getFocus(oEvent) {
-            oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
-        };
-        var outFocus = function outFocus(e) {
-            if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 || e.currentTarget.parentNode.querySelector('.input option').value.length === 0 ) {
-                e.currentTarget.parentNode.querySelector('label').classList.remove("focus");
-            }
-        };
-        Array.from(input).forEach(function($label) {
-            $label.addEventListener("focus", getFocus);
-            $label.addEventListener("click", getFocus);
-            $label.addEventListener("blur", outFocus);
-        });</script>
+        // var input = document.querySelectorAll('fieldset .input');
+        //     var getFocus = function getFocus(oEvent) {
+        //         oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
+        //     };
+        //     var outFocus = function outFocus(e) {
+        //         if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 || e.currentTarget.parentNode.querySelector('.input option').value.length === 0 ) {
+        //             e.currentTarget.parentNode.querySelector('label').classList.remove("focus");
+        //         }
+        //     };
+        //     Array.from(input).forEach(function($label) {
+        //         $label.addEventListener("focus", getFocus);
+        //         $label.addEventListener("click", getFocus);
+        //         $label.addEventListener("blur", outFocus);
+        //     });
+    </script>
+    <?php 
+        $perso = new WP_Query();
+        $perso->query([
+            'post_type' => 'artist'
+            ]);
+    ;?>
+    <?php if ( $perso->have_posts() ): while( $perso->have_posts() ): $perso->the_post();?> <?php $fields = get_fields(); ?>
+            <script>
+                var lat = <?= $fields[artist_location][Lat_googlemap]; ?>;
+                var long = <?= $fields[artist_location][Long_googlemap]; ?>;
+            </script>   
+    <?php endwhile; endif;?>
     <script src="<?= dw_asset('js/script.js');?>"></script>
+    
 </body>
 </html>

@@ -1,6 +1,6 @@
 // Countdown home page
-    /* --------------------------*/
-    // The date you want to count down to
+/* --------------------------*/
+// The date you want to count down to
     var targetDate = new Date("2018/08/19 18:00:00");   
 
     // Other date related variables
@@ -86,11 +86,11 @@
 /* --------------------------*/
 // Google map individual
 /* --------------------------*/
-    var myCenter = new google.maps.LatLng(12.2667, -2.06667);
+    var myCenter = new google.maps.LatLng(`${lat}`, `${long}`);
     function initialize() {
         var mapProp = {
             center: myCenter,
-            zoom: 7,
+            zoom: 10,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map"), mapProp);
