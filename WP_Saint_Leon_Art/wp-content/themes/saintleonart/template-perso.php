@@ -12,7 +12,7 @@ get_header();
         ]);
 ;?>
 <?php if ( $perso->have_posts() ): while( $perso->have_posts() ): $perso->the_post();?>
-<?php $fields = get_fields(); ?>
+<?php $fields = get_fields();?>
 <section class="introduction" style="background-image: url(<?= $fields['artist_branding'] ;?>);">
     <h2 id="branding"><?= $fields['artist_name']; ?><span> SaintLeon'Art</span></h2>
     <?php if( have_rows('artist_location') ): the_row(); ?>

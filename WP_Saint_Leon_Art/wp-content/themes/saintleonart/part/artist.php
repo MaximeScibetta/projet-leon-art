@@ -6,7 +6,7 @@
 ;?>
 <?php if ( $artists->have_posts() ): while( $artists->have_posts() ): $artists->the_post();?>
 <?php $fields = get_fields(); ?>
-<a href="http://saintleonart.app/?artist=<?= sla_the_slug() ;?>" class="item">
+<a href="<?= get_permalink( );?>" class="item">
     <img src="<?= $fields['artiste_profil'][url];?>" alt="" width="400" height="225">
     <div class="item__info">
         <h3 class="">
