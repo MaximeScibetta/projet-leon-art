@@ -15,7 +15,6 @@
        && get_page_template_slug( $post->ID ) != 'template-contact.php' 
        && get_page_template_slug( $post->ID ) != 'template-practical.php' 
        && get_page_template_slug( $post->ID ) != 'template-all.php' ):?>
-    <?php get_template_part('part', 'grid');?>
 <?php endif ?>
     <header>
         <button class="hamburger" >

@@ -21,7 +21,7 @@ add_filter( 'wp_title', 'sla_page_title' );
     function sla_init_types()
     {
         register_post_type('event', [
-            'label' => 'Activités',
+            'label' => 'Événements',
             'labels' => [
                 'all_items' => 'Tout les événments',
                 'singular_name' => 'événement',

@@ -480,6 +480,8 @@
                     }
                     .content{
                         //width: calc( (#{$gutters} * 6) );
+                        min-width: 500px;
+                        max-width: 500px;
                         width: auto;
                         display: inline-block;  
                         vertical-align: top;
