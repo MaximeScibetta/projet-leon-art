@@ -208,20 +208,18 @@ add_filter( 'wp_title', 'sla_page_title' );
         return $taxoArray;
     }
 
-    
-            /**
-*   GET the slug
-*/
-function dw_get_the_slug()
+    /****************************************************************************************************/
+
+/***************
+*** Get the slug
+***************/
+function sla_get_the_slug()
 {
   global $post;
   return $post->post_name;
 }
 
-/**
-*   RETURN the slug
-*/
-function dw_the_slug()
+function sla_the_slug()
 {
-  echo dw_get_the_slug();
+  echo sla_get_the_slug();
 }
