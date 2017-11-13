@@ -82,7 +82,8 @@ get_header();
 <section class="artist">
     <h2 class="u-margin-bottom">Nos participants</h2>
     <div class="artist__container">
-    
+            <!-- Le premier a supprimé -->
+        <?php get_template_part('part/artist') ;?>
         <?php get_template_part('part/artist') ;?>
 
     </div>
@@ -90,6 +91,8 @@ get_header();
 </section>
 <section class="event">
     <h2>Prochain événement</h2>
+            <!-- Le premier a supprimé -->
+    <?php get_template_part('part/event') ;?>
     <?php get_template_part('part/event') ;?>
     <a href="" class="btn btn--anim u-margin-top" data-text="Voir tous nos événements">Voir tous nos événements</a>
 </section>
