@@ -1,7 +1,9 @@
     </article>
-    <footer class="<?php 
-                        if( get_page_template_slug( $post->ID ) != 'template-perso.php' && get_page_template_slug( $post->ID ) != 'template-home.php' ) {
-                         //echo'u-margin-top-huge';
+    <footer class="<?php if( get_page_template_slug( $post->ID ) == 'template-about.php' ||
+                            get_page_template_slug( $post->ID ) == 'template-program.php' || 
+                            get_page_template_slug( $post->ID ) == 'template-practical.php' ||
+                            get_page_template_slug( $post->ID ) == 'template-contact.php'  ) {
+                         echo'u-margin-top-huge';
                         }
                     ?>">
         <div class="newsletter u-padding-vertical-large ">

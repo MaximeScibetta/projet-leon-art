@@ -14,7 +14,7 @@ get_header();
 <?php if ( $perso->have_posts() ): while( $perso->have_posts() ): $perso->the_post();?>
 <?php $fields = get_fields();?>
 <section class="introduction" style="background-image: url(<?= $fields['artist_branding'] ;?>);">
-    <h2 id="branding"><?= $fields['artist_name']; ?><span> SaintLeon'Art</span></h2>
+    <h2 id="branding"><?= $fields['artist_surname']; ?> <?= $fields['artist_name']; ?><span> SaintLeon'Art</span></h2>
     <?php if( have_rows('artist_location') ): the_row(); ?>
         <div class="location">
             <a href="#map">
@@ -29,7 +29,7 @@ get_header();
     <section class="description">
         <?php sla_image_attribute('artist_description_img'); ?>
         <div>
-            <h3><?= $fields['artist_name']; ?></h3>
+            <h3><?= $fields['artist_surname']; ?> <?= $fields['artist_name']; ?></h3>
             <p class="content">
                     <?php the_sub_field('artist_description'); ?>
             </p>
@@ -52,7 +52,7 @@ get_header();
 <div id="map"></div>
 <?php if( have_rows('artist_social') ): the_row(); ?>
 <section class="social">
-    <h2>Retrouvez <?= $fields['artist_name']; ?> sur les réseaux sociaux !</h2>
+    <h2>Retrouvez <?= $fields['artist_surname']; ?> <?= $fields['artist_name']; ?> sur les réseaux sociaux !</h2>
     <div>
         <a href="<?php the_sub_field('social_twitter'); ?>">
             <svg version="1.1" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
