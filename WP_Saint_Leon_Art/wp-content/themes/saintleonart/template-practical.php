@@ -4,16 +4,33 @@ Template Name: Page pratique
 */
 get_header();
 ?>
+<?php 
+    $practical = new WP_Query();
+    $practical->query([
+        'post_type' => 'page',
+        'meta_query' => [ 
+                [
+                    'key'   => '_wp_page_template', 
+                    'value' => 'template-practical.php'
+                ]
+            ],
+        ]);
+;?>
+<?php if ( $practical->have_posts() ): while( $practical->have_posts() ): $practical->the_post();?>
+<?php $fields = get_fields(); ?>
 <section class="introduction litle" style="background-image: url(<?= dw_asset('images/practical.jpg');?>);">
     <h2 id="branding" class="branding">Venir à <span>SaintLeon'Art</span></h2>
 </section>
 <section class="map" id="mapinteractiv">
     <div class="hang">
+        <?php if($fields['practical_text']):?>
         <p>
-            Venir à Saint léonard est possible de toute la Belgique via tout type de transport. Vous pourrez y venir en voiture et la déposer dans au parking le plus proche Place des Déportés ou alors en transport en commun à l'aide de nos nombreux arrêts de bus à proximité grâce à la TEC via les bus de la ligne 1 ou 4 ou encore en train direction Liège - Guillemins via la SNCB si vous venez de plus loin. Vous pourrez choisir votre moyen de transport préféré via notre carte interactive.
+           <?= $fields['practical_text']; ?>
         </p>
+        <?php endif;?>
         <div class="content">
             <span>SaintLeon'Art</span>
+            <?php if( have_rows('practical_infos') ): while ( have_rows('practical_infos') ) : the_row(); ?>
             <div class="info">
                 <div>
                     <svg version="1.1" id="parking" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.678 248.678" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 248.678 248.678">
@@ -22,7 +39,7 @@ get_header();
                         <path d="m110.175,79.169c3.313,0 6-2.687 6-6v-14.002h12.327c8.823,0 16.001-7.178 16.001-16.001s-7.178-16.001-16.001-16.001h-18.327c-3.313,0-6,2.687-6,6v40.004c-1.42109e-14,3.313 2.687,6 6,6zm6-40.004h12.327c2.206,0 4.001,1.795 4.001,4.001s-1.795,4.001-4.001,4.001h-12.327v-8.002z"/>
                         </g>
                     </svg>
-                    <p>Tourisme parking a quelque mètre du quartier</p>
+                    <p><?php the_sub_field('parking'); ?></p>
                 </div>
                 <div>
                     <svg version="1.1" id="bus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 508 508" style="enable-background:new 0 0 508 508;">
@@ -47,7 +64,7 @@ get_header();
                             </g>
                         </g>
                     </svg>
-                    <p>La ligne 1 ou 4</p>
+                    <p><?php the_sub_field('bus'); ?></p>
                 </div>
                 <div>
                     <svg version="1.1" id="train" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 506.852 506.852" style="enable-background:new 0 0 506.852 506.852;">
@@ -82,12 +99,14 @@ get_header();
                             </g>
                         </g>
                     </svg>
-                    <p>Direction Liège-Guillemins</p>
+                    <p><?php the_sub_field('train'); ?></p>
                 </div>
             </div>
+            <?php endwhile; endif; ?>
        </div>
     </div>
     <h2>Map interactive</h2>
     <iframe src="https://www.google.fr/maps/d/embed?mid=1nmuuAJ-lLItmVbx4dM3wAajKFHk" height="480"></iframe>
 </section>
+<?php endwhile; endif; ?>
 <?php get_footer(); ?> 
