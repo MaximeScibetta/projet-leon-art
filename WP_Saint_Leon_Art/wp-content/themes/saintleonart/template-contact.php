@@ -28,9 +28,9 @@ get_header();
             <?= $fields['contact_text'];?>
         </p>
         <?php endif; ?>
-        <?php if( have_rows('contact_info') ): while ( have_rows('contact_info') ) : the_row(); ?>
         <div class="content">
             <span>SaintLeon'Art</span>
+            <?php if( have_rows('contact_info') ): while ( have_rows('contact_info') ) : the_row(); ?>
             <div class="info">
                 <div>
                     <svg version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
@@ -77,8 +77,8 @@ get_header();
                     <p><?php the_sub_field('mail'); ?></p>
                 </div>
             </div>
+            <?php endwhile; endif; ?>
        </div>
-        <?php endwhile; endif; ?>
     </div>
     <?php get_template_part('part/contact-form') ;?>
 </section>
