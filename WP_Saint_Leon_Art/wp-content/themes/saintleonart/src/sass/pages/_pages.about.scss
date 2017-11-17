@@ -346,9 +346,9 @@
                 display: none;
             }
             .o-flex{
-                @include inuit-flex-direction(row);
-                @include inuit-flex-spacing(space-between);
-                @include inuit-flex-wrap(wrap);
+                // @include inuit-flex-direction(row);
+                // @include inuit-flex-spacing(space-between);
+                // @include inuit-flex-wrap(wrap);
             }
             &__container{
                 .o-flex__item{

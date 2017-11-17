@@ -516,52 +516,43 @@
             }
         }
         .instagram{
-            padding: $igsul 0;
-            position: relative;
-            background-color: $grey;
-            svg{
-                width: 20px;
-                display: block;
-                margin: 0 auto;
-            }
-            h2{
-                color: $black;
-                text-transform: uppercase;
-                text-align: center;
-                >span{
-                    font-family: 'RobotoL';
-                    font-size: 16px;
-                    display: block;
-                    letter-spacing:3px;
-                }
-            }
-            @include mq($from: 0px, $until: tablet){
-                #arrowRight, #arrowLeft{
-                    display: none;
-                }
-            }
-            #arrowRight, #arrowLeft{
-                height: 20px;
-                position: absolute;
-                top: 61%;
-            }
-            #arrowLeft{
-                left: -42px;
-            }
-            #arrowRight{
-                right: -42px;
-            }
-            &__gallery{
-                width: ( 100% - 8.33333% - 8.33333% );
-                text-align: center;
-                margin: 0 auto;
-                img{
-                    width: 49%;
-                    @include mq($from: tablet){
-                        width: 24%;
-                    }
-                }
-            }
+             padding: $igsul 0;
+             position: relative;
+             background-color: $grey;
+             svg {
+                 width: 20px;
+                 display: block;
+                 margin: 0 auto;
+             }
+             h2 {
+                 color: $black;
+                 text-transform: uppercase;
+                 text-align: center;
+                 >span {
+                     font-family: 'RobotoL';
+                     font-size: 16px;
+                     display: block;
+                     letter-spacing: 3px;
+                 }
+             }
+                &__gallery {
+                 width: ( 100% - 8.33333% - 8.33333%);
+                 text-align: center;
+                 margin: 0 auto;
+                 display: flex;
+                 flex-direction: row;
+                 justify-content: space-between;
+                 flex-wrap: wrap;
+                 a {
+                     width: 49%;
+                     @include mq($from: tablet) {
+                         width: 24%;
+                     }
+                     img{
+                         width: 100%;
+                     }
+                 }
+             }
         }
         .twitter{
             position: relative;
