@@ -547,11 +547,17 @@
                      width: 49%;
                      @include mq($from: tablet) {
                          width: 24%;
+                         &:nth-child(n+5){
+                             margin-top: $igsu;
+                         }
                      }
                      img{
                          width: 100%;
                      }
                  }
+             }
+             #load-more{
+                 margin-top: $igsu;
              }
         }
         .twitter{

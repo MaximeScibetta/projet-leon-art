@@ -137,7 +137,7 @@ get_header();
     </h2>
     <div id="instafeed" class="instagram__gallery u-margin-top">
     </div>
-    <button id="load-more">Voir plus</button>
+    <a href="" class="btn btn--anim" data-text="Charger plus d'images"id="load-more">Charger plus d'images</a>
     
 </section>
 <section class="twitter">
