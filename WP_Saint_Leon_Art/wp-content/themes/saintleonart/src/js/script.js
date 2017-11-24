@@ -122,20 +122,19 @@
 /* --------------------------*/
 // Event menu
 /* --------------------------*/
-    const buttons = document.querySelectorAll('.program__navigation a');
+    const buttons = document.querySelectorAll('.program__navigation .day a');
 
-    Array.from(buttons).forEach(function($btn) {
-        $btn.addEventListener("click", fActive);
-    });
-
+    
     function fActive(e) {
         e.stopPropagation();
-        //e.preventDefault();
-        if(  document.querySelector('.active') ){
-            document.querySelector('.active').classList.remove('active');
+        if (document.querySelector('.program__navigation .day a.active')) {
+            document.querySelector('.program__navigation .day a.active').classList.remove('active');
         }
         e.currentTarget.classList.add('active');
     };
+    Array.from(buttons).forEach(function($btn) {
+        $btn.addEventListener("click", fActive);
+    });
 /* --------------------------*/
 // Form contact feedback and focus
 /* --------------------------*/

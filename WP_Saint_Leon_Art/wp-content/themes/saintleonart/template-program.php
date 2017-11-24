@@ -49,8 +49,8 @@ get_header();
 <section class="program">
     <div class="program__navigation">
         <div class="day"> 
-            <?php if( have_rows('days') ): $i=1; while( have_rows('days') ): the_row(); ?>
-                <a href="#day<?php if($i): echo $i; endif; $i++;?>"><?php the_sub_field('date'); ?> <?= $key ;?> </a>
+            <?php if( have_rows('days') ): $i=1; $first = true; while( have_rows('days') ): the_row(); ?>
+                <a class="<?php if($first): echo 'active'; $first = false; endif;?>" href="#day<?php if($i): echo $i; endif; $i++;?>"><?php the_sub_field('date'); ?> <?= $key ;?> </a>
             <?php endwhile; endif; ?>
             <a href="#all">Tous le programme</a>
         </div>
