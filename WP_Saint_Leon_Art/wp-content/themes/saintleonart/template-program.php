@@ -50,9 +50,9 @@ get_header();
     <div class="program__navigation">
         <div class="day"> 
             <?php if( have_rows('days') ): $i=1; $first = true; while( have_rows('days') ): the_row(); ?>
-                <a class="<?php if($first): echo 'active'; $first = false; endif;?>" href="#day<?php if($i): echo $i; endif; $i++;?>"><?php the_sub_field('date'); ?> <?= $key ;?> </a>
+                <a href="#day<?php if($i): echo $i; endif; $i++;?>"><?php the_sub_field('date'); ?> <?= $key ;?> </a>
             <?php endwhile; endif; ?>
-            <a href="#all">Tous le programme</a>
+            <a  class="<?php if ($first) : echo 'active'; endif; ?>" href="#all">Tous le programme</a>
         </div>
         <a href="" class="order">Trier 
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96.154px" height="96.154px" viewBox="0 0 96.154 96.154" style="enable-background:new 0 0 96.154 96.154;">
@@ -104,7 +104,7 @@ get_header();
         <?php endwhile; endif; ?>
         </div>
     <?php endwhile; endif; ?>
-    <div class="timeline all" id="all">
+    <div class="timeline all here" id="all">
         <?php if (have_rows('days')) :while (have_rows('days')) : the_row(); ?>
             <?php if (have_rows('events')) : $i = 0; while (have_rows('events')) : the_row(); ?>
                 <a href="<?php the_sub_field('event_link'); ?>">

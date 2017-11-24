@@ -129,6 +129,8 @@
         e.stopPropagation();
         if (document.querySelector('.program__navigation .day a.active')) {
             document.querySelector('.program__navigation .day a.active').classList.remove('active');
+            document.querySelector('.program .timeline.all#all').classList.remove('here');
+            
         }
         e.currentTarget.classList.add('active');
     };
