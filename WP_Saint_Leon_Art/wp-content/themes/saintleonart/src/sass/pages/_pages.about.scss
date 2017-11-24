@@ -346,18 +346,22 @@
                 display: none;
             }
             .o-flex{
-                // @include inuit-flex-direction(row);
-                // @include inuit-flex-spacing(space-between);
-                // @include inuit-flex-wrap(wrap);
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
             }
             &__container{
                 .o-flex__item{
                     position: relative;
-                    //margin-right: 24px;
-                    flex-basis: calc( (#{$gutters} * 6) - #{$igsus} );
+                    margin-right: 24px;
+                    display: inline-flex;
+                    width: calc( (#{$gutters} * 6) - 30px );
                     margin-bottom: $igsu;
+                    &:nth-child(3n+3){
+                        margin-right: 0;
+                    }
                     @include mq($from: desktop){
-                        flex-basis: calc( (#{$gutters} * 4) - 16px );
+                        width: calc( (#{$gutters} * 4) - 20px );
                     }
                     img{
                         width: 100%;
@@ -403,7 +407,7 @@
             @include mq($until: 810px){
                 h2{
                     padding: 24px $gutters;
-                    margin: $inuit-global-spacing-unit auto $inuit-global-spacing-unit-large;
+                    margin: 0 auto $inuit-global-spacing-unit-large;
                     position: relative;
                     background-color: $purple;
                     color: $white;
@@ -418,7 +422,7 @@
                         border-left-width: 26px;
                         border-bottom: 26px solid $purple;
                         position: absolute;
-                        top: 68px;
+                        top: 67px;
                         left: 46%;
                         transform: rotate(180deg);
                     } 
