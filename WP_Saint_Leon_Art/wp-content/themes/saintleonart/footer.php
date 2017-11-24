@@ -135,78 +135,44 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVA_O8C3KixYaKtQ8SbWHItWCEPHXFRao"></script>
-    <script> 
-        $('.count').each(function () {
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
-    </script>
-    <script>
-        // var input = document.querySelectorAll('fieldset .input');
-        //     var getFocus = function getFocus(oEvent) {
-        //         oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
-        //     };
-        //     var outFocus = function outFocus(e) {
-        //         if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 || e.currentTarget.parentNode.querySelector('.input option').value.length === 0 ) {
-        //             e.currentTarget.parentNode.querySelector('label').classList.remove("focus");
-        //         }
-        //     };
-        //     Array.from(input).forEach(function($label) {
-        //         $label.addEventListener("focus", getFocus);
-        //         $label.addEventListener("click", getFocus);
-        //         $label.addEventListener("blur", outFocus);
-        //     });
-    </script>
     <?php 
         $perso = new WP_Query();
         $perso->query([
             'post_type' => 'artist'
             ]);
     ;?>
-    <?php if ( $perso->have_posts() ): while( $perso->have_posts() ): $perso->the_post();?> <?php $fields = get_fields(); ?>
-            <script>
-                var lat = <?= $fields[artist_location][Lat_googlemap]; ?>;
-                var long = <?= $fields[artist_location][Long_googlemap]; ?>;
-            </script>   
-    <?php endwhile; endif;?>
+   
     <script src="<?= dw_asset('js/script.js');?>"></script>
-    <script src="<?= dw_asset('js/instafeed.min.js');?>">
+    <script src="<?= dw_asset('js/instafeed.min.js');?>"></script>
+    <script type="text/javascript">
+            var loadButton = document.getElementById('load-more');
         
-    </script>
-<!-- <script type="text/javascript">
-    
-        var loadButton = document.getElementById('load-more');
             var feed = new Instafeed({
-                get: 'user',
-                userId: '4581355787',
-                tagName: 'awesome',
-                resolution: 'low_resolution',
-                sortBy: 'random',
-                limit: '4',
-                accessToken: '4581355787.54da896.dcfc4291a3794589984767b9ed9f5c0b',
-                clientId: 'dfdb76e4c7ce4cd0a92c12edab5d3eb4',
-                after: function() {
-                    // disable button if no more results to load
-                    if (!this.hasNext()) {
+            get: 'user',
+            userId: '4581355787',
+            tagName: 'awesome',
+            resolution: 'low_resolution',
+            sortBy: 'random',
+            limit: '4',
+            accessToken: '4581355787.54da896.dcfc4291a3794589984767b9ed9f5c0b',
+            clientId: 'dfdb76e4c7ce4cd0a92c12edab5d3eb4',
+            after: function () {
+                // disable button if no more results to load
+                if (!this.hasNext()) {
                     loadButton.setAttribute('disabled', 'disabled');
-                    }
-                },
-            });
-            // bind the load more button
-            loadButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                feed.next();
-            });
-
-            // run our feed!
-            feed.run();
-</script> -->
+                }
+            },
+        });
+        
+        // run our feed!
+        feed.run();
+        
+        // bind the load more button
+        loadButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            feed.next();
+        });
+        console.log(feed);
+    </script>
 </body>
 </html>
