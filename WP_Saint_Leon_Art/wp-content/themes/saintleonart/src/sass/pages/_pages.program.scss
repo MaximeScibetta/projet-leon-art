@@ -90,13 +90,19 @@
                 position: relative;
                 -webkit-transition: all .4s ease;
                 transition: all .4s ease;
+                &.all{
+                    h2{
+                        display: block;
+                    }
+                }
                 &>a{
                     text-decoration: none;
                    
                 }
                 &.day1,
                 &.day2,
-                &.day3{
+                &.day3,
+                &.all{
                     display: none;
                 }
                 &:before{
@@ -212,10 +218,8 @@
             }
             #day1:target,
             #day2:target,
-            #day3:target{
-                display: block;
-            }
-            #all:target{
+            #day3:target,
+            #all:target,{
                 display: block;
             }
             @include mq($until: tablet){
