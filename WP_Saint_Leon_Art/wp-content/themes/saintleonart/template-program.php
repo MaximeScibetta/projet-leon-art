@@ -33,10 +33,10 @@ get_header();
                     C45.576,13.08,46.321,24.468,41.099,31.431z"/>
             </g>
         </svg>
-        <span>Saint Léonard 4000, Liège, Belgique</span>
+        <span><?= $fields['address'] ;?></span>
     </address>
     <p class="time">
-        <span>Du 19 août à 18:00 au 21 août à 20:00</span>
+        <span><?= $fields['date']; ?></span>
         <svg version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
             <g>
                 <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
