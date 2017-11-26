@@ -135,44 +135,8 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVA_O8C3KixYaKtQ8SbWHItWCEPHXFRao"></script>
-    <?php 
-        $perso = new WP_Query();
-        $perso->query([
-            'post_type' => 'artist'
-            ]);
-    ;?>
-   
+
     <script src="<?= dw_asset('js/script.js');?>"></script>
-    <script src="<?= dw_asset('js/instafeed.min.js');?>"></script>
-    <script type="text/javascript">
-            var loadButton = document.getElementById('load-more');
         
-            var feed = new Instafeed({
-            get: 'user',
-            userId: '4581355787',
-            tagName: 'awesome',
-            resolution: 'low_resolution',
-            sortBy: 'random',
-            limit: '4',
-            accessToken: '4581355787.54da896.dcfc4291a3794589984767b9ed9f5c0b',
-            clientId: 'dfdb76e4c7ce4cd0a92c12edab5d3eb4',
-            after: function () {
-                // disable button if no more results to load
-                if (!this.hasNext()) {
-                    loadButton.setAttribute('disabled', 'disabled');
-                }
-            },
-        });
-        
-        // run our feed!
-        feed.run();
-        
-        // bind the load more button
-        loadButton.addEventListener('click', function (e) {
-            e.preventDefault();
-            feed.next();
-        });
-        console.log(feed);
-    </script>
 </body>
 </html>

@@ -189,3 +189,33 @@ get_header();
 </section>
 <?php endwhile;endif; ?>
 <?php get_footer(); ?>
+<script src="<?= dw_asset('js/instafeed.min.js'); ?>"></script>
+<script type="text/javascript">
+        var loadButton = document.getElementById('load-more');
+    
+        var feed = new Instafeed({
+        get: 'user',
+        userId: '4581355787',
+        tagName: 'awesome',
+        resolution: 'low_resolution',
+        sortBy: 'random',
+        limit: '4',
+        accessToken: '4581355787.54da896.dcfc4291a3794589984767b9ed9f5c0b',
+        clientId: 'dfdb76e4c7ce4cd0a92c12edab5d3eb4',
+        after: function () {
+            // disable button if no more results to load
+            if (!this.hasNext()) {
+                loadButton.setAttribute('disabled', 'disabled');
+            }
+        },
+    });
+    
+    // run our feed!
+    feed.run();
+    
+    // bind the load more button
+    loadButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        feed.next();
+    });
+</script>

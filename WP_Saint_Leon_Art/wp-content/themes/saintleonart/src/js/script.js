@@ -91,24 +91,6 @@ if (pageTitle === 'Bienvenue - Saint-Léon\'Art' ){
 }
 
 /* --------------------------*/
-// Google map individual
-/* --------------------------*/
-    var myCenter = new google.maps.LatLng(`${lat}`, `${long}`);
-    function initialize() {
-        var mapProp = {
-            center: myCenter,
-            zoom: 10,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map"), mapProp);
-        var marker = new google.maps.Marker({
-            position: myCenter,
-        });
-        marker.setMap(map);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-    
-/* --------------------------*/
 // Hamburger menu and sidebar
 /* --------------------------*/
     const hamburger = document.querySelector('.hamburger');
@@ -328,7 +310,6 @@ if (pageTitle === ' » À propos - Saint-Léon\'Art'){
         var getFocus = function getFocus(oEvent) {
             oEvent.currentTarget.parentNode.querySelector('label').classList.add("focus");
             var oInput =  oEvent.currentTarget.parentNode.querySelector('.input');
-            console.log(oEvent)
             setTimeout(function(){
                 oInput.classList.add("border");
                 
@@ -336,13 +317,10 @@ if (pageTitle === ' » À propos - Saint-Léon\'Art'){
             
         };
 
-         
-
         var outFocus = function outFocus(e) {
-            if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 || e.currentTarget.parentNode.querySelector('.input option').value.length === 0 ) {
+            if (e.currentTarget.parentNode.querySelector('.input').value.length === 0 ) {
                 e.currentTarget.parentNode.querySelector('label').classList.remove("focus");
             }
-            console.log(e.currentTarget)
             e.currentTarget.classList.remove("border");
             
         };
