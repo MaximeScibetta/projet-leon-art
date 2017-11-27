@@ -5,10 +5,22 @@ Template Name: Page all artiss
 get_header();
 ?>
 <?php 
-$query = new WP_Query();
-$query->query([
-    'post_type' => 'artist',
-]);; ?>
+    // Set custom paged query.
+    $paged1 = isset($_GET['paged1']) ? (int)$_GET['paged1'] : 1;
+    // artists query
+    $query = new WP_Query();
+    $query->query([
+        'post_type' => 'artist',
+        'paged' => $paged1,
+        'posts_per_page' => 1,
+    ]);
+    // pagination query
+    $paginateArgs = array(
+        'format' => '?paged1=%#%',
+        'current' => $paged1, // Reference the custom paged query we initially set.
+        'total' => $query->max_num_pages // Max pages from our custom query.
+    );
+?>
 <section class="introduction litle" style="background-image: url(<?= dw_asset('images/all-expo.jpg'); ?>);">
     <h2 class="branding" id="branding">Artistes <span>SaintLeon'Art</span></h2>
 </section>
@@ -62,11 +74,10 @@ $query->query([
 	<button>Apply filter</button>
 	<input type="hidden" name="action" value="myfilter">
 </form>
-<div id="response"></div>
 <?php if ($query->have_posts()) : ?>
     <div class="artist__container">
         <?php while ($query->have_posts()) : $query->the_post(); ?>
-        <?php $fields = get_fields(); ?>
+        <?php $fields = get_fields();  ?>
             <a href="" class="item">
                 <img src="<?= $fields['artiste_profil'][url]; ?>" alt="" width="400" height="225">
                 <div class="item__info">
@@ -78,6 +89,9 @@ $query->query([
                 </div>
             </a>
         <?php endwhile; ?>
+        <div class="pagination p12">
+            <?php echo paginate_links($paginateArgs); ?>        
+        </div>
     </div>
 <?php endif; ?>
     <div class="pagination p12">
@@ -91,6 +105,9 @@ $query->query([
         <a class="is-active" href="#"><li>6</li></a>
         <a href="#"><li>Suivant</li></a>
       </ul>
+    </div>
+    <div class="pagination p12">
+        <?php echo paginate_links($paginateArgs); ?>        
     </div>
 </section>
 <?php get_footer(); ?>
