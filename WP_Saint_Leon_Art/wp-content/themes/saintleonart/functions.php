@@ -12,7 +12,14 @@ add_filter( 'wp_title', 'sla_page_title' );
 
 // Specify that the theme supports the images
 //add_theme_support('post-thumbnails');
+function register_my_session()
+{
+    if (!session_id()) {
+        session_start();
+    }
+}
 
+add_action('init', 'register_my_session');
 /****************************************************************************************************/
 
 /*******************************************
@@ -251,7 +258,12 @@ function misha_filter_function()
             'terms' => $_POST['categoryfilter']
         )
     );
+
+    // Init query
     $query = new WP_Query($args);
+    
+        
+    // Set custom pagination query.
     global $wp_rewrite;
     $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=236";
     $paginateArgs = array(
@@ -259,7 +271,8 @@ function misha_filter_function()
         'current' => $page, // Reference the custom paged query we initially set.
         'total' => $query->max_num_pages, // Max pages from our custom query.
         'base' => $base,
-     );
+    );
+    
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post(); $fields = get_fields();
             echo '<a href="'.get_the_permalink().'" class="item">';
