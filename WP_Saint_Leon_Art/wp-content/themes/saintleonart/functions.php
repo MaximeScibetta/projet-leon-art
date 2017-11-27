@@ -208,7 +208,7 @@ add_filter( 'wp_title', 'sla_page_title' );
         return $taxoArray;
     }
 
-    /****************************************************************************************************/
+/****************************************************************************************************/
 
 /***************
 *** Get the slug
@@ -223,3 +223,49 @@ function sla_the_slug()
 {
   echo sla_get_the_slug();
 }
+
+/****************************************************************************************************/
+/**
+ * AJAC filter posts by taxonomy term
+ */
+function misha_filter_function()
+{
+    $args = array(
+        'orderby' => 'date', // we will sort posts by date
+        'order' => $_POST['date'] // ASC или DESC
+    );
+ 
+	// for taxonomies / categories
+    if (isset($_POST['categoryfilter']))
+        $args['tax_query'] = array(
+        array(
+            'taxonomy' => 'kind',
+            'field' => 'id',
+            'terms' => $_POST['categoryfilter']
+        )
+    );
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post(); $fields = get_fields();
+            echo '<a href="" class="item">';
+                echo '<img src="'.$fields["artiste_profil"][url].'" alt="" width="400" height="225">';
+                echo '<div class="item__info">';
+                    echo '<h3 class="">'.$fields["artist_surname"];
+                        echo '<span>'.$fields["artist_name"].'</span>';
+                    echo '</h3>';
+                    echo '<p class="">'.$fields["artist_job"].'</p>';
+                echo '</div>';
+            echo '</a>';
+        endwhile;
+        wp_reset_postdata();
+    else :
+        echo 'No posts found';
+    endif;
+
+    die();
+}
+
+
+add_action('wp_ajax_myfilter', 'misha_filter_function');
+add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
