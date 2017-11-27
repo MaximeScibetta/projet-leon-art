@@ -213,16 +213,16 @@ add_filter( 'wp_title', 'sla_page_title' );
 /***************
 *** Get the slug
 ***************/
-function sla_get_the_slug()
-{
-  global $post;
-  return $post->post_name;
-}
+    function sla_get_the_slug()
+    {
+    global $post;
+    return $post->post_name;
+    }
 
-function sla_the_slug()
-{
-  echo sla_get_the_slug();
-}
+    function sla_the_slug()
+    {
+    echo sla_get_the_slug();
+    }
 
 /****************************************************************************************************/
 /**
@@ -232,13 +232,13 @@ function misha_filter_function()
 {
 
     // Set custom paged query.
-    $paged1 = isset($_GET['paged1']) ? (int)$_GET['paged1'] : 1;
+    $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
     // Set custom paged query.
     $args = array(
         'orderby' => 'date', // we will sort posts by date
         'order' => $_POST['date'], // ASC или DESC
-        'paged' => $paged1,
+        'paged' => $page,
         'posts_per_page' => 1,
     );
  
@@ -252,14 +252,17 @@ function misha_filter_function()
         )
     );
     $query = new WP_Query($args);
+    global $wp_rewrite;
+    $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=236";
     $paginateArgs = array(
-        'format' => '?paged1=%#%',
-        'current' => $paged1, // Reference the custom paged query we initially set.
-        'total' => $query->max_num_pages // Max pages from our custom query.
-    );
+        'format' => '?page/%#%/',
+        'current' => $page, // Reference the custom paged query we initially set.
+        'total' => $query->max_num_pages, // Max pages from our custom query.
+        'base' => $base,
+     );
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post(); $fields = get_fields();
-            echo '<a href="" class="item">';
+            echo '<a href="'.get_the_permalink().'" class="item">';
                 echo '<img src="'.$fields["artiste_profil"][url].'" alt="" width="400" height="225">';
                 echo '<div class="item__info">';
                     echo '<h3 class="">'.$fields["artist_surname"];
@@ -269,9 +272,9 @@ function misha_filter_function()
                 echo '</div>';
             echo '</a>';
         endwhile;
-        // echo '<div class="pagination p12">';
-        //     echo paginate_links($paginateArgs);
-        // echo '</div>';
+        echo '<div class="pagination p12">';
+            echo paginate_links($paginateArgs);
+        echo '</div>';
         wp_reset_postdata();
     else :
         echo 'No posts found';
@@ -279,7 +282,6 @@ function misha_filter_function()
 
     die();
 }
-
-
 add_action('wp_ajax_myfilter', 'misha_filter_function');
 add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
+

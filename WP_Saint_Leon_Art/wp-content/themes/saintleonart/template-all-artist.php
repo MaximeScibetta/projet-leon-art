@@ -6,18 +6,18 @@ get_header();
 ?>
 <?php 
     // Set custom paged query.
-    $paged1 = isset($_GET['paged1']) ? (int)$_GET['paged1'] : 1;
+    $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
     // artists query
     $query = new WP_Query();
     $query->query([
         'post_type' => 'artist',
-        'paged' => $paged1,
+        'paged' => $page,
         'posts_per_page' => 1,
     ]);
     // pagination query
     $paginateArgs = array(
-        'format' => '?paged1=%#%',
-        'current' => $paged1, // Reference the custom paged query we initially set.
+        'format' => '?page=%#%',
+        'current' => $page, // Reference the custom paged query we initially set.
         'total' => $query->max_num_pages // Max pages from our custom query.
     );
 ?>
@@ -78,7 +78,7 @@ get_header();
     <div class="artist__container">
         <?php while ($query->have_posts()) : $query->the_post(); ?>
         <?php $fields = get_fields();  ?>
-            <a href="" class="item">
+            <a href="<?= get_the_permalink() ;?>" class="item">
                 <img src="<?= $fields['artiste_profil'][url]; ?>" alt="" width="400" height="225">
                 <div class="item__info">
                     <h3 class="">
@@ -94,7 +94,7 @@ get_header();
         </div>
     </div>
 <?php endif; ?>
-    <div class="pagination p12">
+    <!-- <div class="pagination p12">
       <ul>
         <a href="#"><li>Précédent</li></a>
         <a href="#"><li>1</li></a>
@@ -105,9 +105,6 @@ get_header();
         <a class="is-active" href="#"><li>6</li></a>
         <a href="#"><li>Suivant</li></a>
       </ul>
-    </div>
-    <div class="pagination p12">
-        <?php echo paginate_links($paginateArgs); ?>        
-    </div>
+    </div> -->
 </section>
 <?php get_footer(); ?>
