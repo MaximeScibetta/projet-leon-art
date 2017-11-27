@@ -343,11 +343,7 @@ jQuery(function ($) {
             url: filter.attr('action'),
             data: filter.serialize(), // form data
             type: filter.attr('method'), // POST
-            beforeSend: function (xhr) {
-                filter.find('button').text('Processing...'); // changing the button label
-            },
             success: function (data) {
-                filter.find('button').text('Apply filter'); // changing the button label back
                 $('.artist__container').html(data); // insert data
             }
         });

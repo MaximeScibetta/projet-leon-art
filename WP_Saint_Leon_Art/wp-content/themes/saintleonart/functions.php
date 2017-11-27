@@ -272,7 +272,6 @@ function misha_filter_function()
         'total' => $query->max_num_pages, // Max pages from our custom query.
         'base' => $base,
     );
-    
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post(); $fields = get_fields();
             echo '<a href="'.get_the_permalink().'" class="item">';
@@ -298,3 +297,10 @@ function misha_filter_function()
 add_action('wp_ajax_myfilter', 'misha_filter_function');
 add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
 
+function myfilter(){
+    if (isset($_POST['filter'])) {
+        $_SESSION['artist_filter'] = 'ok';
+    }
+var_dump($_SESSION);
+
+}
