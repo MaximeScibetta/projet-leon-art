@@ -15,11 +15,13 @@
         }
         .all{
             &__navigation{
-                max-width: 800px;
+                max-width: 1200px;
                 margin: 0 auto;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: $igsul;
                 .see{
                     width: 45%;
                     overflow-y: hidden;
@@ -73,11 +75,26 @@
                 }
                 .order{
                     outline: none;
-                    border: none;
                     background-color: $grey;
+                    border: 2px solid $purple;
+                    border-radius: 50px;
+                    padding: $igsus $igsul;
+                    text-transform: uppercase;
+                    font-family: 'RobotoR';
+                    color: $purple;
+                    appearance: none;
+                    background: $grey url(../images/dropdown_triangle.svg) 288px center no-repeat;
+                    background-size: 18px 13px;
+                    &:hover{
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                    option{
+                        padding: $igsus $igsul;
+                    }
                 }
                 .radio {
-                    margin: 0.5rem;
+                    margin: $igsus 0 0 $igsu;
                     input[type="radio"] {
                         position: absolute;
                         opacity: 0;
@@ -86,7 +103,7 @@
                                 content: '';
                                 background: $purple;
                                 border-radius: 100%;
-                                border: 1px solid $purple;
+                                border: 4px solid $purple;
                                 display: inline-block;
                                 width: 1.4em;
                                 height: 1.4em;
@@ -111,7 +128,7 @@
                             +.radio-label {
                                 &:before {
                                     outline: none;
-                                    border-color: $white;
+                                    //border-color: $white;
                                 }
                             }
                         }
@@ -131,6 +148,12 @@
                                 }
                             }
                         }
+                    }
+                }
+                input[type="submit"].btn.btn--anim{
+                    &:hover{
+                        background-color: $purple;
+                        color: $white;
                     }
                 }
             }

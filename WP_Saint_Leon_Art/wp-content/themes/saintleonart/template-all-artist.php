@@ -52,7 +52,7 @@ get_header();
 
 <section class="artist all">
     <h2>Nos artistes</h2>
-    <div class="all__navigation">
+    <!-- <div class="all__navigation">
         <ul class="see">
             <li>Voir les
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96.154px" height="96.154px" viewBox="0 0 96.154 96.154" style="enable-background:new 0 0 96.154 96.154;">
@@ -70,7 +70,7 @@ get_header();
             <li><a href="">artistes</a></li>
             <li><a href="">arts urbains</a></li>
         </ul>
-    </div>
+    </div> -->
 <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter" class="all__navigation">
 	<?php if ($terms = get_terms('kind', 'orderby=name')) : 
         echo '<select name="categoryfilter" class="order">';
@@ -88,7 +88,7 @@ get_header();
         <input id="radioDESC" type="radio" name="date" value="DESC" <?php if ($_SESSION['artist_filter_date'] == 'DESC') : echo 'checked'; endif; ?>  />
         <label for="radioDESC" class="radio-label">Les plus récent</label>
     </div>
-    <input type="submit" name="myfilter" value="Apply filter">
+    <input type="submit" name="myfilter" value="Filtrer les éléments" class="btn btn--anim" data-text="Filtrer les éléments">
 	<input type="hidden" name="action" value="myfilter">
 </form>
 <?php if ($query->have_posts()) : ?>
