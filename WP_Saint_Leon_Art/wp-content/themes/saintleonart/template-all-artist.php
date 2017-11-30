@@ -5,53 +5,51 @@ Template Name: Page all artiss
 get_header();
 ?>
 <?php 
-
     // Default values for user SESSION
-    if(!isset($_SESSION['artist_filter'])){
-        $_SESSION['artist_filter'] = 'null';
-    }
-    if (!isset($_SESSION['current_page'])) {
-        $_SESSION['current_page'] = 1;
-    }
-    if (!isset($_SESSION['artist_filter_date'])) {
-        $_SESSION['artist_filter_date'] = 'DESC';
-    }
+        if(!isset($_SESSION['artist_filter'])){
+            $_SESSION['artist_filter'] = 'null';
+        }
+        if (!isset($_SESSION['current_page'])) {
+            $_SESSION['current_page'] = 1;
+        }
+        if (!isset($_SESSION['artist_filter_date'])) {
+            $_SESSION['artist_filter_date'] = 'DESC';
+        }
 
     // Set custom paged query.
-    $_SESSION['current_page'] = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $_SESSION['current_page'] = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
     // Artists query
-    $args = [
-        'post_type' => 'artist',
-        'orderby' => 'date',
-        'order' => $_SESSION['artist_filter_date'],
-        'paged' => $_SESSION['current_page'],
-        'posts_per_page' => 1,
-        'tax_query' => [
-            [
-                'taxonomy' => 'kind',
-                'field' => 'id',
-                'terms' => $_SESSION['artist_filter'],
+        $args = [
+            'post_type' => 'artist',
+            'orderby' => 'date',
+            'order' => $_SESSION['artist_filter_date'],
+            'paged' => $_SESSION['current_page'],
+            'posts_per_page' => 1,
+            'tax_query' => [
+                [
+                    'taxonomy' => 'kind',
+                    'field' => 'id',
+                    'terms' => $_SESSION['artist_filter'],
+                ]
             ]
-        ]
-    ];
+        ];
 
     // Init query
-    $query = new WP_Query($args);
+        $query = new WP_Query($args);
     
     // Pagination query
-    $paginateArgs = array(
-        'format' => '?page=%#%',
-        'current' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'],
-        'total' => $query->max_num_pages 
-    );
+        $paginateArgs = array(
+            'format' => '?page=%#%',
+            'current' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'],
+            'total' => $query->max_num_pages 
+        );
 ?>
 <section class="introduction litle" style="background-image: url(<?= dw_asset('images/all-expo.jpg'); ?>);">
     <h2 class="branding" id="branding">Artistes <span>SaintLeon'Art</span></h2>
 </section>
-
 <section class="artist all">
-    <h2>Nos artistes</h2>
+    <h2>Tous nos artistes</h2>
     <!-- <div class="all__navigation">
         <ul class="see">
             <li>Voir les
@@ -88,8 +86,8 @@ get_header();
         <input id="radioDESC" type="radio" name="date" value="DESC" <?php if ($_SESSION['artist_filter_date'] == 'DESC') : echo 'checked'; endif; ?>  />
         <label for="radioDESC" class="radio-label">Les plus récent</label>
     </div>
-    <input type="submit" name="myfilter" value="Filtrer les éléments" class="btn btn--anim" data-text="Filtrer les éléments">
-	<input type="hidden" name="action" value="myfilter">
+    <input type="submit" name="artistfilter" value="Filtrer les éléments" class="btn btn--anim" data-text="Filtrer les éléments">
+	<input type="hidden" name="action" value="artistfilter">
 </form>
 <?php if ($query->have_posts()) : ?>
     <div class="artist__container">

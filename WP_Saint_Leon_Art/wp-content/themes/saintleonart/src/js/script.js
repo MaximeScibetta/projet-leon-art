@@ -336,18 +336,38 @@ if (pageTitle === ' » À propos - Saint-Léon\'Art'){
 /* --------------------------*/
 // Taxonomy Filter and pagination
 /* --------------------------*/
-jQuery(function ($) {
-    $('#filter').submit(function () {
-        var filter = $('#filter');
-        $.ajax({
-            url: filter.attr('action'),
-            data: filter.serialize(), // form data
-            type: filter.attr('method'), // POST
-            success: function (data) {
-                $('.artist__container').html(data); // insert data
-                console.log(data);
-            }
+if (pageTitle === ' » Tous les artistes - Saint-Léon\'Art'){
+    jQuery(function ($) {
+        $('#filter').submit(function () {
+            var filter = $('#filter');
+            $.ajax({
+                url: filter.attr('action'),
+                data: filter.serialize(), // form data
+                type: filter.attr('method'), // POST
+                success: function (data) {
+                    $('.artist__container').html(data); // insert data
+                    console.log(data);
+                }
+            });
+            return false;
         });
-        return false;
     });
-});
+}
+
+if (pageTitle === ' » Tous les événements - Saint-Léon\'Art') {
+    jQuery(function ($) {
+        $('#event_filter').submit(function () {
+            var filter = $('#event_filter');
+            $.ajax({
+                url: filter.attr('action'),
+                data: filter.serialize(), // form data
+                type: filter.attr('method'), // POST
+                success: function (data) {
+                    $('.event__container').html(data); // insert data
+                    console.log(data);
+                }
+            });
+            return false;
+        });
+    });
+}
