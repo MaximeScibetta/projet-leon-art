@@ -12,9 +12,10 @@
                 <span class="circle"></span>
                 <span class="handle"></span>
             </button>
-            <form action="">
-                <input type="search">
+            <form role="search" method="get" action="/">
+                <label class="u-hidden-visually" for="search">Recherche</label>
+                <input type="search" id="search" class="search-field" placeholder="Recherche…" value="party" name="s">
+                <input type="submit" class="search-submit" value="Rechercher">
             </form>
-        </li>
     </ul>
 </nav>

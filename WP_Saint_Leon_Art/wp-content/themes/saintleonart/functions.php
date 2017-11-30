@@ -4,22 +4,28 @@
 *** Hook functions
 *****************/
 
-// Add new post type
-add_action('init', 'sla_init_types');
+    // Add new post type
+    add_action('init', 'sla_init_types');
 
-// Change the wp_title() action result
-add_filter( 'wp_title', 'sla_page_title' );
+    // Change the wp_title() action result
+    add_filter( 'wp_title', 'sla_page_title' );
 
-// Specify that the theme supports the images
-//add_theme_support('post-thumbnails');
-function register_my_session()
-{
-    if (!session_id()) {
-        session_start();
+    // Specify that the theme supports the images
+    //add_theme_support('post-thumbnails');
+    function register_my_session()
+    {
+        if (!session_id()) {
+            session_start();
+        }
     }
-}
 
-add_action('init', 'register_my_session');
+    add_action('init', 'register_my_session');
+
+function wpdocs_after_setup_theme()
+{
+    add_theme_support('html5', array('search-form'));
+}
+add_action('after_setup_theme', 'wpdocs_after_setup_theme');
 /****************************************************************************************************/
 
 /*******************************************
@@ -232,118 +238,120 @@ add_action('init', 'register_my_session');
     }
 
 /****************************************************************************************************/
+
 /**
- * AJAX filter posts by taxonomy term
+ * AJAX filter artist posts by taxonomy term
  */
-function ms_filter_function()
-{
-    // Creation of my session
-        if (isset($_POST['categoryfilter'])) {
-            $_SESSION['artist_filter'] = $_POST['categoryfilter'];
-        }
-        if (isset($_POST['date'])) {
-            $_SESSION['artist_filter_date'] = $_POST['date'];
-        }
-    // Set custom artists query.
-        $args = [
-            'orderby' => 'date',
-            'order' => $_SESSION['artist_filter_date'],
-            'paged' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'],
-            'posts_per_page' => 1,
-            'tax_query' => [
-                [
-                    'taxonomy' => 'kind',
-                    'field' => 'id',
-                    'terms' => $_SESSION['artist_filter'],
+    function ms_filter_function()
+    {
+        // Creation of my session
+            if (isset($_POST['categoryfilter'])) {
+                $_SESSION['artist_filter'] = $_POST['categoryfilter'];
+            }
+            if (isset($_POST['date'])) {
+                $_SESSION['artist_filter_date'] = $_POST['date'];
+            }
+        // Set custom artists query.
+            $args = [
+                'orderby' => 'date',
+                'order' => $_SESSION['artist_filter_date'],
+                'paged' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'],
+                'posts_per_page' => 1,
+                'tax_query' => [
+                    [
+                        'taxonomy' => 'kind',
+                        'field' => 'id',
+                        'terms' => $_SESSION['artist_filter'],
+                    ]
                 ]
-            ]
-        ];
+            ];
 
-    // Init query
-        $query = new WP_Query($args);
-    
+        // Init query
+            $query = new WP_Query($args);
         
-    // Set custom pagination query.
-        global $wp_rewrite;
-        $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=236";
-        $paginateArgs = array(
-            'format' => '?page/%#%/',
-            'current' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'], // Reference the custom paged query we initially set.
-            'total' => $query->max_num_pages, // Max pages from our custom query.
-            'base' => $base,
-        );
-        
-    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-        $fields = get_fields();
-        include('part/all-artist.php');
-    endwhile;
-    echo '<div class="pagination p12">';
-    echo paginate_links($paginateArgs);
-    echo '</div>';
-    wp_reset_postdata();
-    else :
-        echo 'Aucun artistes n\'a été trouvé';
-    endif;
+            
+        // Set custom pagination query.
+            global $wp_rewrite;
+            $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=236";
+            $paginateArgs = array(
+                'format' => '?page/%#%/',
+                'current' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'], // Reference the custom paged query we initially set.
+                'total' => $query->max_num_pages, // Max pages from our custom query.
+                'base' => $base,
+            );
+            
+        if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+            $fields = get_fields();
+            include('part/all-artist.php');
+        endwhile;
+        echo '<div class="pagination p12">';
+        echo paginate_links($paginateArgs);
+        echo '</div>';
+        wp_reset_postdata();
+        else :
+            echo 'Aucun artistes n\'a été trouvé';
+        endif;
 
-    die();
-}
-    add_action('wp_ajax_artistfilter', 'ms_filter_function');
-    add_action('wp_ajax_nopriv_artistfilter', 'ms_filter_function');
+        die();
+    }
+        add_action('wp_ajax_artistfilter', 'ms_filter_function');
+        add_action('wp_ajax_nopriv_artistfilter', 'ms_filter_function');
 
 /****************************************************************************************************/
+
 /**
- * AJAX filter posts by taxonomy term
+ * AJAX filter event posts by taxonomy term
  */
-function ms_event_filter_function()
-{
-    // Creation of my session
-        if (isset($_POST['event_categoryfilter'])) {
-            $_SESSION['event_filter'] = $_POST['event_categoryfilter'];
-        }
-        if (isset($_POST['event_date'])) {
-            $_SESSION['event_filter_date'] = $_POST['event_date'];
-        }
-    // Set custom artists query.
-        $args = [
-            'orderby' => 'date',
-            'order' => $_SESSION['event_filter_date'],
-            'paged' => ($_SESSION['event_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['event_current_page'],
-            'posts_per_page' => 1,
-            'tax_query' => [
-                [
-                    'taxonomy' => 'type',
-                    'field' => 'id',
-                    'terms' => $_SESSION['event_filter'],
+    function ms_event_filter_function()
+    {
+        // Creation of my session
+            if (isset($_POST['event_categoryfilter'])) {
+                $_SESSION['event_filter'] = $_POST['event_categoryfilter'];
+            }
+            if (isset($_POST['event_date'])) {
+                $_SESSION['event_filter_date'] = $_POST['event_date'];
+            }
+        // Set custom artists query.
+            $args = [
+                'orderby' => 'date',
+                'order' => $_SESSION['event_filter_date'],
+                'paged' => ($_SESSION['event_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['event_current_page'],
+                'posts_per_page' => 1,
+                'tax_query' => [
+                    [
+                        'taxonomy' => 'type',
+                        'field' => 'id',
+                        'terms' => $_SESSION['event_filter'],
+                    ]
                 ]
-            ]
-        ];
+            ];
 
-    // Init query
-        $query = new WP_Query($args);
-    
+        // Init query
+            $query = new WP_Query($args);
         
-    // Set custom pagination query.
-        global $wp_rewrite;
-        $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=233";
-        $paginateArgs = array(
-            'format' => '?page/%#%/',
-            'current' => ($_SESSION['event_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['event_current_page'], // Reference the custom paged query we initially set.
-            'total' => $query->max_num_pages, // Max pages from our custom query.
-            'base' => $base,
-        );
-    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-        $fields = get_fields();
-        include('part/all-event.php');
-    endwhile;
-    echo '<div class="pagination p12">';
-        echo paginate_links($paginateArgs);
-    echo '</div>';
-    wp_reset_postdata();
-    else :
-        echo 'Aucun event n\'a été trouvé';
-    endif;
+            
+        // Set custom pagination query.
+            global $wp_rewrite;
+            $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=233";
+            $paginateArgs = array(
+                'format' => '?page/%#%/',
+                'current' => ($_SESSION['event_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['event_current_page'], // Reference the custom paged query we initially set.
+                'total' => $query->max_num_pages, // Max pages from our custom query.
+                'base' => $base,
+            );
+        if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+            $fields = get_fields();
+            include('part/all-event.php');
+        endwhile;
+        echo '<div class="pagination p12">';
+            echo paginate_links($paginateArgs);
+        echo '</div>';
+        wp_reset_postdata();
+        else :
+            echo 'Aucun event n\'a été trouvé';
+        endif;
 
-    die();
-}
-add_action('wp_ajax_eventfilter', 'ms_event_filter_function');
-add_action('wp_ajax_nopriv_eventfilter', 'ms_event_filter_function');
+        die();
+    }
+    add_action('wp_ajax_eventfilter', 'ms_event_filter_function');
+    add_action('wp_ajax_nopriv_eventfilter', 'ms_event_filter_function');
