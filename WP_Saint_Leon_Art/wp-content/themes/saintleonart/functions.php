@@ -235,29 +235,31 @@ add_action('init', 'register_my_session');
 /**
  * AJAC filter posts by taxonomy term
  */
-function misha_filter_function()
+function ms_filter_function()
 {
 
-    // Set custom paged query.
-    $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
-    // Set custom paged query.
-    $args = array(
-        'orderby' => 'date', // we will sort posts by date
-        'order' => $_POST['date'], // ASC или DESC
-        'paged' => $page,
+    // Creation of my session
+    if (isset($_POST['categoryfilter'])) {
+        $_SESSION['artist_filter'] = $_POST['categoryfilter'];
+    }
+    if (isset($_POST['date'])) {
+        $_SESSION['artist_filter_date'] = $_POST['date'];
+    }
+    // Set custom artists query.
+    $args = [
+        'orderby' => 'date', 
+        'order' => $_SESSION['artist_filter_date'],
+        'paged' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'],
         'posts_per_page' => 1,
-    );
- 
-	// for taxonomies / categories
-    if (isset($_POST['categoryfilter']))
-        $args['tax_query'] = array(
-        array(
-            'taxonomy' => 'kind',
-            'field' => 'id',
-            'terms' => $_POST['categoryfilter']
-        )
-    );
+        'tax_query' => [
+            [
+                'taxonomy' => 'kind',
+                'field' => 'id',
+                'terms' => $_SESSION['artist_filter'],
+            ]
+        ]
+    ];
 
     // Init query
     $query = new WP_Query($args);
@@ -268,7 +270,7 @@ function misha_filter_function()
     $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=236";
     $paginateArgs = array(
         'format' => '?page/%#%/',
-        'current' => $page, // Reference the custom paged query we initially set.
+        'current' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'], // Reference the custom paged query we initially set.
         'total' => $query->max_num_pages, // Max pages from our custom query.
         'base' => $base,
     );
@@ -289,18 +291,10 @@ function misha_filter_function()
         echo '</div>';
         wp_reset_postdata();
     else :
-        echo 'No posts found';
+        echo 'Aucun articles n\'a été trouvé';
     endif;
 
     die();
 }
-add_action('wp_ajax_myfilter', 'misha_filter_function');
-add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
-
-function myfilter(){
-    if (isset($_POST['filter'])) {
-        $_SESSION['artist_filter'] = 'ok';
-    }
-var_dump($_SESSION);
-
-}
+add_action('wp_ajax_myfilter', 'ms_filter_function');
+add_action('wp_ajax_nopriv_myfilter', 'ms_filter_function');

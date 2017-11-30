@@ -345,6 +345,7 @@ jQuery(function ($) {
             type: filter.attr('method'), // POST
             success: function (data) {
                 $('.artist__container').html(data); // insert data
+                console.log(data);
             }
         });
         return false;

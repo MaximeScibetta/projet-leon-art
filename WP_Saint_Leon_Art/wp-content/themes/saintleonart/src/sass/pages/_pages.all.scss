@@ -20,43 +20,37 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                .order,
-                .see li{
-                    a{
-                        text-decoration: none;
-                        color: $purple;
-                    }
-                    text-decoration: none;
-                    color: $purple;
-                    margin-top: $igsus;
-                    width: 100%;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    text-align: center;
-                    font-family: 'RobotoR';
-                    border: 2px solid $purple;
-                    border-radius: 50px;
-                    padding: $igsus $igsu;
-                    &:hover,&.active{
-                        background: $yellow;
-                        border-color:  $yellow;
-                    }
-                    svg{
-                        height: 16px; width: 18px;
-                        fill: $purple;
-                        display: inline-block;
-                    }
-                }
-                .order{
-                    width: 45%;
-                    height: 50px;
-                    //margin-right: 10%;
-                }
                 .see{
                     width: 45%;
                     overflow-y: hidden;
                     height: 60px;
                     transition: 1s cubic-bezier(.86,0,.07,1);
+                    li {
+                        a {
+                            text-decoration: none;
+                            color: $purple;
+                        }
+                        text-decoration: none;
+                        color: $purple;
+                        margin-top: $igsus;
+                        width: 100%;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-family: 'RobotoR';
+                        border: 2px solid $purple;
+                        border-radius: 50px;
+                        padding: $igsus $igsu;
+                        &:hover {
+                            cursor: pointer
+                        }
+                        svg {
+                            height: 16px;
+                            width: 18px;
+                            fill: $purple;
+                            display: inline-block;
+                        }
+                    }
                     &:hover{
                         height: 420px;
                         transition: 1s cubic-bezier(.86,0,.07,1);
@@ -77,6 +71,68 @@
                         }
                     }
                 }
+                .order{
+                    outline: none;
+                    border: none;
+                    background-color: $grey;
+                }
+                .radio {
+                    margin: 0.5rem;
+                    input[type="radio"] {
+                        position: absolute;
+                        opacity: 0;
+                        +.radio-label {
+                            &:before {
+                                content: '';
+                                background: $purple;
+                                border-radius: 100%;
+                                border: 1px solid $purple;
+                                display: inline-block;
+                                width: 1.4em;
+                                height: 1.4em;
+                                position: relative;
+                                top: -0.2em;
+                                margin-right: 1em;
+                                vertical-align: top;
+                                cursor: pointer;
+                                text-align: center;
+                                transition: all 250ms ease;
+                            }
+                        }
+                        &:checked {
+                            +.radio-label {
+                                &:before {
+                                    background-color: $white;
+                                    box-shadow: inset 0 0 0 4px $purple;
+                                }
+                            }
+                        }
+                        &:focus {
+                            +.radio-label {
+                                &:before {
+                                    outline: none;
+                                    border-color: $white;
+                                }
+                            }
+                        }
+                        &:disabled {
+                            +.radio-label {
+                                &:before {
+                                    box-shadow: inset 0 0 0 4px $purple;
+                                    border-color: darken($purple, 25%);
+                                    background: darken($purple, 25%);
+                                }
+                            }
+                        }
+                        +.radio-label {
+                            &:empty {
+                                &:before {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .pagination{
                 padding: 30px 0;
@@ -89,6 +145,7 @@
                     color: $black;
                     &:hover {
                         text-decoration: underline;
+                        //background-color: rgba(130, 28, 73, .43) ;
                     }
                 }
                 span:hover{
