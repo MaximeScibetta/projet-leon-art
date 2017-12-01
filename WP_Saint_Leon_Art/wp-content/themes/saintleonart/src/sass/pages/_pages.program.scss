@@ -2,6 +2,7 @@
     @include mq($from: 0px){
         .introduction.litle{
             height: 300px;
+            background-position: center;
             @include mq($from: desktop){
                 min-height: 400px;
             }

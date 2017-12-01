@@ -197,6 +197,9 @@
                     padding: 7px 10px;
                     color: $white;
                     bottom: 12px;
+                    @include mq($from: desktop){
+                        bottom: -40px;
+                    }
                 }
                 fieldset .on {
                     display: block

@@ -3,7 +3,10 @@
         .introduction{
             background-size: cover;
             height: 100vh;
-            min-height: 600px;
+            &.home{
+            min-height: 650px;
+                
+            }
             &__tagline{
                 font-family: 'RobotoL';
                 color: $white;
@@ -14,7 +17,7 @@
                 margin-top: $igsul !important; 
                 line-height: 1.2;
             }
-            h2{
+            h2.sla{
                 padding-top: $inuit-global-spacing-unit-huge; 
                 font-size: 50px;
                 width: 140px;
