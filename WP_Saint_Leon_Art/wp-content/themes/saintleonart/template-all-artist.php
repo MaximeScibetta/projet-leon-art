@@ -93,16 +93,7 @@ get_header();
     <div class="artist__container">
         <?php while ($query->have_posts()) : $query->the_post(); ?>
         <?php $fields = get_fields(); ?>
-            <a href="<?= get_the_permalink() ;?>" class="item">
-                <img src="<?= $fields['artiste_profil'][url]; ?>" alt="" width="400" height="225">
-                <div class="item__info">
-                    <h3 class="">
-                        <?= $fields['artist_surname']; ?>
-                        <span><?= $fields['artist_name']; ?></span>
-                    </h3>
-                    <p class=""><?= $fields['artist_job']; ?></p>
-                </div>
-            </a>
+            <?php include('part/all-artist.php'); ?>
         <?php endwhile; ?>
         <div class="pagination p12">
             <?php echo paginate_links($paginateArgs); ?>        

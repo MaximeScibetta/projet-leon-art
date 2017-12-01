@@ -1,11 +1,12 @@
-<a href="">
+<a href="<?= get_the_permalink() ;?>">
     <div class="event__item">
         <div class="head">
-            <p class="date"><span>23 sept.</span></p>
-            <img src="<?= $fields['actu_badge'][url]; ?>" alt="" class="">
+            <p class="date"><span><?php ms_the_creation_date();?> .</span></p>
+            <img src="<?= $fields['actu_badge']; ?>" alt="" class="">
         </div>
         <div class="content">
             <p class="title u-margin-top-small"><?= $fields['actu_title']; ?></p>
+            <?php if(!$fields['actu_hour'] == "") :?>
             <p class="hour u-margin-top-small">
                 <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
                     <g>
@@ -16,6 +17,8 @@
                 </svg>
                 <?= $fields['actu_hour']; ?>
             </p>
+            <?php endif; ?>
+            <?php if (!$fields['actu_address'] == "") : ?>
             <address class="u-margin-top-tiny">
                 <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
                     <g>
@@ -29,6 +32,10 @@
                 </svg>
                 <?= $fields['actu_address']; ?>
             </address>
+            <?php endif; ?>
+            <?php if($fields['actu_address'] == "" && $fields['actu_hour'] == "") :?>
+            <p><?php ms_the_news_excerpt(100) ;?></p>
+            <?php endif; ?>
         </div>
     </div>
 </a>

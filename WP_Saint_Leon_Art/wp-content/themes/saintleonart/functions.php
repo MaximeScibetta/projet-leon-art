@@ -450,7 +450,7 @@ add_action('after_setup_theme', 'wpdocs_after_setup_theme');
 /**
  *   RETURN a customizable date for news
  */
-    function ms_get_the_news_date()
+    function ms_get_the_creation_date()
     {
         global $post;
         $dateSrc = $post->post_date;
@@ -462,9 +462,9 @@ add_action('after_setup_theme', 'wpdocs_after_setup_theme');
         return $date;
     }
 
-    function ms_the_news_date()
+    function ms_the_creation_date()
     {
-        echo ms_get_the_news_date();
+        echo ms_get_the_creation_date();
     }
 /****************************************************************************************************/
 /**
