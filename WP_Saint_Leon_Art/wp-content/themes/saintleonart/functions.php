@@ -432,37 +432,37 @@ add_action('after_setup_theme', 'wpdocs_after_setup_theme');
 /**
 *   RETURN a customizable excerpt for news
 */
-function ms_get_the_news_excerpt($length = null)
-{
-  $fields = get_fields();
-  $excerpt = $fields['actu_content']; 
-  if(is_null($length) || strlen($excerpt) <= $lenght) return $excerpt;
-  return trim(substr($excerpt, 0, $length)) . '&hellip;';
-}
-/**
-*   Output a customizable excerpt
-*/
-function ms_the_news_excerpt($length = null)
-{
-  echo ms_get_the_news_excerpt($length);
-}
+    function ms_get_the_news_excerpt($length = null)
+    {
+    $fields = get_fields();
+    $excerpt = $fields['actu_content']; 
+    if(is_null($length) || strlen($excerpt) <= $lenght) return $excerpt;
+    return trim(substr($excerpt, 0, $length)) . '&hellip;';
+    }
+    /**
+    *   Output a customizable excerpt
+    */
+    function ms_the_news_excerpt($length = null)
+    {
+    echo ms_get_the_news_excerpt($length);
+    }
 /****************************************************************************************************/
 /**
  *   RETURN a customizable date for news
  */
-function ms_get_the_news_date()
-{
-    global $post;
-    $dateSrc = $post->post_date;
-    $dateTime = new \Datetime($dateSrc);
-    $date = $dateTime->format('d F');
-    $dateArray = explode( ' ', $date);
-    $dateArray[1] = substr($dateArray[1], 0, 5);     
-    $date = implode( ' ', $dateArray );
-    return $date;
-}
+    function ms_get_the_news_date()
+    {
+        global $post;
+        $dateSrc = $post->post_date;
+        $dateTime = new \Datetime($dateSrc);
+        $date = $dateTime->format('d F');
+        $dateArray = explode( ' ', $date);
+        $dateArray[1] = substr($dateArray[1], 0, 5);     
+        $date = implode( ' ', $dateArray );
+        return $date;
+    }
 
-function ms_the_news_date()
-{
-    echo ms_get_the_news_date();
-}
+    function ms_the_news_date()
+    {
+        echo ms_get_the_news_date();
+    }

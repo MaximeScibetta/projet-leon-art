@@ -562,7 +562,7 @@
         }
         .twitter{
             position: relative;
-            background-color: $grey;
+            background-color: $white;
             padding: $igsul 0 $igsuh;            
             svg{
                 height: 20px;
@@ -584,54 +584,10 @@
                     letter-spacing:3px;
                 }
             }
-            &__item{
-                text-align: center;
-                p{
-                    max-width: 235px;
-                    margin: 0 auto;
-                    @include mq($from: tablet){
-                        max-width: 500px;
-                    }
-                    &+p{
-                        width: 100%;
-                    }
-                }
-            }
-            #arrowLeft, #arrowRight{
-                height: 20px;
-                position: absolute;
-                top: 46%;
-                @include mq($from: tablet){
-                    top: 41%;
-                }
-            }
-            #arrowRight{
-                right: 0;
-            }
-            @include mq($from: tablet, $until: wide){
-                #arrowLeft{
-                    padding-right: 30%;
-                    left: 10%;
-                }
-                #arrowRight{
-                    padding-left: 30%;
-                    right: 10%;
-                }
-                #arrowRight, #arrowLeft{
-                    height: 50px;
-                }
-            }
-            @include mq($from: wide){
-                #arrowLeft{
-                    left: 23%;
-                    padding-right: 20%;
-                }
-                #arrowRight{
-                    right: 23%;
-                    padding-left: 20%;
-                }
-                #arrowRight, #arrowLeft{
-                    height: 50px;
+            .fb-page.fb_iframe_widget {
+                &>span {
+                    display: block;
+                    margin: $igsu auto 0;
                 }
             }
         }
