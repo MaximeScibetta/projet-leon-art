@@ -63,7 +63,7 @@ $news->query([
         <?= $fields['actu_content']; ?>
     </section>
     <section class="news__cta">
-        <a href="<?= get_page_link() ;?>" class="btn btn--anim" data-text="Voir toutes nos actualités">Voir toutes nos actualités</a>
+        <a href="<?= get_page_link(282) ;?>" class="btn btn--anim" data-text="Voir toutes nos actualités">Voir toutes nos actualités</a>
         <a href="<?= get_page_link(236) ;?>" class="btn btn--anim" data-text="Voir tous nos artistes">Voir tous nos artistes</a>
         <a href="<?= get_page_link(233) ;?>" class="btn btn--anim" data-text="Voir tous nos événements">Voir tous nos événements</a>
     </section>

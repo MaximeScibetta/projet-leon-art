@@ -373,57 +373,76 @@ add_action('after_setup_theme', 'wpdocs_after_setup_theme');
 /**
  * AJAX filter news posts by taxonomy term
  */
-function news_filter_function()
-{
-        // Creation of my session
-            if (isset($_POST['news_categoryfilter'])) {
-                $_SESSION['news_filter'] = $_POST['news_categoryfilter'];
-            }
-            if (isset($_POST['news_date'])) {
-                $_SESSION['news_filter_date'] = $_POST['news_date'];
-            }
-        // Set custom artists query.
-            $args = [
-                'orderby' => 'date',
-                'order' => $_SESSION['news_filter_date'],
-                'paged' => ($_SESSION['news_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['news_current_page'],
-                'posts_per_page' => 1,
-                'tax_query' => [
-                    [
-                        'taxonomy' => 'subject',
-                        'field' => 'id',
-                        'terms' => $_SESSION['news_filter'],
+    function news_filter_function()
+    {
+            // Creation of my session
+                if (isset($_POST['news_categoryfilter'])) {
+                    $_SESSION['news_filter'] = $_POST['news_categoryfilter'];
+                }
+                if (isset($_POST['news_date'])) {
+                    $_SESSION['news_filter_date'] = $_POST['news_date'];
+                }
+            // Set custom artists query.
+                $args = [
+                    'orderby' => 'date',
+                    'order' => $_SESSION['news_filter_date'],
+                    'paged' => ($_SESSION['news_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['news_current_page'],
+                    'posts_per_page' => 1,
+                    'tax_query' => [
+                        [
+                            'taxonomy' => 'subject',
+                            'field' => 'id',
+                            'terms' => $_SESSION['news_filter'],
+                        ]
                     ]
-                ]
-            ];
+                ];
 
-        // Init query
-            $query = new WP_Query($args);
-        
+            // Init query
+                $query = new WP_Query($args);
             
-        // Set custom pagination query.
-            global $wp_rewrite;
-            $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=282";
-            $paginateArgs = array(
-                'format' => '?page/%#%/',
-                'current' => ($_SESSION['news_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['news_current_page'], // Reference the custom paged query we initially set.
-                'total' => $query->max_num_pages, // Max pages from our custom query.
-                'base' => $base,
-            );
+                
+            // Set custom pagination query.
+                global $wp_rewrite;
+                $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=282";
+                $paginateArgs = array(
+                    'format' => '?page/%#%/',
+                    'current' => ($_SESSION['news_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['news_current_page'], // Reference the custom paged query we initially set.
+                    'total' => $query->max_num_pages, // Max pages from our custom query.
+                    'base' => $base,
+                );
 
-    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+        if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+        $fields = get_fields();
+        include('part/all-news.php');
+        endwhile;
+        echo '<div class="pagination p12">';
+        echo paginate_links($paginateArgs);
+        echo '</div>';
+        wp_reset_postdata();
+        else :
+            echo 'Aucun event n\'a été trouvé';
+        endif;
+
+        die();
+    }
+    add_action('wp_ajax_newsfilter', 'news_filter_function');
+    add_action('wp_ajax_nopriv_newsfilter', 'news_filter_function');
+
+/****************************************************************************************************/
+/**
+*   RETURN a customizable excerpt for news
+*/
+function ms_get_the_news_excerpt($length = null)
+{
     $fields = get_fields();
-    include('part/all-news.php');
-    endwhile;
-    echo '<div class="pagination p12">';
-    echo paginate_links($paginateArgs);
-    echo '</div>';
-    wp_reset_postdata();
-    else :
-        echo 'Aucun event n\'a été trouvé';
-    endif;
-
-    die();
+  $excerpt = $fields['actu_content']; 
+  if(is_null($length) || strlen($excerpt) <= $lenght) return $excerpt;
+    echo trim(substr($excerpt, 0, $length)) . '&hellip;';
 }
-add_action('wp_ajax_newsfilter', 'news_filter_function');
-add_action('wp_ajax_nopriv_newsfilter', 'news_filter_function');
+/**
+*   Output a customizable excerpt
+*/
+function ms_the_news_excerpt($length = null)
+{
+  echo ms_get_the_news_excerpt($length);
+}
