@@ -21,11 +21,11 @@
 
     add_action('init', 'register_my_session');
 
-function wpdocs_after_setup_theme()
-{
-    add_theme_support('html5', array('search-form'));
-}
-add_action('after_setup_theme', 'wpdocs_after_setup_theme');
+    function wpdocs_after_setup_theme()
+    {
+        add_theme_support('html5', array('search-form'));
+    }
+    add_action('after_setup_theme', 'wpdocs_after_setup_theme');
 /****************************************************************************************************/
 
 /*******************************************
@@ -133,6 +133,7 @@ add_action('after_setup_theme', 'wpdocs_after_setup_theme');
 *** Register navgation menu
 **************************/
     register_nav_menu( 'header', 'Menu principal, affiché dans le header.' );
+    register_nav_menu('all__navigation', 'Menu secondaire, affiché dans les pages all.');
 
 /******************
 **** Get menu items
@@ -448,7 +449,7 @@ add_action('after_setup_theme', 'wpdocs_after_setup_theme');
     }
 /****************************************************************************************************/
 /**
- *   RETURN a customizable date for news
+ *   RETURN a customizable creation date 
  */
     function ms_get_the_creation_date()
     {
