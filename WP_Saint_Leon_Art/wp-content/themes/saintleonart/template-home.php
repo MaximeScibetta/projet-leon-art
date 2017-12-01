@@ -50,7 +50,7 @@ get_header();
     <div class="activitie__flex flex">
         <?php if( have_rows('type_activitie') ): while ( have_rows('type_activitie') ) : the_row(); ?>
         
-        <a class="clickable" href="http://saintleonart.app/?page_id=49">
+        <a class="clickable" href="<?php the_sub_field('link'); ?>">
             <div class="flex__item">
                 <?php sla_image_attribute('illustration'); ?>
                 <div class="container">

@@ -371,3 +371,21 @@ if (pageTitle === ' » Tous les événements - Saint-Léon\'Art') {
         });
     });
 }
+
+if (pageTitle === ' » Actualités - Saint-Léon\'Art') {
+    jQuery(function ($) {
+        $('#news_filter').submit(function () {
+            var filter = $('#news_filter');
+            $.ajax({
+                url: filter.attr('action'),
+                data: filter.serialize(), // form data
+                type: filter.attr('method'), // POST
+                success: function (data) {
+                    $('.event__container').html(data); // insert data
+                    console.log(data);
+                }
+            });
+            return false;
+        });
+    });
+}

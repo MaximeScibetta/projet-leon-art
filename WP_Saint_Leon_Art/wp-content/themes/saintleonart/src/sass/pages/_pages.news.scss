@@ -1,0 +1,141 @@
+.wrapper {
+    @include mq($from: 0px) {
+        .news{
+            &__introduction{
+                background-size: cover;
+                height: 80vh;
+                position: relative;
+                .title{
+                    background-color: $purple;
+                    padding: $igsu;
+                    position: absolute;
+                    top: 70%;
+                    h2{
+                        color: $white;
+                    }
+                }
+            }
+            &__information{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                time, .hour, address{
+                    width: 100%;
+                    padding: $igsu;
+                    svg{
+                        fill: $white;
+                        height: 40px;
+                        width: 40px;
+                        vertical-align: middle;
+                        margin-bottom: 3px;
+                        margin-right: $igsus;
+                    }
+                }
+                :nth-child(2){
+                    text-align: right;
+                }
+                time{
+                    background-color: $purple;
+                    color: $white;
+                }
+                .hour{
+                    background-color: $red;
+                    color: $white;
+                    svg{
+                        margin-right: 0;
+                        margin-left: $igsus;
+                    }
+                    svg#hour_right{
+                        display: none;
+                    }
+                }
+                address{
+                    background-color: $yellow;
+                    color: $purple;
+                    svg{
+                        fill: $purple;
+                    }
+                }
+                @include mq($from: 900px) {
+                    flex-direction: row;
+                    time, .hour,  address {
+                        width: 33.3333333333%;
+                    }
+                    :nth-child(2) {
+                        text-align: inherit;
+                    }
+                    .hour{
+                        svg#hour_right {
+                            display: inline-block;
+                            margin-left: 0;
+                            margin-right: $igsus;
+                        }
+                        svg#hour_left {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &__content{
+                h2{
+                    margin: $igsul $gutters;
+                    @include mq($from: 900px) {
+                        text-align: center;
+                            font-size: 28px;
+                    }
+                }
+                p{
+                    margin: 0 $gutters $igsu;
+                    max-width: 700px;
+                    @include mq($from: 900px){
+                        margin: 0 auto $igsu;
+                    }
+                }
+            }
+            &__cta{
+                margin: $igsul 0;
+                a:nth-child(2){
+                    margin: $igsu $gutters;
+                    @include mq($from: tablet){
+                        margin: $igsu auto;
+                    }
+                }
+                @include mq($from: wide) {
+                    text-align: center;
+                    margin: $igsul $gutters;
+                    a{
+                        display: inline-block;
+                        width: 30%;
+                    }
+                    a:nth-child(2){
+                        margin: 0 3.33333%;
+                    }
+                }
+            }
+            &__gallery {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                img{
+                    width: 100%;
+                }
+                @include mq($from: tablet){
+                    flex-direction: row;
+                    margin: 0 $gutters $igsul;
+                    img{
+                        width: 31%;
+                        height: 31%;
+                        &:first-of-type{
+                            margin-right: 3.3333333%;
+                        }
+                        &:last-of-type{
+                            margin-left: 3.3333333%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
