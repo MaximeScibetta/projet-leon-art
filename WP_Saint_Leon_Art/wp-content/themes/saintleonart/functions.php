@@ -466,3 +466,22 @@ add_action('after_setup_theme', 'wpdocs_after_setup_theme');
     {
         echo ms_get_the_news_date();
     }
+/****************************************************************************************************/
+/**
+ *   RETURN a customizable date for event
+ */
+    function ms_get_the_event_date()
+    {
+        $fields = get_fields();
+        $date = $fields['event_date']; 
+        $dateArray = explode(' ', $date);
+        $dateArray[1] = substr($dateArray[1], 0, 5);
+        $dataArray = array_splice($dateArray, 2);
+        $date = implode(' ', $dateArray);
+        return $date;
+    }
+
+    function ms_the_event_date()
+    {
+        echo ms_get_the_event_date();
+    }

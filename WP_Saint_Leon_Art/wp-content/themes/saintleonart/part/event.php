@@ -5,12 +5,12 @@
     ]);
 ;?>
 <?php if ( $events->have_posts() ): while( $events->have_posts() ): $events->the_post();?>
-<?php $fields = get_fields(); ?>
-<a href="">
+<?php $fields = get_fields();?>
+<a href="<?= get_the_permalink() ;?>">
     <div class="event__item">
         <div class="head">
-            <p class="date"><span>23 sept.</span></p>
-            <img src="<?= $fields['event_image'][url];?>" alt="" class="">
+            <p class="date"><span><?php ms_the_event_date();?>.</span></p>
+            <img src="<?= $fields['event_image'];?>" alt="" class="">
         </div>
         <div class="content">
             <p class="title u-margin-top-small"><?= $fields['event_name']; ?></p>
