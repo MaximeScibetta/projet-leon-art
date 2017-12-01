@@ -50,18 +50,11 @@ get_header();
 </section>
 <section class="event all">
     <h2>Toutes nos actualités</h2>
-    <div class="all__navigation">
-        <ul class="see">
-            <li>Je veux voir ...</li>
-            <?php foreach (dw_get_nav_items('all__navigation') as $item) :?>
-                <li><a href="<?php echo $item->link; ?>"><?php echo $item->label; ?></a></li>
-            <?php endforeach;?>
-        </ul>
-    </div>
+    <?php get_template_part('part-all-navigation');?>
     <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="news_filter" class="all__navigation">
         <?php if ($terms = get_terms('subject', 'orderby=name')) :
             echo '<select name="news_categoryfilter" class="order">';
-        echo '<option value="null">Tous les événements </option>';
+        echo '<option value="null">Toutes les actualités </option>';
         foreach ($terms as $term) :
             echo '<option value="' . $term->term_id . '"' . ( ($term->term_id == $_SESSION['news_filter']) ? 'selected="selected"' : "") . '>' . $term->name . '</option>';
         endforeach;
