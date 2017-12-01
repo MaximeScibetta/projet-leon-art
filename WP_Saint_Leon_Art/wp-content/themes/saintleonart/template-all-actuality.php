@@ -106,7 +106,7 @@ get_header();
         <a href="<?= get_the_permalink() ;?>">
             <div class="event__item">
                 <div class="head">
-                    <p class="date"><span>23 sept.</span></p>
+                    <p class="date"><span><?php ms_the_news_date();?>.</span></p>
                     <img src="<?= $fields['actu_badge'][url]; ?>" alt="" class="">
                 </div>
                 <div class="content">

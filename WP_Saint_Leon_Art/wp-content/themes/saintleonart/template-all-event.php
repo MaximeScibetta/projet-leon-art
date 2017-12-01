@@ -104,7 +104,7 @@ get_header();
         <a href="">
             <div class="event__item">
                 <div class="head">
-                    <p class="date"><span>23 sept.</span></p>
+                    <p class="date"><span><?= $fields['event_date']; ?>.</span></p>
                     <img src="<?= $fields['event_image'][url]; ?>" alt="" class="">
                 </div>
                 <div class="content">
