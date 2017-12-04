@@ -42,14 +42,16 @@ get_header();
         </div>
     </section>
 <?php endwhile; endif;?>
-<?php $images = get_field('artist_gallery'); if( $images ): ?>
+<?php if (have_rows('artist_gallery')) : ?>
     <section class="artwork">
-        <?php foreach( $images as $image ): ?>
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-        <?php endforeach; ?>
+        <?php $images = get_field('artist_gallery');
+        if ($images) : ?>
+            <?php foreach ($images as $image) : ?>
+                <img src="<?php echo $image['gallery_item']['url']; ?>" alt="<?php echo $image['gallery_item']['alt']; ?>" />
+            <?php endforeach; ?>
+        <?php endif; ?>
     </section>
 <?php endif; ?>
-
 <div id="map"></div>
 <?php if( have_rows('artist_social') ): the_row(); ?>
 <section class="social">

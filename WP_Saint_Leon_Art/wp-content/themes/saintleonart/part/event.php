@@ -2,6 +2,8 @@
     $events = new WP_Query();
     $events->query([
         'post_type' => 'event',
+        'posts_per_page' => 5,
+        'orderby' => 'date',
     ]);
 ;?>
 <?php if ( $events->have_posts() ): while( $events->have_posts() ): $events->the_post();?>

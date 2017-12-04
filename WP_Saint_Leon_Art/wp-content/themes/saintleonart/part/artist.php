@@ -2,6 +2,8 @@
     $artists = new WP_Query();
     $artists->query([
         'post_type' => 'artist',
+        'posts_per_page' => 4,
+        'orderby' => 'rand',
     ]);
 ;?>
 <?php if ( $artists->have_posts() ): while( $artists->have_posts() ): $artists->the_post();?>
