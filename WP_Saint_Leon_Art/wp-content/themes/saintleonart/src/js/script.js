@@ -392,48 +392,51 @@ if (pageTitle === ' » Actualités - Saint-Léon\'Art') {
 /* --------------------------*/
 // Menu animation on scroll
 /* --------------------------*/
-var fAddLogoMenu = function fAnimMenu() {
-    const menu = document.querySelector('ul.menu');
-    var li = document.createElement("li");
-    const span = document.createElement('span');
-    var sheet = window.document.styleSheets[0];
-    const midle = menu.childNodes[7];
-    li.appendChild(span);
-    span.appendChild(document.createTextNode("SaintLeon'Art"));
-    menu.insertBefore(li, midle.nextSibling);
-    li.classList.add('menu__item');
-    li.classList.add('logo');
-    span.classList.add('logo');
-    menu.classList.add('onScroll');
-    sheet.insertRule('.header {padding-top: 0px;}', sheet.cssRules.length);
-}
-var fRemoveLogoMenu = function fRemoveLogoMenu(e) {
-        var sheet = window.document.styleSheets[0];
-        const menu = document.querySelector('ul.menu');
-        const logo = menu.querySelector('.menu__item.logo');
-        menu.classList.remove('onScroll');
-        menu.removeChild(logo);
-        sheet.insertRule('.header {padding-top: 24px;}', sheet.cssRules.length);
-}
-var AnimMenu = (function () {
-    var executed = false;
-    var actionDo = false;
-    return function (e) {
-        if (!executed) {
-            if (window.pageYOffset > 150) {
-                executed = true;
-                actionDo = true;
-                fAddLogoMenu()
-            }
-        }
-        if(actionDo && executed){
-            if (window.pageYOffset < 100) {
-                actionDo = false;
-                executed = false;
-                fRemoveLogoMenu();
-            }
-        }
-    };
-})();
 
-window.addEventListener('scroll', AnimMenu);
+if (window.matchMedia("(min-width: 980px)").matches) {
+    var fAddLogoMenu = function fAnimMenu() {
+        const menu = document.querySelector('ul.menu');
+        var li = document.createElement("li");
+        const span = document.createElement('span');
+        var sheet = window.document.styleSheets[0];
+        const midle = menu.childNodes[7];
+        li.appendChild(span);
+        span.appendChild(document.createTextNode("SaintLeon'Art"));
+        menu.insertBefore(li, midle.nextSibling);
+        li.classList.add('menu__item');
+        li.classList.add('logo');
+        span.classList.add('logo');
+        menu.classList.add('onScroll');
+        sheet.insertRule('.header {padding-top: 0px;}', sheet.cssRules.length);
+    }
+    var fRemoveLogoMenu = function fRemoveLogoMenu(e) {
+            var sheet = window.document.styleSheets[0];
+            const menu = document.querySelector('ul.menu');
+            const logo = menu.querySelector('.menu__item.logo');
+            menu.classList.remove('onScroll');
+            menu.removeChild(logo);
+            sheet.insertRule('.header {padding-top: 24px;}', sheet.cssRules.length);
+    }
+    var AnimMenu = (function () {
+        var executed = false;
+        var actionDo = false;
+        return function (e) {
+            if (!executed) {
+                if (window.pageYOffset > 150) {
+                    executed = true;
+                    actionDo = true;
+                    fAddLogoMenu()
+                }
+            }
+            if(actionDo && executed){
+                if (window.pageYOffset < 100) {
+                    actionDo = false;
+                    executed = false;
+                    fRemoveLogoMenu();
+                }
+            }
+        };
+    })();
+
+    window.addEventListener('scroll', AnimMenu);
+}

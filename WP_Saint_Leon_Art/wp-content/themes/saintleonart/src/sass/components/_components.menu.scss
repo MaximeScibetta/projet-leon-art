@@ -162,7 +162,7 @@ body{
                 }
                 .onScroll{
                     background: #4e283a;
-                    transition: 1s cubic-bezier(.86, 0, .07, 1);
+                    transition: .5s cubic-bezier(.86, 0, .07, 1);
                     .menu__item.logo {
                         vertical-align: middle;
                         span.logo {
@@ -171,7 +171,7 @@ body{
                             font-family: 'Whoopass';
                             color: $white;
                             background-color: $purple;
-                            width: 100px;
+                            width: 105px;
                             text-align: center;
                             word-wrap: break-word;
                             line-height: 0.9;
