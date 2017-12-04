@@ -126,6 +126,7 @@ body{
             .site-nav{
                 text-align: center;
                 .menu{
+                    //transition: 1s cubic-bezier(.86, 0, .07, 1);
                     &__item{
                         display: inline-block;
                         margin-right: $inuit-global-spacing-unit-large;
@@ -156,6 +157,26 @@ body{
                                 opacity: 1;
                                 transition: .2s cubic-bezier(.86,0,.07,1);
                             }
+                        }
+                    }
+                }
+                .onScroll{
+                    background: #4e283a;
+                    transition: 1s cubic-bezier(.86, 0, .07, 1);
+                    .menu__item.logo {
+                        vertical-align: middle;
+                        span.logo {
+                            padding: $igsu;
+                            font-size: 20px;
+                            font-family: 'Whoopass';
+                            color: $white;
+                            background-color: $purple;
+                            width: 100px;
+                            text-align: center;
+                            word-wrap: break-word;
+                            line-height: 0.9;
+                            display: block;
+                            vertical-align: bottom;
                         }
                     }
                 }

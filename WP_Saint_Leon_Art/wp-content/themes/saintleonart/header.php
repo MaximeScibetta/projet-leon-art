@@ -16,7 +16,7 @@
        && get_page_template_slug( $post->ID ) != 'template-practical.php' 
        && get_page_template_slug( $post->ID ) != 'template-all.php' ):?>
 <?php endif ?>
-    <header>
+    <header class="header">
         <button class="hamburger" >
             <span class="line"></span>
             <span class="line"></span>
