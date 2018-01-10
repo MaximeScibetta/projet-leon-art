@@ -46,7 +46,7 @@
                         padding-top: $inuit-global-spacing-unit * 8; 
                     }
                     .introduction__tagline{
-                        margin-top: $inuit-global-spacing-unit * 7 !important; 
+                        margin-top: $igsu * 3 !important; 
                     }
                 }
             }
@@ -77,9 +77,9 @@
                         }
                     }
                     .introduction__tagline{
-                        margin-top: 75px !important;
+                        margin-top: $igsu * 3 !important;
                         @media (max-height: 600px){
-                            margin-top: 45px!important;
+                            margin-top: $igsu * 3 !important;
                         }
                     }
                 }

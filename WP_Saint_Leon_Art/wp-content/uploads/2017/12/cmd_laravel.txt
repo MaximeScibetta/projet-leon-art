@@ -1,3 +1,0 @@
-php artisan tinker
-\User::create(['name'=>'Maxime', 'email'=>'example@gmail.be']);
-php artisan migrate:refresh --seed

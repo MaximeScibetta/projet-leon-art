@@ -422,7 +422,7 @@ if (window.matchMedia("(min-width: 980px)").matches) {
         var actionDo = false;
         return function (e) {
             if (!executed) {
-                if (window.pageYOffset > 150) {
+                if (window.pageYOffset > 10) {
                     executed = true;
                     actionDo = true;
                     fAddLogoMenu()
