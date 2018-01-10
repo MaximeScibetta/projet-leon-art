@@ -121,7 +121,7 @@
                     &:before{
                         background: $yellow;
                     }
-                    &:hover{
+                    &:hover, &:focus{
                         &:before{
                             color: $black;
                         }
@@ -167,7 +167,7 @@
                         a{
                             text-decoration: none;
                             color: $white;
-                            &:hover{
+                            &:hover, &:focus{
                                 text-decoration: underline;
                             }
                         }
@@ -187,7 +187,8 @@
                    margin-top: $inuit-global-spacing-unit-small;
                    position: relative;
                    max-width: 400px;
-                   &:hover{
+                   &:hover,
+                   &:focus{
                        cursor: pointer;
                        .info{
                        text-decoration: underline;

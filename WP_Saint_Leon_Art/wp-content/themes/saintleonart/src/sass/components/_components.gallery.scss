@@ -82,7 +82,8 @@
             left: -3px;
         }
     }
-    .CSSgal .prevNext button:hover {
+    .CSSgal .prevNext button:hover,
+    .CSSgal .prevNext button:focus {
         opacity: 1;
         cursor: pointer;
     }
@@ -123,7 +124,8 @@
     .CSSgal .bullets > a+a {
         background: $purple; opacity: .5; /* Dim all but first */
     }
-    .CSSgal .bullets > a:hover {
+    .CSSgal .bullets>a:hover,
+    .CSSgal .bullets>a:focus {
         background: $purple; opacity: .7;
     }
     

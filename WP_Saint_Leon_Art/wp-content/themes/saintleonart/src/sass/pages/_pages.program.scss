@@ -266,7 +266,9 @@
                     border: 2px solid $purple;
                     border-radius: 50px;
                     padding: $igsus $igsu;
-                    &:hover,&.active{
+                    &:hover,
+                    &.active,
+                    &:focus{
                         background: $yellow;
                         border-color:  $yellow;
                     }
@@ -333,7 +335,8 @@
                 }
             }
             .timeline{
-                a:hover{
+                a:hover,
+                a:focus{
                     cursor: pointer;
                     .timeline{
                         &-item{

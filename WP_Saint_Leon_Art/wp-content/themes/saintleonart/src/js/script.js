@@ -108,6 +108,7 @@ if (pageTitle === 'Bienvenue - Saint-Léon\'Art' ){
         e.preventDefault()
         search.classList.toggle('open')
         search.parentNode.classList.toggle('open');
+        search.parentNode.parentNode.classList.toggle('open');
     });
 
 if (pageTitle === ' » Programme - Saint-Léon\'Art'){

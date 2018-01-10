@@ -23,7 +23,8 @@
         border: 1px solid $purple;
         width: 150px;
         margin: 0 auto;
-        &:hover{
+        &:hover,
+        &:focus{
             color: $yellow;
             background-color: $purple;
             cursor: pointer;
@@ -139,6 +140,7 @@
         transition-timing-function: ease-out;
     }
     &:hover:before,
+    &:focus:before,
     &:active:before{
         //transform: scaleY(1);
         transform: translateY(0%);
@@ -150,6 +152,6 @@
 form{
     .btn{
         width: 100%;
-        margin: 0;
+        margin: 0 auto;
     }
 }

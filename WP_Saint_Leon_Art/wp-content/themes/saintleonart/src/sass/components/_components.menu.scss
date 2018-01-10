@@ -68,7 +68,8 @@ body{
                             }
                         }
                         &.active,
-                        &:hover:not(.sla):not(:last-child){
+                        &:hover:not(.sla):not(:last-child),
+                        &:focus:not(.sla):not(:last-child) {
                             background-color: $yellow;
                             padding: $igsus 0;
                             a{
@@ -126,7 +127,7 @@ body{
             .site-nav{
                 text-align: center;
                 .menu{
-                    //transition: 1s cubic-bezier(.86, 0, .07, 1);
+                    transition: .5s cubic-bezier(.86, 0, .07, 1);
                     &__item{
                         display: inline-block;
                         margin-right: $inuit-global-spacing-unit-large;
@@ -145,6 +146,9 @@ body{
                             color: $white;
                             text-transform: uppercase;
                             padding: $inuit-global-spacing-unit-tiny 0 0 0;
+                            &:focus {
+                                border-top: 2px solid $white;
+                            }
                         }
                         form{
                             position: absolute;
@@ -159,6 +163,10 @@ body{
                             }
                         }
                     }
+                }
+                .menu.open{
+                    transform: translateX(-10%);
+                    transition: .5s cubic-bezier(.86, 0, .07, 1);
                 }
                 .onScroll{
                     background: #4e283a;

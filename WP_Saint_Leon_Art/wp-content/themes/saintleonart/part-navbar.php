@@ -16,6 +16,7 @@
                 <label class="u-hidden-visually" for="search">Recherche</label>
                 <input type="search" id="search" class="search-field" placeholder="Recherche…" value="<?php echo get_search_query() ?>" name="s">
                 <input type="submit" class="search-submit" value="Rechercher">
-            </form>
+            </form> 
+        </li>
     </ul>
 </nav>

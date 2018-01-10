@@ -201,7 +201,8 @@
                                 height: 40px;
                                 fill: $white;
                             }
-                            &:hover svg{
+                            &:hover svg,
+                            &:focus svg{
                                 fill: $yellow;
                             }
                         }
@@ -385,14 +386,18 @@
                         position: absolute;
                         bottom: 0; width: 100%;
                         font-size: 0;
+                        a:hover,
+                        a:focus{
+                            svg {
+                                fill: $yellow;
+                                cursor: pointer;
+                                
+                            }
+                        }
                         svg{
                             fill: $white;
                             width: 18.75px;
                             height: 18.75px;
-                            &:hover{
-                                fill: $yellow;
-                                cursor: pointer;
-                            } 
                         }
                         svg{
                             &:nth-of-type(1),
@@ -433,7 +438,8 @@
             &__container{
                 &>a{
                     text-decoration: none;
-                    &:hover{
+                    &:hover,
+                    &:focus{
                         background-color: $grey;
                         cursor: pointer;
                     }
@@ -442,7 +448,8 @@
                     height: 75px;
                     position: relative;
                     margin: $igsu 0;
-                    &:hover{
+                    &:hover,
+                    &:focus{
                         background: $grey;
                         &:nth-child(2n+1){
                             time{
@@ -534,7 +541,8 @@
                             width: 28px;
                             margin: 18px 6px 0;
                         }
-                        &:hover{
+                        &:hover,
+                        &:focus{
                             background-color: $red;
                             svg{
                                 fill: $white;
