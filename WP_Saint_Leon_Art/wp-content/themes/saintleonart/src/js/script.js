@@ -478,13 +478,13 @@ if (svg !== null) {
     }, 200);
 }
 
-document.addEventListener('click', function () {
+// document.addEventListener('click', function () {
 
-    if (document.body.classList.contains('active')) {
-        document.body.classList.remove('active');
-        svg.setProgress(0);
-        return;
-    }
-    document.body.classList.add('active');
-    svg.setProgress(1);
-});
+//     if (document.body.classList.contains('active')) {
+//         document.body.classList.remove('active');
+//         svg.setProgress(0);
+//         return;
+//     }
+//     document.body.classList.add('active');
+//     svg.setProgress(1);
+// });
