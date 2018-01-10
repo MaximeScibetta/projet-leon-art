@@ -11,23 +11,27 @@
                 <h3>Rester au courant de</h3>
                 <span>SaintLeon'Art</span>
             </div>
-            <form action="index.php" class="form">
-                <fieldset>
-                    <legend class="u-hidden-visually">Prénom</legend>
-                    <label for="news_first_name">Prénom</label>
-                    <input type="text" id="news_first_name" name="news_first_name" class="input">
-                    <span class="left"></span>
-                </fieldset>
-        
-                <fieldset>
-                    <legend class="u-hidden-visually">Email</legend>
-                    <label for="news_email">Adresse email</label>
-                    <input type="email" id="news_email" name="news_email" class="input">
-                    <span class="left"></span>
-                </fieldset>
-                <button type="submit" class="btn btn--anim" data-text="Inscritpion au newsletter">Inscritpion au newsletter</button>
-            </form>
+                <form class="form" method="post" action="http://saintleonart.app/?na=s" onsubmit="return newsletter_check(this)">
+                    <fieldset>
+                        <legend class="u-hidden-visually">Prénom</legend>
+                        <div class="tnp-field tnp-field-firstname">
+                            <label>Prénom</label>
+                            <input class="tnp-firstname input" type="text" name="nn" id="news_first_name">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="u-hidden-visually">Email</legend>
+                        <div class="tnp-field tnp-field-email">
+                            <label>Email</label>
+                            <input id="news_email" class="input tnp-email" type="email" name="ne" required>
+                        </div>
+                    </fieldset>
+                    <div class="tnp-field tnp-field-button">
+                <button type="submit" class="btn btn--anim tnp-submit" data-text="Inscritpion au newsletter">Inscritpion au newsletter</button>
+                    </div>
+                </form>
         </div>
+      
         <div class="footer_wrapper">
             <div class="nav u-margin-top-large u-padding-horizontal">
                 <h3>Plus d'infos</h3>
