@@ -243,7 +243,7 @@ if (pageTitle === ' » À propos - Saint-Léon\'Art'){
         });
     });
 
-    const prevNext = document.querySelectorAll('.prevNext div a');
+    const prevNext = document.querySelectorAll('.prevNext div button');
 
     Array.from(prevNext).forEach(function ($prevNext) {
         $prevNext.addEventListener("click", fCancelAnchor);

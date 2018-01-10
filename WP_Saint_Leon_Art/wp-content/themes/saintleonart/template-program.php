@@ -23,7 +23,7 @@ get_header();
 </section>
 <div class="information">
     <address>
-        <svg version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
+        <svg version="1.1" class="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
             <g>
                 <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
                     s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
@@ -37,7 +37,7 @@ get_header();
     </address>
     <p class="time">
         <span><?= $fields['date']; ?></span>
-        <svg version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
+        <svg version="1.1" class="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
             <g>
                 <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
                     S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
@@ -67,15 +67,15 @@ get_header();
 
     </div>
     <?php if( have_rows('days') ): $d=1; while ( have_rows('days') ) : the_row(); ?>
-        <div class="timeline <?php if($d): echo 'day'.$d; endif;?>" id="<?php if($d): echo 'day'.$d; endif; $d++;?>">
+        <div class="timeline<?php if($d): echo ' day'.$d; endif;?>" id="<?php if($d): echo 'day'.$d; endif; $d++;?>">
         <?php if( have_rows('events') ): $i=0; while ( have_rows('events') ) : the_row(); ?>
             <a href="<?php  the_sub_field('event_link'); ?>">
                 <div class="timeline-item">
                     <div class="timeline-icon"></div>
-                    <div class="timeline-content <?php if($i%2 == 1): echo 'right'; endif; $i++;?>">
+                    <div class="timeline-content<?php if($i%2 == 1): echo ' right'; endif; $i++;?>">
                         <h2><?php  the_sub_field('event_name'); ?></h2>
                         <span>
-                            <svg version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-2 -2 65 65" style="enable-background:new 0 0 60 60;">
+                            <svg version="1.1" class="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-2 -2 65 65" style="enable-background:new 0 0 60 60;">
                                     <path stroke="#000" stroke-width="3" d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
                                         S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
                                     <path stroke="#000" stroke-width="1" d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
@@ -83,7 +83,7 @@ get_header();
                             <?php  the_sub_field('event_hour'); ?>
                         </span>
                         <address>
-                            <svg version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
+                            <svg version="1.1" class="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
                                 <g>
                                     <path stroke="#000" stroke-width="3"  d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
                                         s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
@@ -110,10 +110,10 @@ get_header();
                 <a href="<?php the_sub_field('event_link'); ?>">
                     <div class="timeline-item">
                         <div class="timeline-icon"></div>
-                        <div class="timeline-content <?php if ($i % 2 == 1) : echo 'right'; endif; $i++; ?>">
+                        <div class="timeline-content<?php if ($i % 2 == 1) : echo ' right'; endif; $i++; ?>">
                             <h2><?php the_sub_field('event_name'); ?></h2>
                             <span>
-                                <svg version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-2 -2 65 65" style="enable-background:new 0 0 60 60;">
+                                <svg version="1.1" class="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-2 -2 65 65" style="enable-background:new 0 0 60 60;">
                                         <path stroke="#000" stroke-width="3" d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
                                             S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
                                         <path stroke="#000" stroke-width="1" d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
@@ -121,7 +121,7 @@ get_header();
                                 <?php the_sub_field('event_hour'); ?>
                             </span>
                             <address>
-                                <svg version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
+                                <svg version="1.1" class="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
                                     <g>
                                         <path stroke="#000" stroke-width="3"  d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
                                             s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
@@ -146,7 +146,7 @@ get_header();
 <section class="map" id="mapinteractiv">
     <h2>Map interactive</h2>
     <div class="overlay" onClick="style.pointerEvents='none'"></div>
-    <iframe scrolling="no" style="overflow:hidden;" src="https://www.google.fr/maps/d/embed?mid=1nmuuAJ-lLItmVbx4dM3wAajKFHk" height="480"></iframe>
+    <iframe title="Map interactive de l'événement saitn-leonart" style="overflow:hidden; height: 480px;" src="https://www.google.fr/maps/d/embed?mid=1nmuuAJ-lLItmVbx4dM3wAajKFHk" ></iframe>
 </section>
 <?php endwhile;endif; ?>
 <?php get_footer(); ?>

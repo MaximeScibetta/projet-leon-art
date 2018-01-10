@@ -32,7 +32,7 @@ get_header();
         </li>
         <li class="counter__hours" id="hours">
             <div class="number">00</div>
-            <div class="label">heures<div>
+            <div class="label">heures</div>
         </li>
         <li class="counter__minutes" id="minutes">
             <div class="number">00</div>
@@ -56,7 +56,7 @@ get_header();
                 <div class="container">
                     <h3 class="">
                         <span><?php the_sub_field('title_activitie'); ?></span>
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="612px" height="612px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="612px" height="612px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
                             <g>
                                 <g id="Right">
                                     <g>
@@ -144,7 +144,7 @@ get_header();
         <span>Nous suivre</span>
         Facebook feed
     </h2>
-    <div style="display: block;" class="fb-page" data-href="https://www.facebook.com/Saint.Leon.Art/" data-tabs="timeline, events,messages " data-width="1200" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+    <div style="display: block;" class="fb-page" data-href="https://www.facebook.com/Saint.Leon.Art/" data-tabs="timeline, events, messages" data-width="1200" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
         <blockquote cite="https://www.facebook.com/Saint.Leon.Art/" class="fb-xfbml-parse-ignore">
             <a href="https://www.facebook.com/Saint.Leon.Art/">Saint Léon&#039;Art</a>
         </blockquote>
@@ -158,7 +158,6 @@ get_header();
     }(document, 'script', 'facebook-jssdk'));</script>
 </section>
 <?php endwhile;endif; ?>
-<?php get_footer(); ?>
 <script src="<?= dw_asset('js/instafeed.min.js'); ?>"></script>
 <script type="text/javascript">
         var loadButton = document.getElementById('load-more');
@@ -189,3 +188,4 @@ get_header();
         feed.next();
     });
 </script>
+<?php get_footer(); ?>

@@ -1,14 +1,5 @@
 .btn{
-    //display: block;
-    // color: $black;
-    // background-color: $yellow;
-    // text-decoration: none;
-    // text-transform: uppercase;
-    // text-align: center;
-    // font-size: 16px;
-    // font-family: 'RobotoR';
-    // border-radius: 5px;
-    // padding: 8px 3%;
+    overflow: hidden;
     &:hover{
         //color: $white;
         //background-color: $purple;
@@ -154,5 +145,11 @@
         opacity: 1;
         
         transition: .5s cubic-bezier(.86,0,.07,1);
+    }
+}
+form{
+    .btn{
+        width: 100%;
+        margin: 0;
     }
 }

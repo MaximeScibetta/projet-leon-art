@@ -6,7 +6,7 @@
                          echo'u-margin-top-huge';
                         }
                     ?>">
-        <div class="newsletter u-padding-vertical-large ">
+        <div class="newsletter u-padding-vertical-large">
             <div class="title">
                 <h3>Rester au courant de</h3>
                 <span>SaintLeon'Art</span>
@@ -14,22 +14,22 @@
             <form action="index.php" class="form">
                 <fieldset>
                     <legend class="u-hidden-visually">Prénom</legend>
-                    <label for="first_name">Prénom</label>
-                    <input type="text" id="first_name" name="first_name" class="input">
+                    <label for="news_first_name">Prénom</label>
+                    <input type="text" id="news_first_name" name="news_first_name" class="input">
                     <span class="left"></span>
                 </fieldset>
         
                 <fieldset>
                     <legend class="u-hidden-visually">Email</legend>
-                    <label for="email">Adresse email</label>
-                    <input type="email" id="email" name="email" class="input">
+                    <label for="news_email">Adresse email</label>
+                    <input type="email" id="news_email" name="news_email" class="input">
                     <span class="left"></span>
                 </fieldset>
-                <a href="" class="btn btn--anim" data-text="Inscritpion au newsletter">Inscription au newsletter</a>
+                <button type="submit" class="btn btn--anim" data-text="Inscritpion au newsletter">Inscritpion au newsletter</button>
             </form>
         </div>
         <div class="footer_wrapper">
-            <div class="nav u-margin-top-large u-padding-horizontal ">
+            <div class="nav u-margin-top-large u-padding-horizontal">
                 <h3>Plus d'infos</h3>
                 <ul class="secondMenu">
                     <li class="secondMenu__item">
@@ -45,14 +45,14 @@
                         <a href="">Presse</a>
                     </li>
                     <li class="secondMenu__item">
-                        <a href="">Contact</a>
+                        <a href="">Contactez-nous</a>
                     </li>
                     <li class="secondMenu__item">
                         <a href="">Informations pratique</a>
                     </li>
                 </ul>
             </div> 
-            <div class="lastActu u-margin-top-large u-padding-bottom u-padding-horizontal ">
+            <div class="lastActu u-margin-top-large u-padding-bottom u-padding-horizontal">
                 <h3 class="u-margin-bottom-small">Dernières actu</h3>
                 <a class="lastActu__item item">
                     <img src="<?= dw_asset('images/insta.jpg');?>" alt="">
@@ -76,7 +76,7 @@
                     </div>
                 </a>
             </div>
-            <div class="partner u-margin-top-large u-padding-bottom-large u-padding-horizontal ">
+            <div class="partner u-margin-top-large u-padding-bottom-large u-padding-horizontal">
                 <h3 class="u-margin-bottom-small">Nos partenaires</h3>
                 <svg id="naos" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.59 120.81">
                     <defs>

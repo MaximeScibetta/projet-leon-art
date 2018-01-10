@@ -106,7 +106,7 @@ get_header();
        </div>
     </div>
     <h2>Map interactive</h2>
-    <iframe src="https://www.google.fr/maps/d/embed?mid=1nmuuAJ-lLItmVbx4dM3wAajKFHk" height="480"></iframe>
+    <iframe title="Map interactive" src="https://www.google.fr/maps/d/embed?mid=1nmuuAJ-lLItmVbx4dM3wAajKFHk" style="height: 480px;"></iframe>
 </section>
 <?php endwhile; endif; ?>
 <?php get_footer(); ?> 

@@ -52,22 +52,22 @@ get_header();
     <h2>Tous nos événements</h2>
     <?php get_template_part('part-all-navigation'); ?>
     <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="event_filter" class="all__navigation">
+        <label for="event_categoryfilter" class="u-hidden-visually">Sélectionnez un genre</label>
         <?php if ($terms = get_terms('type', 'orderby=name')) :
-            echo '<select name="event_categoryfilter" class="order">';
+            echo '<select name="event_categoryfilter" id="event_categoryfilter" class="order">';
             echo '<option value="null">Tous les événements </option>';
             foreach ($terms as $term) :
                 echo '<option value="' . $term->term_id . '"' . ( ($term->term_id == $_SESSION['event_filter']) ? 'selected="selected"' : "") . '>' . $term->name . '</option>';
             endforeach;
             echo '</select>';
         endif; ?>
-        <div class="radio">
+        <fieldset class="radio">
+            <legend class="u-hidden-visually">Trier les actualités par date</legend>
             <input id="radioASC" type="radio" name="event_date" value="ASC" <?php if ($_SESSION['event_filter_date'] == 'ASC') : echo 'checked'; endif; ?> /> 
             <label for="radioASC" class="radio-label">Les plus anciens</label>
-        </div>
-        <div class="radio">
             <input id="radioDESC" type="radio" name="event_date" value="DESC" <?php if ($_SESSION['event_filter_date'] == 'DESC') : echo 'checked'; endif; ?>  />
             <label for="radioDESC" class="radio-label">Les plus récent</label>
-        </div>
+        </fieldset>
         <input type="submit" name="eventfilter" value="Filtrer les éléments" class="btn btn--anim" data-text="Filtrer les éléments">
         <input type="hidden" name="action" value="eventfilter">
     </form>

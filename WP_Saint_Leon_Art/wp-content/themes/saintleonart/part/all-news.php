@@ -2,7 +2,7 @@
     <div class="event__item">
         <div class="head">
             <p class="date"><span><?php ms_the_creation_date();?> .</span></p>
-            <img src="<?= $fields['actu_badge']; ?>" alt="" class="">
+            <img src="<?= $fields['actu_badge']; ?>" alt="Illustration de l'actualité <?= $fields['actu_title']; ?>" class="">
         </div>
         <div class="content">
             <p class="title u-margin-top-small"><?= $fields['actu_title']; ?></p>

@@ -239,11 +239,11 @@ get_header();
 <section class="gallery">
     <h2 class="u-margin-bottom">En images</h2>
     <div class="CSSgal">
-        <s id="s1"></s> 
-        <s id="s2"></s>
-        <s id="s3"></s>
-        <s id="s4"></s>
-        <s id="s5"></s>
+        <i id="s1"></i> 
+        <i id="s2"></i>
+        <i id="s3"></i>
+        <i id="s4"></i>
+        <i id="s5"></i>
         <div class="slider">
             <div class="precNext">
                 <img src="http://saintleonart.app/wp-content/uploads/2017/10/Mon_voisin_doris-e1508242487943.jpg" alt="">
@@ -267,8 +267,8 @@ get_header();
         </div>
         <div class="prevNext"> 
             <div>
-                <a href="#s5" data-translateValue-mobile="-400%" data-translateValue-desktop="-265%" data-next="9" data-prec="1" data-focus="4" data-next-img="0" data-prec-img="3">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
+                <button data-translateValue-mobile="-400%" data-translateValue-desktop="-265%" data-next="9" data-prec="1" data-focus="4" data-next-img="0" data-prec-img="3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
                         <g transform="matrix(-1 0 0 1 451.846 0)">
                             <g>
                                 <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" data-original="#000000" class="active-path" >
@@ -276,20 +276,20 @@ get_header();
                             </g>
                         </g> 
                     </svg>
-                </a>
-                <a href="#s2" data-translateValue-mobile="-100%" data-translateValue-desktop="-55%" data-next="3" data-prec="1" data-focus="1" data-next-img="2" data-prec-img="0">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
+                </button>
+                <button data-translateValue-mobile="-100%" data-translateValue-desktop="-55%" data-next="3" data-prec="1" data-focus="1" data-next-img="2" data-prec-img="0">
+                    <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
                         <g>
                             <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
                                 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
                                 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
                         </g>
                     </svg>
-                </a>
+                </button>
             </div>
             <div>
-                <a href="#s1" data-translateValue-mobile="-0%" data-translateValue-desktop="-0%" data-next="1" data-prec="3" data-focus="0" data-next-img="1" data-prec-img="4">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
+                <button data-translateValue-mobile="-0%" data-translateValue-desktop="-0%" data-next="1" data-prec="3" data-focus="0" data-next-img="1" data-prec-img="4">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
                         <g transform="matrix(-1 0 0 1 451.846 0)">
                             <g>
                                 <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" data-original="#000000" class="active-path" >
@@ -297,39 +297,39 @@ get_header();
                             </g>
                         </g> 
                     </svg>
-                </a>
-                <a href="#s3" data-translateValue-mobile="-200%" data-translateValue-desktop="-125%" data-next="5" data-prec="3" data-focus="2" data-next-img="3" data-prec-img="1">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
+                </button>
+                <button data-translateValue-mobile="-200%" data-translateValue-desktop="-125%" data-next="5" data-prec="3" data-focus="2" data-next-img="3" data-prec-img="1">
+                    <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
                         <g>
                             <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
                                 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
                                 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
                         </g>
                     </svg>
-                </a>
+                </button>
             </div>
             <div>
-                <a href="#s2" data-translateValue-mobile="-100%" data-translateValue-desktop="-55%" data-next="3" data-prec="5" data-focus="1" data-next-img="2" data-prec-img="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
+                <button data-translateValue-mobile="-100%" data-translateValue-desktop="-55%" data-next="3" data-prec="5" data-focus="1" data-next-img="2" data-prec-img="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
                         <g transform="matrix(-1 0 0 1 451.846 0)"><g>
                             <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" data-original="#000000" class="active-path" >
                             </path>
                         </g></g> 
                     </svg>
-                </a>
-                <a href="#s4" data-translateValue-mobile="-300%" data-translateValue-desktop="-195%" data-next="7" data-prec="5" data-focus="3"  data-next-img="4" data-prec-img="2">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
+                </button>
+                <button data-translateValue-mobile="-300%" data-translateValue-desktop="-195%" data-next="7" data-prec="5" data-focus="3"  data-next-img="4" data-prec-img="2">
+                    <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
                         <g>
                             <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
                                 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
                                 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
                         </g>
                     </svg>
-                </a>
+                </button>
             </div>
             <div>
-                <a href="#s3" data-translateValue-mobile="-200%" data-translateValue-desktop="-125%" data-next="5" data-prec="7" data-focus="2" data-next-img="3" data-prec-img="1">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
+                <button data-translateValue-mobile="-200%" data-translateValue-desktop="-125%" data-next="5" data-prec="7" data-focus="2" data-next-img="3" data-prec-img="1">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
                         <g transform="matrix(-1 0 0 1 451.846 0)">
                             <g>
                                 <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" data-original="#000000" class="active-path" >
@@ -337,35 +337,35 @@ get_header();
                             </g>
                         </g> 
                     </svg>
-                </a>
-                <a href="#s5" data-translateValue-mobile="-400%" data-translateValue-desktop="-265%" data-next="9" data-prec="7" data-focus="4" data-next-img="0" data-prec-img="3">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
+                </button>
+                <button data-translateValue-mobile="-400%" data-translateValue-desktop="-265%" data-next="9" data-prec="7" data-focus="4" data-next-img="0" data-prec-img="3">
+                    <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
                         <g>
                             <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
                                 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
                                 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
                         </g>
                     </svg>
-                </a>
+                </button>
             </div>
             <div>
-                <a href="#s4" data-translateValue-mobile="-300%" data-translateValue-desktop="-195%" data-next="7" data-prec="9" data-focus="3" data-next-img="4" data-prec-img="2">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
+                <button data-translateValue-mobile="-300%" data-translateValue-desktop="-195%" data-next="7" data-prec="9" data-focus="3" data-next-img="4" data-prec-img="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="512" height="512" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;">
                         <g transform="matrix(-1 0 0 1 451.846 0)"><g>
                             <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" data-original="#000000" class="active-path" >
                             </path>
                         </g></g> 
                     </svg>
-                </a>
-                <a href="#s1" data-translateValue-mobile="0%" data-translateValue-desktop="0%" data-next="1" data-prec="9" data-focus="0" data-next-img="1" data-prec-img="4">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
+                </button>
+                <button data-translateValue-mobile="0%" data-translateValue-desktop="0%" data-next="1" data-prec="9" data-focus="0" data-next-img="1" data-prec-img="4">
+                    <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" >
                         <g>
                             <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
                                 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
                                 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
                         </g>
                     </svg>
-                </a>
+                </button>
             </div>
         </div>
         <div class="bullets">
@@ -384,18 +384,21 @@ get_header();
         <div class="btn--mobile">
             <h3 class="u-margin-bottom">Nos galeries</h3>
             <a href="">
+                facebook
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.124 96.123">
                     <path d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 0 0-1.96 1.961v15.803a1.96 1.96 0 0 0 1.96 1.96H36.57v39.876a1.96 1.96 0 0 0 1.96 1.96h16.352a1.96 1.96 0 0 0 1.96-1.96V54.287h14.654a1.96 1.96 0 0 0 1.96-1.96l.006-15.803a1.963 1.963 0 0 0-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 0 0 1.959-1.96V1.98A1.96 1.96 0 0 0 72.089.02z"/>
                 </svg>
             </a>
             <a href="">
+                instagram
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169.063 169.063">
                     <path d="M122.406 0H46.654C20.929 0 0 20.93 0 46.655v75.752c0 25.726 20.929 46.655 46.654 46.655h75.752c25.727 0 46.656-20.93 46.656-46.655V46.655C169.063 20.93 148.133 0 122.406 0zm31.657 122.407c0 17.455-14.201 31.655-31.656 31.655H46.654C29.2 154.063 15 139.862 15 122.407V46.655C15 29.201 29.2 15 46.654 15h75.752c17.455 0 31.656 14.201 31.656 31.655v75.752z"/>
                     <path d="M84.531 40.97c-24.021 0-43.563 19.542-43.563 43.563 0 24.02 19.542 43.561 43.563 43.561s43.563-19.541 43.563-43.561c0-24.021-19.542-43.563-43.563-43.563zm0 72.123c-15.749 0-28.563-12.812-28.563-28.561 0-15.75 12.813-28.563 28.563-28.563s28.563 12.813 28.563 28.563c0 15.749-12.814 28.561-28.563 28.561zM129.921 28.251c-2.89 0-5.729 1.17-7.77 3.22a11.053 11.053 0 0 0-3.23 7.78c0 2.891 1.18 5.73 3.23 7.78 2.04 2.04 4.88 3.22 7.77 3.22 2.9 0 5.73-1.18 7.78-3.22 2.05-2.05 3.22-4.89 3.22-7.78 0-2.9-1.17-5.74-3.22-7.78-2.04-2.05-4.88-3.22-7.78-3.22z"/>
                 </svg>
             </a>
             <a href="">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
+                twitter
+                <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
                     <g>
                         <g>
                             <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
@@ -438,18 +441,21 @@ get_header();
                 </div>
                 <div class="social">
                     <a href="">
+                        facebook
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.124 96.123">
                             <path d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 0 0-1.96 1.961v15.803a1.96 1.96 0 0 0 1.96 1.96H36.57v39.876a1.96 1.96 0 0 0 1.96 1.96h16.352a1.96 1.96 0 0 0 1.96-1.96V54.287h14.654a1.96 1.96 0 0 0 1.96-1.96l.006-15.803a1.963 1.963 0 0 0-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 0 0 1.959-1.96V1.98A1.96 1.96 0 0 0 72.089.02z"/>
                         </svg>
                     </a>
                     <a href="">
+                        instagram
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169.063 169.063">
                             <path d="M122.406 0H46.654C20.929 0 0 20.93 0 46.655v75.752c0 25.726 20.929 46.655 46.654 46.655h75.752c25.727 0 46.656-20.93 46.656-46.655V46.655C169.063 20.93 148.133 0 122.406 0zm31.657 122.407c0 17.455-14.201 31.655-31.656 31.655H46.654C29.2 154.063 15 139.862 15 122.407V46.655C15 29.201 29.2 15 46.654 15h75.752c17.455 0 31.656 14.201 31.656 31.655v75.752z"/>
                             <path d="M84.531 40.97c-24.021 0-43.563 19.542-43.563 43.563 0 24.02 19.542 43.561 43.563 43.561s43.563-19.541 43.563-43.561c0-24.021-19.542-43.563-43.563-43.563zm0 72.123c-15.749 0-28.563-12.812-28.563-28.561 0-15.75 12.813-28.563 28.563-28.563s28.563 12.813 28.563 28.563c0 15.749-12.814 28.561-28.563 28.561zM129.921 28.251c-2.89 0-5.729 1.17-7.77 3.22a11.053 11.053 0 0 0-3.23 7.78c0 2.891 1.18 5.73 3.23 7.78 2.04 2.04 4.88 3.22 7.77 3.22 2.9 0 5.73-1.18 7.78-3.22 2.05-2.05 3.22-4.89 3.22-7.78 0-2.9-1.17-5.74-3.22-7.78-2.04-2.05-4.88-3.22-7.78-3.22z"/>
                         </svg>
                     </a>
                     <a href="">
-                        <svg version="1.1" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
+                        twitter
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
                             <g>
                                 <g>
                                     <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
@@ -464,7 +470,8 @@ get_header();
                         </svg>
                     </a>
                     <a href="">
-                        <svg version="1.1" id="email" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.012 31.012" style="enable-background:new 0 0 31.012 31.012;">
+                        mail
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.012 31.012" style="enable-background:new 0 0 31.012 31.012;">
                             <g>
                                 <path d="M28.512,26.529H2.5c-1.378,0-2.5-1.121-2.5-2.5V6.982c0-1.379,1.122-2.5,2.5-2.5h26.012c1.378,0,2.5,1.121,2.5,2.5v17.047
                                     C31.012,25.408,29.89,26.529,28.512,26.529z M2.5,5.482c-0.827,0-1.5,0.673-1.5,1.5v17.047c0,0.827,0.673,1.5,1.5,1.5h26.012

@@ -522,7 +522,7 @@ function ms_get_the_data_file()
             '.$size.'
         </p>
         <p class="format">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 550.801 550.801" style="enable-background:new 0 0 550.801 550.801;">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 550.801 550.801" style="enable-background:new 0 0 550.801 550.801;">
                 <g>
                     <g>
                         <path d="M267.342,414.698c-6.613,0-10.884,0.585-13.413,1.165v85.72c2.534,0.586,6.616,0.586,10.304,0.586
@@ -563,7 +563,8 @@ function ms_get_the_data_file()
             ' . $format . '
         </p>
         <a href="'.$url.'" class="download">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 489.3 489.3" style="enable-background:new 0 0 489.3 489.3;">
+            télécharger'. $title.'
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 489.3 489.3" style="enable-background:new 0 0 489.3 489.3;">
                 <g>
                     <g>
                         <path d="M244.65,0c-6.8,0-12.2,5.5-12.2,12.3V342l-55.9-55.9c-4.8-4.8-12.5-4.8-17.3,0s-4.8,12.5,0,17.3l76.8,76.8

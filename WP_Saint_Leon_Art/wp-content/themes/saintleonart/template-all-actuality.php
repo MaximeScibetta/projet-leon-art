@@ -52,24 +52,24 @@ get_header();
     <h2>Toutes nos actualités</h2>
     <?php get_template_part('part-all-navigation');?>
     <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="news_filter" class="all__navigation">
+        <label for="news_categoryfilter" class="u-hidden-visually">Sélectionnez un genre</label>
         <?php if ($terms = get_terms('subject', 'orderby=name')) :
-            echo '<select name="news_categoryfilter" class="order">';
+            echo '<select name="news_categoryfilter" id="news_categoryfilter" class="order">';
         echo '<option value="null">Toutes les actualités </option>';
         foreach ($terms as $term) :
             echo '<option value="' . $term->term_id . '"' . ( ($term->term_id == $_SESSION['news_filter']) ? 'selected="selected"' : "") . '>' . $term->name . '</option>';
         endforeach;
         echo '</select>';
         endif; ?>
-        <div class="radio">
+        <fieldset class="radio">
+            <legend class="u-hidden-visually">Trier les actualités par date</legend>
             <input id="radioASC" type="radio" name="news_date" value="ASC" <?php if ($_SESSION['news_filter_date'] == 'ASC') : echo 'checked';
                                                                             endif; ?> /> 
             <label for="radioASC" class="radio-label">Les plus anciens</label>
-        </div>
-        <div class="radio">
             <input id="radioDESC" type="radio" name="news_date" value="DESC" <?php if ($_SESSION['news_filter_date'] == 'DESC') : echo 'checked';
                                                                                 endif; ?>  />
             <label for="radioDESC" class="radio-label">Les plus récent</label>
-        </div>
+        </fieldset>
         <input type="submit" name="newsfilter" value="Filtrer les éléments" class="btn btn--anim" data-text="Filtrer les éléments">
         <input type="hidden" name="action" value="newsfilter">
     </form>
@@ -77,7 +77,7 @@ get_header();
     <div class="event__container">
         <?php while ($query->have_posts()) : $query->the_post(); ?>
         <?php $fields = get_fields(); ?>
-        <?php include('part/all-news.php'); ?>
+            <?php include('part/all-news.php'); ?>
         <?php endwhile; ?>
         <div class="pagination p12">
             <?php echo paginate_links($paginateArgs); ?>       

@@ -186,6 +186,7 @@
                }
                @include mq($until: desktop){
                     .btn--mobile{
+                        font-size: 0;
                         display: block;
                         padding: $inuit-global-spacing-unit-large 0;
                         text-align: center;
@@ -369,7 +370,7 @@
                     .info{
                         background-color: $yellow;
                         position: absolute;
-                        bottom: 45px; width: 100%;
+                        bottom: 40px; width: 100%;
                         text-align: center;
                         padding: $igsus 0;
                         .name{
@@ -383,6 +384,7 @@
                         padding: $igsus 0;
                         position: absolute;
                         bottom: 0; width: 100%;
+                        font-size: 0;
                         svg{
                             fill: $white;
                             width: 18.75px;
@@ -520,7 +522,7 @@
                         }
                     }
                     a.download{
-                        
+                        font-size: 0;
                         float: inherit;
                         position: absolute;
                         top: 0px;

@@ -341,25 +341,16 @@
                                 h2{
                                     background: rgba(134, 46, 85, 0.8);
                                 }
-                                
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            left: 45%;
-                            top: 20px;
-                            width: 0;
-                            height: 0;
-                            border-top: 7px solid transparent;
-                            border-bottom: 7px solid transparent;
-                            border-left: 7px solid rgba(134, 46, 85, 0.8);
-                        }
-                        &.right:before {
-                            content: '';
-                            right: 45%;
-                            left: inherit;
-                            border-left: 0;
-                            border-right: 7px solid rgba(134, 46, 85, 0.8);
-                        }
+                                &:before {
+                                    border-color: rgba(134,46,85,.8);
+                                    border-top: 7px solid transparent;
+                                    border-bottom: 7px solid transparent;
+                                }
+                                &.right:before {
+                                    border-color: rgba(134, 46, 85, .8);
+                                    border-top: 7px solid transparent;
+                                    border-bottom: 7px solid transparent;
+                                }
                             }
                         }
                     }

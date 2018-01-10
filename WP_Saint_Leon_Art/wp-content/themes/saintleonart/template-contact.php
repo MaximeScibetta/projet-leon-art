@@ -46,7 +46,7 @@ get_header();
                     <address><?php the_sub_field('address'); ?></address>
                 </div>
                 <div>
-                    <svg version="1.1" id="phone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29.731 29.731" style="enable-background:new 0 0 29.731 29.731;">
+                    <svg version="1.1" id="phoneLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29.731 29.731" style="enable-background:new 0 0 29.731 29.731;">
                         <g>
                             <path d="M23.895,29.731c-1.237,0-2.731-0.31-4.374-0.93c-3.602-1.358-7.521-4.042-11.035-7.556
                                 c-3.515-3.515-6.199-7.435-7.558-11.037C-0.307,6.933-0.31,4.245,0.921,3.015c0.177-0.177,0.357-0.367,0.543-0.563

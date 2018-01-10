@@ -61,7 +61,7 @@
     //     visibility: hidden; /* Hide all but first P/N container */
     // }
     
-    .CSSgal .prevNext a {
+    .CSSgal .prevNext button {
         background:$purple;
         position: absolute;
         width:       60px;
@@ -82,10 +82,11 @@
             left: -3px;
         }
     }
-    .CSSgal .prevNext a:hover {
+    .CSSgal .prevNext button:hover {
         opacity: 1;
+        cursor: pointer;
     }
-    .CSSgal .prevNext a+a {
+    .CSSgal .prevNext button+button {
         left: auto;
         right: 6px;
         svg{

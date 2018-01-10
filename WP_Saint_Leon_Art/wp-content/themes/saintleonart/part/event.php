@@ -12,12 +12,12 @@
     <div class="event__item">
         <div class="head">
             <p class="date"><span><?php ms_the_event_date();?>.</span></p>
-            <img src="<?= $fields['event_image'];?>" alt="" class="">
+            <img src="<?= $fields['event_image'];?>" alt="Illustration de l'événement <?= $fields['event_name']; ?>" class="">
         </div>
         <div class="content">
             <p class="title u-margin-top-small"><?= $fields['event_name']; ?></p>
             <p class="hour u-margin-top-small">
-                <svg class="u-margin-right-small" version="1.1" id="hour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
+                <svg class="u-margin-right-small hour" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
                     <g>
                         <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
                             S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
@@ -27,7 +27,7 @@
                 <?= $fields['event_hour']; ?>
             </p>
             <address class="u-margin-top-tiny">
-                <svg class="u-margin-right-small" version="1.1" id="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
+                <svg class="u-margin-right-small location" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
                     <g>
                         <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
                             s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"/>
