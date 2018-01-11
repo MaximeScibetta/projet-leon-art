@@ -54,20 +54,12 @@ get_header();
             <?php endwhile; endif; ?>
             <a  class="<?php if ($first) : echo 'active'; endif; ?>" href="#all">Tous le programme</a>
         </div>
-        <a href="" class="order">Trier 
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96.154px" height="96.154px" viewBox="0 0 96.154 96.154" style="enable-background:new 0 0 96.154 96.154;">
-                <g>
-                    <path d="M0.561,20.971l45.951,57.605c0.76,0.951,2.367,0.951,3.127,0l45.956-57.609c0.547-0.689,0.709-1.716,0.414-2.61
-                        c-0.061-0.187-0.129-0.33-0.186-0.437c-0.351-0.65-1.025-1.056-1.765-1.056H2.093c-0.736,0-1.414,0.405-1.762,1.056
-                        c-0.059,0.109-0.127,0.253-0.184,0.426C-0.15,19.251,0.011,20.28,0.561,20.971z"/>
-                </g>
-            </svg>
-        </a>
         <a href="#mapinteractiv" class="interactiv">Map interactive</a>
 
     </div>
-    <?php if( have_rows('days') ): $d=1; while ( have_rows('days') ) : the_row(); ?>
+    <?php if( have_rows('days') ): $d=1;  while ( have_rows('days') ) : the_row(); ?>
         <div class="timeline<?php if($d): echo ' day'.$d; endif;?>" id="<?php if($d): echo 'day'.$d; endif; $d++;?>">
+        <h3>Ancre section</h3>
         <?php if( have_rows('events') ): $i=0; while ( have_rows('events') ) : the_row(); ?>
             <a href="<?php  the_sub_field('event_link'); ?>">
                 <div class="timeline-item">
@@ -105,6 +97,7 @@ get_header();
         </div>
     <?php endwhile; endif; ?>
     <div class="timeline all here" id="all">
+        <h3>Ancre section</h3>
         <?php if (have_rows('days')) :while (have_rows('days')) : the_row(); ?>
             <?php if (have_rows('events')) : $i = 0; while (have_rows('events')) : the_row(); ?>
                 <a href="<?php the_sub_field('event_link'); ?>">

@@ -14,14 +14,25 @@
             display: none;
         }
         .all{
+            .filterNav{
+                width: 100%;
+                margin: 0 auto;
+            }
             &__navigation{
                 max-width: 1200px;
-                margin: 0 auto;
+                margin: 0 10px;
+                @include mq($from: 450px) {
+                    margin: 0 $gutters $igsu;
+                }
+                @include mq($from: 1400px) {
+                    margin: 0 auto $igsu;
+                }
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 flex-wrap: wrap;
                 margin-bottom: $igsul;
+                margin-bottom: $igsu;
                 .see{
                     width: 100%;
                     overflow-y: hidden;
@@ -76,32 +87,61 @@
                     }
                 }
                 .order{
+                    width: 100%;
+                    @include mq($from: 610px) {
+                        width: 48%;
+                    }
                     outline: none;
                     background-color: $grey;
                     border: 2px solid $purple;
-                    border-radius: 50px;
-                    padding: $igsus $igsul;
+                    border-radius: 10px;
+                    padding: 0 0 0 $igsut;
                     text-transform: uppercase;
                     font-family: 'RobotoR';
                     color: $purple;
                     appearance: none;
                     background: $grey url(../images/dropdown_triangle.svg) 288px center no-repeat;
                     background-size: 18px 13px;
+                    background-position-x: 90%;
                     &:hover,
                     &:focus{
                         cursor: pointer;
                         text-decoration: underline;
+                        background: $yellow url(../images/dropdown_triangle.svg) 288px center no-repeat;
+                        background-size: 18px 13px;
+                        background-position-x: 90%;
                     }
                     option{
                         padding: $igsus $igsul;
+                        background: $white;
+                        &:hover{
+                        background: $white;
+
+                        }
                     }
                 }
                 .radio {
-                    margin: $igsus 0 0 $igsu;
+                    margin: $igsu 0 0 0;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    width: 100%;
+                    @include mq($from: 610px){
+                        width: 48%;
+                        margin: 3px 0 0 $igsus;
+                    }
+                    div{
+                        width: 45%;
+                    }
+                    div:first-of-type{
+                        margin-right: 12px;
+                    }
                     input[type="radio"] {
                         position: absolute;
                         opacity: 0;
                         +.radio-label {
+                            word-wrap: normal;
                             &:before {
                                 content: '';
                                 background: $purple;
@@ -154,6 +194,11 @@
                     }
                 }
                 input[type="submit"].btn.btn--anim{
+                    width: 100%;
+                    margin: $igsu auto 0 auto;
+                    @include mq($from: 900px) {
+                        margin-bottom: $igsul;
+                    }
                     &:hover,
                     &:focus{
                         background-color: $purple;

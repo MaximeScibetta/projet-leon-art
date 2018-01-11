@@ -475,9 +475,6 @@
         $dateSrc = $post->post_date;
         $dateTime = new \Datetime($dateSrc);
         $date = $dateTime->format('d F Y');
-        // $dateArray = explode(' ', $date);
-        // $dateArray[1] = substr($dateArray[1], 0, 5);
-        // $date = implode(' ', $dateArray);
         return $date;
     }
 

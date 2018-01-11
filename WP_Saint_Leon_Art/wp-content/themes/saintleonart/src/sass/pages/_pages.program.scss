@@ -91,6 +91,10 @@
                 position: relative;
                 -webkit-transition: all .4s ease;
                 transition: all .4s ease;
+                h3{
+                    margin-bottom: 120px;
+                    font-size: 0;
+                }
                 &.all{
                     h2{
                         display: block;
@@ -327,7 +331,7 @@
                         }
                     }
                     .interactiv{
-                        width: calc( 50% - #{$igsut} );
+                        width: calc( 100% - #{$igsut} );
                         @include mq($from:1950px){
                             width: calc( 16.6666665% - #{$igsut} );
                         }
