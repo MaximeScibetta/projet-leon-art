@@ -286,6 +286,8 @@ if (pageTitle === ' » À propos - Saint-Léon\'Art'){
             // Add class active from actual focus
             btnA[$prevNext.getAttribute('data-focus')].classList.add('active');
         });
+
+        $
     });
 
     const img = document.querySelectorAll('.slider div');

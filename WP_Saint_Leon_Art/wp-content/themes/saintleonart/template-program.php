@@ -139,7 +139,7 @@ get_header();
 <section class="map" id="mapinteractiv">
     <h2>Map interactive</h2>
     <div class="overlay" onClick="style.pointerEvents='none'"></div>
-    <iframe title="Map interactive de l'événement saitn-leonart" style="overflow:hidden; height: 480px;" src="https://www.google.fr/maps/d/embed?mid=1nmuuAJ-lLItmVbx4dM3wAajKFHk" ></iframe>
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1B2Fa7MMRLEa1NCRbI7VADypd4FzlDOVM" title="Map interactive de l'événement saitn-leonart" style="overflow:hidden; height: 480px;"></iframe>
 </section>
 <?php endwhile;endif; ?>
 <?php get_footer(); ?>
