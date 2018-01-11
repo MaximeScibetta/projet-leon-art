@@ -44,9 +44,13 @@ get_header();
         <a href="<?php the_sub_field('btn_link'); ?>" class="btn btn--anim" data-text="<?php the_sub_field('btn_name'); ?>"><?php the_sub_field('btn_name'); ?></a>
         <?php endwhile; endif; ?>
     </div>
+    <a href="#next" class="demo">
+        <span></span>
+        Scroll
+    </a>
 </section>
 <section class="activitie">
-    <h2 class="u-margin-top-large"><?= $fields['section_title']; ?></h2>
+    <h2 class="u-margin-top-large" id="next"><?= $fields['section_title']; ?></h2>
     <div class="activitie__flex flex">
         <?php if( have_rows('type_activitie') ): while ( have_rows('type_activitie') ) : the_row(); ?>
         

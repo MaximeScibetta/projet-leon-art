@@ -19,6 +19,8 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
+define('WP_CACHE', true);
+define( 'WPCACHEHOME', '/home/vagrant/Code/Laravel/public/projet-leon-art/WP_Saint_Leon_Art/wp-content/plugins/wp-super-cache/' );
 define('DB_NAME', 'saintleonart');
 
 /** Utilisateur de la base de données MySQL. */

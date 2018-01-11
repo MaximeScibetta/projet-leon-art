@@ -134,6 +134,7 @@
 **************************/
     register_nav_menu( 'header', 'Menu principal, affiché dans le header.' );
     register_nav_menu('all__navigation', 'Menu secondaire, affiché dans les pages all.');
+    register_nav_menu('footer', 'Menu footer, affiché dans le footer.');
 
 /******************
 **** Get menu items

@@ -33,28 +33,10 @@
         </div>
       
         <div class="footer_wrapper">
+            
             <div class="nav u-margin-top-large u-padding-horizontal">
                 <h3>Plus d'infos</h3>
-                <ul class="secondMenu">
-                    <li class="secondMenu__item">
-                        <a href="">À propos de Saint-Léon'art</a>
-                    </li>
-                    <li class="secondMenu__item">
-                        <a href="">Notre programme</a>
-                    </li>
-                    <li class="secondMenu__item">
-                        <a href="">Prochains événements</a>
-                    </li>
-                    <li class="secondMenu__item">
-                        <a href="">Presse</a>
-                    </li>
-                    <li class="secondMenu__item">
-                        <a href="">Contactez-nous</a>
-                    </li>
-                    <li class="secondMenu__item">
-                        <a href="">Informations pratique</a>
-                    </li>
-                </ul>
+                <?php get_template_part('part-footer-nav'); ?>
             </div> 
             <div class="lastActu u-margin-top-large u-padding-bottom u-padding-horizontal">
                 <h3 class="u-margin-bottom-small">Dernières actu</h3>
