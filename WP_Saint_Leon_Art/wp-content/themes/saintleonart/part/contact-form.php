@@ -1,4 +1,4 @@
-<form action="index.php" class="contact">
+<!-- <form action="index.php" class="contact">
     <fieldset>
         <legend class="u-hidden-visually">Prénom</legend>
         <label for="first_name">Prénom</label>
@@ -34,4 +34,6 @@
         <span class="left"></span>
     </fieldset>
     <button type="submit" class="btn btn--anim" data-text="Envoyer">Envoyer</button>
-</form>
+</form> -->
+
+<?php echo do_shortcode('[contact-form-7 id="404" title="Formulaire de contacte" html_class="contact"]'); ?>

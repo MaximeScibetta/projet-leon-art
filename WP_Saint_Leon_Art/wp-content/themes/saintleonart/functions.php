@@ -584,3 +584,29 @@ function ms_the_data_file()
 {
     echo ms_get_the_data_file();
 }
+/****************************************************************************************************/
+/**
+ *   Contact form 7, delete <p> adding data-text attr on submit input
+ */
+// Delete <p>
+add_filter('wpcf7_form_elements', function ($content) {
+    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+    return $content;
+});
+
+// Add attr
+// add_filter('wpcf7_form_elements', 'imp_wpcf7_form_elements');
+// function imp_wpcf7_form_elements($content)
+// {
+//     $str_pos = strpos($content, 'type="submit"');
+//     $content = substr_replace($content, ' data-text="Envoyer" ', $str_pos, 0);
+//     return $content;
+// }
+//Add class to span error
+function cf7_add_custom_class($error)
+{
+    $error = str_replace("class=\"", "class=\"left ", $error);
+    return $error;
+}
+add_filter('wpcf7_validation_error', 'cf7_add_custom_class');

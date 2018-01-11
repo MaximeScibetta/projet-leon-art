@@ -131,76 +131,76 @@ if (pageTitle === ' » Programme - Saint-Léon\'Art'){
             $btn.addEventListener("click", fActive);
         });
 }
-if (pageTitle === ' » Page contact - Saint-Léon\'Art'){
-    /* --------------------------*/
-    // Form contact feedback and focus
-    /* --------------------------*/
-        var fCheckForm = function fCheckForm() {
-            var $Form = document.querySelector('form.contact');
-            var $FirstNameField = document.getElementById('first_name');
-            var $LastNameField = document.getElementById('last_name');
-            var $EmailField = document.getElementById('email');
-            var $MsgField = document.getElementById('message');
-            var $SubmitBtn = document.querySelector('.btn.btn--anim');
-            var regexpName = /^[a-zA-Z\u00C0-\u00FF]+['-]?[a-zA-Z\u00C0-\u00FF]+$/;
-            var regexpEmail = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
-            var regexpMsg = /^([a-zA-Z]{2,40} + [a-zA-Z]{2,40})$/;
-            var fCheckAField = function fCheckAField(field, regexp) {
-                if (field.value == '') {
-                    field.parentNode.querySelector('span').innerHTML = "Votre champs de formulaire est vide.";
-                    field.parentNode.querySelector('span').classList.add('on');
-                    return false;
-                } else if (regexp && !regexp.test(field.value)) {
-                    field.parentNode.querySelector('span').innerHTML = "Il semble que la valeur rentré ait un problème.";
-                    field.parentNode.querySelector('span').classList.add('on');
-                    return false;
-                } else {
-                    $SubmitBtn.removeAttribute('disabled');
-                    field.parentNode.querySelector('span').classList.remove('on');
-                    field.parentNode.querySelector('.input').classList.add('ok');
-                    return true;
-                }
-            };
-            var fCheckFirstName = function fCheckFirstName() {
-                return fCheckAField($FirstNameField, regexpName);
-            };
-            var fCheckLastName = function fCheckLastName() {
-                return fCheckAField($LastNameField, regexpName);
-            };
-            var fCheckEmail = function fCheckEmail() {
-                return fCheckAField($EmailField, regexpEmail);
-            };
-            var fCheckMessage = function fCheckMessage() {
-                if ($MsgField.value.split(/\s+/).length >= 3) {
-                    $MsgField.parentNode.querySelector('span').classList.remove('on');
-                    $MsgField.parentNode.querySelector('.input').classList.add('ok');
-                    return true;
-                }
-                if ($MsgField.value.split(/\s+/).length === 1) {
-                    $MsgField.parentNode.querySelector('span').innerHTML = "Vous n'avez pas écrit de message.";
-                    $MsgField.parentNode.querySelector('span').classList.add('on');
-                    return false;
-                }
-                if ($MsgField.value.split(/\s+/).length < 5) {
-                    $MsgField.parentNode.querySelector('span').innerHTML = "Vous avez pas écris un assez grand message.";
-                    $MsgField.parentNode.querySelector('span').classList.add('on');
-                    return false;
-                }
-            };
-            var fCheckAll = function fCheckAll() {
-                if (fCheckFirstName() * fCheckLastName() * fCheckEmail() * fCheckMessage() ) {
-                    $Form.classList.add('valid');
-                }
-            };
+// if (pageTitle === ' » Page contact - Saint-Léon\'Art'){
+//     /* --------------------------*/
+//     // Form contact feedback and focus
+//     /* --------------------------*/
+//         var fCheckForm = function fCheckForm() {
+//             var $Form = document.querySelector('form.contact');
+//             var $SubjectField = document.getElementById('subject');
+//             var $LastNameField = document.getElementById('last_name');
+//             var $EmailField = document.getElementById('email');
+//             var $MsgField = document.getElementById('message');
+//             var $SubmitBtn = document.querySelector('.btn.btn--anim');
+//             var regexpName = /^[a-zA-Z\u00C0-\u00FF]+['-]?[a-zA-Z\u00C0-\u00FF]+$/;
+//             var regexpEmail = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+//             var regexpMsg = /^([a-zA-Z]{2,40} + [a-zA-Z]{2,40})$/;
+//             var fCheckAField = function fCheckAField(field, regexp) {
+//                 if (field.value == '') {
+//                     field.parentNode.querySelector('span').innerHTML = "Votre champs de formulaire est vide.";
+//                     field.parentNode.querySelector('span').classList.add('on');
+//                     return false;
+//                 } else if (regexp && !regexp.test(field.value)) {
+//                     field.parentNode.querySelector('span').innerHTML = "Il semble que la valeur rentré ait un problème.";
+//                     field.parentNode.querySelector('span').classList.add('on');
+//                     return false;
+//                 } else {
+//                     $SubmitBtn.removeAttribute('disabled');
+//                     field.parentNode.querySelector('span').classList.remove('on');
+//                     field.parentNode.querySelector('.input').classList.add('ok');
+//                     return true;
+//                 }
+//             };
+//             var fCheckFirstName = function fCheckFirstName() {
+//                 return fCheckAField($SubjectField, regexpName);
+//             };
+//             var fCheckLastName = function fCheckLastName() {
+//                 return fCheckAField($LastNameField, regexpName);
+//             };
+//             var fCheckEmail = function fCheckEmail() {
+//                 return fCheckAField($EmailField, regexpEmail);
+//             };
+//             var fCheckMessage = function fCheckMessage() {
+//                 if ($MsgField.value.split(/\s+/).length >= 3) {
+//                     $MsgField.parentNode.querySelector('span').classList.remove('on');
+//                     $MsgField.parentNode.querySelector('.input').classList.add('ok');
+//                     return true;
+//                 }
+//                 if ($MsgField.value.split(/\s+/).length === 1) {
+//                     $MsgField.parentNode.querySelector('span').innerHTML = "Vous n'avez pas écrit de message.";
+//                     $MsgField.parentNode.querySelector('span').classList.add('on');
+//                     return false;
+//                 }
+//                 if ($MsgField.value.split(/\s+/).length < 5) {
+//                     $MsgField.parentNode.querySelector('span').innerHTML = "Vous avez pas écris un assez grand message.";
+//                     $MsgField.parentNode.querySelector('span').classList.add('on');
+//                     return false;
+//                 }
+//             };
+//             var fCheckAll = function fCheckAll() {
+//                 if (fCheckFirstName() * fCheckLastName() * fCheckEmail() * fCheckMessage() ) {
+//                     $Form.classList.add('valid');
+//                 }
+//             };
 
-            $FirstNameField.addEventListener('blur', fCheckFirstName, false);
-            $LastNameField.addEventListener('blur', fCheckLastName, false);
-            $EmailField.addEventListener('blur', fCheckEmail, false);
-            $MsgField.addEventListener('blur', fCheckMessage, false);
-            $SubmitBtn.addEventListener('click', fCheckAll, false);
-        };
-        fCheckForm();
-}
+//             $SubjectField.addEventListener('blur', fCheckFirstName, false);
+//             $LastNameField.addEventListener('blur', fCheckLastName, false);
+//             $EmailField.addEventListener('blur', fCheckEmail, false);
+//             $MsgField.addEventListener('blur', fCheckMessage, false);
+//             $SubmitBtn.addEventListener('click', fCheckAll, false);
+//         };
+//         fCheckForm();
+//}
 if (pageTitle === ' » À propos - Saint-Léon\'Art'){
     /* --------------------------*/
     // JS Slider
@@ -329,7 +329,9 @@ if (pageTitle === ' » À propos - Saint-Léon\'Art'){
             $label.addEventListener("focus", getFocus);
             $label.addEventListener("click", getFocus);
             $label.addEventListener("blur", outFocus);
-
+            if($label.value != ""){
+                $label.parentNode.querySelector('label').classList.add("focus")
+            }
         });
     };
     fAnimInput();
