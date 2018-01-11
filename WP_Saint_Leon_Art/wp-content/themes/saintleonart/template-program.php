@@ -74,6 +74,7 @@ get_header();
                             </svg>
                             <?php  the_sub_field('event_hour'); ?>
                         </span>
+                        <span><?= $fields['days'][0]['date'] ;?></span>
                         <address>
                             <svg version="1.1" class="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
                                 <g>
@@ -93,14 +94,15 @@ get_header();
                     </div>
                 </div>
             </a>
-        <?php endwhile; endif; ?>
+        <?php endwhile; endif;  ?>
         </div>
     <?php endwhile; endif; ?>
     <div class="timeline all here" id="all">
         <h3>Ancre section</h3>
-        <?php if (have_rows('days')) :while (have_rows('days')) : the_row(); ?>
-            <?php if (have_rows('events')) : $i = 0; while (have_rows('events')) : the_row(); ?>
-                <a href="<?php the_sub_field('event_link'); ?>">
+        
+        <?php if (have_rows('days')) : $w = 0; while (have_rows('days'))  : the_row(); ?>
+        <?php if (have_rows('events')) : $i = 0; while (have_rows('events')) : the_row(); ?>
+        <a href="<?php the_sub_field('event_link'); ?>">
                     <div class="timeline-item">
                         <div class="timeline-icon"></div>
                         <div class="timeline-content<?php if ($i % 2 == 1) : echo ' right'; endif; $i++; ?>">
@@ -111,7 +113,7 @@ get_header();
                                             S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
                                         <path stroke="#000" stroke-width="1" d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
                                 </svg>
-                                <?php the_sub_field('event_hour'); ?>
+                                <?php the_sub_field('event_hour'); ?> le <?= $fields['days'][$w]['date']; ?>
                             </span>
                             <address>
                                 <svg version="1.1" class="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
@@ -133,7 +135,7 @@ get_header();
                     </div>
                 </a>
             <?php endwhile; endif; ?>
-        <?php endwhile; endif; ?>
+        <?php $w++ ;endwhile;  endif; ?>
     </div>
 </section> 
 <section class="map" id="mapinteractiv">

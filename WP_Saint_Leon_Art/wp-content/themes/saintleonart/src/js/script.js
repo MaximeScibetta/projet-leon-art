@@ -444,6 +444,7 @@ if (window.matchMedia("(min-width: 980px)").matches) {
     })();
 
     window.addEventListener('scroll', AnimMenu);
+    window.addEventListener('load', AnimMenu);
 }
 /* --------------------------*/
 // Newsletter validation effect
