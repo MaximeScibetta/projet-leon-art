@@ -40,27 +40,7 @@
             </div> 
             <div class="lastActu u-margin-top-large u-padding-bottom u-padding-horizontal">
                 <h3 class="u-margin-bottom-small">Dernières actu</h3>
-                <a class="lastActu__item item">
-                    <img src="<?= dw_asset('images/insta.jpg');?>" alt="">
-                    <div class="item__info info">
-                        <p class="info__title">Macadam party</p>
-                        <p class="info__date">23 Juillet 2017</p>
-                    </div>
-                </a>
-                <a class="lastActu__item item">
-                    <img src="<?= dw_asset('images/insta1.jpg');?>" alt="">
-                    <div class="item__info info">
-                        <p class="info__title">Verre écologique</p>
-                        <p class="info__date">3 Septembre 2017</p>
-                    </div>
-                </a>
-                <a class="lastActu__item item">
-                    <img src="<?= dw_asset('images/insta3.jpg');?>" alt="">
-                    <div class="item__info info">
-                        <p class="info__title">Expositon dans le quartier</p>
-                        <p class="info__date">25 Mai 2017</p>
-                    </div>
-                </a>
+                <?php get_template_part('part/last-actu-footer'); ?>
             </div>
             <div class="partner u-margin-top-large u-padding-bottom-large u-padding-horizontal">
                 <h3 class="u-margin-bottom-small">Nos partenaires</h3>

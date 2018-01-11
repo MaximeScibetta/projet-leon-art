@@ -465,8 +465,25 @@
     }
 
     function ms_the_creation_date()
+        {
+            echo ms_get_the_creation_date();
+        }
+
+    function ms_get_complete_date()
     {
-        echo ms_get_the_creation_date();
+        global $post;
+        $dateSrc = $post->post_date;
+        $dateTime = new \Datetime($dateSrc);
+        $date = $dateTime->format('d F Y');
+        // $dateArray = explode(' ', $date);
+        // $dateArray[1] = substr($dateArray[1], 0, 5);
+        // $date = implode(' ', $dateArray);
+        return $date;
+    }
+
+    function ms_complete_date()
+    {
+        echo ms_get_complete_date();
     }
 /****************************************************************************************************/
 /**
