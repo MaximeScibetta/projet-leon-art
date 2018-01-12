@@ -434,7 +434,7 @@ if (window.matchMedia("(min-width: 980px)").matches) {
                 }
             }
             if(actionDo && executed){
-                if (window.pageYOffset < 100) {
+                if (window.pageYOffset < 10) {
                     actionDo = false;
                     executed = false;
                     fRemoveLogoMenu();

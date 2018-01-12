@@ -2,7 +2,15 @@
     <div class="event__item">
         <div class="head">
             <p class="date"><span><?php ms_the_creation_date();?> .</span></p>
-            <img src="<?= $fields['actu_badge']; ?>" alt="Illustration de l'actualité <?= $fields['actu_title']; ?>" class="">
+            <img src="<?= $fields['actu_badge']; ?>" 
+            srcset="
+                <?= $fields['actu_badge_mobile']; ?> 700w,
+                <?= $fields['actu_badge']; ?> 150w" 
+            alt="Illustration de l'actualité <?= $fields['actu_title']; ?>" 
+            sizes="
+                (max-width: 919px) 70vw,
+                (max-width: 9000px) 5vw,
+                150px">
         </div>
         <div class="content">
             <p class="title u-margin-top-small"><?= $fields['actu_title']; ?></p>
