@@ -124,24 +124,40 @@
 
     <script src="<?= dw_asset('js/script.js');?>"></script>
         <script language="JavaScript" type="text/javascript">
-<!--
-function bgenScroll() {
- if (window.pageYOffset!= null){
-  st=window.pageYOffset+'';
- }
- if (document.body.scrollWidth!= null){
-  if (document.body.scrollTop){
-  st=document.body.scrollTop;
-  }
-  st=document.documentElement.scrollTop;
- }
-  setTimeout('window.scroll(0,st)',10);
-}
+        <!--
+        function bgenScroll() {
+        if (window.pageYOffset!= null){
+        st=window.pageYOffset+'';
+        }
+        if (document.body.scrollWidth!= null){
+        if (document.body.scrollTop){
+        st=document.body.scrollTop;
+        }
+        st=document.documentElement.scrollTop;
+        }
+        setTimeout('window.scroll(0,st)',10);
+        }
 
 
 
-//-->
+        //-->
+        </script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="<?= dw_asset('dist/glide.min.js'); ?>"></script>
+<script>
+    if(window.matchMedia("(min-width: 720px)").matches){
+        $("#Glide").glide({
+            startAt: 2,
+            paddings: "150",
+            hoverpause: true,
+        });
+    }else{
+        $("#Glide").glide({
+               startAt: 2,
+               hoverpause: true,
+           });
+    }
 </script>
-
 </body>
 </html>
+

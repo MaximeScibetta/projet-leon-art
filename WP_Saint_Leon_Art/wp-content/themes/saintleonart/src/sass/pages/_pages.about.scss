@@ -160,22 +160,31 @@
         }
         .gallery{
             margin-bottom: $igsul;
+            .glide{
+                width: 100%;
+                &__arrows {
+                    button{
+                        background-color: $purple;
+                    }
+                }
+                &__wrapper{
+                    .glide__track{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                &__bullets{
+                    button{
+                        background-color: $purple;
+                        &.active{
+                            border: 2px solid $white;
+                        }
+                    }
+                }
+            }
             h2{
                 margin: $igsul $gutters 0;
-            }
-            .CSSgal{
-                @include mq($from: 1200px){
-                    margin: 0 $gutters;
-                }
-            }
-            @include mq($from: wide){
-                h2{
-                    width: 1200px;
-                    margin: $igsul auto 0;
-                }
-                .CSSgal{
-                    margin: 0 auto;
-                }
             }
             &__cta{
                .btn--anim{

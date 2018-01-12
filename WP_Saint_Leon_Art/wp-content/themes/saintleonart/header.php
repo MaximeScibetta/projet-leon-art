@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php wp_title() ;?></title>
     <link rel="stylesheet"  href="<?= dw_asset('css/main.css');?>">
+    <link rel="stylesheet" href="<?= dw_asset('dist/css/glide.core.css');?>">
+    <link rel="stylesheet" href="<?= dw_asset('dist/css/glide.theme.css');?>">
 </head>
 <body>
 <?php if( get_page_template_slug( $post->ID ) != 'template-perso.php' 

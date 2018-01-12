@@ -8,11 +8,12 @@ $news->query([
     'post_type' => 'event',
     'name' => sla_get_the_slug(),
 ]); ?>
+<div itemscope itemtype="http://schema.org/Event">
 <?php if ($news->have_posts()) : while ($news->have_posts()) : $news->the_post(); ?>
     <?php $fields = get_fields(); ?>
     <section class="news__introduction" style="background-image: url(<?= $fields['event_branding']; ?>);">
         <div class="title">
-            <h2><?= $fields['event_name']; ?></h2>
+            <h2 itemprop="name"><?= $fields['event_name']; ?></h2>
         </div>
     </section>
     <?php if ($fields['event_date'] || $fields['event_hour'] || $fields['event_address']) : ?>
@@ -24,9 +25,11 @@ $news->query([
                         <path d="M38,23h-7h-2h-7h-2h-9v9v2v7v2v9h9h2h7h2h7h2h9v-9v-2v-7v-2v-9h-9H38z M31,25h7v7h-7V25z M38,41h-7v-7h7V41z M22,34h7v7h-7 V34z M22,25h7v7h-7V25z M13,25h7v7h-7V25z M13,34h7v7h-7V34z M20,50h-7v-7h7V50z M29,50h-7v-7h7V50z M38,50h-7v-7h7V50z M47,50h-7v-7h7V50z M47,41h-7v-7h7V41z M47,25v7h-7v-7H47z"/>
                     </g>
                 </svg>
-                <?= $fields['event_date']; ?>
+                <span itemprop="startTime">
+                    <?= $fields['event_date']; ?>
+                </span>
             </time>
-            <span class="hour">
+            <span class="hour" itemprop="doorTime">
                 <svg version="1.1" id="hour_right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
                     <g>
                         <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
@@ -55,12 +58,14 @@ $news->query([
                     </g>
                 </svg>
                 <?= $fields['event_address']; ?>
-            </address>
+            </address itemprop="location">
         </div>
     <?php endif; ?>
     <section class="news__content">
         <h2><?= $fields['event_name']; ?></h2>
-        <?= $fields['event_description']; ?>
+        <div itemprop="description">
+            <?= $fields['event_description']; ?>   
+        </div>
     </section>
     <section class="news__cta">
         <a href="<?= get_page_link(282); ?>" class="btn btn--anim" data-text="Voir toutes nos actualités">Voir toutes nos actualités</a>
@@ -72,11 +77,12 @@ $news->query([
         <?php $images = get_field('event_gallery');
         if ($images) : ?>
             <?php foreach ($images as $image) : ?>
-                <img src="<?php echo $image['gallery_item']['url']; ?>" alt="<?php echo $image['gallery_item']['alt']; ?>" />
+                <img itemprop="image" src="<?php echo $image['gallery_item']['url']; ?>" alt="<?php echo $image['gallery_item']['alt']; ?>" />
             <?php endforeach; ?>
         <?php endif; ?>
     </section>
     <?php endif; ?>
 <?php endwhile;
 endif; ?>
+</div>
 <?php get_footer(); ?>

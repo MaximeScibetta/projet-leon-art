@@ -208,7 +208,7 @@
             $width =  $image['width'];
             $height =  $image['height'];
         }
-        return '<img src="' . $url . '" alt="' . $alt . '">';
+        return '<img itemprop="image" src="' . $url . '" alt="' . $alt . '">';
     }
 
     function sla_image_attribute($function)
