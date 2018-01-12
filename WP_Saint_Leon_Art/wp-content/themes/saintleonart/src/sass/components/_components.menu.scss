@@ -103,6 +103,7 @@ body{
             //     transition: transform 0.5s;
             //     width: 300px;
             // }
+           
         }
         .header{
             padding-top: 0;
@@ -156,7 +157,8 @@ body{
                             position: absolute;
                             opacity: 0;
                             top: -24px;left: 45px;
-                            transition: .2s cubic-bezier(.86,0,.07,1);
+                            transition: .2s cubic-bezier(.86, 0, .07, 1);
+                            transform: translateX(200%);
                         }
                         &.open{
                             form{
@@ -167,8 +169,10 @@ body{
                     }
                 }
                 .menu.open{
-                    transform: translateX(-10%);
                     transition: .5s cubic-bezier(.86, 0, .07, 1);
+                    transform: translateX(-20%);
+                    @include mq($from: 900px, $until: 1200px){
+                    }
                 }
                 .onScroll{
                     background: #4e283a;

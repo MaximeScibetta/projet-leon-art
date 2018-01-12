@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Page all artiss    
+Template Name: Page all artist   
  */
 get_header();
 ?>

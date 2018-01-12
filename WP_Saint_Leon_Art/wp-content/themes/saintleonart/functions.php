@@ -405,7 +405,7 @@
                 
             // Set custom pagination query.
                 global $wp_rewrite;
-                $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=282";
+                $base = trailingslashit(home_url('/')) . "?{$wp_rewrite->pagination_base}=%#%&page_id=282";
                 $paginateArgs = array(
                     'format' => '?page/%#%/',
                     'current' => ($_SESSION['news_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['news_current_page'], // Reference the custom paged query we initially set.

@@ -18,6 +18,7 @@ get_header();
             <p>Vous allez recevoir un email de confirmation d'ici 15 minutes.</p>
             <p>Merci de votre confiance & à bientôt !</p>
         </div>
+        <a href="<?= get_permalink('282'); ?>" class="btn btn--anim" data-text="Voir nos actualités">Voir nos actualités</a>
     </div>
 </section>
 <?php get_footer(); ?>

@@ -94,7 +94,7 @@ if (pageTitle === 'Bienvenue - Saint-Léon\'Art' ){
 // Hamburger menu and sidebar
 /* --------------------------*/
     const hamburger = document.querySelector('.hamburger');
-    const search = document.querySelector('.search-icon')
+    // const search = document.querySelector('.search-icon')
     let sidebarOpened = false
 
     function openMenu(){
@@ -128,13 +128,13 @@ if (pageTitle === 'Bienvenue - Saint-Léon\'Art' ){
         }
     });
 
-    search.addEventListener('click', function(e) {
-        e.stopPropagation()
-        e.preventDefault()
-        search.classList.toggle('open')
-        search.parentNode.classList.toggle('open');
-        search.parentNode.parentNode.classList.toggle('open');
-    });
+    // search.addEventListener('click', function(e) {
+    //     e.stopPropagation()
+    //     e.preventDefault()
+    //     search.classList.toggle('open')
+    //     search.parentNode.classList.toggle('open');
+    //     search.parentNode.parentNode.classList.toggle('open');
+    // });
 
 if (pageTitle === ' » Programme - Saint-Léon\'Art'){
     /* --------------------------*/
@@ -474,36 +474,42 @@ if (window.matchMedia("(min-width: 980px)").matches) {
 /* --------------------------*/
 // Newsletter validation effect
 /* --------------------------*/
-function PathLoader(el) {
-    this.el = el;
-    this.strokeLength = el.getTotalLength();
-
-    // set dash offset to 0
-    this.el.style.strokeDasharray =
-        this.el.style.strokeDashoffset = this.strokeLength;
+if (pageTitle === ' » Newsletter - Saint-Léon\'Art'){
+    function PathLoader(el) {
+        this.el = el;
+        this.strokeLength = el.getTotalLength();
+    
+        // set dash offset to 0
+        this.el.style.strokeDasharray =
+            this.el.style.strokeDashoffset = this.strokeLength;
+    }
+    
+    PathLoader.prototype._draw = function (val) {
+        this.el.style.strokeDashoffset = this.strokeLength * (1 - val);
+    }
+    
+    PathLoader.prototype.setProgress = function (val, cb) {
+        this._draw(val);
+        if (cb && typeof cb === 'function') cb();
+    }
+    
+    PathLoader.prototype.setProgressFn = function (fn) {
+        if (typeof fn === 'function') fn(this);
+    }
+    
+    var body = document.body,
+        svg = document.querySelector('svg path');
+    
+    if (svg !== null) {
+        svg = new PathLoader(svg);
+    
+        setTimeout(function () {
+            document.body.classList.add('active');
+            svg.setProgress(1);
+        }, 200);
+    }
 }
 
-PathLoader.prototype._draw = function (val) {
-    this.el.style.strokeDashoffset = this.strokeLength * (1 - val);
-}
-
-PathLoader.prototype.setProgress = function (val, cb) {
-    this._draw(val);
-    if (cb && typeof cb === 'function') cb();
-}
-
-PathLoader.prototype.setProgressFn = function (fn) {
-    if (typeof fn === 'function') fn(this);
-}
-
-var body = document.body,
-    svg = document.querySelector('svg path');
-
-if (svg !== null) {
-    svg = new PathLoader(svg);
-
-    setTimeout(function () {
-        document.body.classList.add('active');
-        svg.setProgress(1);
-    }, 200);
-}
+$('.search-button').click(function () {
+    $(this).parent().toggleClass('open');
+});

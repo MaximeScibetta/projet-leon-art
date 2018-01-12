@@ -12,19 +12,15 @@
                 <span>SaintLeon'Art</span>
             </div>
             <form class="form" method="post" action="http://saintleonart.app/?na=s" onsubmit="return newsletter_check(this)">
-                <fieldset>
+                <fieldset class="tnp-field tnp-field-firstname">
                     <legend class="u-hidden-visually">Prénom</legend>
-                    <div class="tnp-field tnp-field-firstname">
-                        <label>Prénom</label>
-                        <input class="tnp-firstname input" type="text" name="nn" id="news_first_name">
-                    </div>
+                    <label for="nn">Prénom</label>
+                    <input class="tnp-firstname input" type="text" name="nn" id="nn">
                 </fieldset>
-                <fieldset>
+                <fieldset class="tnp-field tnp-field-email">
                     <legend class="u-hidden-visually">Email</legend>
-                    <div class="tnp-field tnp-field-email">
-                        <label>Email</label>
-                        <input id="news_email" class="input tnp-email" type="email" name="ne" required>
-                    </div>
+                    <label for="ne">Email</label>
+                    <input id="ne" class="input tnp-email" type="email" name="ne" required>
                 </fieldset>
                 <div class="tnp-field tnp-field-button">
                     <button type="submit" class="btn btn--anim tnp-submit" data-text="Inscritpion au newsletter">Inscritpion au newsletter</button>
