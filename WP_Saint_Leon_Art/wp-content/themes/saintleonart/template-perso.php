@@ -14,7 +14,7 @@ get_header();
 <?php if ( $perso->have_posts() ): while( $perso->have_posts() ): $perso->the_post();?>
 <?php $fields = get_fields();?>
 <section class="introduction" style="background-image: url(<?= $fields['artist_branding'] ;?>);">
-    <h2 id="branding"><?= $fields['artist_surname']; ?> <?= $fields['artist_name']; ?><span> SaintLeon'Art</span></h2>
+    <h2 class="branding" id="branding"><?= $fields['artist_surname']; ?> <?= $fields['artist_name']; ?><span> SaintLeon'Art</span></h2>
     <?php if( have_rows('artist_location') ): the_row(); ?>
         <div class="location">
             <a href="#map">
@@ -24,6 +24,10 @@ get_header();
             </a>
         </div>
     <?php endif; ?>
+    <a href="#next" class="demo" id="next">
+        <span></span>
+        Scroll
+    </a>
 </section>
 <?php if( have_rows('section_description') ): while ( have_rows('section_description') ) : the_row(); ?>
     <section class="description">

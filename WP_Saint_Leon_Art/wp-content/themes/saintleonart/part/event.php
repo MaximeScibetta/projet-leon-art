@@ -12,7 +12,14 @@
     <div class="event__item">
         <div class="head">
             <p class="date"><span><?php ms_the_event_date();?>.</span></p>
-            <img src="<?= $fields['event_image'];?>" alt="Illustration de l'événement <?= $fields['event_name']; ?>" class="">
+            <img src="<?= $fields['event_image'];?>" alt="Illustration de l'événement <?= $fields['event_name']; ?>"
+            srcset="
+                <?= $fields['event_image_mobile']; ?> 700w,
+                <?= $fields['event_image']; ?> 150w" 
+            sizes="
+                (max-width: 919px) 70vw,
+                (max-width: 9000px) 5vw,
+                150px">
         </div>
         <div class="content">
             <p class="title u-margin-top-small"><?= $fields['event_name']; ?></p>

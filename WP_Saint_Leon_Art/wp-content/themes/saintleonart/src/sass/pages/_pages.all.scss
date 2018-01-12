@@ -340,5 +340,11 @@
                 }
             }
         }
+        span.page-numbers.dots{
+            &:hover{
+                cursor: default;
+                text-decoration: none;
+            }
+        }
     }
 }

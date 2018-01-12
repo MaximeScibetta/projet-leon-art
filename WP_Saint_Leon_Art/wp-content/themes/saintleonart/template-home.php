@@ -81,7 +81,7 @@ get_header();
         </a>
         <?php endwhile; endif; ?>
     </div>
-    <a href="http://saintleonart.app/?page_id=29" class="btn btn--anim u-margin-top" data-text="Voir le programme">Voir le programme</a>
+    <a href="<?= get_permalink('29'); ?>" class="btn btn--anim u-margin-top" data-text="Voir le programme">Voir le programme</a>
 </section>
 <section class="artist">
     <h2 class="u-margin-bottom">Nos participants</h2>
@@ -89,12 +89,12 @@ get_header();
             <!-- Le premier a supprimé -->
         <?php get_template_part('part/artist') ;?>
     </div>
-    <a href="http://saintleonart.app/?page_id=49" class="btn btn--anim u-margin-top" data-text="Voir tous nos artistes">Voir tous nos artistes</a>
+    <a href="<?= get_permalink('49'); ?>" class="btn btn--anim u-margin-top" data-text="Voir tous nos artistes">Voir tous nos artistes</a>
 </section>
 <section class="event">
     <h2>Prochain événement</h2>
         <?php get_template_part('part/event') ;?>
-    <a href="" class="btn btn--anim u-margin-top" data-text="Voir tous nos événements">Voir tous nos événements</a>
+    <a href="<?= get_permalink('233') ;?>" class="btn btn--anim u-margin-top" data-text="Voir tous nos événements">Voir tous nos événements</a>
 </section>
 <section class="instagram">
     <svg class="" version="1.1" id="instagram_color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 551.034 551.034" style="enable-background:new 0 0 551.034 551.034;">
