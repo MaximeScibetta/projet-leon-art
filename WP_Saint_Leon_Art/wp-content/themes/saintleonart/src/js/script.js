@@ -230,93 +230,19 @@ if (pageTitle === ' » À propos - Saint-Léon\'Art'){
     /* --------------------------*/
     // JS Slider
     /* --------------------------*/
-    const fCancelAnchor = function (e) {
-        e.preventDefault();
+    if (window.matchMedia("(min-width: 720px)").matches) {
+        $("#Glide").glide({
+            startAt: 2,
+            paddings: "150",
+            hoverpause: true,
+        });
+    } else {
+        $("#Glide").glide({
+            startAt: 2,
+            hoverpause: true,
+        });
     }
-    const bullets = document.querySelectorAll('.bullets_nav');
-    var translateValue;
-    Array.from(bullets).forEach(function ($btn) {
-        $btn.addEventListener("click", fCancelAnchor);
-
-
-        $btn.addEventListener('click', () => {
-
-            if (window.matchMedia("(max-width: 739px)").matches) {
-                var translateValue = $btn.getAttribute('data-translateValue-mobile');
-            } else {
-                var translateValue = $btn.getAttribute('data-translateValue-desktop');
-
-            }
-
-            // Remove class active from prec focus
-            if ($btn.parentNode.querySelector('.active')) {
-                $btn.parentNode.querySelector('.active').classList.remove('active');
-            }
-
-            // Make translateX animation of slider
-            document.querySelector('.slider').style.transform = `translateX(${translateValue})`;
-
-            // Add class active from actual focus
-            $btn.classList.add('active');
-
-            // Change opacity of prec/next image
-            if (document.querySelectorAll('.slider .precNext')) {
-                document.querySelectorAll('.slider .precNext')[0].classList.remove('precNext');
-                document.querySelectorAll('.slider .precNext')[0].classList.remove('precNext');
-            }
-            img[$btn.getAttribute('data-prec-img')].classList.toggle('precNext');
-            img[$btn.getAttribute('data-next-img')].classList.toggle('precNext');
-        });
-    });
-
-    const prevNext = document.querySelectorAll('.prevNext div button');
-
-    Array.from(prevNext).forEach(function ($prevNext) {
-        $prevNext.addEventListener("click", fCancelAnchor);
-
-
-        $prevNext.addEventListener("click", () => {
-
-            if (window.matchMedia("(max-width: 739px)").matches) {
-                var translateValue = $prevNext.getAttribute('data-translateValue-mobile');
-            } else {
-                var translateValue = $prevNext.getAttribute('data-translateValue-desktop');
-
-            }
-            // Make translateX animation of slider
-            document.querySelector('.slider').style.transform = `translateX(${translateValue})`;
-
-            // Create variable for the parent
-            const prevNextParent = $prevNext.parentNode.parentNode;
-
-            // Add visible/hidden style for the nextPrec button
-            prevNextParent.childNodes[$prevNext.getAttribute('data-next')].style.visibility = 'visible';
-            prevNextParent.childNodes[$prevNext.getAttribute('data-prec')].style.visibility = 'hidden';
-
-            // Change opacity of prec/next image
-            if (document.querySelectorAll('.slider .precNext')) {
-                document.querySelectorAll('.slider .precNext')[0].classList.remove('precNext');
-                document.querySelectorAll('.slider .precNext')[0].classList.remove('precNext');
-            }
-            img[$prevNext.getAttribute('data-prec-img')].classList.toggle('precNext');
-            img[$prevNext.getAttribute('data-next-img')].classList.toggle('precNext');
-
-            // Remove class active from bullets prec focus
-            const btnA = document.querySelectorAll('.bullets_nav');
-            const btn = document.querySelector('.bullets_nav');
-            if (document.querySelector('.bullets .active')) {
-                document.querySelector('.bullets .active').classList.remove('active');
-            }
-
-            // Add class active from actual focus
-            btnA[$prevNext.getAttribute('data-focus')].classList.add('active');
-        });
-
-        $
-    });
-
-    const img = document.querySelectorAll('.slider div');
-
+    
     $('.count').each(function () {
         $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
