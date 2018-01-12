@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 .hamburger,
-.hamburger:focus{
+.hamburger:active{
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -21,7 +21,7 @@
 }
 
 .hamburger.is-active,
-.hamburger:focus{
+.hamburger:active{
   animation: smallbig 0.6s forwards;
 }
 
@@ -44,21 +44,21 @@
 .hamburger.is-active .line:nth-child(1),
 .hamburger.is-active .line:nth-child(2),
 .hamburger.is-active .line:nth-child(3),
-.hamburger:focus .line:nth-child(1),
-.hamburger:focus .line:nth-child(2),
-.hamburger:focus .line:nth-child(3){
+.hamburger:active .line:nth-child(1),
+.hamburger:active .line:nth-child(2),
+.hamburger:active .line:nth-child(3){
   -webkit-transition-delay: 0.2s;
   -o-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
 
 .hamburger.is-active .line:nth-child(2),
-.hamburger:focus .line:nth-child(2){
+.hamburger:active .line:nth-child(2){
   opacity: 0;
 }
 
 .hamburger.is-active .line:nth-child(1),
-.hamburger:focus .line:nth-child(1){
+.hamburger:active .line:nth-child(1){
   -webkit-transform: translateY(13px) rotate(45deg);
   -ms-transform: translateY(13px) rotate(45deg);
   -o-transform: translateY(13px) rotate(45deg);
@@ -66,7 +66,7 @@
 }
 
 .hamburger.is-active .line:nth-child(3),
-.hamburger:focus .line:nth-child(3){
+.hamburger:active .line:nth-child(3){
   -webkit-transform: translateY(-13px) rotate(-45deg);
   -ms-transform: translateY(-13px) rotate(-45deg);
   -o-transform: translateY(-13px) rotate(-45deg);

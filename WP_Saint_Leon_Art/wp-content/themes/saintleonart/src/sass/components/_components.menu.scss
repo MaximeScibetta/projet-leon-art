@@ -98,12 +98,11 @@ body{
                     }
                 }
             }
-            .hamburger:focus ~ .site-nav{
-                transform: translateX(0);
-                transition: transform 0.5s;
-                width: 300px;
-    
-            }
+            // .hamburger:focus ~ .site-nav{
+            //     transform: translateX(0);
+            //     transition: transform 0.5s;
+            //     width: 300px;
+            // }
         }
         .header{
             padding-top: 0;

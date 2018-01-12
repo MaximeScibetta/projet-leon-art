@@ -95,12 +95,37 @@ if (pageTitle === 'Bienvenue - Saint-Léon\'Art' ){
 /* --------------------------*/
     const hamburger = document.querySelector('.hamburger');
     const search = document.querySelector('.search-icon')
+    let sidebarOpened = false
 
+    function openMenu(){
+        document.body.classList.add('has-sidebar')
+        hamburger.classList.add('is-active')
+        sidebarOpened = true;
+        return;
+    }
+
+    function closeMenu() {
+        document.body.classList.remove('has-sidebar')
+        hamburger.classList.remove('is-active')
+        sidebarOpened = false;
+        return;
+    }
     hamburger.addEventListener('click', function(e) {
         e.stopPropagation()
         e.preventDefault()
-        hamburger.classList.toggle('is-active')
-        document.body.classList.toggle('has-sidebar')
+        if (!sidebarOpened) {
+            openMenu()
+        }else{
+            closeMenu()
+        }
+    });
+    document.body.addEventListener('click', function () {
+        if (sidebarOpened) {
+            document.body.classList.remove('has-sidebar')
+            hamburger.classList.remove('is-active')
+            sidebarOpened = false;
+            return;
+        }
     });
 
     search.addEventListener('click', function(e) {

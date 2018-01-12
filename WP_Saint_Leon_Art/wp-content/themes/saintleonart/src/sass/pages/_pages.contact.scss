@@ -19,7 +19,7 @@
                     line-height: 0.9;
                     margin: $igsu auto 0;
                     display: block;
-                    vertical-align: bottom;
+                    vertical-align: text-bottom;
                     
                     @include mq($from: 600px){
                         display: inline-block;
