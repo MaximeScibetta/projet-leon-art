@@ -50,18 +50,18 @@ get_header();
     <div class="program__navigation">
         <div class="day"> 
             <?php if( have_rows('days') ): $i=1; $first = true; while( have_rows('days') ): the_row(); ?>
-                <a href="#day<?php if($i): echo $i; endif; $i++;?>"><?php the_sub_field('date'); ?> <?= $key ;?> </a>
+                <a title="Vers le programe du <?php the_sub_field('date'); ?>" href="#day<?php if($i): echo $i; endif; $i++;?>"><?php the_sub_field('date'); ?> <?= $key ;?> </a>
             <?php endwhile; endif; ?>
-            <a  class="<?php if ($first) : echo 'active'; endif; ?>" href="#all">Tous le programme</a>
+            <a title="Vers tous le programme de l'événement" class="<?php if ($first) : echo 'active'; endif; ?>" href="#all">Tous le programme</a>
         </div>
-        <a href="#mapinteractiv" class="interactiv">Map interactive</a>
+        <a title="Vers la map interactive de l'événement" href="#mapinteractiv" class="interactiv">Map interactive</a>
 
     </div>
     <?php if( have_rows('days') ): $d=1;  while ( have_rows('days') ) : the_row(); ?>
         <div class="timeline<?php if($d): echo ' day'.$d; endif;?>" id="<?php if($d): echo 'day'.$d; endif; $d++;?>">
         <h3>Ancre section</h3>
         <?php if( have_rows('events') ): $i=0; while ( have_rows('events') ) : the_row(); ?>
-            <a href="<?php  the_sub_field('event_link'); ?>">
+            <a title="Vers la page de <?php the_sub_field('event_name') ;?>" href="<?php  the_sub_field('event_link'); ?>">
                 <div class="timeline-item">
                     <div class="timeline-icon"></div>
                     <div class="timeline-content<?php if($i%2 == 1): echo ' right'; endif; $i++;?>">
@@ -102,7 +102,7 @@ get_header();
         
         <?php if (have_rows('days')) : $w = 0; while (have_rows('days'))  : the_row(); ?>
         <?php if (have_rows('events')) : $i = 0; while (have_rows('events')) : the_row(); ?>
-        <a href="<?php the_sub_field('event_link'); ?>">
+        <a title="Vers la page de <?php the_sub_field('event_name'); ?>" href="<?php the_sub_field('event_link'); ?>">
                     <div class="timeline-item">
                         <div class="timeline-icon"></div>
                         <div class="timeline-content<?php if ($i % 2 == 1) : echo ' right'; endif; $i++; ?>">

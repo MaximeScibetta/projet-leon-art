@@ -38,11 +38,14 @@ get_header();
     // Init query
         $query = new WP_Query($args);
     
-    // Pagination query
+    // Set custom pagination query.
+        global $wp_rewrite;
+        $base = trailingslashit(home_url('/')) . "?{$wp_rewrite->pagination_base}=%#%&page_id=236";
         $paginateArgs = array(
             'format' => '?page=%#%',
             'current' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'],
-            'total' => $query->max_num_pages 
+            'total' => $query->max_num_pages,
+            'base' => $base,
         );
 ?>
 <section class="introduction litle" style="background-image: url(<?= dw_asset('images/all-expo.jpg'); ?>);">

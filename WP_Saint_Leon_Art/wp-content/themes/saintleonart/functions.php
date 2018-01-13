@@ -283,18 +283,7 @@
 
         // Init query
             $query = new WP_Query($args);
-        
-            
-        // Set custom pagination query.
-            global $wp_rewrite;
-            $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=236";
-            $paginateArgs = array(
-                'format' => '?page/%#%/',
-                'current' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'], // Reference the custom paged query we initially set.
-                'total' => $query->max_num_pages, // Max pages from our custom query.
-                'base' => $base,
-            );
-            
+
         if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
             $fields = get_fields();
             include('part/all-artist.php');
@@ -347,7 +336,7 @@
             
         // Set custom pagination query.
             global $wp_rewrite;
-            $base = trailingslashit('http://saintleonart.app/') . "?{$wp_rewrite->pagination_base}=%#%&page_id=233";
+            $base = trailingslashit(home_url('/')) . "?{$wp_rewrite->pagination_base}=%#%&page_id=233";
             $paginateArgs = array(
                 'format' => '?page/%#%/',
                 'current' => ($_SESSION['event_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['event_current_page'], // Reference the custom paged query we initially set.

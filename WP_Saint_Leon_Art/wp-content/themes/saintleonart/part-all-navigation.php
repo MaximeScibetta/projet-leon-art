@@ -13,7 +13,7 @@
             </a>
         </li>
         <?php foreach (dw_get_nav_items('all__navigation') as $item) : ?>
-            <li><a href="<?php echo $item->link; ?>"><?php echo $item->label; ?></a></li>
+            <li><a title="Vers la page <?= $item->label ;?>" href="<?php echo $item->link; ?>"><?php echo $item->label; ?></a></li>
         <?php endforeach; ?>
     </ul>
 </div>

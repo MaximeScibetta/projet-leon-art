@@ -27,14 +27,14 @@ get_header();
             </p>
         </div>
         <?php if( have_rows('button') ): while ( have_rows('button') ) : the_row(); ?>
-        <a href="<?php the_sub_field('btn_link'); ?>" class="btn btn--anim" data-text="<?php the_sub_field('btn_name'); ?>"><?php the_sub_field('btn_name'); ?></a>
+        <a title="Vers la page notre programme" href="<?php the_sub_field('btn_link'); ?>" class="btn btn--anim" data-text="<?php the_sub_field('btn_name'); ?>"><?php the_sub_field('btn_name'); ?></a>
         <?php endwhile; endif; ?>
     </section>
     <?php if( have_rows('score') ): while ( have_rows('score') ) : the_row(); ?>
         <section class="score">
             <ul>
                 <li>
-                    <h2><a href="">En 2013...</a></h2>
+                    <h2>En 2013..</h2>
                 </li>
             </ul>
             <div class="score__flex flex">
@@ -254,26 +254,25 @@ get_header();
         </div>
         
         <div class="gallery__cta u-margin-top">
-            <a href="" class="btn btn--anim" data-text="Notre galerie instagram">Notre galerie instagram</a>
-            <a href="" class="btn btn--anim" data-text="Notre galerie facebook">Notre galerie facebook</a>
-            <a href="" class="btn btn--anim" data-text="Notre galerie twitter">Notre galerie twitter</a>
-            <a href="" class="btn btn--anim" data-text="Notre galerie photos">Notre galerie photos</a>
+            <a title="Vers la gallerie de notre page facebook" href="http://instagram.be" class="btn btn--anim" data-text="Notre galerie instagram">Notre galerie instagram</a>
+            <a title="Vers la gallerie de notre page instagram" href="http://facebook.be" class="btn btn--anim" data-text="Notre galerie facebook">Notre galerie facebook</a>
+            <a title="Vers la gallerie de notre page twitter" href="http://twitter.be" class="btn btn--anim" data-text="Notre galerie twitter">Notre galerie twitter</a>
             <div class="btn--mobile">
                 <h3 class="u-margin-bottom">Nos galeries</h3>
-                <a href="">
+                <a title="Vers notre page facebook" href="http://facebook.be">
                     facebook
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.124 96.123">
                         <path d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 0 0-1.96 1.961v15.803a1.96 1.96 0 0 0 1.96 1.96H36.57v39.876a1.96 1.96 0 0 0 1.96 1.96h16.352a1.96 1.96 0 0 0 1.96-1.96V54.287h14.654a1.96 1.96 0 0 0 1.96-1.96l.006-15.803a1.963 1.963 0 0 0-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 0 0 1.959-1.96V1.98A1.96 1.96 0 0 0 72.089.02z"/>
                     </svg>
                 </a>
-                <a href="">
+                <a title="Vers notre page instagram" href="http://instagram.be">
                     instagram
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169.063 169.063">
                         <path d="M122.406 0H46.654C20.929 0 0 20.93 0 46.655v75.752c0 25.726 20.929 46.655 46.654 46.655h75.752c25.727 0 46.656-20.93 46.656-46.655V46.655C169.063 20.93 148.133 0 122.406 0zm31.657 122.407c0 17.455-14.201 31.655-31.656 31.655H46.654C29.2 154.063 15 139.862 15 122.407V46.655C15 29.201 29.2 15 46.654 15h75.752c17.455 0 31.656 14.201 31.656 31.655v75.752z"/>
                         <path d="M84.531 40.97c-24.021 0-43.563 19.542-43.563 43.563 0 24.02 19.542 43.561 43.563 43.561s43.563-19.541 43.563-43.561c0-24.021-19.542-43.563-43.563-43.563zm0 72.123c-15.749 0-28.563-12.812-28.563-28.561 0-15.75 12.813-28.563 28.563-28.563s28.563 12.813 28.563 28.563c0 15.749-12.814 28.561-28.563 28.561zM129.921 28.251c-2.89 0-5.729 1.17-7.77 3.22a11.053 11.053 0 0 0-3.23 7.78c0 2.891 1.18 5.73 3.23 7.78 2.04 2.04 4.88 3.22 7.77 3.22 2.9 0 5.73-1.18 7.78-3.22 2.05-2.05 3.22-4.89 3.22-7.78 0-2.9-1.17-5.74-3.22-7.78-2.04-2.05-4.88-3.22-7.78-3.22z"/>
                     </svg>
                 </a>
-                <a href="">
+                <a title="Vers notre page twitter" href="http://twitter.be">
                     twitter
                     <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
                         <g>
@@ -302,7 +301,7 @@ get_header();
                 </p>
             </div>
             <?php if( have_rows('asbl_button') ): while ( have_rows('asbl_button') ) : the_row(); ?>
-            <a href="<?php the_sub_field('btn_link'); ?>" class="btn btn--anim" data-text="<?php the_sub_field('btn_name'); ?>"><?php the_sub_field('btn_name'); ?></a>
+            <a title="Vers la page actualités" href="<?php the_sub_field('btn_link'); ?>" class="btn btn--anim" data-text="<?php the_sub_field('btn_name'); ?>"><?php the_sub_field('btn_name'); ?></a>
             <?php endwhile; endif; ?>
         </section>
     <?php endif;?>
@@ -318,20 +317,20 @@ get_header();
                         <p class="job" itemprop="jobTitle"><?php the_sub_field('job'); ?></p>
                     </div>
                     <div class="social">
-                        <a itemprop="follows" href="<?php the_sub_field('facebook'); ?>">
+                        <a title="Vers la page facebook de <?php the_sub_field('surname') ;?>" itemprop="follows" href="<?php the_sub_field('facebook'); ?>">
                             facebook
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.124 96.123">
                                 <path d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 0 0-1.96 1.961v15.803a1.96 1.96 0 0 0 1.96 1.96H36.57v39.876a1.96 1.96 0 0 0 1.96 1.96h16.352a1.96 1.96 0 0 0 1.96-1.96V54.287h14.654a1.96 1.96 0 0 0 1.96-1.96l.006-15.803a1.963 1.963 0 0 0-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 0 0 1.959-1.96V1.98A1.96 1.96 0 0 0 72.089.02z"/>
                             </svg>
                         </a>
-                        <a itemprop="follows" href="<?php the_sub_field('instagram'); ?>">
+                        <a title="Vers la page instagram de <?php the_sub_field('surname') ;?>" itemprop="follows" href="<?php the_sub_field('instagram'); ?>">
                             instagram
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169.063 169.063">
                                 <path d="M122.406 0H46.654C20.929 0 0 20.93 0 46.655v75.752c0 25.726 20.929 46.655 46.654 46.655h75.752c25.727 0 46.656-20.93 46.656-46.655V46.655C169.063 20.93 148.133 0 122.406 0zm31.657 122.407c0 17.455-14.201 31.655-31.656 31.655H46.654C29.2 154.063 15 139.862 15 122.407V46.655C15 29.201 29.2 15 46.654 15h75.752c17.455 0 31.656 14.201 31.656 31.655v75.752z"/>
                                 <path d="M84.531 40.97c-24.021 0-43.563 19.542-43.563 43.563 0 24.02 19.542 43.561 43.563 43.561s43.563-19.541 43.563-43.561c0-24.021-19.542-43.563-43.563-43.563zm0 72.123c-15.749 0-28.563-12.812-28.563-28.561 0-15.75 12.813-28.563 28.563-28.563s28.563 12.813 28.563 28.563c0 15.749-12.814 28.561-28.563 28.561zM129.921 28.251c-2.89 0-5.729 1.17-7.77 3.22a11.053 11.053 0 0 0-3.23 7.78c0 2.891 1.18 5.73 3.23 7.78 2.04 2.04 4.88 3.22 7.77 3.22 2.9 0 5.73-1.18 7.78-3.22 2.05-2.05 3.22-4.89 3.22-7.78 0-2.9-1.17-5.74-3.22-7.78-2.04-2.05-4.88-3.22-7.78-3.22z"/>
                             </svg>
                         </a>
-                        <a itemprop="follows" href="<?php the_sub_field('twitter'); ?>">
+                        <a title="Vers la page twitter de <?php the_sub_field('surname') ;?>" itemprop="follows" href="<?php the_sub_field('twitter'); ?>">
                             twitter
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;">
                                 <g>
@@ -347,7 +346,7 @@ get_header();
                                 </g>
                             </svg>
                         </a>
-                        <a itemprop="email" href="mailto:<?php the_sub_field('email'); ?>">
+                        <a title="Vers votre boîte email" itemprop="email" href="mailto:<?php the_sub_field('email'); ?>">
                             mail
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.012 31.012" style="enable-background:new 0 0 31.012 31.012;">
                                 <g>
@@ -374,7 +373,7 @@ get_header();
                 <?php ms_the_data_file(); ?>
             <?php endwhile;?>
         </div>
-        <a href="" class="btn btn--anim" data-text="Voir nos actualités">Voir nos actualités</a>
+        <a title="Vers la page toutes nos actualités" href="" class="btn btn--anim" data-text="Voir nos actualités">Voir nos actualités</a>
     </section>
     <?php endif;?>
     <?php endwhile;endif; ?>

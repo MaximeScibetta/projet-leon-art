@@ -41,10 +41,10 @@ get_header();
     </ul>
     <div class="introduction__cta u-padding-horizontal-small u-margin-top-large">
         <?php if( have_rows('buttons') ): while ( have_rows('buttons') ) : the_row(); ?>
-        <a href="<?php the_sub_field('btn_link'); ?>" class="btn btn--anim" data-text="<?php the_sub_field('btn_name'); ?>"><?php the_sub_field('btn_name'); ?></a>
+        <a title="Vers la page <?php the_sub_field('btn_name') ;?>" href="<?php the_sub_field('btn_link'); ?>" class="btn btn--anim" data-text="<?php the_sub_field('btn_name'); ?>"><?php the_sub_field('btn_name'); ?></a>
         <?php endwhile; endif; ?>
     </div>
-    <a href="#next" class="demo">
+    <a title="Vers la section suivante ci-dessous" href="#next" class="demo">
         <span></span>
         Scroll
     </a>
@@ -54,7 +54,7 @@ get_header();
     <div class="activitie__flex flex">
         <?php if( have_rows('type_activitie') ): while ( have_rows('type_activitie') ) : the_row(); ?>
         
-        <a class="clickable" href="<?php the_sub_field('link'); ?>">
+        <a title="Vers la page tous nos <?php the_sub_field('title_activitie') ;?>" class="clickable" href="<?php the_sub_field('link'); ?>">
             <div class="flex__item">
                 <?php sla_image_attribute('illustration'); ?>
                 <div class="container">
@@ -81,7 +81,7 @@ get_header();
         </a>
         <?php endwhile; endif; ?>
     </div>
-    <a href="<?= get_permalink('29'); ?>" class="btn btn--anim u-margin-top" data-text="Voir le programme">Voir le programme</a>
+    <a title="Vers la page notre programme" href="<?= get_permalink('29'); ?>" class="btn btn--anim u-margin-top" data-text="Voir le programme">Voir le programme</a>
 </section>
 <section class="artist">
     <h2 class="u-margin-bottom">Nos participants</h2>
@@ -89,12 +89,12 @@ get_header();
             <!-- Le premier a supprimé -->
         <?php get_template_part('part/artist') ;?>
     </div>
-    <a href="<?= get_permalink('49'); ?>" class="btn btn--anim u-margin-top" data-text="Voir tous nos artistes">Voir tous nos artistes</a>
+    <a title="Vers la page tous nos artistes" href="<?= get_permalink('49'); ?>" class="btn btn--anim u-margin-top" data-text="Voir tous nos artistes">Voir tous nos artistes</a>
 </section>
 <section class="event">
     <h2>Prochain événement</h2>
         <?php get_template_part('part/event') ;?>
-    <a href="<?= get_permalink('233') ;?>" class="btn btn--anim u-margin-top" data-text="Voir tous nos événements">Voir tous nos événements</a>
+    <a title="Vers la page tous nos événements" href="<?= get_permalink('233') ;?>" class="btn btn--anim u-margin-top" data-text="Voir tous nos événements">Voir tous nos événements</a>
 </section>
 <section class="instagram">
     <svg class="" version="1.1" id="instagram_color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 551.034 551.034" style="enable-background:new 0 0 551.034 551.034;">
@@ -137,7 +137,7 @@ get_header();
     </h2>
     <div id="instafeed" class="instagram__gallery u-margin-top">
     </div>
-    <a href="" class="btn btn--anim" data-text="Charger plus d'images"id="load-more">Charger plus d'images</a>
+    <a title="Charger plus d'images de nore instagram" href="" class="btn btn--anim" data-text="Charger plus d'images"id="load-more">Charger plus d'images</a>
     
 </section>
 <section class="twitter">
@@ -150,7 +150,7 @@ get_header();
     </h2>
     <div style="display: block;" class="fb-page" data-href="https://www.facebook.com/Saint.Leon.Art/" data-tabs="timeline, events, messages" data-width="1200" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
         <blockquote cite="https://www.facebook.com/Saint.Leon.Art/" class="fb-xfbml-parse-ignore">
-            <a href="https://www.facebook.com/Saint.Leon.Art/">Saint Léon&#039;Art</a>
+            <a title="Vers la page page facebook Saint-Leonart" href="https://www.facebook.com/Saint.Leon.Art/">Saint Léon&#039;Art</a>
         </blockquote>
     </div>
     <script>(function(d, s, id) {
