@@ -448,15 +448,15 @@
         $dateTime = new \Datetime($dateSrc);
         $date = $dateTime->format('d F');
         $dateArray = explode( ' ', $date);
-        $dateArray[1] = substr($dateArray[1], 0, 5);     
-        $date = implode( ' ', $dateArray );
+        $dateArray[1] = substr($dateArray[1], 0, 3);     
+        $date = implode( '<br>', $dateArray );
         return $date;
     }
 
     function ms_the_creation_date()
-        {
-            echo ms_get_the_creation_date();
-        }
+    {
+        echo ms_get_the_creation_date();
+    }
 
     function ms_get_complete_date()
     {

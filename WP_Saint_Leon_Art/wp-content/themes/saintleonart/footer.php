@@ -11,7 +11,7 @@
                 <h3>Rester au courant de</h3>
                 <span>SaintLeon'Art</span>
             </div>
-            <form class="form" method="post" action="http://saintleonart.app/?na=s" onsubmit="return newsletter_check(this)">
+            <form class="form" method="post" action="<?php home_url('/'); ?>?na=s" onsubmit="return newsletter_check(this)">
                 <fieldset class="tnp-field tnp-field-firstname">
                     <legend class="u-hidden-visually">Prénom</legend>
                     <label for="nn">Prénom</label>

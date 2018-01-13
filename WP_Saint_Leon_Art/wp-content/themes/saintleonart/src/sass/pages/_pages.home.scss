@@ -537,7 +537,7 @@
                         }
                     }
                 }
-                &>a:not(:first-of-type){
+                &>a:not(:first-of-type):not(:last-of-type){
                     display: none;
                 }
             }
