@@ -2,8 +2,7 @@
     <div class="event__item">
         <div class="head">
             <p class="date"><span><?php ms_the_creation_date();?> .</span></p>
-            <img src="<?= $fields['actu_badge']; ?>" 
-            alt="Illustration de l'actualité <?= $fields['actu_title']; ?>" 
+            <img src="<?= $fields['actu_badge']; ?>" alt="Illustration de l'actualité <?= $fields['actu_title']; ?>" 
             srcset="
                 <?= $fields['actu_badge_mobile']; ?> 700w,
                 <?= $fields['actu_badge']; ?> 150w" 
@@ -42,7 +41,7 @@
             </address>
             <?php endif; ?>
             <?php if($fields['actu_address'] == "" && $fields['actu_hour'] == "") :?>
-            <p><?php ms_the_news_excerpt(100) ;?></p>
+            <p><?php ms_the_news_excerpt(80) ;?></p>
             <?php endif; ?>
         </div>
     </div>

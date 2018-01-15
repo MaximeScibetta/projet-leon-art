@@ -1,11 +1,16 @@
 .wrapper{
     @include mq($from: 0px){
-        .introduction{
+        .introduction {
+            h2#branding.shadow {
+                color: $purple;
+                text-shadow: #fff 1px 1px 5px;
+            }
             .location{
                 background-color: $purple;
                 display: inline-block;
                 padding: $inuit-global-spacing-unit;
-                margin-top:  $inuit-global-spacing-unit-huge*2;
+                position: absolute;
+                top: 50%;
                 a{
                     color: $white;
                     text-decoration: none;

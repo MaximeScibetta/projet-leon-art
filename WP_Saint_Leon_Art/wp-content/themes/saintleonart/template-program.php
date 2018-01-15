@@ -52,12 +52,12 @@ get_header();
             <?php if( have_rows('days') ): $i=1; $first = true; while( have_rows('days') ): the_row(); ?>
                 <a title="Vers le programe du <?php the_sub_field('date'); ?>" href="#day<?php if($i): echo $i; endif; $i++;?>"><?php the_sub_field('date'); ?> <?= $key ;?> </a>
             <?php endwhile; endif; ?>
-            <a title="Vers tous le programme de l'événement" class="<?php if ($first) : echo 'active'; endif; ?>" href="#all">Tous le programme</a>
+            <a title="Vers tous le programme de l'événement" class="<?php if ($first) : echo 'active'; endif; ?>" href="#all">Tout le programme</a>
         </div>
         <a title="Vers la map interactive de l'événement" href="#mapinteractiv" class="interactiv">Map interactive</a>
 
     </div>
-    <?php if( have_rows('days') ): $d=1;  while ( have_rows('days') ) : the_row(); ?>
+    <?php $dd=0; if( have_rows('days') ): $d=1;  while ( have_rows('days') ) : the_row(); ?>
         <div class="timeline<?php if($d): echo ' day'.$d; endif;?>" id="<?php if($d): echo 'day'.$d; endif; $d++;?>">
         <h3>Ancre section</h3>
         <?php if( have_rows('events') ): $i=0; while ( have_rows('events') ) : the_row(); ?>
@@ -72,9 +72,8 @@ get_header();
                                         S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
                                     <path stroke="#000" stroke-width="1" d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z"/>
                             </svg>
-                            <?php  the_sub_field('event_hour'); ?>
+                            <?php   the_sub_field('event_hour'); ?> le <?= $fields['days'][$dd]['date']; ?>
                         </span>
-                        <span><?= $fields['days'][0]['date'] ;?></span>
                         <address>
                             <svg version="1.1" class="location" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.757 54.757" style="enable-background:new 0 0 54.757 54.757;">
                                 <g>
@@ -94,7 +93,8 @@ get_header();
                     </div>
                 </div>
             </a>
-        <?php endwhile; endif;  ?>
+        <?php endwhile; endif;
+        $dd++; ?>
         </div>
     <?php endwhile; endif; ?>
     <div class="timeline all here" id="all">

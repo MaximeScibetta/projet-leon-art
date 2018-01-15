@@ -67,13 +67,14 @@ $news->query([
             <?= $fields['event_description']; ?>   
         </div>
     </section>
-    <section class="news__cta">
+    <div class="news__cta">
         <a title="Vers la page toutes nos actualités" href="<?= get_page_link(282); ?>" class="btn btn--anim" data-text="Voir toutes nos actualités">Voir toutes nos actualités</a>
         <a title="Vers la page tous nos artistes" href="<?= get_page_link(236); ?>" class="btn btn--anim" data-text="Voir tous nos artistes">Voir tous nos artistes</a>
         <a title="Vers la page tous nos événements" href="<?= get_page_link(233); ?>" class="btn btn--anim" data-text="Voir tous nos événements">Voir tous nos événements</a>
-    </section>
+    </div>
     <?php if (have_rows('event_gallery')) : ?>
     <section class="news__gallery">
+    <h2 class="u-hidden-visually">Présentation d'image de <?= $fields['event_name']; ?></h2>
         <?php $images = get_field('event_gallery');
         if ($images) : ?>
             <?php foreach ($images as $image) : ?>

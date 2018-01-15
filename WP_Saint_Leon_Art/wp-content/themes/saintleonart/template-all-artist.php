@@ -25,7 +25,7 @@ get_header();
             'orderby' => 'date',
             'order' => $_SESSION['artist_filter_date'],
             'paged' => $_SESSION['current_page'],
-            'posts_per_page' => 1,
+            'posts_per_page' => 4,
             'tax_query' => [
                 [
                     'taxonomy' => 'kind',

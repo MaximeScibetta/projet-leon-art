@@ -22,6 +22,7 @@ get_header();
     <h2 id="branding">Contactez <span>SaintLeon'Art</span></h2>
 </section>
 <section class="form">
+    <h2 class="u-hidden-visually">Formulaire de contacte pour Saint-Léon'Art</h2>
     <div class="hang">
         <?php if($fields['contact_text']):?>
         <p>

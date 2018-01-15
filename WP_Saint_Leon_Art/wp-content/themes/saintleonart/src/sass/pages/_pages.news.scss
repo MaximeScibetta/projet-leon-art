@@ -5,6 +5,7 @@
                 background-size: cover;
                 height: 80vh;
                 position: relative;
+                background-position: center;
                 .title{
                     background-color: $purple;
                     padding: $igsu;
@@ -83,6 +84,8 @@
                     @include mq($from: 900px) {
                         text-align: center;
                             font-size: 28px;
+                            max-width: 600px;
+                            margin: $igsul auto;
                     }
                 }
                 p{

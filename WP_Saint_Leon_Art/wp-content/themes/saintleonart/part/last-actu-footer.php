@@ -10,7 +10,6 @@ $news->query([
         <img src="<?= $fields['actu_badge']; ?>" alt="Illustration de l'actualité <?= $fields['actu_title']; ?>">
         <div class="item__info info">
             <p class="info__title"><?= $fields['actu_title']; ?></p>
-            <p class="info__date"><?php ms_complete_date(); ?></p>
         </div>
     </a>
 <?php endwhile;

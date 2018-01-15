@@ -25,7 +25,7 @@ get_header();
             'orderby' => 'date',
             'order' => $_SESSION['news_filter_date'],
             'paged' => $_SESSION['news_current_page'],
-            'posts_per_page' => 1,
+            'posts_per_page' => 5,
             'tax_query' => [
                 [
                     'taxonomy' => 'subject',
@@ -66,18 +66,12 @@ get_header();
             endif; ?>
             <fieldset class="radio">
                 <legend class="u-hidden-visually">Trier les actualités par date</legend>
-                <div>
-                    <input id="radioASC" type="radio" name="news_date" value="ASC" <?php if ($_SESSION['news_filter_date'] == 'ASC') : echo 'checked';
-                                                                                    endif; ?> /> 
-                    <label for="radioASC" class="radio-label">Les plus anciens</label>
-    
-                </div>
-                <div>
+                <input id="radioASC" type="radio" name="news_date" value="ASC" <?php if ($_SESSION['news_filter_date'] == 'ASC') : echo 'checked';
+                                                                                endif; ?> /> 
+                <label for="radioASC" class="radio-label">Les plus anciens</label>
                 <input id="radioDESC" type="radio" name="news_date" value="DESC" <?php if ($_SESSION['news_filter_date'] == 'DESC') : echo 'checked';
                                                                                     endif; ?>  />
                 <label for="radioDESC" class="radio-label">Les plus récent</label>
-    
-                </div>
             </fieldset>
             <input type="submit" name="newsfilter" value="Filtrer les éléments" class="btn btn--anim" data-text="Filtrer les éléments">
             <input type="hidden" name="action" value="newsfilter">

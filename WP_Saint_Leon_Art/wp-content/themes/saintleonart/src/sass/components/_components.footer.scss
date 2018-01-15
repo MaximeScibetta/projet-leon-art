@@ -204,6 +204,7 @@
                         vertical-align: top;
                         &__title{
                             font-family: 'RobotoM';
+                            max-width: 330px;
                         }
                     }
                     svg{
@@ -233,32 +234,64 @@
                 .nav{
                     width: 100%;
                     @include mq($from: 610px){
-                        width: 38%;
+                        width: 30%;
                     }
                     @include mq($from: tablet){
                         width: 33%;
                     }
                     @include mq($from: desktop){
-                        width: 25%;
+                        width: 20%;
                     }
                 }   
                 .lastActu{
                     width: 100%;
+                    img{
+                        width: 75px;height: 75px;
+                    }
                     a{
                         text-decoration: none;
                         color: $white;
                     }
                     @include mq($from: 610px){
-                        width: 50%;
+                        width: 65%;
                     }
                     @include mq($from: desktop){
-                        width: 33%;
+                        width: 40%;
+                    }
+                    &__item{
+                        .info__title{
+                            width: 175px;
+                            @include mq($from: 350px){
+                                width: 200px;
+                            }
+                            @include mq($from: 400px) {
+                                width: 250px;
+                            }
+                            @include mq($from: 450px) {
+                                width: 300px;
+                            }
+                            @include mq($from: 610px) {
+                                width: 200px;
+                            }
+                            @include mq($from: 680px) {
+                                width: 300px;
+                            }
+                            @include mq($from: desktop) {
+                                width: 240px;
+                            }
+                            @include mq($from: 1100px) {
+                                width: 300px;
+                            }
+                        }
                     }
                 }         
                 .partner{
                     width: 100%;
                     @include mq($from: desktop){
                         width: 40%;
+                    }
+                    a{
+                        text-decoration: none;
                     }
                     svg{
                         width: 60px;

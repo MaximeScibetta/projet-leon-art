@@ -310,6 +310,20 @@
                     margin: 0 24px 0 0;
                 }
             }
+            .wpcf7-response-output.wpcf7-mail-sent-ng{
+                background-color: #F44336;
+                padding: 24px;
+                color: white;
+                margin-top: 48px;
+                &:before {
+                    display: inline-block;
+                    content: "✘";
+                    color: $white;
+                    width: 25px;
+                    height: 25px;
+                    margin: 0 24px 0 0;
+                }
+            }
         }
     }
     @include mq($from: desktop){

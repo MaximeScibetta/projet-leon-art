@@ -373,7 +373,7 @@ get_header();
                 <?php ms_the_data_file(); ?>
             <?php endwhile;?>
         </div>
-        <a title="Vers la page toutes nos actualités" href="" class="btn btn--anim" data-text="Voir nos actualités">Voir nos actualités</a>
+        <a title="Vers la page toutes nos actualités" href="<?= get_permalink('282') ;?>" class="btn btn--anim" data-text="Voir nos actualités">Voir nos actualités</a>
     </section>
     <?php endif;?>
     <?php endwhile;endif; ?>

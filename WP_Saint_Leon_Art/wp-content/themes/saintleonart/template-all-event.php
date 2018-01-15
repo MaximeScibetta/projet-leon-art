@@ -25,7 +25,7 @@ get_header();
             'orderby' => 'date',
             'order' => $_SESSION['event_filter_date'],
             'paged' => $_SESSION['event_current_page'],
-            'posts_per_page' => 1,
+            'posts_per_page' => 5,
             'tax_query' => [
                 [
                     'taxonomy' => 'type',

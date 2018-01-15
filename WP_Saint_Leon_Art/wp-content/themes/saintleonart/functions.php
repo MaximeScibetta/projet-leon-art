@@ -1,5 +1,5 @@
 <?php 
-
+define('UPLOADS', 'wp-content/uploads');
 /*****************
 *** Hook functions
 *****************/
@@ -271,7 +271,7 @@
                 'orderby' => 'date',
                 'order' => $_SESSION['artist_filter_date'],
                 'paged' => ($_SESSION['current_page'] > $query->max_num_pages) ? 1 : $_SESSION['current_page'],
-                'posts_per_page' => 1,
+                'posts_per_page' => 4,
                 'tax_query' => [
                     [
                         'taxonomy' => 'kind',
@@ -320,7 +320,7 @@
                 'orderby' => 'date',
                 'order' => $_SESSION['event_filter_date'],
                 'paged' => ($_SESSION['event_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['event_current_page'],
-                'posts_per_page' => 1,
+                'posts_per_page' => 5,
                 'tax_query' => [
                     [
                         'taxonomy' => 'type',
@@ -378,7 +378,7 @@
                     'orderby' => 'date',
                     'order' => $_SESSION['news_filter_date'],
                     'paged' => ($_SESSION['news_current_page'] > $query->max_num_pages) ? 1 : $_SESSION['news_current_page'],
-                    'posts_per_page' => 1,
+                    'posts_per_page' => 5,
                     'tax_query' => [
                         [
                             'taxonomy' => 'subject',

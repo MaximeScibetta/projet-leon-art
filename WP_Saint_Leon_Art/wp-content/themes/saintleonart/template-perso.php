@@ -15,7 +15,7 @@ get_header();
     <?php if ($perso->have_posts()) : while ($perso->have_posts()) : $perso->the_post(); ?>
 <?php $fields = get_fields(); ?>
 <section class="introduction" style="background-image: url(<?= $fields['artist_branding']; ?>);">
-    <h2 class="branding" id="branding"><?= $fields['artist_surname']; ?> <?= $fields['artist_name']; ?><span> SaintLeon'Art</span></h2>
+    <h2 class="shadow branding" id="branding"><?= $fields['artist_surname']; ?> <?= $fields['artist_name']; ?><span> SaintLeon'Art</span></h2>
     <?php if (have_rows('artist_location')) : the_row(); ?>
         <div class="location">
             <a title="Vers la google map ci-dessous" href="#map">
@@ -50,6 +50,7 @@ get_header();
 endif; ?>
 <?php if (have_rows('artist_gallery')) : ?>
     <section class="artwork">
+    <h2 class="u-hidden-visually">Gallerie d'image de <?= $fields['artist_surname']; $fields['artist_name']; ?></h2>
         <?php $images = get_field('artist_gallery');
         if ($images) : ?>
             <?php foreach ($images as $image) : ?>

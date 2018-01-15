@@ -123,12 +123,15 @@
             position: relative;
             a.demo {
                 position: absolute;
-                bottom: 20px;
+                bottom: -20px;
                 left: 50%;
+                @media (max-height:800px){
+                    display: none;
+                }
                 z-index: 2;
                 display: inline-block;
                 -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
+                transform: translate(-50%, -50%);
                 color: #fff;
                 font: normal 400 20px/1 'Josefin Sans', sans-serif;
                 letter-spacing: .1em;
@@ -418,6 +421,7 @@
                         h3{
                             font-family: 'RobotoB';
                             font-size: 20px;
+                            width: 133%;
                             span{
                                 text-transform: uppercase;
                             }
@@ -427,6 +431,7 @@
                             font-family: 'RobotoL';
                             text-transform: uppercase;
                             letter-spacing: 2px;
+                            width: 133%;
                         }
                     }
                 }
@@ -633,7 +638,7 @@
                         margin-right: $igsus;
                     }
                     address{
-                        margin-left: $igsus;
+                       // margin-left: $igsus;
                     }
                 }
             }
